@@ -1,6 +1,6 @@
-SublimeText 2 WPSeek.com WordPress Package
+# SublimeText 2 WPSeek.com WordPress Package
 
-The WordPress SublimeText 2 Bundle is a [SublimeText](http://www.sublimetext.com/2) bundle built with the sole purpose of reducing the amount of time spent digging around the [WordPress](http://wordpress.org) core to look up the little things that we work with every day.
+The WPSeek.com SublimeText 2 WordPress Bundle is a [SublimeText 2](http://www.sublimetext.com/2) bundle built with the sole purpose of reducing the amount of time spent digging around the [WordPress](http://wordpress.org) core to look up the little things that we work with every day.
 
 ## Features
 
