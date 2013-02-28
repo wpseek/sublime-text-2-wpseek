@@ -1,0 +1,18 @@
+SublimeText 2 WPSeek.com WordPress Package
+
+The WordPress SublimeText 2 Bundle is a [SublimeText](http://www.sublimetext.com/2) bundle built with the sole purpose of reducing the amount of time spent digging around the [WordPress](http://wordpress.org) core to look up the little things that we work with every day.
+
+## Features
+
+- Auto-completion of WordPress functions with parameter hinting.
+- Parameter hinting for common functions like `[get_]bloginfo()` and query vars.
+
+## Bugs/Suggestions
+
+If you find a bug, would like to see a feature implemented, or would like to contribute a feature to the project please use the [Issue Tracker](https://github.com/AlphawolfWMP/sublime-text-2-wpseek/issues) over at my GitHub project page.
+
+## Credits
+
+Bundle Maintainer: [Oliver Schlöbe](http://www.schloebe.de).
+
+Donations help make this project possible. If you find this project helpful, [please help and contribute to the cause](http://www.schloebe.de/donate/).
