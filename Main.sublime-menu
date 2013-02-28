@@ -1,0 +1,26 @@
+[
+    {
+        "caption": "Tools",
+        "mnemonic": "t",
+        "id": "tools",
+        "children":
+        [
+            {
+                "caption": "wpseek.com",
+                "mnemonic": "f",
+                "id": "wpseek_com",
+                "children":
+                [
+                    {
+                        "command": "wpseek_com_search_selection",
+                        "caption": "Search Selection"
+                    },
+                    {
+                        "command": "wpseek_com_search_from_input",
+                        "caption": "Search From Input"
+                    }
+                ]
+            }
+        ]
+    }
+]

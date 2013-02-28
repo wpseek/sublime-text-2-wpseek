@@ -1,0 +1,14 @@
+[
+    {
+        "caption": "wpseek.com: Search Selection",
+        "command": "wpseek_com_search_selection"
+    },
+    {
+        "caption": "wpseek.com: Open Function Reference",
+        "command": "wpseek_com_open_selection"
+    },
+    {
+        "caption": "wpseek.com: Search from Input",
+        "command": "wpseek_com_search_from_input"
+    }
+]
