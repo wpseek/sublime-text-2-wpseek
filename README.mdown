@@ -5,7 +5,8 @@ The WPSeek.com SublimeText 2 WordPress Bundle is a [SublimeText 2](http://www.su
 ## Features
 
 - Auto-completion of WordPress functions with parameter hinting.
-- Parameter hinting for common functions like `[get_]bloginfo()` and query vars.
+ - Parameter hinting for common functions like `[get_]bloginfo()` and query vars.
+- Auto-completion of WordPress constants
 
 ## Bugs/Suggestions
 
