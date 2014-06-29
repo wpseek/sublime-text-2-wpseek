@@ -19,7 +19,7 @@ The easiest way to install this is with [Package Control](https://sublime.wbond.
  * Select "Package Control: Install Package" (it'll take a few seconds)
  * Type "wpseek" and select the package when the list appears.
 
-Package Control will automatically keep Git up to date with the latest version.
+Package Control will automatically keep the wpseek package up to date with the latest version.
 
 ## Bugs/Suggestions
 
