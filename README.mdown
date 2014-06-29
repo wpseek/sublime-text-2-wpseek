@@ -8,6 +8,19 @@ The WPSeek.com SublimeText 2 WordPress Bundle is a [SublimeText 2](http://www.su
  - Parameter hinting for common functions like `[get_]bloginfo()` and query vars.
 - Auto-completion of WordPress constants
 
+## Install
+
+### Package Control
+
+The easiest way to install this is with [Package Control](https://sublime.wbond.net/packages/Package%20Control).
+
+ * If you just went and installed Package Control, you probably need to restart Sublime Text 2 before doing this next bit.
+ * Bring up the Command Palette (Command+Shift+p on OS X, Control+Shift+P on Linux/Windows).
+ * Select "Package Control: Install Package" (it'll take a few seconds)
+ * Type "wpseek" and select the package when the list appears.
+
+Package Control will automatically keep Git up to date with the latest version.
+
 ## Bugs/Suggestions
 
 If you find a bug, would like to see a feature implemented, or would like to contribute a feature to the project please use the [Issue Tracker](https://github.com/AlphawolfWMP/sublime-text-2-wpseek/issues) over at my GitHub project page.
