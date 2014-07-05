@@ -1,10 +1,15 @@
 [
     {
-        "command": "wpseek_com_search_selection",
-        "caption": "Search wpseek.com"
-    },
-    {
-        "command": "wpseek_com_open_selection",
-        "caption": "wpseek.com Function Reference"
+        "caption": "wpseek.com WordPress Developer Assistant",
+        "children": [
+            {
+                "caption": "Search selection",
+                "command": "wpseek_com_search_selection"
+            },
+            {
+                "caption": "wpseek.com Function Reference",
+                "command": "wpseek_com_open_selection"
+            }
+        ]
     }
 ]
