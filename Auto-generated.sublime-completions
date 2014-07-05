@@ -2130,6 +2130,10 @@
 			"contents": "get_sitestats()"
 		},
 		{
+			"trigger": "is_customize_preview",
+			"contents": "is_customize_preview()"
+		},
+		{
 			"trigger": "wp_customize_support_script",
 			"contents": "wp_customize_support_script()"
 		},
@@ -8506,6 +8510,22 @@
 			"contents": "install_themes_feature_list()"
 		},
 		{
+			"trigger": "wp_install_load_language",
+			"contents": "wp_install_load_language( ${1:\\$request} )"
+		},
+		{
+			"trigger": "wp_install_download_language_pack",
+			"contents": "wp_install_download_language_pack( ${1:\\$language} )"
+		},
+		{
+			"trigger": "wp_get_available_translations",
+			"contents": "wp_get_available_translations()"
+		},
+		{
+			"trigger": "wp_install_language_form",
+			"contents": "wp_install_language_form( ${1:\\$body} )"
+		},
+		{
 			"trigger": "install_global_terms",
 			"contents": "install_global_terms()"
 		},
@@ -9696,10 +9716,6 @@
 		{
 			"trigger": "display_header",
 			"contents": "display_header( ${1:\\$body_classes = ''} )"
-		},
-		{
-			"trigger": "wp_get_available_translations",
-			"contents": "wp_get_available_translations()"
 		},
 		{
 			"trigger": "options_permalink_add_js",
