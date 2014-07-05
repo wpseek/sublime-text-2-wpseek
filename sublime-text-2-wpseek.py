@@ -1,5 +1,12 @@
-# written by Oliver Schlöbe (www.schloebe.de)
-# based on Stackoverflow Search Plugin by Eric Martel (emartel@gmail.com / www.ericmartel.com)
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Author: Oliver Schlöbe
+# @Date:   2014-07-05 14:36:00
+# @Last Modified by:   Oliver Schlöbe
+# @Last Modified time: 2014-07-05 14:37:00
+# @Author URL: http://www.schloebe.de/
+# @Plugin URL: https://github.com/AlphawolfWMP/sublime-text-2-wpseek
+# @License: GPL 3+
 
 # available commands
 #   wpseek_com_open_selection
