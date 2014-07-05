@@ -1,14 +1,10 @@
 [
     {
         "caption": "Tools",
-        "mnemonic": "t",
-        "id": "tools",
         "children":
         [
             {
-                "caption": "wpseek.com",
-                "mnemonic": "f",
-                "id": "wpseek_com",
+                "caption": "wpseek.com WordPress Developer Assistant",
                 "children":
                 [
                     {
