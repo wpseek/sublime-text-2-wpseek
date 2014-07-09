@@ -3754,6 +3754,10 @@
 			"contents": "get_option( ${1:\\$option}${2:, \\$default = false} )"
 		},
 		{
+			"trigger": "wp_dropdown_languages",
+			"contents": "wp_dropdown_languages( ${1:\\$args = array()} )"
+		},
+		{
 			"trigger": "wp_get_pomo_file_data",
 			"contents": "wp_get_pomo_file_data( ${1:\\$po_file} )"
 		},
@@ -5116,6 +5120,10 @@
 		{
 			"trigger": "_wp_http_get_object",
 			"contents": "_wp_http_get_object()"
+		},
+		{
+			"trigger": "attachment_url_to_postid",
+			"contents": "attachment_url_to_postid( ${1:\\$url} )"
 		},
 		{
 			"trigger": "wp_maybe_generate_attachment_metadata",
@@ -7854,6 +7862,10 @@
 			"contents": "wp_ajax_date_format()"
 		},
 		{
+			"trigger": "wp_ajax_set_attachment_thumbnail",
+			"contents": "wp_ajax_set_attachment_thumbnail()"
+		},
+		{
 			"trigger": "wp_ajax_set_post_thumbnail",
 			"contents": "wp_ajax_set_post_thumbnail()"
 		},
@@ -8511,19 +8523,19 @@
 		},
 		{
 			"trigger": "wp_install_load_language",
-			"contents": "wp_install_load_language( ${1:\\$request} )"
+			"contents": "wp_install_load_language( ${1:\\$translation} )"
 		},
 		{
 			"trigger": "wp_install_download_language_pack",
-			"contents": "wp_install_download_language_pack( ${1:\\$language} )"
+			"contents": "wp_install_download_language_pack( ${1:\\$download} )"
 		},
 		{
-			"trigger": "wp_get_available_translations",
-			"contents": "wp_get_available_translations()"
+			"trigger": "wp_get_available_translations_from_api",
+			"contents": "wp_get_available_translations_from_api()"
 		},
 		{
 			"trigger": "wp_install_language_form",
-			"contents": "wp_install_language_form( ${1:\\$body} )"
+			"contents": "wp_install_language_form( ${1:\\$languages} )"
 		},
 		{
 			"trigger": "install_global_terms",
