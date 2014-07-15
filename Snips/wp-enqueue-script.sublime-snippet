@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Enqueue a script.
+ *
+ * @param string		\$handle	Name of the script.
+ * @param string		\$src		Path to the script from the root directory of WordPress. Example: '/js/myscript.js'.
+ * @param array			\$deps		(optional) An array of registered handles this script depends on. Default empty array.
+ * @param string|bool 	\$ver		(optional) Optional. String specifying the script version number, if it has one. This parameter
+ *						is used to ensure that the correct version is sent to the client regardless of caching,
+ *						and so should be included if a version number is available and makes sense for the script.
+ * @param bool			\$in_footer (optional) Whether to enqueue the script before </head> or before </body>
+ */
+function ${1:PREFIX_enqueue_scripts}() {
+	wp_enqueue_script( ${2:'${3:\$handle}', '${4:\$src}', ${5:array( 'jquery' )}, ${6:false}, ${7:false}});
+}
+
+add_action( 'wp_enqueue_scripts', '${1:PREFIX_enqueue_scripts}' );
+
+]]></content>
+    <description>WordPress: Enqueue a script</description>
+	 <tabTrigger>wp_enqueue</tabTrigger>
+    <scope>source.php - variable.other.php</scope>
+</snippet>
