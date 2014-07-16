@@ -2186,6 +2186,10 @@
 			"contents": "add_theme_support( ${1:\\$feature} )"
 		},
 		{
+			"trigger": "get_editor_stylesheets",
+			"contents": "get_editor_stylesheets()"
+		},
+		{
 			"trigger": "remove_editor_styles",
 			"contents": "remove_editor_styles()"
 		},
@@ -5122,6 +5126,10 @@
 			"contents": "_wp_http_get_object()"
 		},
 		{
+			"trigger": "wp_media_mce_styles",
+			"contents": "wp_media_mce_styles()"
+		},
+		{
 			"trigger": "attachment_url_to_postid",
 			"contents": "attachment_url_to_postid( ${1:\\$url} )"
 		},
@@ -7792,6 +7800,10 @@
 		{
 			"trigger": "add_cssclass",
 			"contents": "add_cssclass( ${1:\\$add}${2:, \\$class} )"
+		},
+		{
+			"trigger": "wp_ajax_parse_media_shortcode",
+			"contents": "wp_ajax_parse_media_shortcode()"
 		},
 		{
 			"trigger": "wp_ajax_parse_embed",
