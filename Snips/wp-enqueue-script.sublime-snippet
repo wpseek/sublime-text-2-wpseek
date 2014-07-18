@@ -19,6 +19,6 @@ add_action( 'wp_enqueue_scripts', '${1:PREFIX_enqueue_scripts}' );
 
 ]]></content>
     <description>WordPress: Enqueue a script</description>
-	 <tabTrigger>wp_enqueue</tabTrigger>
+	<tabTrigger>wp_enqueue</tabTrigger>
     <scope>source.php - variable.other.php</scope>
 </snippet>
