@@ -2499,7 +2499,7 @@
 		},
 		{
 			"trigger": "wp_generate_auth_cookie",
-			"contents": "wp_generate_auth_cookie( ${1:\\$user_id}${2:, \\$expiration}${3:, \\$scheme = 'auth'} )"
+			"contents": "wp_generate_auth_cookie( ${1:\\$user_id}${2:, \\$expiration}${3:, \\$scheme = 'auth'}${4:, \\$token = ''} )"
 		},
 		{
 			"trigger": "wp_validate_auth_cookie",
@@ -3888,6 +3888,26 @@
 		{
 			"trigger": "get_locale",
 			"contents": "get_locale()"
+		},
+		{
+			"trigger": "wp_destroy_all_sessions",
+			"contents": "wp_destroy_all_sessions()"
+		},
+		{
+			"trigger": "wp_destroy_other_sessions",
+			"contents": "wp_destroy_other_sessions()"
+		},
+		{
+			"trigger": "wp_destroy_current_session",
+			"contents": "wp_destroy_current_session()"
+		},
+		{
+			"trigger": "wp_get_all_sessions",
+			"contents": "wp_get_all_sessions()"
+		},
+		{
+			"trigger": "wp_get_session_token",
+			"contents": "wp_get_session_token()"
 		},
 		{
 			"trigger": "register_new_user",
@@ -8180,6 +8200,10 @@
 		{
 			"trigger": "wp_handle_upload",
 			"contents": "wp_handle_upload( ${1:\\$file}${2:, \\$overrides = false}${3:, \\$time = null} )"
+		},
+		{
+			"trigger": "_wp_handle_upload",
+			"contents": "_wp_handle_upload( ${1:\\$file}${2:, \\$overrides}${3:, \\$time}${4:, \\$action} )"
 		},
 		{
 			"trigger": "validate_file_to_edit",
