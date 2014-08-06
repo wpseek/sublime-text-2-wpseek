@@ -4210,10 +4210,6 @@
 			"contents": "force_ssl_login( ${1:\\$force = null} )"
 		},
 		{
-			"trigger": "is_https_url",
-			"contents": "is_https_url( ${1:\\$url} )"
-		},
-		{
 			"trigger": "is_ssl",
 			"contents": "is_ssl()"
 		},
@@ -6108,6 +6104,10 @@
 		{
 			"trigger": "map_meta_cap",
 			"contents": "map_meta_cap( ${1:\\$cap}${2:, \\$user_id} )"
+		},
+		{
+			"trigger": "hash_equals",
+			"contents": "hash_equals( ${1:\\$a}${2:, \\$b} )"
 		},
 		{
 			"trigger": "_json_decode_object_helper",
