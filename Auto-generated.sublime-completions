@@ -8358,6 +8358,10 @@
 			"contents": "wp_dashboard_setup()"
 		},
 		{
+			"trigger": "post_form_autocomplete_off",
+			"contents": "post_form_autocomplete_off()"
+		},
+		{
 			"trigger": "heartbeat_autosave",
 			"contents": "heartbeat_autosave( ${1:\\$response}${2:, \\$data} )"
 		},
