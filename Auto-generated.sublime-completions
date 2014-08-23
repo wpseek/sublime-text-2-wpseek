@@ -5142,8 +5142,8 @@
 			"contents": "_wp_http_get_object()"
 		},
 		{
-			"trigger": "wp_media_mce_styles",
-			"contents": "wp_media_mce_styles()"
+			"trigger": "wpview_media_sandbox_styles",
+			"contents": "wpview_media_sandbox_styles()"
 		},
 		{
 			"trigger": "attachment_url_to_postid",
