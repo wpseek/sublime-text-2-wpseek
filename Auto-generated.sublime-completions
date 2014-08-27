@@ -3803,7 +3803,7 @@
 		},
 		{
 			"trigger": "load_default_textdomain",
-			"contents": "load_default_textdomain()"
+			"contents": "load_default_textdomain( ${1:\\$locale = null} )"
 		},
 		{
 			"trigger": "unload_textdomain",
@@ -7262,6 +7262,22 @@
 			"contents": "wp_get_db_schema( ${1:\\$scope = 'all'}${2:, \\$blog_id = null} )"
 		},
 		{
+			"trigger": "wp_download_language_pack",
+			"contents": "wp_download_language_pack( ${1:\\$download} )"
+		},
+		{
+			"trigger": "wp_install_language_form",
+			"contents": "wp_install_language_form( ${1:\\$languages} )"
+		},
+		{
+			"trigger": "wp_get_available_translations",
+			"contents": "wp_get_available_translations()"
+		},
+		{
+			"trigger": "translations_api",
+			"contents": "translations_api( ${1:\\$type}${2:, \\$args = null} )"
+		},
+		{
 			"trigger": "wp_save_image",
 			"contents": "wp_save_image( ${1:\\$post_id} )"
 		},
@@ -8562,22 +8578,6 @@
 			"contents": "install_themes_feature_list()"
 		},
 		{
-			"trigger": "wp_install_load_language",
-			"contents": "wp_install_load_language( ${1:\\$translation} )"
-		},
-		{
-			"trigger": "wp_install_download_language_pack",
-			"contents": "wp_install_download_language_pack( ${1:\\$download} )"
-		},
-		{
-			"trigger": "wp_get_available_translations_from_api",
-			"contents": "wp_get_available_translations_from_api()"
-		},
-		{
-			"trigger": "wp_install_language_form",
-			"contents": "wp_install_language_form( ${1:\\$languages} )"
-		},
-		{
 			"trigger": "install_global_terms",
 			"contents": "install_global_terms()"
 		},
@@ -8656,6 +8656,10 @@
 		{
 			"trigger": "upgrade_network",
 			"contents": "upgrade_network()"
+		},
+		{
+			"trigger": "upgrade_400",
+			"contents": "upgrade_400()"
 		},
 		{
 			"trigger": "upgrade_380",
