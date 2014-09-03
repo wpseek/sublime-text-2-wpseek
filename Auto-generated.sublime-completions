@@ -414,12 +414,8 @@
 			"contents": "update_blog_details( ${1:\\$blog_id}${2:, \\$details = array()} )"
 		},
 		{
-			"trigger": "_wp_refresh_blog_details_on_updated_option",
-			"contents": "_wp_refresh_blog_details_on_updated_option( ${1:\\$option_name} )"
-		},
-		{
 			"trigger": "refresh_blog_details",
-			"contents": "refresh_blog_details( ${1:\\$blog_id} )"
+			"contents": "refresh_blog_details( ${1:\\$blog_id = 0} )"
 		},
 		{
 			"trigger": "get_blog_details",
@@ -7260,6 +7256,10 @@
 		{
 			"trigger": "wp_get_db_schema",
 			"contents": "wp_get_db_schema( ${1:\\$scope = 'all'}${2:, \\$blog_id = null} )"
+		},
+		{
+			"trigger": "wp_can_install_language_pack",
+			"contents": "wp_can_install_language_pack()"
 		},
 		{
 			"trigger": "wp_download_language_pack",
