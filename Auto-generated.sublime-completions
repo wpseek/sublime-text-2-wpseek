@@ -3023,7 +3023,7 @@
 		},
 		{
 			"trigger": "term_exists",
-			"contents": "term_exists( ${1:\\$term}${2:, \\$taxonomy = ''}${3:, \\$parent = 0} )"
+			"contents": "term_exists( ${1:\\$term}${2:, \\$taxonomy = ''}${3:, \\$parent = null} )"
 		},
 		{
 			"trigger": "get_terms",
@@ -4048,6 +4048,10 @@
 		{
 			"trigger": "wp_signon",
 			"contents": "wp_signon( ${1:\\$credentials = array()}${2:, \\$secure_cookie = ''} )"
+		},
+		{
+			"trigger": "wp_get_last_changed",
+			"contents": "wp_get_last_changed( ${1:\\$group}${2:, \\$force = false} )"
 		},
 		{
 			"trigger": "wp_validate_boolean",
@@ -6167,7 +6171,7 @@
 		},
 		{
 			"trigger": "wp_get_attachment_link",
-			"contents": "wp_get_attachment_link( ${1:\\$id = 0}${2:, \\$size = 'thumbnail'}${3:, \\$permalink = false}${4:, \\$icon = false}${5:, \\$text = false} )"
+			"contents": "wp_get_attachment_link( ${1:\\$id = 0}${2:, \\$size = 'thumbnail'}${3:, \\$permalink = false}${4:, \\$icon = false}${5:, \\$text = false}${6:, \\$attr = ''} )"
 		},
 		{
 			"trigger": "the_attachment_link",
