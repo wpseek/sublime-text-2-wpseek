@@ -3918,6 +3918,10 @@
 			"contents": "check_password_reset_key( ${1:\\$key}${2:, \\$login} )"
 		},
 		{
+			"trigger": "_wp_password_hint",
+			"contents": "_wp_password_hint()"
+		},
+		{
 			"trigger": "_wp_get_user_contactmethods",
 			"contents": "_wp_get_user_contactmethods( ${1:\\$user = null} )"
 		},
