@@ -15,8 +15,12 @@
                         "command": "wpseek_com_search_from_input",
                         "caption": "Search From Input"
                     }
-                ]
+                ],
+                "id": "wpseek_wp_developer_assistant",
+                "mnemonic": "f"
             }
-        ]
+        ],
+        "id": "tools",
+        "mnemonic": "t"
     }
 ]

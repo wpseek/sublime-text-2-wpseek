@@ -3,7 +3,7 @@
 # @Author: Oliver Schlöbe
 # @Date:   2014-07-05 14:36:00
 # @Last Modified by:   Oliver Schlöbe
-# @Last Modified time: 2014-07-05 14:37:00
+# @Last Modified time: 2014-11-01 17:43:00
 # @Author URL: http://www.schloebe.de/
 # @Plugin URL: https://github.com/AlphawolfWMP/sublime-text-2-wpseek
 # @License: GPL 3+
@@ -13,7 +13,10 @@
 #   wpseek_com_search_selection
 #   wpseek_com_search_from_input
 
-import sublime, sublime_plugin, subprocess, webbrowser
+import sublime
+import sublime_plugin
+import subprocess
+import webbrowser
 
 def SearchWPSFor(text):
     url = 'http://wpseek.com/' + text.replace(' ','%20') + '/'
@@ -26,7 +29,6 @@ def OpenWPSFunctionReference(text):
 class WPSeekComOpenSelectionCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         for selection in self.view.sel():
-            # if the user didn't select anything, search the currently highlighted word
             if selection.empty():
                 selection = self.view.word(selection)
 
@@ -36,7 +38,6 @@ class WPSeekComOpenSelectionCommand(sublime_plugin.TextCommand):
 class WPSeekComSearchSelectionCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         for selection in self.view.sel():
-            # if the user didn't select anything, search the currently highlighted word
             if selection.empty():
                 selection = self.view.word(selection)
 
