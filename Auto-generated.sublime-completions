@@ -2863,7 +2863,7 @@
 		},
 		{
 			"trigger": "get_approved_comments",
-			"contents": "get_approved_comments( ${1:\\$post_id} )"
+			"contents": "get_approved_comments( ${1:\\$post_id = 0}${2:, \\$args = array()} )"
 		},
 		{
 			"trigger": "check_comment",
@@ -2895,7 +2895,7 @@
 		},
 		{
 			"trigger": "get_ancestors",
-			"contents": "get_ancestors( ${1:\\$object_id = 0}${2:, \\$object_type = ''} )"
+			"contents": "get_ancestors( ${1:\\$object_id = 0}${2:, \\$object_type = ''}${3:, \\$resource_type = ''} )"
 		},
 		{
 			"trigger": "is_object_in_taxonomy",
@@ -8220,6 +8220,10 @@
 		{
 			"trigger": "_wp_ajax_menu_quick_search",
 			"contents": "_wp_ajax_menu_quick_search( ${1:\\$request = array()} )"
+		},
+		{
+			"trigger": "wp_print_revision_templates",
+			"contents": "wp_print_revision_templates()"
 		},
 		{
 			"trigger": "wp_prepare_revisions_for_js",
