@@ -254,6 +254,22 @@
 			"contents": "get_archives_link( ${1:\\$url}${2:, \\$text}${3:, \\$format = 'html'}${4:, \\$before = ''}${5:, \\$after = ''} )"
 		},
 		{
+			"trigger": "get_the_archive_description",
+			"contents": "get_the_archive_description()"
+		},
+		{
+			"trigger": "the_archive_description",
+			"contents": "the_archive_description( ${1:\\$before = ''}${2:, \\$after = ''} )"
+		},
+		{
+			"trigger": "get_the_archive_title",
+			"contents": "get_the_archive_title()"
+		},
+		{
+			"trigger": "the_archive_title",
+			"contents": "the_archive_title( ${1:\\$before = ''}${2:, \\$after = ''} )"
+		},
+		{
 			"trigger": "single_month_title",
 			"contents": "single_month_title( ${1:\\$prefix = ''}${2:, \\$display = true} )"
 		},
@@ -2922,6 +2938,10 @@
 			"contents": "get_term_link( ${1:\\$term}${2:, \\$taxonomy = ''} )"
 		},
 		{
+			"trigger": "_split_shared_term",
+			"contents": "_split_shared_term( ${1:\\$term_id}${2:, \\$term_taxonomy_id} )"
+		},
+		{
 			"trigger": "_update_generic_term_count",
 			"contents": "_update_generic_term_count( ${1:\\$terms}${2:, \\$taxonomy} )"
 		},
@@ -3244,10 +3264,6 @@
 		{
 			"trigger": "_wp_admin_bar_init",
 			"contents": "_wp_admin_bar_init()"
-		},
-		{
-			"trigger": "admin_created_user_subject",
-			"contents": "admin_created_user_subject()"
 		},
 		{
 			"trigger": "get_blogaddress_by_domain",
