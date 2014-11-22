@@ -2879,7 +2879,7 @@
 		},
 		{
 			"trigger": "get_approved_comments",
-			"contents": "get_approved_comments( ${1:\\$post_id = 0}${2:, \\$args = array()} )"
+			"contents": "get_approved_comments( ${1:\\$post_id}${2:, \\$args = array()} )"
 		},
 		{
 			"trigger": "check_comment",
@@ -2936,6 +2936,14 @@
 		{
 			"trigger": "get_term_link",
 			"contents": "get_term_link( ${1:\\$term}${2:, \\$taxonomy = ''} )"
+		},
+		{
+			"trigger": "_wp_check_split_terms_in_menus",
+			"contents": "_wp_check_split_terms_in_menus( ${1:\\$term_id}${2:, \\$new_term_id}${3:, \\$term_taxonomy_id}${4:, \\$taxonomy} )"
+		},
+		{
+			"trigger": "_wp_check_split_default_terms",
+			"contents": "_wp_check_split_default_terms( ${1:\\$term_id}${2:, \\$new_term_id}${3:, \\$term_taxonomy_id}${4:, \\$taxonomy} )"
 		},
 		{
 			"trigger": "_split_shared_term",
@@ -4059,7 +4067,7 @@
 		},
 		{
 			"trigger": "count_user_posts",
-			"contents": "count_user_posts( ${1:\\$userid} )"
+			"contents": "count_user_posts( ${1:\\$userid}${2:, \\$post_type = 'post'} )"
 		},
 		{
 			"trigger": "wp_validate_logged_in_cookie",
@@ -6883,7 +6891,7 @@
 		},
 		{
 			"trigger": "get_page_children",
-			"contents": "get_page_children( ${1:\\$page_id}${2:, \\$pages} )"
+			"contents": "get_page_children( ${1:\\$page_id}${2:, \\$pages}${3:, \\$ancestors = true} )"
 		},
 		{
 			"trigger": "get_page_by_title",
@@ -7236,6 +7244,10 @@
 		{
 			"trigger": "confirm_delete_users",
 			"contents": "confirm_delete_users( ${1:\\$users} )"
+		},
+		{
+			"trigger": "network_settings_add_js",
+			"contents": "network_settings_add_js()"
 		},
 		{
 			"trigger": "_wp_menu_output",
@@ -7910,6 +7922,10 @@
 			"contents": "add_cssclass( ${1:\\$add}${2:, \\$class} )"
 		},
 		{
+			"trigger": "wp_ajax_destroy_sessions",
+			"contents": "wp_ajax_destroy_sessions()"
+		},
+		{
 			"trigger": "wp_ajax_parse_media_shortcode",
 			"contents": "wp_ajax_parse_media_shortcode()"
 		},
@@ -8251,15 +8267,15 @@
 		},
 		{
 			"trigger": "request_filesystem_credentials",
-			"contents": "request_filesystem_credentials( ${1:\\$form_post}${2:, \\$type = ''}${3:, \\$error = false}${4:, \\$context = false}${5:, \\$extra_fields = null} )"
+			"contents": "request_filesystem_credentials( ${1:\\$form_post}${2:, \\$type = ''}${3:, \\$error = false}${4:, \\$context = false}${5:, \\$extra_fields = null}${6:, \\$allow_relaxed_file_ownership = false} )"
 		},
 		{
 			"trigger": "get_filesystem_method",
-			"contents": "get_filesystem_method( ${1:\\$args = array()}${2:, \\$context = false} )"
+			"contents": "get_filesystem_method( ${1:\\$args = array()}${2:, \\$context = false}${3:, \\$allow_relaxed_file_ownership = false} )"
 		},
 		{
 			"trigger": "wp_filesystem",
-			"contents": "wp_filesystem( ${1:\\$args = false}${2:, \\$context = false} )"
+			"contents": "wp_filesystem( ${1:\\$args = false}${2:, \\$context = false}${3:, \\$allow_relaxed_file_ownership = false} )"
 		},
 		{
 			"trigger": "copy_dir",
