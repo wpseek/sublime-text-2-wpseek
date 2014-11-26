@@ -3382,6 +3382,10 @@
 			"contents": "fetch_rss( ${1:\\$url} )"
 		},
 		{
+			"trigger": "_wp_clear_update_cache",
+			"contents": "_wp_clear_update_cache()"
+		},
+		{
 			"trigger": "wp_schedule_update_checks",
 			"contents": "wp_schedule_update_checks()"
 		},
