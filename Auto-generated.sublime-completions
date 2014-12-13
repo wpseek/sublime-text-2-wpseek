@@ -1882,10 +1882,6 @@
 			"contents": "wp_cache_add( ${1:\\$key}${2:, \\$data}${3:, \\$group = ''}${4:, \\$expire = 0} )"
 		},
 		{
-			"trigger": "wp_is_trusted_network",
-			"contents": "wp_is_trusted_network()"
-		},
-		{
 			"trigger": "wp_get_sites",
 			"contents": "wp_get_sites( ${1:\\$args = array()} )"
 		},
@@ -2936,18 +2932,6 @@
 		{
 			"trigger": "get_term_link",
 			"contents": "get_term_link( ${1:\\$term}${2:, \\$taxonomy = ''} )"
-		},
-		{
-			"trigger": "_wp_check_split_terms_in_menus",
-			"contents": "_wp_check_split_terms_in_menus( ${1:\\$term_id}${2:, \\$new_term_id}${3:, \\$term_taxonomy_id}${4:, \\$taxonomy} )"
-		},
-		{
-			"trigger": "_wp_check_split_default_terms",
-			"contents": "_wp_check_split_default_terms( ${1:\\$term_id}${2:, \\$new_term_id}${3:, \\$term_taxonomy_id}${4:, \\$taxonomy} )"
-		},
-		{
-			"trigger": "_split_shared_term",
-			"contents": "_split_shared_term( ${1:\\$term_id}${2:, \\$term_taxonomy_id} )"
 		},
 		{
 			"trigger": "_update_generic_term_count",
@@ -6455,15 +6439,15 @@
 		},
 		{
 			"trigger": "_navigation_markup",
-			"contents": "_navigation_markup( ${1:\\$links}${2:, \\$class = 'paging-navigation'}${3:, \\$screen_reader_text = ''} )"
+			"contents": "_navigation_markup( ${1:\\$links}${2:, \\$class = 'posts-navigation'}${3:, \\$screen_reader_text = ''} )"
 		},
 		{
-			"trigger": "the_pagination",
-			"contents": "the_pagination( ${1:\\$args = array()} )"
+			"trigger": "the_posts_pagination",
+			"contents": "the_posts_pagination( ${1:\\$args = array()} )"
 		},
 		{
-			"trigger": "get_the_pagination",
-			"contents": "get_the_pagination( ${1:\\$args = array()} )"
+			"trigger": "get_the_posts_pagination",
+			"contents": "get_the_posts_pagination( ${1:\\$args = array()} )"
 		},
 		{
 			"trigger": "the_posts_navigation",
@@ -6895,7 +6879,7 @@
 		},
 		{
 			"trigger": "get_page_children",
-			"contents": "get_page_children( ${1:\\$page_id}${2:, \\$pages}${3:, \\$ancestors = true} )"
+			"contents": "get_page_children( ${1:\\$page_id}${2:, \\$pages} )"
 		},
 		{
 			"trigger": "get_page_by_title",
