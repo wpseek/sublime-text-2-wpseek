@@ -3366,8 +3366,8 @@
 			"contents": "fetch_rss( ${1:\\$url} )"
 		},
 		{
-			"trigger": "_wp_clear_update_cache",
-			"contents": "_wp_clear_update_cache()"
+			"trigger": "wp_clean_update_cache",
+			"contents": "wp_clean_update_cache()"
 		},
 		{
 			"trigger": "wp_schedule_update_checks",
@@ -3942,8 +3942,8 @@
 			"contents": "check_password_reset_key( ${1:\\$key}${2:, \\$login} )"
 		},
 		{
-			"trigger": "_wp_get_password_hint",
-			"contents": "_wp_get_password_hint()"
+			"trigger": "wp_get_password_hint",
+			"contents": "wp_get_password_hint()"
 		},
 		{
 			"trigger": "_wp_get_user_contactmethods",
