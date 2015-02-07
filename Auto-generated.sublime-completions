@@ -7288,7 +7288,7 @@
 		},
 		{
 			"trigger": "install_plugins_upload",
-			"contents": "install_plugins_upload( ${1:\\$page = 1} )"
+			"contents": "install_plugins_upload()"
 		},
 		{
 			"trigger": "install_search_form",
@@ -7937,6 +7937,14 @@
 		{
 			"trigger": "add_cssclass",
 			"contents": "add_cssclass( ${1:\\$add}${2:, \\$class} )"
+		},
+		{
+			"trigger": "wp_ajax_update_plugin",
+			"contents": "wp_ajax_update_plugin()"
+		},
+		{
+			"trigger": "wp_ajax_install_plugin",
+			"contents": "wp_ajax_install_plugin()"
 		},
 		{
 			"trigger": "wp_ajax_destroy_sessions",
@@ -8747,6 +8755,10 @@
 			"contents": "get_alloptions_110()"
 		},
 		{
+			"trigger": "maybe_convert_table_to_utf8mb4",
+			"contents": "maybe_convert_table_to_utf8mb4( ${1:\\$table} )"
+		},
+		{
 			"trigger": "maybe_add_column",
 			"contents": "maybe_add_column( ${1:\\$table_name}${2:, \\$column_name}${3:, \\$create_ddl} )"
 		},
@@ -8765,6 +8777,10 @@
 		{
 			"trigger": "upgrade_network",
 			"contents": "upgrade_network()"
+		},
+		{
+			"trigger": "upgrade_420",
+			"contents": "upgrade_420()"
 		},
 		{
 			"trigger": "upgrade_400",
