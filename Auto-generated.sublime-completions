@@ -2939,6 +2939,26 @@
 			"contents": "get_term_link( ${1:\\$term}${2:, \\$taxonomy = ''} )"
 		},
 		{
+			"trigger": "wp_get_split_term",
+			"contents": "wp_get_split_term( ${1:\\$old_term_id}${2:, \\$taxonomy} )"
+		},
+		{
+			"trigger": "wp_get_split_terms",
+			"contents": "wp_get_split_terms( ${1:\\$old_term_id} )"
+		},
+		{
+			"trigger": "_wp_check_split_terms_in_menus",
+			"contents": "_wp_check_split_terms_in_menus( ${1:\\$term_id}${2:, \\$new_term_id}${3:, \\$term_taxonomy_id}${4:, \\$taxonomy} )"
+		},
+		{
+			"trigger": "_wp_check_split_default_terms",
+			"contents": "_wp_check_split_default_terms( ${1:\\$term_id}${2:, \\$new_term_id}${3:, \\$term_taxonomy_id}${4:, \\$taxonomy} )"
+		},
+		{
+			"trigger": "_split_shared_term",
+			"contents": "_split_shared_term( ${1:\\$term_id}${2:, \\$term_taxonomy_id} )"
+		},
+		{
 			"trigger": "_update_generic_term_count",
 			"contents": "_update_generic_term_count( ${1:\\$terms}${2:, \\$taxonomy} )"
 		},
@@ -9164,7 +9184,7 @@
 		},
 		{
 			"trigger": "get_submit_button",
-			"contents": "get_submit_button( ${1:\\$text = null}${2:, \\$type = 'primary large'}${3:, \\$name = 'submit'}${4:, \\$wrap = true}${5:, \\$other_attributes = null} )"
+			"contents": "get_submit_button( ${1:\\$text = ''}${2:, \\$type = 'primary large'}${3:, \\$name = 'submit'}${4:, \\$wrap = true}${5:, \\$other_attributes = ''} )"
 		},
 		{
 			"trigger": "submit_button",
@@ -9188,7 +9208,7 @@
 		},
 		{
 			"trigger": "iframe_header",
-			"contents": "iframe_header( ${1:\\$title = ''}${2:, \\$limit_styles = false} )"
+			"contents": "iframe_header( ${1:\\$title = ''}${2:, \\$deprecated = false} )"
 		},
 		{
 			"trigger": "_admin_search_query",
@@ -9256,7 +9276,7 @@
 		},
 		{
 			"trigger": "wp_dropdown_roles",
-			"contents": "wp_dropdown_roles( ${1:\\$selected = false} )"
+			"contents": "wp_dropdown_roles( ${1:\\$selected = ''} )"
 		},
 		{
 			"trigger": "parent_dropdown",
@@ -9288,7 +9308,7 @@
 		},
 		{
 			"trigger": "wp_comment_reply",
-			"contents": "wp_comment_reply( ${1:\\$position = '1'}${2:, \\$checkbox = false}${3:, \\$mode = 'single'}${4:, \\$table_row = true} )"
+			"contents": "wp_comment_reply( ${1:\\$position = 1}${2:, \\$checkbox = false}${3:, \\$mode = 'single'}${4:, \\$table_row = true} )"
 		},
 		{
 			"trigger": "get_inline_data",
