@@ -1,3 +1,4 @@
+
 {
 	"scope": "source.php - variable.other.php\n",
 	"completions": [
@@ -7958,6 +7959,14 @@
 			"contents": "add_cssclass( ${1:\\$add}${2:, \\$class} )"
 		},
 		{
+			"trigger": "wp_ajax_press_this_add_category",
+			"contents": "wp_ajax_press_this_add_category()"
+		},
+		{
+			"trigger": "wp_ajax_press_this_save_post",
+			"contents": "wp_ajax_press_this_save_post()"
+		},
+		{
 			"trigger": "wp_ajax_update_plugin",
 			"contents": "wp_ajax_update_plugin()"
 		},
@@ -8376,6 +8385,10 @@
 		{
 			"trigger": "get_file_description",
 			"contents": "get_file_description( ${1:\\$file} )"
+		},
+		{
+			"trigger": "customize_themes_print_templates",
+			"contents": "customize_themes_print_templates()"
 		},
 		{
 			"trigger": "wp_prepare_themes_for_js",
@@ -9952,18 +9965,6 @@
 		{
 			"trigger": "wp_widgets_access_body_class",
 			"contents": "wp_widgets_access_body_class( ${1:\\$classes} )"
-		},
-		{
-			"trigger": "press_this_media_buttons",
-			"contents": "press_this_media_buttons()"
-		},
-		{
-			"trigger": "get_images_from_uri",
-			"contents": "get_images_from_uri( ${1:\\$uri} )"
-		},
-		{
-			"trigger": "press_it",
-			"contents": "press_it()"
 		},
 		{
 			"trigger": "options_reading_blog_charset",
