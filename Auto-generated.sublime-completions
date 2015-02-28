@@ -1,4 +1,3 @@
-
 {
 	"scope": "source.php - variable.other.php\n",
 	"completions": [
@@ -2483,6 +2482,10 @@
 			"contents": "wp_safe_redirect( ${1:\\$location}${2:, \\$status = 302} )"
 		},
 		{
+			"trigger": "_wp_sanitize_utf8_in_redirect",
+			"contents": "_wp_sanitize_utf8_in_redirect( ${1:\\$matches} )"
+		},
+		{
 			"trigger": "wp_sanitize_redirect",
 			"contents": "wp_sanitize_redirect( ${1:\\$location} )"
 		},
@@ -4113,6 +4116,10 @@
 		{
 			"trigger": "wp_signon",
 			"contents": "wp_signon( ${1:\\$credentials = array()}${2:, \\$secure_cookie = ''} )"
+		},
+		{
+			"trigger": "wp_delete_file",
+			"contents": "wp_delete_file( ${1:\\$file} )"
 		},
 		{
 			"trigger": "wp_validate_boolean",
@@ -9177,6 +9184,10 @@
 		{
 			"trigger": "wp_list_widgets",
 			"contents": "wp_list_widgets()"
+		},
+		{
+			"trigger": "_wp_posts_page_notice",
+			"contents": "_wp_posts_page_notice()"
 		},
 		{
 			"trigger": "wp_star_rating",
