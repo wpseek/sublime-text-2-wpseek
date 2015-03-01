@@ -16,7 +16,7 @@ The WPSeek.com SublimeText 2 / 3 WordPress Bundle is a [SublimeText](http://www.
 The easiest way to install this is with [Package Control](https://sublime.wbond.net/packages/Package%20Control).
 
  * If you just went and installed Package Control, you probably need to restart Sublime Text 2 before doing this next bit.
- * Bring up the Command Palette (Command+Shift+p on OS X, Control+Shift+P on Linux/Windows).
+ * Bring up the Command Palette (<kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> on OS X, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> on Linux/Windows).
  * Select "Package Control: Install Package" (it'll take a few seconds)
  * Type "wpseek" and select the package when the list appears.
 
