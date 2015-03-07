@@ -3795,7 +3795,7 @@
 		},
 		{
 			"trigger": "update_option",
-			"contents": "update_option( ${1:\\$option}${2:, \\$value} )"
+			"contents": "update_option( ${1:\\$option}${2:, \\$value}${3:, \\$autoload = null} )"
 		},
 		{
 			"trigger": "wp_load_core_site_options",
@@ -6883,7 +6883,11 @@
 		},
 		{
 			"trigger": "wp_attachment_is_image",
-			"contents": "wp_attachment_is_image( ${1:\\$post_id = 0} )"
+			"contents": "wp_attachment_is_image( ${1:\\$post = 0} )"
+		},
+		{
+			"trigger": "wp_attachment_is",
+			"contents": "wp_attachment_is( ${1:\\$type}${2:, \\$post_id = 0} )"
 		},
 		{
 			"trigger": "wp_get_attachment_thumb_url",
@@ -9500,6 +9504,10 @@
 		{
 			"trigger": "add_user",
 			"contents": "add_user()"
+		},
+		{
+			"trigger": "wp_media_attach_action",
+			"contents": "wp_media_attach_action( ${1:\\$parent_id}${2:, \\$action = 'attach'} )"
 		},
 		{
 			"trigger": "wp_read_audio_metadata",
