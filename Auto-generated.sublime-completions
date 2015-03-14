@@ -4714,6 +4714,22 @@
 			"contents": "wp_schedule_single_event( ${1:\\$timestamp}${2:, \\$hook}${3:, \\$args = array()} )"
 		},
 		{
+			"trigger": "mail_emoji",
+			"contents": "mail_emoji( ${1:\\$mail} )"
+		},
+		{
+			"trigger": "wp_staticize_emoji",
+			"contents": "wp_staticize_emoji( ${1:\\$text} )"
+		},
+		{
+			"trigger": "wp_encode_emoji",
+			"contents": "wp_encode_emoji( ${1:\\$content} )"
+		},
+		{
+			"trigger": "print_emoji_styles",
+			"contents": "print_emoji_styles()"
+		},
+		{
 			"trigger": "wp_spaces_regexp",
 			"contents": "wp_spaces_regexp()"
 		},
@@ -5512,6 +5528,10 @@
 		{
 			"trigger": "wp_styles",
 			"contents": "wp_styles()"
+		},
+		{
+			"trigger": "feed_emoji",
+			"contents": "feed_emoji( ${1:\\$content} )"
 		},
 		{
 			"trigger": "fetch_feed",
@@ -8532,6 +8552,10 @@
 		{
 			"trigger": "wp_dashboard_setup",
 			"contents": "wp_dashboard_setup()"
+		},
+		{
+			"trigger": "wp_admin_canonical_url",
+			"contents": "wp_admin_canonical_url()"
 		},
 		{
 			"trigger": "post_form_autocomplete_off",
