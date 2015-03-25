@@ -4726,6 +4726,10 @@
 			"contents": "wp_encode_emoji( ${1:\\$content} )"
 		},
 		{
+			"trigger": "print_emoji_detection_script",
+			"contents": "print_emoji_detection_script()"
+		},
+		{
 			"trigger": "print_emoji_styles",
 			"contents": "print_emoji_styles()"
 		},
