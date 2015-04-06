@@ -8006,10 +8006,6 @@
 			"contents": "wp_ajax_update_plugin()"
 		},
 		{
-			"trigger": "wp_ajax_install_plugin",
-			"contents": "wp_ajax_install_plugin()"
-		},
-		{
 			"trigger": "wp_ajax_destroy_sessions",
 			"contents": "wp_ajax_destroy_sessions()"
 		},
