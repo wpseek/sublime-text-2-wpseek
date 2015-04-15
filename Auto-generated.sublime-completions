@@ -6238,6 +6238,14 @@
 			"contents": "hash_hmac( ${1:\\$algo}${2:, \\$data}${3:, \\$key}${4:, \\$raw_output = false} )"
 		},
 		{
+			"trigger": "_mb_strlen",
+			"contents": "_mb_strlen( ${1:\\$str}${2:, \\$encoding = null} )"
+		},
+		{
+			"trigger": "mb_strlen",
+			"contents": "mb_strlen( ${1:\\$str}${2:, \\$encoding = null} )"
+		},
+		{
 			"trigger": "_mb_substr",
 			"contents": "_mb_substr( ${1:\\$str}${2:, \\$start}${3:, \\$length = null}${4:, \\$encoding = null} )"
 		},
