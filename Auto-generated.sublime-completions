@@ -4714,8 +4714,8 @@
 			"contents": "wp_schedule_single_event( ${1:\\$timestamp}${2:, \\$hook}${3:, \\$args = array()} )"
 		},
 		{
-			"trigger": "_wp_staticize_emoji_for_email",
-			"contents": "_wp_staticize_emoji_for_email( ${1:\\$mail} )"
+			"trigger": "wp_staticize_emoji_for_email",
+			"contents": "wp_staticize_emoji_for_email( ${1:\\$mail} )"
 		},
 		{
 			"trigger": "wp_staticize_emoji",
@@ -5532,10 +5532,6 @@
 		{
 			"trigger": "wp_styles",
 			"contents": "wp_styles()"
-		},
-		{
-			"trigger": "_wp_staticize_emoji_for_feeds",
-			"contents": "_wp_staticize_emoji_for_feeds( ${1:\\$content} )"
 		},
 		{
 			"trigger": "fetch_feed",
