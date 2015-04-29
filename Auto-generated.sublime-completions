@@ -1231,7 +1231,7 @@
 		},
 		{
 			"trigger": "add_rewrite_endpoint",
-			"contents": "add_rewrite_endpoint( ${1:\\$name}${2:, \\$places}${3:, \\$query_var = null} )"
+			"contents": "add_rewrite_endpoint( ${1:\\$name}${2:, \\$places}${3:, \\$query_var = true} )"
 		},
 		{
 			"trigger": "flush_rewrite_rules",
@@ -8852,6 +8852,10 @@
 		{
 			"trigger": "upgrade_network",
 			"contents": "upgrade_network()"
+		},
+		{
+			"trigger": "upgrade_430",
+			"contents": "upgrade_430()"
 		},
 		{
 			"trigger": "upgrade_420",
