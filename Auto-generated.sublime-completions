@@ -6250,6 +6250,10 @@
 			"contents": "mb_substr( ${1:\\$str}${2:, \\$start}${3:, \\$length = null}${4:, \\$encoding = null} )"
 		},
 		{
+			"trigger": "_wp_can_use_pcre_u",
+			"contents": "_wp_can_use_pcre_u( ${1:\\$set = null} )"
+		},
+		{
 			"trigger": "_",
 			"contents": "_( ${1:\\$string} )"
 		},
