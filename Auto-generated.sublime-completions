@@ -2515,7 +2515,7 @@
 		},
 		{
 			"trigger": "wp_set_auth_cookie",
-			"contents": "wp_set_auth_cookie( ${1:\\$user_id}${2:, \\$remember = false}${3:, \\$secure = ''} )"
+			"contents": "wp_set_auth_cookie( ${1:\\$user_id}${2:, \\$remember = false}${3:, \\$secure = ''}${4:, \\$token = ''} )"
 		},
 		{
 			"trigger": "wp_parse_auth_cookie",
@@ -7976,6 +7976,14 @@
 		{
 			"trigger": "add_link",
 			"contents": "add_link()"
+		},
+		{
+			"trigger": "_upgrade_422_find_genericons_files_in_folder",
+			"contents": "_upgrade_422_find_genericons_files_in_folder( ${1:\\$directory} )"
+		},
+		{
+			"trigger": "_upgrade_422_remove_genericons",
+			"contents": "_upgrade_422_remove_genericons()"
 		},
 		{
 			"trigger": "_redirect_to_about_wordpress",
