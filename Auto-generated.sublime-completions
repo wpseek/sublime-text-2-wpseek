@@ -4095,7 +4095,7 @@
 		},
 		{
 			"trigger": "count_user_posts",
-			"contents": "count_user_posts( ${1:\\$userid}${2:, \\$post_type = 'post'} )"
+			"contents": "count_user_posts( ${1:\\$userid}${2:, \\$post_type = 'post'}${3:, \\$public_only = false} )"
 		},
 		{
 			"trigger": "wp_validate_logged_in_cookie",
@@ -6188,6 +6188,10 @@
 		{
 			"trigger": "get_role",
 			"contents": "get_role( ${1:\\$role} )"
+		},
+		{
+			"trigger": "wp_roles",
+			"contents": "wp_roles()"
 		},
 		{
 			"trigger": "user_can",
