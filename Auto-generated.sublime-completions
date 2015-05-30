@@ -1226,6 +1226,10 @@
 			"contents": "url_to_postid( ${1:\\$url} )"
 		},
 		{
+			"trigger": "wp_resolve_numeric_slug_conflicts",
+			"contents": "wp_resolve_numeric_slug_conflicts( ${1:\\$query_vars = array()} )"
+		},
+		{
 			"trigger": "_wp_filter_taxonomy_base",
 			"contents": "_wp_filter_taxonomy_base( ${1:\\$base} )"
 		},
@@ -2939,7 +2943,7 @@
 		},
 		{
 			"trigger": "get_term_link",
-			"contents": "get_term_link( ${1:\\$term}${2:, \\$taxonomy = ''} )"
+			"contents": "get_term_link( ${1:\\$term}${2:, \\$taxonomy = ''}${3:, \\$field = null} )"
 		},
 		{
 			"trigger": "wp_get_split_term",
