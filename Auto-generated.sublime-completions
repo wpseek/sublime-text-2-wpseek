@@ -2963,7 +2963,7 @@
 		},
 		{
 			"trigger": "_split_shared_term",
-			"contents": "_split_shared_term( ${1:\\$term_id}${2:, \\$term_taxonomy_id} )"
+			"contents": "_split_shared_term( ${1:\\$term_id}${2:, \\$term_taxonomy_id}${3:, \\$record = true} )"
 		},
 		{
 			"trigger": "_update_generic_term_count",
@@ -4122,6 +4122,10 @@
 			"contents": "wp_signon( ${1:\\$credentials = array()}${2:, \\$secure_cookie = ''} )"
 		},
 		{
+			"trigger": "wp_post_preview_js",
+			"contents": "wp_post_preview_js()"
+		},
+		{
 			"trigger": "wp_delete_file",
 			"contents": "wp_delete_file( ${1:\\$file} )"
 		},
@@ -4252,6 +4256,10 @@
 		{
 			"trigger": "global_terms_enabled",
 			"contents": "global_terms_enabled()"
+		},
+		{
+			"trigger": "get_main_network_id",
+			"contents": "get_main_network_id()"
 		},
 		{
 			"trigger": "is_main_network",
@@ -5632,6 +5640,10 @@
 		{
 			"trigger": "get_wp_title_rss",
 			"contents": "get_wp_title_rss( ${1:\\$sep = '&#187;'} )"
+		},
+		{
+			"trigger": "get_last_build_date_feed",
+			"contents": "get_last_build_date_feed()"
 		},
 		{
 			"trigger": "get_default_feed",
@@ -8848,6 +8860,10 @@
 		{
 			"trigger": "get_alloptions_110",
 			"contents": "get_alloptions_110()"
+		},
+		{
+			"trigger": "split_all_shared_terms",
+			"contents": "split_all_shared_terms()"
 		},
 		{
 			"trigger": "maybe_convert_table_to_utf8mb4",
