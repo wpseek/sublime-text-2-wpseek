@@ -614,6 +614,14 @@
 			"contents": "redirect_canonical( ${1:\\$requested_url = null}${2:, \\$do_redirect = true} )"
 		},
 		{
+			"trigger": "wp_htmledit_pre",
+			"contents": "wp_htmledit_pre( ${1:\\$output} )"
+		},
+		{
+			"trigger": "wp_richedit_pre",
+			"contents": "wp_richedit_pre( ${1:\\$text} )"
+		},
+		{
 			"trigger": "url_is_accessable_via_ssl",
 			"contents": "url_is_accessable_via_ssl( ${1:\\$url} )"
 		},
@@ -4886,12 +4894,8 @@
 			"contents": "_deep_replace( ${1:\\$search}${2:, \\$subject} )"
 		},
 		{
-			"trigger": "wp_htmledit_pre",
-			"contents": "wp_htmledit_pre( ${1:\\$output} )"
-		},
-		{
-			"trigger": "wp_richedit_pre",
-			"contents": "wp_richedit_pre( ${1:\\$text} )"
+			"trigger": "format_for_editor",
+			"contents": "format_for_editor( ${1:\\$text}${2:, \\$default_editor = null} )"
 		},
 		{
 			"trigger": "ent2ncr",
@@ -5028,6 +5032,10 @@
 		{
 			"trigger": "balancetags",
 			"contents": "balancetags( ${1:\\$text}${2:, \\$force = false} )"
+		},
+		{
+			"trigger": "convert_invalid_entities",
+			"contents": "convert_invalid_entities( ${1:\\$content} )"
 		},
 		{
 			"trigger": "convert_chars",
