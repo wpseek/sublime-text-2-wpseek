@@ -150,6 +150,10 @@
 			"contents": "user_can_richedit()"
 		},
 		{
+			"trigger": "wp_site_icon",
+			"contents": "wp_site_icon()"
+		},
+		{
 			"trigger": "wp_no_robots",
 			"contents": "wp_no_robots()"
 		},
@@ -304,6 +308,18 @@
 		{
 			"trigger": "_wp_render_title_tag",
 			"contents": "_wp_render_title_tag()"
+		},
+		{
+			"trigger": "has_site_icon",
+			"contents": "has_site_icon( ${1:\\$blog_id = null} )"
+		},
+		{
+			"trigger": "site_icon_url",
+			"contents": "site_icon_url( ${1:\\$blog_id = null}${2:, \\$size = 512}${3:, \\$url = ''} )"
+		},
+		{
+			"trigger": "get_site_icon_url",
+			"contents": "get_site_icon_url( ${1:\\$blog_id = null}${2:, \\$size = 512}${3:, \\$url = ''} )"
 		},
 		{
 			"trigger": "get_bloginfo",
@@ -4338,6 +4354,10 @@
 			"contents": "_deprecated_file( ${1:\\$file}${2:, \\$version}${3:, \\$replacement = null}${4:, \\$message = ''} )"
 		},
 		{
+			"trigger": "_deprecated_constructor",
+			"contents": "_deprecated_constructor( ${1:\\$class}${2:, \\$version} )"
+		},
+		{
 			"trigger": "_deprecated_function",
 			"contents": "_deprecated_function( ${1:\\$function}${2:, \\$version}${3:, \\$replacement = null} )"
 		},
@@ -5576,6 +5596,14 @@
 		{
 			"trigger": "self_link",
 			"contents": "self_link()"
+		},
+		{
+			"trigger": "rss2_site_icon",
+			"contents": "rss2_site_icon()"
+		},
+		{
+			"trigger": "atom_site_icon",
+			"contents": "atom_site_icon()"
 		},
 		{
 			"trigger": "prep_atom_text_construct",
