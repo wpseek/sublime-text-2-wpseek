@@ -2902,6 +2902,10 @@
 			"contents": "get_lastcommentmodified( ${1:\\$timezone = 'server'} )"
 		},
 		{
+			"trigger": "get_default_comment_status",
+			"contents": "get_default_comment_status( ${1:\\$post_type = 'post'}${2:, \\$comment_type = 'comment'} )"
+		},
+		{
 			"trigger": "get_comment_statuses",
 			"contents": "get_comment_statuses()"
 		},
@@ -3300,6 +3304,10 @@
 		{
 			"trigger": "wp_admin_bar_my_sites_menu",
 			"contents": "wp_admin_bar_my_sites_menu( ${1:\\$wp_admin_bar} )"
+		},
+		{
+			"trigger": "wp_admin_bar_customize_menu",
+			"contents": "wp_admin_bar_customize_menu( ${1:\\$wp_admin_bar} )"
 		},
 		{
 			"trigger": "wp_admin_bar_site_menu",
@@ -7078,10 +7086,6 @@
 			"contents": "add_ping( ${1:\\$post_id}${2:, \\$uri} )"
 		},
 		{
-			"trigger": "get_default_comment_status",
-			"contents": "get_default_comment_status( ${1:\\$post_type = 'post'}${2:, \\$comment_type = 'comment'} )"
-		},
-		{
 			"trigger": "wp_transition_post_status",
 			"contents": "wp_transition_post_status( ${1:\\$new_status}${2:, \\$old_status}${3:, \\$post} )"
 		},
@@ -8080,6 +8084,10 @@
 		{
 			"trigger": "add_cssclass",
 			"contents": "add_cssclass( ${1:\\$add}${2:, \\$class} )"
+		},
+		{
+			"trigger": "wp_ajax_crop_image",
+			"contents": "wp_ajax_crop_image()"
 		},
 		{
 			"trigger": "wp_ajax_press_this_add_category",
