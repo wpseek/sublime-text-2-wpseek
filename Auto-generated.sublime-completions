@@ -2047,7 +2047,7 @@
 		},
 		{
 			"trigger": "recurse_dirsize",
-			"contents": "recurse_dirsize( ${1:\\$directory} )"
+			"contents": "recurse_dirsize( ${1:\\$directory}${2:, \\$exclude = null} )"
 		},
 		{
 			"trigger": "get_dirsize",
@@ -5134,6 +5134,10 @@
 			"contents": "_autop_newline_preservation_helper( ${1:\\$matches} )"
 		},
 		{
+			"trigger": "wp_replace_in_html_tags",
+			"contents": "wp_replace_in_html_tags( ${1:\\$haystack}${2:, \\$replace_pairs} )"
+		},
+		{
 			"trigger": "wpautop",
 			"contents": "wpautop( ${1:\\$pee}${2:, \\$br = true} )"
 		},
@@ -5698,10 +5702,6 @@
 			"contents": "get_wp_title_rss( ${1:\\$sep = '&#187;'} )"
 		},
 		{
-			"trigger": "get_last_build_date_feed",
-			"contents": "get_last_build_date_feed()"
-		},
-		{
 			"trigger": "get_default_feed",
 			"contents": "get_default_feed()"
 		},
@@ -5914,8 +5914,20 @@
 			"contents": "wp_kses_check_attr_val( ${1:\\$value}${2:, \\$vless}${3:, \\$checkname}${4:, \\$checkvalue} )"
 		},
 		{
+			"trigger": "wp_kses_hair_parse",
+			"contents": "wp_kses_hair_parse( ${1:\\$attr} )"
+		},
+		{
+			"trigger": "wp_kses_attr_parse",
+			"contents": "wp_kses_attr_parse( ${1:\\$element} )"
+		},
+		{
 			"trigger": "wp_kses_hair",
 			"contents": "wp_kses_hair( ${1:\\$attr}${2:, \\$allowed_protocols} )"
+		},
+		{
+			"trigger": "wp_kses_attr_check",
+			"contents": "wp_kses_attr_check( ${1:\\$name}${2:, \\$value}${3:, \\$whole}${4:, \\$vless}${5:, \\$element}${6:, \\$allowed_html} )"
 		},
 		{
 			"trigger": "wp_kses_attr",
@@ -5946,6 +5958,10 @@
 			"contents": "wp_kses_allowed_html( ${1:\\$context = ''} )"
 		},
 		{
+			"trigger": "wp_kses_one_attr",
+			"contents": "wp_kses_one_attr( ${1:\\$string}${2:, \\$element} )"
+		},
+		{
 			"trigger": "wp_kses",
 			"contents": "wp_kses( ${1:\\$string}${2:, \\$allowed_html}${3:, \\$allowed_protocols = array()} )"
 		},
@@ -5966,6 +5982,14 @@
 			"contents": "shortcode_parse_atts( ${1:\\$text} )"
 		},
 		{
+			"trigger": "unescape_invalid_shortcodes",
+			"contents": "unescape_invalid_shortcodes( ${1:\\$content} )"
+		},
+		{
+			"trigger": "do_shortcodes_in_html_tags",
+			"contents": "do_shortcodes_in_html_tags( ${1:\\$content}${2:, \\$ignore_html} )"
+		},
+		{
 			"trigger": "do_shortcode_tag",
 			"contents": "do_shortcode_tag( ${1:\\$m} )"
 		},
@@ -5975,7 +5999,7 @@
 		},
 		{
 			"trigger": "do_shortcode",
-			"contents": "do_shortcode( ${1:\\$content} )"
+			"contents": "do_shortcode( ${1:\\$content}${2:, \\$ignore_html = false} )"
 		},
 		{
 			"trigger": "has_shortcode",
