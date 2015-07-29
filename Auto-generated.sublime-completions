@@ -5138,6 +5138,10 @@
 			"contents": "wp_replace_in_html_tags( ${1:\\$haystack}${2:, \\$replace_pairs} )"
 		},
 		{
+			"trigger": "wp_html_split",
+			"contents": "wp_html_split( ${1:\\$input} )"
+		},
+		{
 			"trigger": "wpautop",
 			"contents": "wpautop( ${1:\\$pee}${2:, \\$br = true} )"
 		},
