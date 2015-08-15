@@ -311,15 +311,15 @@
 		},
 		{
 			"trigger": "has_site_icon",
-			"contents": "has_site_icon( ${1:\\$blog_id = null} )"
+			"contents": "has_site_icon( ${1:\\$blog_id = 0} )"
 		},
 		{
 			"trigger": "site_icon_url",
-			"contents": "site_icon_url( ${1:\\$blog_id = null}${2:, \\$size = 512}${3:, \\$url = ''} )"
+			"contents": "site_icon_url( ${1:\\$size = 512}${2:, \\$url = ''}${3:, \\$blog_id = 0} )"
 		},
 		{
 			"trigger": "get_site_icon_url",
-			"contents": "get_site_icon_url( ${1:\\$blog_id = null}${2:, \\$size = 512}${3:, \\$url = ''} )"
+			"contents": "get_site_icon_url( ${1:\\$size = 512}${2:, \\$url = ''}${3:, \\$blog_id = 0} )"
 		},
 		{
 			"trigger": "get_bloginfo",
@@ -636,6 +636,26 @@
 		{
 			"trigger": "wp_richedit_pre",
 			"contents": "wp_richedit_pre( ${1:\\$text} )"
+		},
+		{
+			"trigger": "preview_theme_ob_filter_callback",
+			"contents": "preview_theme_ob_filter_callback( ${1:\\$matches} )"
+		},
+		{
+			"trigger": "preview_theme_ob_filter",
+			"contents": "preview_theme_ob_filter( ${1:\\$content} )"
+		},
+		{
+			"trigger": "_preview_theme_stylesheet_filter",
+			"contents": "_preview_theme_stylesheet_filter()"
+		},
+		{
+			"trigger": "_preview_theme_template_filter",
+			"contents": "_preview_theme_template_filter()"
+		},
+		{
+			"trigger": "preview_theme",
+			"contents": "preview_theme()"
 		},
 		{
 			"trigger": "url_is_accessable_via_ssl",
@@ -2346,26 +2366,6 @@
 			"contents": "switch_theme( ${1:\\$stylesheet} )"
 		},
 		{
-			"trigger": "preview_theme_ob_filter_callback",
-			"contents": "preview_theme_ob_filter_callback( ${1:\\$matches} )"
-		},
-		{
-			"trigger": "preview_theme_ob_filter",
-			"contents": "preview_theme_ob_filter( ${1:\\$content} )"
-		},
-		{
-			"trigger": "_preview_theme_stylesheet_filter",
-			"contents": "_preview_theme_stylesheet_filter()"
-		},
-		{
-			"trigger": "_preview_theme_template_filter",
-			"contents": "_preview_theme_template_filter()"
-		},
-		{
-			"trigger": "preview_theme",
-			"contents": "preview_theme()"
-		},
-		{
 			"trigger": "locale_stylesheet",
 			"contents": "locale_stylesheet()"
 		},
@@ -2986,12 +2986,24 @@
 			"contents": "wp_get_split_terms( ${1:\\$old_term_id} )"
 		},
 		{
+			"trigger": "_wp_check_split_nav_menu_terms",
+			"contents": "_wp_check_split_nav_menu_terms( ${1:\\$term_id}${2:, \\$new_term_id}${3:, \\$term_taxonomy_id}${4:, \\$taxonomy} )"
+		},
+		{
 			"trigger": "_wp_check_split_terms_in_menus",
 			"contents": "_wp_check_split_terms_in_menus( ${1:\\$term_id}${2:, \\$new_term_id}${3:, \\$term_taxonomy_id}${4:, \\$taxonomy} )"
 		},
 		{
 			"trigger": "_wp_check_split_default_terms",
 			"contents": "_wp_check_split_default_terms( ${1:\\$term_id}${2:, \\$new_term_id}${3:, \\$term_taxonomy_id}${4:, \\$taxonomy} )"
+		},
+		{
+			"trigger": "_wp_check_for_scheduled_split_terms",
+			"contents": "_wp_check_for_scheduled_split_terms()"
+		},
+		{
+			"trigger": "_wp_batch_split_terms",
+			"contents": "_wp_batch_split_terms()"
 		},
 		{
 			"trigger": "_split_shared_term",
@@ -8952,10 +8964,6 @@
 		{
 			"trigger": "get_alloptions_110",
 			"contents": "get_alloptions_110()"
-		},
-		{
-			"trigger": "split_all_shared_terms",
-			"contents": "split_all_shared_terms()"
 		},
 		{
 			"trigger": "maybe_convert_table_to_utf8mb4",
