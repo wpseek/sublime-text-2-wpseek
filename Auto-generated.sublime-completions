@@ -3430,6 +3430,18 @@
 			"contents": "wp_http_supports( ${1:\\$capabilities = array()}${2:, \\$url = null} )"
 		},
 		{
+			"trigger": "wp_remote_retrieve_cookie_value",
+			"contents": "wp_remote_retrieve_cookie_value( ${1:\\$response}${2:, \\$name} )"
+		},
+		{
+			"trigger": "wp_remote_retrieve_cookie",
+			"contents": "wp_remote_retrieve_cookie( ${1:\\$response}${2:, \\$name} )"
+		},
+		{
+			"trigger": "wp_remote_retrieve_cookies",
+			"contents": "wp_remote_retrieve_cookies( ${1:\\$response} )"
+		},
+		{
 			"trigger": "wp_remote_retrieve_body",
 			"contents": "wp_remote_retrieve_body( ${1:\\$response} )"
 		},
@@ -5230,6 +5242,10 @@
 			"contents": "_wp_post_thumbnail_class_filter( ${1:\\$attr} )"
 		},
 		{
+			"trigger": "wp_get_attachment_image_url",
+			"contents": "wp_get_attachment_image_url( ${1:\\$attachment_id}${2:, \\$size = 'thumbnail'}${3:, \\$icon = false} )"
+		},
+		{
 			"trigger": "wp_get_attachment_image",
 			"contents": "wp_get_attachment_image( ${1:\\$attachment_id}${2:, \\$size = 'thumbnail'}${3:, \\$icon = false}${4:, \\$attr = ''} )"
 		},
@@ -6402,6 +6418,14 @@
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$func} )"
 		},
 		{
+			"trigger": "the_post_thumbnail_url",
+			"contents": "the_post_thumbnail_url( ${1:\\$size = 'post-thumbnail'} )"
+		},
+		{
+			"trigger": "get_the_post_thumbnail_url",
+			"contents": "get_the_post_thumbnail_url( ${1:\\$post = null}${2:, \\$size = 'post-thumbnail'} )"
+		},
+		{
 			"trigger": "get_the_post_thumbnail",
 			"contents": "get_the_post_thumbnail( ${1:\\$post = null}${2:, \\$size = 'post-thumbnail'}${3:, \\$attr = ''} )"
 		},
@@ -7124,6 +7148,22 @@
 		{
 			"trigger": "get_shortcut_link",
 			"contents": "get_shortcut_link()"
+		},
+		{
+			"trigger": "the_comments_pagination",
+			"contents": "the_comments_pagination( ${1:\\$args = array()} )"
+		},
+		{
+			"trigger": "get_the_comments_pagination",
+			"contents": "get_the_comments_pagination( ${1:\\$args = array()} )"
+		},
+		{
+			"trigger": "the_comments_navigation",
+			"contents": "the_comments_navigation( ${1:\\$args = array()} )"
+		},
+		{
+			"trigger": "get_the_comments_navigation",
+			"contents": "get_the_comments_navigation( ${1:\\$args = array()} )"
 		},
 		{
 			"trigger": "paginate_comments_links",
