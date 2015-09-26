@@ -2518,6 +2518,30 @@
 			"contents": "term_exists( ${1:\\$term}${2:, \\$taxonomy = ''}${3:, \\$parent = null} )"
 		},
 		{
+			"trigger": "wp_lazyload_term_meta",
+			"contents": "wp_lazyload_term_meta( ${1:\\$check}${2:, \\$term_id} )"
+		},
+		{
+			"trigger": "update_termmeta_cache",
+			"contents": "update_termmeta_cache( ${1:\\$term_ids} )"
+		},
+		{
+			"trigger": "update_term_meta",
+			"contents": "update_term_meta( ${1:\\$term_id}${2:, \\$meta_key}${3:, \\$meta_value}${4:, \\$prev_value = ''} )"
+		},
+		{
+			"trigger": "get_term_meta",
+			"contents": "get_term_meta( ${1:\\$term_id}${2:, \\$key = ''}${3:, \\$single = false} )"
+		},
+		{
+			"trigger": "delete_term_meta",
+			"contents": "delete_term_meta( ${1:\\$term_id}${2:, \\$meta_key}${3:, \\$meta_value = ''} )"
+		},
+		{
+			"trigger": "add_term_meta",
+			"contents": "add_term_meta( ${1:\\$term_id}${2:, \\$meta_key}${3:, \\$meta_value}${4:, \\$unique = false} )"
+		},
+		{
 			"trigger": "get_terms",
 			"contents": "get_terms( ${1:\\$taxonomies}${2:, \\$args = ''} )"
 		},
@@ -8899,7 +8923,7 @@
 		},
 		{
 			"trigger": "comment_exists",
-			"contents": "comment_exists( ${1:\\$comment_author}${2:, \\$comment_date} )"
+			"contents": "comment_exists( ${1:\\$comment_author}${2:, \\$comment_date}${3:, \\$timezone = 'blog'} )"
 		},
 		{
 			"trigger": "wp_get_popular_importers",
