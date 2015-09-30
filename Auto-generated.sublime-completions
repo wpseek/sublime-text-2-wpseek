@@ -630,6 +630,10 @@
 			"contents": "redirect_canonical( ${1:\\$requested_url = null}${2:, \\$do_redirect = true} )"
 		},
 		{
+			"trigger": "force_ssl_login",
+			"contents": "force_ssl_login( ${1:\\$force = null} )"
+		},
+		{
 			"trigger": "wp_get_http",
 			"contents": "wp_get_http( ${1:\\$url}${2:, \\$file_path = false}${3:, \\$red = 1} )"
 		},
@@ -1426,6 +1430,10 @@
 			"contents": "the_author_posts_link( ${1:\\$deprecated = ''} )"
 		},
 		{
+			"trigger": "get_the_author_posts_link",
+			"contents": "get_the_author_posts_link()"
+		},
+		{
 			"trigger": "the_author_posts",
 			"contents": "the_author_posts()"
 		},
@@ -2122,10 +2130,6 @@
 			"contents": "_close_comments_for_old_posts( ${1:\\$posts}${2:, \\$query} )"
 		},
 		{
-			"trigger": "wp_lazyload_comment_meta",
-			"contents": "wp_lazyload_comment_meta( ${1:\\$check}${2:, \\$comment_id} )"
-		},
-		{
 			"trigger": "_prime_comment_caches",
 			"contents": "_prime_comment_caches( ${1:\\$comment_ids}${2:, \\$update_meta_cache = true} )"
 		},
@@ -2518,10 +2522,6 @@
 			"contents": "term_exists( ${1:\\$term}${2:, \\$taxonomy = ''}${3:, \\$parent = null} )"
 		},
 		{
-			"trigger": "wp_lazyload_term_meta",
-			"contents": "wp_lazyload_term_meta( ${1:\\$check}${2:, \\$term_id} )"
-		},
-		{
 			"trigger": "update_termmeta_cache",
 			"contents": "update_termmeta_cache( ${1:\\$term_ids} )"
 		},
@@ -2559,7 +2559,7 @@
 		},
 		{
 			"trigger": "get_term_by",
-			"contents": "get_term_by( ${1:\\$field}${2:, \\$value}${3:, \\$taxonomy}${4:, \\$output = OBJECT}${5:, \\$filter = 'raw'} )"
+			"contents": "get_term_by( ${1:\\$field}${2:, \\$value}${3:, \\$taxonomy = ''}${4:, \\$output = OBJECT}${5:, \\$filter = 'raw'} )"
 		},
 		{
 			"trigger": "get_term",
@@ -4188,10 +4188,6 @@
 		{
 			"trigger": "force_ssl_admin",
 			"contents": "force_ssl_admin( ${1:\\$force = null} )"
-		},
-		{
-			"trigger": "force_ssl_login",
-			"contents": "force_ssl_login( ${1:\\$force = null} )"
 		},
 		{
 			"trigger": "is_ssl",
@@ -7571,7 +7567,7 @@
 		},
 		{
 			"trigger": "plugins_api",
-			"contents": "plugins_api( ${1:\\$action}${2:, \\$args = null} )"
+			"contents": "plugins_api( ${1:\\$action}${2:, \\$args = array()} )"
 		},
 		{
 			"trigger": "populate_network",
@@ -8663,7 +8659,7 @@
 		},
 		{
 			"trigger": "themes_api",
-			"contents": "themes_api( ${1:\\$action}${2:, \\$args = null} )"
+			"contents": "themes_api( ${1:\\$action}${2:, \\$args = array()} )"
 		},
 		{
 			"trigger": "get_theme_feature_list",
