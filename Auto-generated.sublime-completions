@@ -31,7 +31,7 @@
 		},
 		{
 			"trigger": "confirm_another_blog_signup",
-			"contents": "confirm_another_blog_signup( ${1:\\$domain}${2:, \\$path}${3:, \\$blog_title}${4:, \\$user_name}${5:, \\$user_email = ''}${6:, \\$meta = array()} )"
+			"contents": "confirm_another_blog_signup( ${1:\\$domain}${2:, \\$path}${3:, \\$blog_title}${4:, \\$user_name}${5:, \\$user_email = ''}${6:, \\$meta = array()}${7:, \\$blog_id = 0} )"
 		},
 		{
 			"trigger": "validate_another_blog_signup",
@@ -2086,10 +2086,6 @@
 			"contents": "get_blog_permalink( ${1:\\$blog_id}${2:, \\$post_id} )"
 		},
 		{
-			"trigger": "create_empty_blog",
-			"contents": "create_empty_blog( ${1:\\$domain}${2:, \\$path}${3:, \\$weblog_title}${4:, \\$site_id = 1} )"
-		},
-		{
 			"trigger": "remove_user_from_blog",
 			"contents": "remove_user_from_blog( ${1:\\$user_id}${2:, \\$blog_id = ''}${3:, \\$reassign = ''} )"
 		},
@@ -2112,10 +2108,6 @@
 		{
 			"trigger": "get_active_blog_for_user",
 			"contents": "get_active_blog_for_user( ${1:\\$user_id} )"
-		},
-		{
-			"trigger": "get_admin_users_for_domain",
-			"contents": "get_admin_users_for_domain( ${1:\\$sitedomain = ''}${2:, \\$path = ''} )"
 		},
 		{
 			"trigger": "get_sitestats",
@@ -3522,6 +3514,14 @@
 			"contents": "_wp_http_get_object()"
 		},
 		{
+			"trigger": "get_admin_users_for_domain",
+			"contents": "get_admin_users_for_domain( ${1:\\$sitedomain = ''}${2:, \\$path = ''} )"
+		},
+		{
+			"trigger": "create_empty_blog",
+			"contents": "create_empty_blog( ${1:\\$domain}${2:, \\$path}${3:, \\$weblog_title}${4:, \\$site_id = 1} )"
+		},
+		{
 			"trigger": "get_blogaddress_by_domain",
 			"contents": "get_blogaddress_by_domain( ${1:\\$domain}${2:, \\$path} )"
 		},
@@ -3806,6 +3806,22 @@
 			"contents": "delete_site_transient( ${1:\\$transient} )"
 		},
 		{
+			"trigger": "update_network_option",
+			"contents": "update_network_option( ${1:\\$option}${2:, \\$value}${3:, \\$network_id = false} )"
+		},
+		{
+			"trigger": "delete_network_option",
+			"contents": "delete_network_option( ${1:\\$option}${2:, \\$network_id = false} )"
+		},
+		{
+			"trigger": "add_network_option",
+			"contents": "add_network_option( ${1:\\$option}${2:, \\$value}${3:, \\$network_id = false} )"
+		},
+		{
+			"trigger": "get_network_option",
+			"contents": "get_network_option( ${1:\\$option}${2:, \\$default = false}${3:, \\$network_id = false} )"
+		},
+		{
 			"trigger": "update_site_option",
 			"contents": "update_site_option( ${1:\\$option}${2:, \\$value} )"
 		},
@@ -3819,7 +3835,7 @@
 		},
 		{
 			"trigger": "get_site_option",
-			"contents": "get_site_option( ${1:\\$option}${2:, \\$default = false}${3:, \\$use_cache = true} )"
+			"contents": "get_site_option( ${1:\\$option}${2:, \\$default = false}${3:, \\$deprecated = true} )"
 		},
 		{
 			"trigger": "delete_all_user_settings",
@@ -4911,7 +4927,7 @@
 		},
 		{
 			"trigger": "format_to_edit",
-			"contents": "format_to_edit( ${1:\\$content}${2:, \\$richedit = false} )"
+			"contents": "format_to_edit( ${1:\\$content}${2:, \\$rich_text = false} )"
 		},
 		{
 			"trigger": "force_balance_tags",
@@ -4996,6 +5012,18 @@
 		{
 			"trigger": "wp_replace_in_html_tags",
 			"contents": "wp_replace_in_html_tags( ${1:\\$haystack}${2:, \\$replace_pairs} )"
+		},
+		{
+			"trigger": "_get_wptexturize_shortcode_regex",
+			"contents": "_get_wptexturize_shortcode_regex( ${1:\\$tagnames} )"
+		},
+		{
+			"trigger": "_get_wptexturize_split_regex",
+			"contents": "_get_wptexturize_split_regex( ${1:\\$shortcode_regex = ''} )"
+		},
+		{
+			"trigger": "get_html_split_regex",
+			"contents": "get_html_split_regex()"
 		},
 		{
 			"trigger": "wp_html_split",
@@ -6403,7 +6431,7 @@
 		},
 		{
 			"trigger": "do_shortcodes_in_html_tags",
-			"contents": "do_shortcodes_in_html_tags( ${1:\\$content}${2:, \\$ignore_html} )"
+			"contents": "do_shortcodes_in_html_tags( ${1:\\$content}${2:, \\$ignore_html}${3:, \\$tagnames} )"
 		},
 		{
 			"trigger": "do_shortcode_tag",
@@ -6411,7 +6439,7 @@
 		},
 		{
 			"trigger": "get_shortcode_regex",
-			"contents": "get_shortcode_regex()"
+			"contents": "get_shortcode_regex( ${1:\\$tagnames = null} )"
 		},
 		{
 			"trigger": "do_shortcode",
