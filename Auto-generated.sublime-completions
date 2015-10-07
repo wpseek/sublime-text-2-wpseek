@@ -1858,6 +1858,10 @@
 			"contents": "wp_cache_add( ${1:\\$key}${2:, \\$data}${3:, \\$group = ''}${4:, \\$expire = 0} )"
 		},
 		{
+			"trigger": "get_subdirectory_reserved_names",
+			"contents": "get_subdirectory_reserved_names()"
+		},
+		{
 			"trigger": "wp_get_sites",
 			"contents": "wp_get_sites( ${1:\\$args = array()} )"
 		},
@@ -2112,6 +2116,10 @@
 		{
 			"trigger": "get_sitestats",
 			"contents": "get_sitestats()"
+		},
+		{
+			"trigger": "wp_handle_comment_submission",
+			"contents": "wp_handle_comment_submission( ${1:\\$comment_data} )"
 		},
 		{
 			"trigger": "_close_comments_for_old_post",
@@ -3006,6 +3014,10 @@
 			"contents": "wp_set_current_user( ${1:\\$id}${2:, \\$name = ''} )"
 		},
 		{
+			"trigger": "wp_installing",
+			"contents": "wp_installing( ${1:\\$is_installing = null} )"
+		},
+		{
 			"trigger": "wp_load_translations_early",
 			"contents": "wp_load_translations_early()"
 		},
@@ -3112,6 +3124,10 @@
 		{
 			"trigger": "wp_unregister_globals",
 			"contents": "wp_unregister_globals()"
+		},
+		{
+			"trigger": "wp_get_server_protocol",
+			"contents": "wp_get_server_protocol()"
 		},
 		{
 			"trigger": "wp_print_media_templates",
@@ -4040,6 +4056,10 @@
 		{
 			"trigger": "get_locale",
 			"contents": "get_locale()"
+		},
+		{
+			"trigger": "mysql_to_rfc3339",
+			"contents": "mysql_to_rfc3339( ${1:\\$date_string} )"
 		},
 		{
 			"trigger": "wp_post_preview_js",
@@ -5162,52 +5182,8 @@
 			"contents": "wp_convert_hr_to_bytes( ${1:\\$size} )"
 		},
 		{
-			"trigger": "wp_embed_handler_video",
-			"contents": "wp_embed_handler_video( ${1:\\$matches}${2:, \\$attr}${3:, \\$url}${4:, \\$rawattr} )"
-		},
-		{
-			"trigger": "wp_embed_handler_audio",
-			"contents": "wp_embed_handler_audio( ${1:\\$matches}${2:, \\$attr}${3:, \\$url}${4:, \\$rawattr} )"
-		},
-		{
-			"trigger": "wp_embed_handler_youtube",
-			"contents": "wp_embed_handler_youtube( ${1:\\$matches}${2:, \\$attr}${3:, \\$url}${4:, \\$rawattr} )"
-		},
-		{
-			"trigger": "wp_embed_handler_googlevideo",
-			"contents": "wp_embed_handler_googlevideo( ${1:\\$matches}${2:, \\$attr}${3:, \\$url}${4:, \\$rawattr} )"
-		},
-		{
-			"trigger": "wp_maybe_load_embeds",
-			"contents": "wp_maybe_load_embeds()"
-		},
-		{
-			"trigger": "wp_oembed_remove_provider",
-			"contents": "wp_oembed_remove_provider( ${1:\\$format} )"
-		},
-		{
-			"trigger": "wp_oembed_add_provider",
-			"contents": "wp_oembed_add_provider( ${1:\\$format}${2:, \\$provider}${3:, \\$regex = false} )"
-		},
-		{
-			"trigger": "wp_oembed_get",
-			"contents": "wp_oembed_get( ${1:\\$url}${2:, \\$args = ''} )"
-		},
-		{
 			"trigger": "wp_expand_dimensions",
 			"contents": "wp_expand_dimensions( ${1:\\$example_width}${2:, \\$example_height}${3:, \\$max_width}${4:, \\$max_height} )"
-		},
-		{
-			"trigger": "wp_embed_defaults",
-			"contents": "wp_embed_defaults( ${1:\\$url = ''} )"
-		},
-		{
-			"trigger": "wp_embed_unregister_handler",
-			"contents": "wp_embed_unregister_handler( ${1:\\$id}${2:, \\$priority = 10} )"
-		},
-		{
-			"trigger": "wp_embed_register_handler",
-			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
 		},
 		{
 			"trigger": "wp_imagecreatetruecolor",
@@ -5288,6 +5264,26 @@
 		{
 			"trigger": "_wp_post_thumbnail_class_filter",
 			"contents": "_wp_post_thumbnail_class_filter( ${1:\\$attr} )"
+		},
+		{
+			"trigger": "wp_img_add_srcset_and_sizes",
+			"contents": "wp_img_add_srcset_and_sizes( ${1:\\$image} )"
+		},
+		{
+			"trigger": "wp_make_content_images_responsive",
+			"contents": "wp_make_content_images_responsive( ${1:\\$content} )"
+		},
+		{
+			"trigger": "wp_get_attachment_image_sizes",
+			"contents": "wp_get_attachment_image_sizes( ${1:\\$attachment_id}${2:, \\$size = 'medium'}${3:, \\$args = null} )"
+		},
+		{
+			"trigger": "wp_get_attachment_image_srcset",
+			"contents": "wp_get_attachment_image_srcset( ${1:\\$attachment_id}${2:, \\$size = 'medium'} )"
+		},
+		{
+			"trigger": "wp_get_attachment_image_srcset_array",
+			"contents": "wp_get_attachment_image_srcset_array( ${1:\\$attachment_id}${2:, \\$size = 'medium'} )"
 		},
 		{
 			"trigger": "wp_get_attachment_image_url",
@@ -5504,6 +5500,50 @@
 		{
 			"trigger": "get_bloginfo_rss",
 			"contents": "get_bloginfo_rss( ${1:\\$show = ''} )"
+		},
+		{
+			"trigger": "wp_embed_handler_video",
+			"contents": "wp_embed_handler_video( ${1:\\$matches}${2:, \\$attr}${3:, \\$url}${4:, \\$rawattr} )"
+		},
+		{
+			"trigger": "wp_embed_handler_audio",
+			"contents": "wp_embed_handler_audio( ${1:\\$matches}${2:, \\$attr}${3:, \\$url}${4:, \\$rawattr} )"
+		},
+		{
+			"trigger": "wp_embed_handler_youtube",
+			"contents": "wp_embed_handler_youtube( ${1:\\$matches}${2:, \\$attr}${3:, \\$url}${4:, \\$rawattr} )"
+		},
+		{
+			"trigger": "wp_embed_handler_googlevideo",
+			"contents": "wp_embed_handler_googlevideo( ${1:\\$matches}${2:, \\$attr}${3:, \\$url}${4:, \\$rawattr} )"
+		},
+		{
+			"trigger": "wp_maybe_load_embeds",
+			"contents": "wp_maybe_load_embeds()"
+		},
+		{
+			"trigger": "wp_oembed_remove_provider",
+			"contents": "wp_oembed_remove_provider( ${1:\\$format} )"
+		},
+		{
+			"trigger": "wp_oembed_add_provider",
+			"contents": "wp_oembed_add_provider( ${1:\\$format}${2:, \\$provider}${3:, \\$regex = false} )"
+		},
+		{
+			"trigger": "wp_oembed_get",
+			"contents": "wp_oembed_get( ${1:\\$url}${2:, \\$args = ''} )"
+		},
+		{
+			"trigger": "wp_embed_defaults",
+			"contents": "wp_embed_defaults( ${1:\\$url = ''} )"
+		},
+		{
+			"trigger": "wp_embed_unregister_handler",
+			"contents": "wp_embed_unregister_handler( ${1:\\$id}${2:, \\$priority = 10} )"
+		},
+		{
+			"trigger": "wp_embed_register_handler",
+			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
 		},
 		{
 			"trigger": "wp_templating_constants",
@@ -6824,6 +6864,10 @@
 		{
 			"trigger": "_walk_bookmarks",
 			"contents": "_walk_bookmarks( ${1:\\$bookmarks}${2:, \\$args = ''} )"
+		},
+		{
+			"trigger": "json_last_error_msg",
+			"contents": "json_last_error_msg()"
 		},
 		{
 			"trigger": "hash_equals",
