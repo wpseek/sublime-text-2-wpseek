@@ -6,6 +6,10 @@
 			"contents": "_get_cron_lock()"
 		},
 		{
+			"trigger": "signup_get_available_languages",
+			"contents": "signup_get_available_languages()"
+		},
+		{
 			"trigger": "confirm_blog_signup",
 			"contents": "confirm_blog_signup( ${1:\\$domain}${2:, \\$path}${3:, \\$blog_title}${4:, \\$user_name = ''}${5:, \\$user_email = ''}${6:, \\$meta = array()} )"
 		},
@@ -2555,7 +2559,7 @@
 		},
 		{
 			"trigger": "get_term_field",
-			"contents": "get_term_field( ${1:\\$field}${2:, \\$term}${3:, \\$taxonomy}${4:, \\$context = 'display'} )"
+			"contents": "get_term_field( ${1:\\$field}${2:, \\$term}${3:, \\$taxonomy = ''}${4:, \\$context = 'display'} )"
 		},
 		{
 			"trigger": "get_term_children",
@@ -3242,6 +3246,10 @@
 			"contents": "wp_register_sidebar_widget( ${1:\\$id}${2:, \\$name}${3:, \\$output_callback}${4:, \\$options = array()} )"
 		},
 		{
+			"trigger": "is_registered_sidebar",
+			"contents": "is_registered_sidebar( ${1:\\$sidebar_id} )"
+		},
+		{
 			"trigger": "unregister_sidebar",
 			"contents": "unregister_sidebar( ${1:\\$name} )"
 		},
@@ -3827,19 +3835,19 @@
 		},
 		{
 			"trigger": "update_network_option",
-			"contents": "update_network_option( ${1:\\$option}${2:, \\$value}${3:, \\$network_id = false} )"
+			"contents": "update_network_option( ${1:\\$network_id}${2:, \\$option}${3:, \\$value} )"
 		},
 		{
 			"trigger": "delete_network_option",
-			"contents": "delete_network_option( ${1:\\$option}${2:, \\$network_id = false} )"
+			"contents": "delete_network_option( ${1:\\$network_id}${2:, \\$option} )"
 		},
 		{
 			"trigger": "add_network_option",
-			"contents": "add_network_option( ${1:\\$option}${2:, \\$value}${3:, \\$network_id = false} )"
+			"contents": "add_network_option( ${1:\\$network_id}${2:, \\$option}${3:, \\$value} )"
 		},
 		{
 			"trigger": "get_network_option",
-			"contents": "get_network_option( ${1:\\$option}${2:, \\$default = false}${3:, \\$network_id = false} )"
+			"contents": "get_network_option( ${1:\\$network_id}${2:, \\$option}${3:, \\$default = false} )"
 		},
 		{
 			"trigger": "update_site_option",
