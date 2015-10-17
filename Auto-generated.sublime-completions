@@ -5618,24 +5618,24 @@
 			"contents": "get_bloginfo_rss( ${1:\\$show = ''} )"
 		},
 		{
-			"trigger": "print_oembed_embed_scripts",
-			"contents": "print_oembed_embed_scripts()"
+			"trigger": "print_embed_scripts",
+			"contents": "print_embed_scripts()"
 		},
 		{
-			"trigger": "print_oembed_embed_styles",
-			"contents": "print_oembed_embed_styles()"
+			"trigger": "print_embed_styles",
+			"contents": "print_embed_styles()"
 		},
 		{
-			"trigger": "wp_oembed_excerpt_attachment",
-			"contents": "wp_oembed_excerpt_attachment( ${1:\\$content} )"
+			"trigger": "wp_embed_excerpt_attachment",
+			"contents": "wp_embed_excerpt_attachment( ${1:\\$content} )"
 		},
 		{
 			"trigger": "the_excerpt_embed",
 			"contents": "the_excerpt_embed()"
 		},
 		{
-			"trigger": "wp_oembed_excerpt_more",
-			"contents": "wp_oembed_excerpt_more( ${1:\\$more_string} )"
+			"trigger": "wp_embed_excerpt_more",
+			"contents": "wp_embed_excerpt_more( ${1:\\$more_string} )"
 		},
 		{
 			"trigger": "wp_filter_oembed_result",
