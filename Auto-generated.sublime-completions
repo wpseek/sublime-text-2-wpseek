@@ -2390,6 +2390,10 @@
 			"contents": "get_term_link( ${1:\\$term}${2:, \\$taxonomy = ''} )"
 		},
 		{
+			"trigger": "wp_term_is_shared",
+			"contents": "wp_term_is_shared( ${1:\\$term_id} )"
+		},
+		{
 			"trigger": "wp_get_split_term",
 			"contents": "wp_get_split_term( ${1:\\$old_term_id}${2:, \\$taxonomy} )"
 		},
@@ -4630,6 +4634,10 @@
 			"contents": "number_format_i18n( ${1:\\$number}${2:, \\$decimals = 0} )"
 		},
 		{
+			"trigger": "wp_maybe_decline_date",
+			"contents": "wp_maybe_decline_date( ${1:\\$date} )"
+		},
+		{
 			"trigger": "date_i18n",
 			"contents": "date_i18n( ${1:\\$dateformatstring}${2:, \\$unixtimestamp = false}${3:, \\$gmt = false} )"
 		},
@@ -5319,11 +5327,11 @@
 		},
 		{
 			"trigger": "wp_get_attachment_image_sizes",
-			"contents": "wp_get_attachment_image_sizes( ${1:\\$size}${2:, \\$image_meta = null}${3:, \\$attachment_id = 0} )"
+			"contents": "wp_get_attachment_image_sizes( ${1:\\$size}${2:, \\$image_meta = null}${3:, \\$attachment_id = 0}${4:, \\$image_src = null} )"
 		},
 		{
 			"trigger": "wp_calculate_image_srcset",
-			"contents": "wp_calculate_image_srcset( ${1:\\$image_name}${2:, \\$size_array}${3:, \\$image_meta}${4:, \\$attachment_id = 0} )"
+			"contents": "wp_calculate_image_srcset( ${1:\\$image_src}${2:, \\$size_array}${3:, \\$image_meta}${4:, \\$attachment_id = 0} )"
 		},
 		{
 			"trigger": "wp_get_attachment_image_srcset",
@@ -5699,11 +5707,11 @@
 		},
 		{
 			"trigger": "get_oembed_response_data",
-			"contents": "get_oembed_response_data( ${1:\\$post = null}${2:, \\$width} )"
+			"contents": "get_oembed_response_data( ${1:\\$post}${2:, \\$width} )"
 		},
 		{
 			"trigger": "get_post_embed_html",
-			"contents": "get_post_embed_html( ${1:\\$post = null}${2:, \\$width}${3:, \\$height} )"
+			"contents": "get_post_embed_html( ${1:\\$width}${2:, \\$height}${3:, \\$post = null} )"
 		},
 		{
 			"trigger": "get_oembed_endpoint_url",
@@ -8540,6 +8548,10 @@
 		{
 			"trigger": "add_cssclass",
 			"contents": "add_cssclass( ${1:\\$add}${2:, \\$class} )"
+		},
+		{
+			"trigger": "wp_ajax_save_wporg_username",
+			"contents": "wp_ajax_save_wporg_username()"
 		},
 		{
 			"trigger": "wp_ajax_generate_password",
