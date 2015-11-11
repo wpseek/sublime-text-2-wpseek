@@ -2750,6 +2750,14 @@
 			"contents": "_get_random_header_data()"
 		},
 		{
+			"trigger": "the_header_image_tag",
+			"contents": "the_header_image_tag( ${1:\\$attr = array()} )"
+		},
+		{
+			"trigger": "get_header_image_tag",
+			"contents": "get_header_image_tag( ${1:\\$attr = array()} )"
+		},
+		{
 			"trigger": "get_header_image",
 			"contents": "get_header_image()"
 		},
@@ -5326,12 +5334,16 @@
 			"contents": "wp_make_content_images_responsive( ${1:\\$content} )"
 		},
 		{
+			"trigger": "wp_calculate_image_sizes",
+			"contents": "wp_calculate_image_sizes( ${1:\\$size}${2:, \\$image_src}${3:, \\$image_meta}${4:, \\$attachment_id = 0} )"
+		},
+		{
 			"trigger": "wp_get_attachment_image_sizes",
-			"contents": "wp_get_attachment_image_sizes( ${1:\\$size}${2:, \\$image_meta = null}${3:, \\$attachment_id = 0}${4:, \\$image_src = null} )"
+			"contents": "wp_get_attachment_image_sizes( ${1:\\$attachment_id}${2:, \\$size = 'medium'}${3:, \\$image_meta = null} )"
 		},
 		{
 			"trigger": "wp_calculate_image_srcset",
-			"contents": "wp_calculate_image_srcset( ${1:\\$image_src}${2:, \\$size_array}${3:, \\$image_meta}${4:, \\$attachment_id = 0} )"
+			"contents": "wp_calculate_image_srcset( ${1:\\$size_array}${2:, \\$image_src}${3:, \\$image_meta}${4:, \\$attachment_id = 0} )"
 		},
 		{
 			"trigger": "wp_get_attachment_image_srcset",
@@ -8516,6 +8528,10 @@
 		{
 			"trigger": "add_link",
 			"contents": "add_link()"
+		},
+		{
+			"trigger": "_upgrade_440_force_deactivate_incompatible_plugins",
+			"contents": "_upgrade_440_force_deactivate_incompatible_plugins()"
 		},
 		{
 			"trigger": "_upgrade_422_find_genericons_files_in_folder",
