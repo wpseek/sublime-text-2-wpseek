@@ -630,6 +630,10 @@
 			"contents": "redirect_guess_404_permalink()"
 		},
 		{
+			"trigger": "strip_fragment_from_url",
+			"contents": "strip_fragment_from_url( ${1:\\$url} )"
+		},
+		{
 			"trigger": "_remove_qs_args_if_not_in_url",
 			"contents": "_remove_qs_args_if_not_in_url( ${1:\\$query_string}${2:, \\$args_to_check}${3:, \\$url} )"
 		},
@@ -4247,7 +4251,7 @@
 		},
 		{
 			"trigger": "wp_send_new_user_notifications",
-			"contents": "wp_send_new_user_notifications( ${1:\\$user_id} )"
+			"contents": "wp_send_new_user_notifications( ${1:\\$user_id}${2:, \\$notify = 'both'} )"
 		},
 		{
 			"trigger": "register_new_user",
