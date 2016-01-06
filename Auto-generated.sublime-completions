@@ -1270,6 +1270,10 @@
 			"contents": "upgrade_network()"
 		},
 		{
+			"trigger": "upgrade_450",
+			"contents": "upgrade_450()"
+		},
+		{
 			"trigger": "upgrade_440",
 			"contents": "upgrade_440()"
 		},
