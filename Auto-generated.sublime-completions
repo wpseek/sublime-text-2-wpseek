@@ -1179,7 +1179,7 @@
 		},
 		{
 			"trigger": "print_column_headers",
-			"contents": "print_column_headers( ${1:\\$screen}${2:, \\$id = true} )"
+			"contents": "print_column_headers( ${1:\\$screen}${2:, \\$with_id = true} )"
 		},
 		{
 			"trigger": "register_column_headers",
@@ -6606,8 +6606,16 @@
 			"contents": "add_feed( ${1:\\$feedname}${2:, \\$function} )"
 		},
 		{
+			"trigger": "remove_permastruct",
+			"contents": "remove_permastruct( ${1:\\$name} )"
+		},
+		{
 			"trigger": "add_permastruct",
 			"contents": "add_permastruct( ${1:\\$name}${2:, \\$struct}${3:, \\$args = array()} )"
+		},
+		{
+			"trigger": "remove_rewrite_tag",
+			"contents": "remove_rewrite_tag( ${1:\\$tag} )"
 		},
 		{
 			"trigger": "add_rewrite_tag",
