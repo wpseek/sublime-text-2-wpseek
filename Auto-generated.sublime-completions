@@ -4266,6 +4266,10 @@
 			"contents": "wp_get_original_referer()"
 		},
 		{
+			"trigger": "wp_get_raw_referer",
+			"contents": "wp_get_raw_referer()"
+		},
+		{
 			"trigger": "wp_get_referer",
 			"contents": "wp_get_referer()"
 		},
@@ -5952,6 +5956,10 @@
 		{
 			"trigger": "get_taxonomy_labels",
 			"contents": "get_taxonomy_labels( ${1:\\$tax} )"
+		},
+		{
+			"trigger": "unregister_taxonomy",
+			"contents": "unregister_taxonomy( ${1:\\$taxonomy} )"
 		},
 		{
 			"trigger": "register_taxonomy",
@@ -10340,6 +10348,10 @@
 		{
 			"trigger": "wp_blacklist_check",
 			"contents": "wp_blacklist_check( ${1:\\$author}${2:, \\$email}${3:, \\$url}${4:, \\$comment}${5:, \\$user_ip}${6:, \\$user_agent} )"
+		},
+		{
+			"trigger": "wp_get_comment_column_max_length",
+			"contents": "wp_get_comment_column_max_length( ${1:\\$column} )"
 		},
 		{
 			"trigger": "get_page_of_comment",
