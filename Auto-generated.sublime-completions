@@ -4603,7 +4603,7 @@
 		},
 		{
 			"trigger": "get_the_excerpt",
-			"contents": "get_the_excerpt( ${1:\\$deprecated = ''} )"
+			"contents": "get_the_excerpt( ${1:\\$post = null} )"
 		},
 		{
 			"trigger": "the_excerpt",
@@ -7870,6 +7870,10 @@
 			"contents": "get_userdatabylogin( ${1:\\$user_login} )"
 		},
 		{
+			"trigger": "get_currentuserinfo",
+			"contents": "get_currentuserinfo()"
+		},
+		{
 			"trigger": "set_current_user",
 			"contents": "set_current_user( ${1:\\$id}${2:, \\$name = ''} )"
 		},
@@ -8132,10 +8136,6 @@
 		{
 			"trigger": "get_userdata",
 			"contents": "get_userdata( ${1:\\$user_id} )"
-		},
-		{
-			"trigger": "get_currentuserinfo",
-			"contents": "get_currentuserinfo()"
 		},
 		{
 			"trigger": "wp_get_current_user",
@@ -9464,6 +9464,10 @@
 		{
 			"trigger": "get_post_type_capabilities",
 			"contents": "get_post_type_capabilities( ${1:\\$args} )"
+		},
+		{
+			"trigger": "unregister_post_type",
+			"contents": "unregister_post_type( ${1:\\$post_type} )"
 		},
 		{
 			"trigger": "register_post_type",
