@@ -5194,6 +5194,10 @@
 			"contents": "wp_filter_nohtml_kses( ${1:\\$data} )"
 		},
 		{
+			"trigger": "wp_kses_post_deep",
+			"contents": "wp_kses_post_deep( ${1:\\$data} )"
+		},
+		{
 			"trigger": "wp_kses_post",
 			"contents": "wp_kses_post( ${1:\\$data} )"
 		},
