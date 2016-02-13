@@ -9519,7 +9519,7 @@
 		},
 		{
 			"trigger": "get_post_field",
-			"contents": "get_post_field( ${1:\\$field}${2:, \\$post}${3:, \\$context = 'display'} )"
+			"contents": "get_post_field( ${1:\\$field}${2:, \\$post = null}${3:, \\$context = 'display'} )"
 		},
 		{
 			"trigger": "get_post_ancestors",
@@ -10354,8 +10354,8 @@
 			"contents": "wp_blacklist_check( ${1:\\$author}${2:, \\$email}${3:, \\$url}${4:, \\$comment}${5:, \\$user_ip}${6:, \\$user_agent} )"
 		},
 		{
-			"trigger": "wp_get_comment_column_max_length",
-			"contents": "wp_get_comment_column_max_length( ${1:\\$column} )"
+			"trigger": "wp_get_comment_fields_max_lengths",
+			"contents": "wp_get_comment_fields_max_lengths()"
 		},
 		{
 			"trigger": "get_page_of_comment",
