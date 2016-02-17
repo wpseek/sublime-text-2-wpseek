@@ -4015,7 +4015,7 @@
 		},
 		{
 			"trigger": "_deprecated_constructor",
-			"contents": "_deprecated_constructor( ${1:\\$class}${2:, \\$version} )"
+			"contents": "_deprecated_constructor( ${1:\\$class}${2:, \\$version}${3:, \\$parent_class = ''} )"
 		},
 		{
 			"trigger": "_deprecated_function",
@@ -4692,6 +4692,10 @@
 		{
 			"trigger": "rest_ensure_request",
 			"contents": "rest_ensure_request( ${1:\\$request} )"
+		},
+		{
+			"trigger": "rest_get_server",
+			"contents": "rest_get_server()"
 		},
 		{
 			"trigger": "rest_do_request",
