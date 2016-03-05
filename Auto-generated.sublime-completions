@@ -3226,16 +3226,16 @@
 			"contents": "wp_get_document_title()"
 		},
 		{
-			"trigger": "the_site_logo",
-			"contents": "the_site_logo( ${1:\\$blog_id = 0} )"
+			"trigger": "the_custom_logo",
+			"contents": "the_custom_logo( ${1:\\$blog_id = 0} )"
 		},
 		{
-			"trigger": "get_the_site_logo",
-			"contents": "get_the_site_logo( ${1:\\$blog_id = 0} )"
+			"trigger": "get_custom_logo",
+			"contents": "get_custom_logo( ${1:\\$blog_id = 0} )"
 		},
 		{
-			"trigger": "has_site_logo",
-			"contents": "has_site_logo( ${1:\\$blog_id = 0} )"
+			"trigger": "has_custom_logo",
+			"contents": "has_custom_logo( ${1:\\$blog_id = 0} )"
 		},
 		{
 			"trigger": "has_site_icon",
