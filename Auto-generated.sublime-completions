@@ -3650,6 +3650,10 @@
 			"contents": "get_singular_template()"
 		},
 		{
+			"trigger": "get_embed_template",
+			"contents": "get_embed_template()"
+		},
+		{
 			"trigger": "get_single_template",
 			"contents": "get_single_template()"
 		},
