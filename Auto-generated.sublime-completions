@@ -10062,6 +10062,10 @@
 			"contents": "get_theme_support( ${1:\\$feature} )"
 		},
 		{
+			"trigger": "_custom_logo_header_styles",
+			"contents": "_custom_logo_header_styles()"
+		},
+		{
 			"trigger": "_custom_header_background_just_in_time",
 			"contents": "_custom_header_background_just_in_time()"
 		},
