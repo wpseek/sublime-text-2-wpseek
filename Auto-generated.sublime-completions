@@ -819,7 +819,7 @@
 		},
 		{
 			"trigger": "get_image_send_to_editor",
-			"contents": "get_image_send_to_editor( ${1:\\$id}${2:, \\$caption}${3:, \\$title}${4:, \\$align}${5:, \\$url = ''}${6:, \\$rel = ''}${7:, \\$size = 'medium'}${8:, \\$alt = ''} )"
+			"contents": "get_image_send_to_editor( ${1:\\$id}${2:, \\$caption}${3:, \\$title}${4:, \\$align}${5:, \\$url = ''}${6:, \\$rel = false}${7:, \\$size = 'medium'}${8:, \\$alt = ''} )"
 		},
 		{
 			"trigger": "the_media_upload_tabs",
@@ -4160,6 +4160,10 @@
 		{
 			"trigger": "get_allowed_mime_types",
 			"contents": "get_allowed_mime_types( ${1:\\$user = null} )"
+		},
+		{
+			"trigger": "wp_get_ext_types",
+			"contents": "wp_get_ext_types()"
 		},
 		{
 			"trigger": "wp_get_mime_types",
