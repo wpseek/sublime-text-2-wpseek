@@ -1599,7 +1599,7 @@
 		},
 		{
 			"trigger": "get_link_to_edit",
-			"contents": "get_link_to_edit( ${1:\\$link_id} )"
+			"contents": "get_link_to_edit( ${1:\\$link} )"
 		},
 		{
 			"trigger": "wp_get_link_cats",
@@ -2036,14 +2036,6 @@
 		{
 			"trigger": "can_edit_network",
 			"contents": "can_edit_network( ${1:\\$site_id} )"
-		},
-		{
-			"trigger": "revoke_super_admin",
-			"contents": "revoke_super_admin( ${1:\\$user_id} )"
-		},
-		{
-			"trigger": "grant_super_admin",
-			"contents": "grant_super_admin( ${1:\\$user_id} )"
 		},
 		{
 			"trigger": "choose_primary_blog",
@@ -5126,18 +5118,6 @@
 			"contents": "wp_scripts()"
 		},
 		{
-			"trigger": "maybe_hash_hex_color",
-			"contents": "maybe_hash_hex_color( ${1:\\$color} )"
-		},
-		{
-			"trigger": "sanitize_hex_color_no_hash",
-			"contents": "sanitize_hex_color_no_hash( ${1:\\$color} )"
-		},
-		{
-			"trigger": "sanitize_hex_color",
-			"contents": "sanitize_hex_color( ${1:\\$color} )"
-		},
-		{
 			"trigger": "is_rtl",
 			"contents": "is_rtl()"
 		},
@@ -5496,6 +5476,14 @@
 		{
 			"trigger": "wp_nav_menu",
 			"contents": "wp_nav_menu( ${1:\\$args = array()} )"
+		},
+		{
+			"trigger": "revoke_super_admin",
+			"contents": "revoke_super_admin( ${1:\\$user_id} )"
+		},
+		{
+			"trigger": "grant_super_admin",
+			"contents": "grant_super_admin( ${1:\\$user_id} )"
 		},
 		{
 			"trigger": "is_super_admin",
@@ -6120,6 +6108,18 @@
 		{
 			"trigger": "ms_upload_constants",
 			"contents": "ms_upload_constants()"
+		},
+		{
+			"trigger": "maybe_hash_hex_color",
+			"contents": "maybe_hash_hex_color( ${1:\\$color} )"
+		},
+		{
+			"trigger": "sanitize_hex_color_no_hash",
+			"contents": "sanitize_hex_color_no_hash( ${1:\\$color} )"
+		},
+		{
+			"trigger": "sanitize_hex_color",
+			"contents": "sanitize_hex_color( ${1:\\$color} )"
 		},
 		{
 			"trigger": "url_shorten",
@@ -6803,11 +6803,11 @@
 		},
 		{
 			"trigger": "comment_author_url_link",
-			"contents": "comment_author_url_link( ${1:\\$linktext = ''}${2:, \\$before = ''}${3:, \\$after = ''} )"
+			"contents": "comment_author_url_link( ${1:\\$linktext = ''}${2:, \\$before = ''}${3:, \\$after = ''}${4:, \\$comment = 0} )"
 		},
 		{
 			"trigger": "get_comment_author_url_link",
-			"contents": "get_comment_author_url_link( ${1:\\$linktext = ''}${2:, \\$before = ''}${3:, \\$after = ''} )"
+			"contents": "get_comment_author_url_link( ${1:\\$linktext = ''}${2:, \\$before = ''}${3:, \\$after = ''}${4:, \\$comment = 0} )"
 		},
 		{
 			"trigger": "comment_author_url",
@@ -6835,11 +6835,11 @@
 		},
 		{
 			"trigger": "get_comment_author_email_link",
-			"contents": "get_comment_author_email_link( ${1:\\$linktext = ''}${2:, \\$before = ''}${3:, \\$after = ''} )"
+			"contents": "get_comment_author_email_link( ${1:\\$linktext = ''}${2:, \\$before = ''}${3:, \\$after = ''}${4:, \\$comment = null} )"
 		},
 		{
 			"trigger": "comment_author_email_link",
-			"contents": "comment_author_email_link( ${1:\\$linktext = ''}${2:, \\$before = ''}${3:, \\$after = ''} )"
+			"contents": "comment_author_email_link( ${1:\\$linktext = ''}${2:, \\$before = ''}${3:, \\$after = ''}${4:, \\$comment = null} )"
 		},
 		{
 			"trigger": "comment_author_email",
@@ -7776,6 +7776,10 @@
 		{
 			"trigger": "get_translations_for_domain",
 			"contents": "get_translations_for_domain( ${1:\\$domain} )"
+		},
+		{
+			"trigger": "_load_textdomain_just_in_time",
+			"contents": "_load_textdomain_just_in_time( ${1:\\$domain} )"
 		},
 		{
 			"trigger": "load_child_theme_textdomain",
@@ -9263,7 +9267,7 @@
 		},
 		{
 			"trigger": "get_page_uri",
-			"contents": "get_page_uri( ${1:\\$page} )"
+			"contents": "get_page_uri( ${1:\\$page = 0} )"
 		},
 		{
 			"trigger": "_page_traverse_name",
