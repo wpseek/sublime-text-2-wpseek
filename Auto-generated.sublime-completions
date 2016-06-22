@@ -862,6 +862,10 @@
 			"contents": "pclziputilpathreduction( ${1:\\$p_dir} )"
 		},
 		{
+			"trigger": "_wp_expand_nav_menu_post_data",
+			"contents": "_wp_expand_nav_menu_post_data()"
+		},
+		{
 			"trigger": "wp_nav_menu_update_menu_items",
 			"contents": "wp_nav_menu_update_menu_items( ${1:\\$nav_menu_selected_id}${2:, \\$nav_menu_selected_title} )"
 		},
@@ -9872,6 +9876,10 @@
 		{
 			"trigger": "__autoload",
 			"contents": "__autoload( ${1:\\$classname} )"
+		},
+		{
+			"trigger": "array_replace_recursive",
+			"contents": "array_replace_recursive( ${1:\\$base = array()}${2:, \\$replacements = array()} )"
 		},
 		{
 			"trigger": "json_last_error_msg",
