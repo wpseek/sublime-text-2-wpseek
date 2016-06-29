@@ -1274,6 +1274,10 @@
 			"contents": "upgrade_network()"
 		},
 		{
+			"trigger": "upgrade_460",
+			"contents": "upgrade_460()"
+		},
+		{
 			"trigger": "upgrade_450",
 			"contents": "upgrade_450()"
 		},
@@ -4070,6 +4074,10 @@
 			"contents": "_doing_it_wrong( ${1:\\$function}${2:, \\$message}${3:, \\$version} )"
 		},
 		{
+			"trigger": "_deprecated_hook",
+			"contents": "_deprecated_hook( ${1:\\$hook}${2:, \\$version}${3:, \\$replacement = null}${4:, \\$message = null} )"
+		},
+		{
 			"trigger": "_deprecated_argument",
 			"contents": "_deprecated_argument( ${1:\\$function}${2:, \\$version}${3:, \\$message = null} )"
 		},
@@ -5628,6 +5636,14 @@
 		{
 			"trigger": "plugin_basename",
 			"contents": "plugin_basename( ${1:\\$file} )"
+		},
+		{
+			"trigger": "do_action_deprecated",
+			"contents": "do_action_deprecated( ${1:\\$tag}${2:, \\$args}${3:, \\$version}${4:, \\$replacement = false}${5:, \\$message = null} )"
+		},
+		{
+			"trigger": "apply_filters_deprecated",
+			"contents": "apply_filters_deprecated( ${1:\\$tag}${2:, \\$args}${3:, \\$version}${4:, \\$replacement = false}${5:, \\$message = null} )"
 		},
 		{
 			"trigger": "remove_all_actions",
@@ -7444,6 +7460,26 @@
 		{
 			"trigger": "_update_blog_date_on_post_publish",
 			"contents": "_update_blog_date_on_post_publish( ${1:\\$new_status}${2:, \\$old_status}${3:, \\$post} )"
+		},
+		{
+			"trigger": "_prime_network_caches",
+			"contents": "_prime_network_caches( ${1:\\$network_ids} )"
+		},
+		{
+			"trigger": "update_network_cache",
+			"contents": "update_network_cache( ${1:\\$networks} )"
+		},
+		{
+			"trigger": "clean_network_cache",
+			"contents": "clean_network_cache( ${1:\\$ids} )"
+		},
+		{
+			"trigger": "get_network",
+			"contents": "get_network( ${1:\\$network = null} )"
+		},
+		{
+			"trigger": "get_networks",
+			"contents": "get_networks( ${1:\\$args = ''} )"
 		},
 		{
 			"trigger": "get_last_updated",
