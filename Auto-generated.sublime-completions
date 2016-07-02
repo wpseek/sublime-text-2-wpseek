@@ -3110,6 +3110,14 @@
 			"contents": "user_can_richedit()"
 		},
 		{
+			"trigger": "wp_resource_hints_scripts_styles",
+			"contents": "wp_resource_hints_scripts_styles()"
+		},
+		{
+			"trigger": "wp_resource_hints",
+			"contents": "wp_resource_hints()"
+		},
+		{
 			"trigger": "wp_site_icon",
 			"contents": "wp_site_icon()"
 		},
@@ -4474,12 +4482,32 @@
 			"contents": "mysql2date( ${1:\\$format}${2:, \\$date}${3:, \\$translate = true} )"
 		},
 		{
+			"trigger": "_wp_register_meta_args_whitelist",
+			"contents": "_wp_register_meta_args_whitelist( ${1:\\$args}${2:, \\$default_args} )"
+		},
+		{
+			"trigger": "get_registered_metadata",
+			"contents": "get_registered_metadata( ${1:\\$object_type}${2:, \\$object_subtype}${3:, \\$object_id}${4:, \\$meta_key = ''} )"
+		},
+		{
+			"trigger": "get_registered_meta_keys",
+			"contents": "get_registered_meta_keys( ${1:\\$object_type}${2:, \\$object_subtype = ''} )"
+		},
+		{
+			"trigger": "unregister_meta_key",
+			"contents": "unregister_meta_key( ${1:\\$object_type}${2:, \\$object_subtype}${3:, \\$meta_key} )"
+		},
+		{
+			"trigger": "registered_meta_key_exists",
+			"contents": "registered_meta_key_exists( ${1:\\$object_type}${2:, \\$object_subtype}${3:, \\$meta_key} )"
+		},
+		{
 			"trigger": "register_meta",
-			"contents": "register_meta( ${1:\\$meta_type}${2:, \\$meta_key}${3:, \\$sanitize_callback}${4:, \\$auth_callback = null} )"
+			"contents": "register_meta( ${1:\\$object_type}${2:, \\$meta_key}${3:, \\$args}${4:, \\$deprecated = null} )"
 		},
 		{
 			"trigger": "sanitize_meta",
-			"contents": "sanitize_meta( ${1:\\$meta_key}${2:, \\$meta_value}${3:, \\$meta_type} )"
+			"contents": "sanitize_meta( ${1:\\$meta_key}${2:, \\$meta_value}${3:, \\$object_type}${4:, \\$object_subtype = ''} )"
 		},
 		{
 			"trigger": "is_protected_meta",
@@ -6676,6 +6704,10 @@
 		{
 			"trigger": "wp_style_loader_src",
 			"contents": "wp_style_loader_src( ${1:\\$src}${2:, \\$handle} )"
+		},
+		{
+			"trigger": "wp_localize_jquery_ui_datepicker",
+			"contents": "wp_localize_jquery_ui_datepicker()"
 		},
 		{
 			"trigger": "wp_just_in_time_script_localization",
@@ -9374,6 +9406,10 @@
 			"contents": "wp_get_attachment_thumb_file( ${1:\\$post_id = 0} )"
 		},
 		{
+			"trigger": "wp_get_attachment_caption",
+			"contents": "wp_get_attachment_caption( ${1:\\$post_id = 0} )"
+		},
+		{
 			"trigger": "wp_get_attachment_url",
 			"contents": "wp_get_attachment_url( ${1:\\$post_id = 0} )"
 		},
@@ -10664,6 +10700,14 @@
 		{
 			"trigger": "check_comment",
 			"contents": "check_comment( ${1:\\$author}${2:, \\$email}${3:, \\$url}${4:, \\$comment}${5:, \\$user_ip}${6:, \\$user_agent}${7:, \\$comment_type} )"
+		},
+		{
+			"trigger": "the_post_thumbnail_caption",
+			"contents": "the_post_thumbnail_caption( ${1:\\$post = null} )"
+		},
+		{
+			"trigger": "get_the_post_thumbnail_caption",
+			"contents": "get_the_post_thumbnail_caption( ${1:\\$post = null} )"
 		},
 		{
 			"trigger": "the_post_thumbnail_url",
