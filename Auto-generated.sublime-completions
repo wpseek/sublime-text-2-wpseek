@@ -3894,6 +3894,14 @@
 			"contents": "wp_underscore_audio_template()"
 		},
 		{
+			"trigger": "wp_raise_memory_limit",
+			"contents": "wp_raise_memory_limit( ${1:\\$context = 'admin'} )"
+		},
+		{
+			"trigger": "wp_object_type_exists",
+			"contents": "wp_object_type_exists( ${1:\\$object_type} )"
+		},
+		{
 			"trigger": "mysql_to_rfc3339",
 			"contents": "mysql_to_rfc3339( ${1:\\$date_string} )"
 		},
@@ -4980,10 +4988,6 @@
 		{
 			"trigger": "wp_max_upload_size",
 			"contents": "wp_max_upload_size()"
-		},
-		{
-			"trigger": "wp_convert_hr_to_bytes",
-			"contents": "wp_convert_hr_to_bytes( ${1:\\$size} )"
 		},
 		{
 			"trigger": "wp_expand_dimensions",
@@ -6088,6 +6092,14 @@
 		{
 			"trigger": "create_initial_taxonomies",
 			"contents": "create_initial_taxonomies()"
+		},
+		{
+			"trigger": "wp_is_ini_value_changeable",
+			"contents": "wp_is_ini_value_changeable( ${1:\\$setting} )"
+		},
+		{
+			"trigger": "wp_convert_hr_to_bytes",
+			"contents": "wp_convert_hr_to_bytes( ${1:\\$value} )"
 		},
 		{
 			"trigger": "is_ssl",
