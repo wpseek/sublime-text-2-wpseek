@@ -3110,8 +3110,8 @@
 			"contents": "user_can_richedit()"
 		},
 		{
-			"trigger": "wp_resource_hints_scripts_styles",
-			"contents": "wp_resource_hints_scripts_styles()"
+			"trigger": "wp_dependencies_unique_hosts",
+			"contents": "wp_dependencies_unique_hosts()"
 		},
 		{
 			"trigger": "wp_resource_hints",
@@ -3898,10 +3898,6 @@
 			"contents": "wp_raise_memory_limit( ${1:\\$context = 'admin'} )"
 		},
 		{
-			"trigger": "wp_object_type_exists",
-			"contents": "wp_object_type_exists( ${1:\\$object_type} )"
-		},
-		{
 			"trigger": "mysql_to_rfc3339",
 			"contents": "mysql_to_rfc3339( ${1:\\$date_string} )"
 		},
@@ -4495,19 +4491,19 @@
 		},
 		{
 			"trigger": "get_registered_metadata",
-			"contents": "get_registered_metadata( ${1:\\$object_type}${2:, \\$object_subtype}${3:, \\$object_id}${4:, \\$meta_key = ''} )"
+			"contents": "get_registered_metadata( ${1:\\$object_type}${2:, \\$object_id}${3:, \\$meta_key = ''} )"
 		},
 		{
 			"trigger": "get_registered_meta_keys",
-			"contents": "get_registered_meta_keys( ${1:\\$object_type}${2:, \\$object_subtype = ''} )"
+			"contents": "get_registered_meta_keys( ${1:\\$object_type} )"
 		},
 		{
 			"trigger": "unregister_meta_key",
-			"contents": "unregister_meta_key( ${1:\\$object_type}${2:, \\$object_subtype}${3:, \\$meta_key} )"
+			"contents": "unregister_meta_key( ${1:\\$object_type}${2:, \\$meta_key} )"
 		},
 		{
 			"trigger": "registered_meta_key_exists",
-			"contents": "registered_meta_key_exists( ${1:\\$object_type}${2:, \\$object_subtype}${3:, \\$meta_key} )"
+			"contents": "registered_meta_key_exists( ${1:\\$object_type}${2:, \\$meta_key} )"
 		},
 		{
 			"trigger": "register_meta",
@@ -4515,7 +4511,7 @@
 		},
 		{
 			"trigger": "sanitize_meta",
-			"contents": "sanitize_meta( ${1:\\$meta_key}${2:, \\$meta_value}${3:, \\$object_type}${4:, \\$object_subtype = ''} )"
+			"contents": "sanitize_meta( ${1:\\$meta_key}${2:, \\$meta_value}${3:, \\$object_type} )"
 		},
 		{
 			"trigger": "is_protected_meta",
@@ -5124,6 +5120,10 @@
 		{
 			"trigger": "image_get_intermediate_size",
 			"contents": "image_get_intermediate_size( ${1:\\$post_id}${2:, \\$size = 'thumbnail'} )"
+		},
+		{
+			"trigger": "wp_image_matches_ratio",
+			"contents": "wp_image_matches_ratio( ${1:\\$source_width}${2:, \\$source_height}${3:, \\$target_width}${4:, \\$target_height} )"
 		},
 		{
 			"trigger": "image_make_intermediate_size",
@@ -7523,7 +7523,7 @@
 		},
 		{
 			"trigger": "get_networks",
-			"contents": "get_networks( ${1:\\$args = ''} )"
+			"contents": "get_networks( ${1:\\$args = array()} )"
 		},
 		{
 			"trigger": "get_last_updated",
@@ -9403,11 +9403,11 @@
 		},
 		{
 			"trigger": "wp_attachment_is_image",
-			"contents": "wp_attachment_is_image( ${1:\\$post = 0} )"
+			"contents": "wp_attachment_is_image( ${1:\\$post = null} )"
 		},
 		{
 			"trigger": "wp_attachment_is",
-			"contents": "wp_attachment_is( ${1:\\$type}${2:, \\$post_id = 0} )"
+			"contents": "wp_attachment_is( ${1:\\$type}${2:, \\$post = null} )"
 		},
 		{
 			"trigger": "wp_get_attachment_thumb_url",
