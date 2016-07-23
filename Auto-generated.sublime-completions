@@ -575,11 +575,11 @@
 		},
 		{
 			"trigger": "request_filesystem_credentials",
-			"contents": "request_filesystem_credentials( ${1:\\$form_post}${2:, \\$type = ''}${3:, \\$error = false}${4:, \\$context = false}${5:, \\$extra_fields = null}${6:, \\$allow_relaxed_file_ownership = false} )"
+			"contents": "request_filesystem_credentials( ${1:\\$form_post}${2:, \\$type = ''}${3:, \\$error = false}${4:, \\$context = ''}${5:, \\$extra_fields = null}${6:, \\$allow_relaxed_file_ownership = false} )"
 		},
 		{
 			"trigger": "get_filesystem_method",
-			"contents": "get_filesystem_method( ${1:\\$args = array()}${2:, \\$context = false}${3:, \\$allow_relaxed_file_ownership = false} )"
+			"contents": "get_filesystem_method( ${1:\\$args = array()}${2:, \\$context = ''}${3:, \\$allow_relaxed_file_ownership = false} )"
 		},
 		{
 			"trigger": "wp_filesystem",
@@ -891,11 +891,11 @@
 		},
 		{
 			"trigger": "wp_nav_menu_item_taxonomy_meta_box",
-			"contents": "wp_nav_menu_item_taxonomy_meta_box( ${1:\\$object}${2:, \\$taxonomy} )"
+			"contents": "wp_nav_menu_item_taxonomy_meta_box( ${1:\\$object}${2:, \\$box} )"
 		},
 		{
 			"trigger": "wp_nav_menu_item_post_type_meta_box",
-			"contents": "wp_nav_menu_item_post_type_meta_box( ${1:\\$object}${2:, \\$post_type} )"
+			"contents": "wp_nav_menu_item_post_type_meta_box( ${1:\\$object}${2:, \\$box} )"
 		},
 		{
 			"trigger": "wp_nav_menu_item_link_meta_box",
@@ -1755,7 +1755,7 @@
 		},
 		{
 			"trigger": "install_search_form",
-			"contents": "install_search_form( ${1:\\$type_selector = true} )"
+			"contents": "install_search_form( ${1:\\$deprecated = true} )"
 		},
 		{
 			"trigger": "install_dashboard",
@@ -2436,6 +2436,10 @@
 		{
 			"trigger": "wp_ajax_set_attachment_thumbnail",
 			"contents": "wp_ajax_set_attachment_thumbnail()"
+		},
+		{
+			"trigger": "wp_ajax_get_post_thumbnail_html",
+			"contents": "wp_ajax_get_post_thumbnail_html()"
 		},
 		{
 			"trigger": "wp_ajax_set_post_thumbnail",
@@ -7844,6 +7848,10 @@
 		{
 			"trigger": "_wp_get_post_revision_version",
 			"contents": "_wp_get_post_revision_version( ${1:\\$revision} )"
+		},
+		{
+			"trigger": "_wp_preview_post_thumbnail_filter",
+			"contents": "_wp_preview_post_thumbnail_filter( ${1:\\$value}${2:, \\$post_id}${3:, \\$meta_key} )"
 		},
 		{
 			"trigger": "_wp_preview_terms_filter",
