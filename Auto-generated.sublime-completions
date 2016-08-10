@@ -78,6 +78,10 @@
 			"contents": "list_core_update( ${1:\\$update} )"
 		},
 		{
+			"trigger": "_wp_override_admin_video_width_limit",
+			"contents": "_wp_override_admin_video_width_limit( ${1:\\$output} )"
+		},
+		{
 			"trigger": "check_column",
 			"contents": "check_column( ${1:\\$table_name}${2:, \\$col_name}${3:, \\$col_type}${4:, \\$is_null = null}${5:, \\$key = null}${6:, \\$default = null}${7:, \\$extra = null} )"
 		},
@@ -2300,10 +2304,6 @@
 		{
 			"trigger": "wp_list_widgets",
 			"contents": "wp_list_widgets()"
-		},
-		{
-			"trigger": "wp_ajax_test_url",
-			"contents": "wp_ajax_test_url()"
 		},
 		{
 			"trigger": "wp_ajax_search_install_plugins",
@@ -5635,7 +5635,7 @@
 		},
 		{
 			"trigger": "_backup_plugin_globals",
-			"contents": "_backup_plugin_globals()"
+			"contents": "_backup_plugin_globals( ${1:\\$backup = true} )"
 		},
 		{
 			"trigger": "_wp_filter_build_unique_id",
