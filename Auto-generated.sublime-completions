@@ -5003,7 +5003,7 @@
 		},
 		{
 			"trigger": "get_attachment_taxonomies",
-			"contents": "get_attachment_taxonomies( ${1:\\$attachment} )"
+			"contents": "get_attachment_taxonomies( ${1:\\$attachment}${2:, \\$output = 'names'} )"
 		},
 		{
 			"trigger": "adjacent_image_link",
@@ -5172,6 +5172,10 @@
 		{
 			"trigger": "image_constrain_size_for_editor",
 			"contents": "image_constrain_size_for_editor( ${1:\\$width}${2:, \\$height}${3:, \\$size = 'medium'}${4:, \\$context = null} )"
+		},
+		{
+			"trigger": "wp_get_additional_image_sizes",
+			"contents": "wp_get_additional_image_sizes()"
 		},
 		{
 			"trigger": "wp_script_add_data",
@@ -5628,14 +5632,6 @@
 		{
 			"trigger": "map_meta_cap",
 			"contents": "map_meta_cap( ${1:\\$cap}${2:, \\$user_id} )"
-		},
-		{
-			"trigger": "_restore_plugin_globals",
-			"contents": "_restore_plugin_globals()"
-		},
-		{
-			"trigger": "_backup_plugin_globals",
-			"contents": "_backup_plugin_globals( ${1:\\$backup = true} )"
 		},
 		{
 			"trigger": "_wp_filter_build_unique_id",
@@ -6096,6 +6092,10 @@
 		{
 			"trigger": "create_initial_taxonomies",
 			"contents": "create_initial_taxonomies()"
+		},
+		{
+			"trigger": "wp_doing_ajax",
+			"contents": "wp_doing_ajax()"
 		},
 		{
 			"trigger": "wp_is_ini_value_changeable",
