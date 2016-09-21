@@ -958,12 +958,16 @@
 			"contents": "option_update_filter( ${1:\\$options} )"
 		},
 		{
+			"trigger": "get_registered_settings",
+			"contents": "get_registered_settings()"
+		},
+		{
 			"trigger": "unregister_setting",
-			"contents": "unregister_setting( ${1:\\$option_group}${2:, \\$option_name}${3:, \\$sanitize_callback = ''} )"
+			"contents": "unregister_setting( ${1:\\$option_group}${2:, \\$option_name}${3:, \\$deprecated = ''} )"
 		},
 		{
 			"trigger": "register_setting",
-			"contents": "register_setting( ${1:\\$option_group}${2:, \\$option_name}${3:, \\$sanitize_callback = ''} )"
+			"contents": "register_setting( ${1:\\$option_group}${2:, \\$option_name}${3:, \\$args = array()} )"
 		},
 		{
 			"trigger": "user_can_access_admin_page",
@@ -2184,6 +2188,10 @@
 		{
 			"trigger": "wp_edit_attachments_query",
 			"contents": "wp_edit_attachments_query( ${1:\\$q = false} )"
+		},
+		{
+			"trigger": "_filter_query_attachment_filenames",
+			"contents": "_filter_query_attachment_filenames( ${1:\\$clauses} )"
 		},
 		{
 			"trigger": "wp_edit_attachments_query_vars",
@@ -6094,10 +6102,6 @@
 			"contents": "create_initial_taxonomies()"
 		},
 		{
-			"trigger": "get_current_site",
-			"contents": "get_current_site()"
-		},
-		{
 			"trigger": "is_wp_error",
 			"contents": "is_wp_error( ${1:\\$thing} )"
 		},
@@ -9216,6 +9220,10 @@
 		{
 			"trigger": "get_most_recent_post_of_user",
 			"contents": "get_most_recent_post_of_user( ${1:\\$user_id} )"
+		},
+		{
+			"trigger": "get_current_site",
+			"contents": "get_current_site()"
 		},
 		{
 			"trigger": "wpmu_welcome_user_notification",
