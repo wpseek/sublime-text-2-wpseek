@@ -958,18 +958,6 @@
 			"contents": "option_update_filter( ${1:\\$options} )"
 		},
 		{
-			"trigger": "get_registered_settings",
-			"contents": "get_registered_settings()"
-		},
-		{
-			"trigger": "unregister_setting",
-			"contents": "unregister_setting( ${1:\\$option_group}${2:, \\$option_name}${3:, \\$deprecated = ''} )"
-		},
-		{
-			"trigger": "register_setting",
-			"contents": "register_setting( ${1:\\$option_group}${2:, \\$option_name}${3:, \\$args = array()} )"
-		},
-		{
 			"trigger": "user_can_access_admin_page",
 			"contents": "user_can_access_admin_page()"
 		},
@@ -3794,8 +3782,16 @@
 			"contents": "get_query_template( ${1:\\$type}${2:, \\$templates = array()} )"
 		},
 		{
+			"trigger": "_wp_translate_php_url_constant_to_key",
+			"contents": "_wp_translate_php_url_constant_to_key( ${1:\\$constant} )"
+		},
+		{
+			"trigger": "_get_component_from_parsed_url_array",
+			"contents": "_get_component_from_parsed_url_array( ${1:\\$url_parts}${2:, \\$component = -1} )"
+		},
+		{
 			"trigger": "wp_parse_url",
-			"contents": "wp_parse_url( ${1:\\$url} )"
+			"contents": "wp_parse_url( ${1:\\$url}${2:, \\$component = -1} )"
 		},
 		{
 			"trigger": "ms_allowed_http_request_hosts",
@@ -8102,6 +8098,10 @@
 			"contents": "translate( ${1:\\$text}${2:, \\$domain = 'default'} )"
 		},
 		{
+			"trigger": "get_user_locale",
+			"contents": "get_user_locale()"
+		},
+		{
 			"trigger": "get_locale",
 			"contents": "get_locale()"
 		},
@@ -8136,6 +8136,18 @@
 		{
 			"trigger": "set_current_user",
 			"contents": "set_current_user( ${1:\\$id}${2:, \\$name = ''} )"
+		},
+		{
+			"trigger": "get_registered_settings",
+			"contents": "get_registered_settings()"
+		},
+		{
+			"trigger": "unregister_setting",
+			"contents": "unregister_setting( ${1:\\$option_group}${2:, \\$option_name}${3:, \\$deprecated = ''} )"
+		},
+		{
+			"trigger": "register_setting",
+			"contents": "register_setting( ${1:\\$option_group}${2:, \\$option_name}${3:, \\$args = array()} )"
 		},
 		{
 			"trigger": "set_site_transient",
