@@ -3902,6 +3902,10 @@
 			"contents": "wp_underscore_audio_template()"
 		},
 		{
+			"trigger": "wp_generate_uuid4",
+			"contents": "wp_generate_uuid4()"
+		},
+		{
 			"trigger": "wp_raise_memory_limit",
 			"contents": "wp_raise_memory_limit( ${1:\\$context = 'admin'} )"
 		},
@@ -5380,10 +5384,6 @@
 		{
 			"trigger": "wp_kses_html_error",
 			"contents": "wp_kses_html_error( ${1:\\$string} )"
-		},
-		{
-			"trigger": "wp_kses_js_entities",
-			"contents": "wp_kses_js_entities( ${1:\\$string} )"
 		},
 		{
 			"trigger": "wp_kses_array_lc",
@@ -8418,6 +8418,10 @@
 			"contents": "wp_set_current_user( ${1:\\$id}${2:, \\$name = ''} )"
 		},
 		{
+			"trigger": "wp_kses_js_entities",
+			"contents": "wp_kses_js_entities( ${1:\\$string} )"
+		},
+		{
 			"trigger": "get_paged_template",
 			"contents": "get_paged_template()"
 		},
@@ -10284,6 +10288,14 @@
 		{
 			"trigger": "_wp_customize_loader_settings",
 			"contents": "_wp_customize_loader_settings()"
+		},
+		{
+			"trigger": "_wp_customize_changeset_filter_insert_post_data",
+			"contents": "_wp_customize_changeset_filter_insert_post_data( ${1:\\$post_data}${2:, \\$supplied_post_data} )"
+		},
+		{
+			"trigger": "_wp_customize_publish_changeset",
+			"contents": "_wp_customize_publish_changeset( ${1:\\$new_status}${2:, \\$old_status}${3:, \\$changeset_post} )"
 		},
 		{
 			"trigger": "_wp_customize_include",
