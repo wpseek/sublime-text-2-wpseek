@@ -4031,7 +4031,7 @@
 		},
 		{
 			"trigger": "wp_timezone_choice",
-			"contents": "wp_timezone_choice( ${1:\\$selected_zone} )"
+			"contents": "wp_timezone_choice( ${1:\\$selected_zone}${2:, \\$locale = null} )"
 		},
 		{
 			"trigger": "_wp_timezone_choice_usort_callback",
@@ -4780,6 +4780,14 @@
 		{
 			"trigger": "wp_schedule_single_event",
 			"contents": "wp_schedule_single_event( ${1:\\$timestamp}${2:, \\$hook}${3:, \\$args = array()} )"
+		},
+		{
+			"trigger": "rest_sanitize_value_from_schema",
+			"contents": "rest_sanitize_value_from_schema( ${1:\\$value}${2:, \\$args} )"
+		},
+		{
+			"trigger": "rest_validate_value_from_schema",
+			"contents": "rest_validate_value_from_schema( ${1:\\$value}${2:, \\$args}${3:, \\$param = ''} )"
 		},
 		{
 			"trigger": "rest_get_avatar_sizes",
