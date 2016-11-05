@@ -10830,6 +10830,10 @@
 			"contents": "wp_blacklist_check( ${1:\\$author}${2:, \\$email}${3:, \\$url}${4:, \\$comment}${5:, \\$user_ip}${6:, \\$user_agent} )"
 		},
 		{
+			"trigger": "wp_check_comment_data_max_lengths",
+			"contents": "wp_check_comment_data_max_lengths( ${1:\\$comment_data} )"
+		},
+		{
 			"trigger": "wp_get_comment_fields_max_lengths",
 			"contents": "wp_get_comment_fields_max_lengths()"
 		},
