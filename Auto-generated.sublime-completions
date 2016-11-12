@@ -9387,11 +9387,11 @@
 		},
 		{
 			"trigger": "wpmu_signup_user_notification",
-			"contents": "wpmu_signup_user_notification( ${1:\\$user}${2:, \\$user_email}${3:, \\$key}${4:, \\$meta = array()} )"
+			"contents": "wpmu_signup_user_notification( ${1:\\$user_login}${2:, \\$user_email}${3:, \\$key}${4:, \\$meta = array()} )"
 		},
 		{
 			"trigger": "wpmu_signup_blog_notification",
-			"contents": "wpmu_signup_blog_notification( ${1:\\$domain}${2:, \\$path}${3:, \\$title}${4:, \\$user}${5:, \\$user_email}${6:, \\$key}${7:, \\$meta = array()} )"
+			"contents": "wpmu_signup_blog_notification( ${1:\\$domain}${2:, \\$path}${3:, \\$title}${4:, \\$user_login}${5:, \\$user_email}${6:, \\$key}${7:, \\$meta = array()} )"
 		},
 		{
 			"trigger": "wpmu_signup_user",
@@ -10460,6 +10460,10 @@
 		{
 			"trigger": "wp_get_custom_css",
 			"contents": "wp_get_custom_css( ${1:\\$stylesheet = ''} )"
+		},
+		{
+			"trigger": "wp_get_custom_css_post",
+			"contents": "wp_get_custom_css_post( ${1:\\$stylesheet = ''} )"
 		},
 		{
 			"trigger": "wp_custom_css_cb",
