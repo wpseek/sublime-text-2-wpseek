@@ -10498,6 +10498,10 @@
 			"contents": "get_custom_header_markup()"
 		},
 		{
+			"trigger": "is_header_video_active",
+			"contents": "is_header_video_active()"
+		},
+		{
 			"trigger": "has_custom_header",
 			"contents": "has_custom_header()"
 		},
