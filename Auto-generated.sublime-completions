@@ -4807,7 +4807,7 @@
 		},
 		{
 			"trigger": "rest_is_ip_address",
-			"contents": "rest_is_ip_address( ${1:\\$ipv4} )"
+			"contents": "rest_is_ip_address( ${1:\\$ip} )"
 		},
 		{
 			"trigger": "rest_parse_request_arg",
@@ -8068,6 +8068,14 @@
 		{
 			"trigger": "get_translations_for_domain",
 			"contents": "get_translations_for_domain( ${1:\\$domain} )"
+		},
+		{
+			"trigger": "_get_path_to_translation_from_lang_dir",
+			"contents": "_get_path_to_translation_from_lang_dir( ${1:\\$domain} )"
+		},
+		{
+			"trigger": "_get_path_to_translation",
+			"contents": "_get_path_to_translation( ${1:\\$domain}${2:, \\$reset = false} )"
 		},
 		{
 			"trigger": "_load_textdomain_just_in_time",
