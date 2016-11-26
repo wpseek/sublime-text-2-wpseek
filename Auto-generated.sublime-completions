@@ -10466,6 +10466,10 @@
 			"contents": "add_editor_style( ${1:\\$stylesheet = 'editor-style.css'} )"
 		},
 		{
+			"trigger": "wp_update_custom_css_post",
+			"contents": "wp_update_custom_css_post( ${1:\\$css}${2:, \\$args = array()} )"
+		},
+		{
 			"trigger": "wp_get_custom_css",
 			"contents": "wp_get_custom_css( ${1:\\$stylesheet = ''} )"
 		},
