@@ -78,10 +78,6 @@
 			"contents": "list_core_update( ${1:\\$update} )"
 		},
 		{
-			"trigger": "_wp_override_admin_video_width_limit",
-			"contents": "_wp_override_admin_video_width_limit( ${1:\\$output} )"
-		},
-		{
 			"trigger": "check_column",
 			"contents": "check_column( ${1:\\$table_name}${2:, \\$col_name}${3:, \\$col_type}${4:, \\$is_null = null}${5:, \\$key = null}${6:, \\$default = null}${7:, \\$extra = null} )"
 		},
@@ -3590,6 +3586,10 @@
 			"contents": "the_terms( ${1:\\$id}${2:, \\$taxonomy}${3:, \\$before = ''}${4:, \\$sep = ', '}${5:, \\$after = ''} )"
 		},
 		{
+			"trigger": "get_term_parents_list",
+			"contents": "get_term_parents_list( ${1:\\$term_id}${2:, \\$taxonomy}${3:, \\$args = array()} )"
+		},
+		{
 			"trigger": "get_the_term_list",
 			"contents": "get_the_term_list( ${1:\\$id}${2:, \\$taxonomy}${3:, \\$before = ''}${4:, \\$sep = ''}${5:, \\$after = ''} )"
 		},
@@ -3683,7 +3683,7 @@
 		},
 		{
 			"trigger": "get_category_parents",
-			"contents": "get_category_parents( ${1:\\$id}${2:, \\$link = false}${3:, \\$separator = '\/'}${4:, \\$nicename = false}${5:, \\$visited = array()} )"
+			"contents": "get_category_parents( ${1:\\$id}${2:, \\$link = false}${3:, \\$separator = '\/'}${4:, \\$nicename = false}${5:, \\$deprecated = array()} )"
 		},
 		{
 			"trigger": "get_category_link",
