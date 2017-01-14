@@ -2174,10 +2174,6 @@
 			"contents": "wp_edit_attachments_query( ${1:\\$q = false} )"
 		},
 		{
-			"trigger": "_filter_query_attachment_filenames",
-			"contents": "_filter_query_attachment_filenames( ${1:\\$clauses} )"
-		},
-		{
 			"trigger": "wp_edit_attachments_query_vars",
 			"contents": "wp_edit_attachments_query_vars( ${1:\\$q = false} )"
 		},
@@ -4256,6 +4252,10 @@
 		{
 			"trigger": "wp_get_mime_types",
 			"contents": "wp_get_mime_types()"
+		},
+		{
+			"trigger": "wp_get_image_mime",
+			"contents": "wp_get_image_mime( ${1:\\$file} )"
 		},
 		{
 			"trigger": "wp_check_filetype_and_ext",
@@ -9458,6 +9458,10 @@
 			"contents": "get_sitestats()"
 		},
 		{
+			"trigger": "_filter_query_attachment_filenames",
+			"contents": "_filter_query_attachment_filenames( ${1:\\$clauses} )"
+		},
+		{
 			"trigger": "wp_add_trashed_suffix_to_post_name_for_post",
 			"contents": "wp_add_trashed_suffix_to_post_name_for_post( ${1:\\$post} )"
 		},
@@ -10275,7 +10279,7 @@
 		},
 		{
 			"trigger": "unregister_sidebar",
-			"contents": "unregister_sidebar( ${1:\\$name} )"
+			"contents": "unregister_sidebar( ${1:\\$sidebar_id} )"
 		},
 		{
 			"trigger": "register_sidebar",
