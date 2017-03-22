@@ -4679,7 +4679,7 @@
 		},
 		{
 			"trigger": "has_excerpt",
-			"contents": "has_excerpt( ${1:\\$id = 0} )"
+			"contents": "has_excerpt( ${1:\\$post = 0} )"
 		},
 		{
 			"trigger": "get_the_excerpt",
@@ -4827,7 +4827,7 @@
 		},
 		{
 			"trigger": "rest_get_date_with_gmt",
-			"contents": "rest_get_date_with_gmt( ${1:\\$date}${2:, \\$force_utc = false} )"
+			"contents": "rest_get_date_with_gmt( ${1:\\$date}${2:, \\$is_utc = false} )"
 		},
 		{
 			"trigger": "rest_parse_date",
@@ -7672,6 +7672,10 @@
 		{
 			"trigger": "get_site",
 			"contents": "get_site( ${1:\\$site = null} )"
+		},
+		{
+			"trigger": "_clean_site_details_cache",
+			"contents": "_clean_site_details_cache( ${1:\\$site_id = 0} )"
 		},
 		{
 			"trigger": "clean_blog_cache",
