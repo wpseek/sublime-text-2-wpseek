@@ -7674,8 +7674,8 @@
 			"contents": "get_site( ${1:\\$site = null} )"
 		},
 		{
-			"trigger": "_clean_site_details_cache",
-			"contents": "_clean_site_details_cache( ${1:\\$site_id = 0} )"
+			"trigger": "clean_site_details_cache",
+			"contents": "clean_site_details_cache( ${1:\\$site_id = 0} )"
 		},
 		{
 			"trigger": "clean_blog_cache",
