@@ -6150,6 +6150,10 @@
 			"contents": "create_initial_taxonomies()"
 		},
 		{
+			"trigger": "wp_disallow_file_mods",
+			"contents": "wp_disallow_file_mods( ${1:\\$context} )"
+		},
+		{
 			"trigger": "is_wp_error",
 			"contents": "is_wp_error( ${1:\\$thing} )"
 		},
@@ -9447,11 +9451,11 @@
 		},
 		{
 			"trigger": "get_blog_count",
-			"contents": "get_blog_count( ${1:\\$network_id = 0} )"
+			"contents": "get_blog_count( ${1:\\$network_id = null} )"
 		},
 		{
 			"trigger": "get_user_count",
-			"contents": "get_user_count()"
+			"contents": "get_user_count( ${1:\\$network_id = null} )"
 		},
 		{
 			"trigger": "get_active_blog_for_user",
