@@ -3090,6 +3090,10 @@
 			"contents": "get_search_query( ${1:\\$escaped = true} )"
 		},
 		{
+			"trigger": "wp_enqueue_editor",
+			"contents": "wp_enqueue_editor()"
+		},
+		{
 			"trigger": "wp_editor",
 			"contents": "wp_editor( ${1:\\$content}${2:, \\$editor_id}${3:, \\$settings = array()} )"
 		},
