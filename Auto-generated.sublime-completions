@@ -6162,6 +6162,10 @@
 			"contents": "is_wp_error( ${1:\\$thing} )"
 		},
 		{
+			"trigger": "wp_doing_cron",
+			"contents": "wp_doing_cron()"
+		},
+		{
 			"trigger": "wp_doing_ajax",
 			"contents": "wp_doing_ajax()"
 		},
@@ -9219,7 +9223,7 @@
 		},
 		{
 			"trigger": "wp_is_large_network",
-			"contents": "wp_is_large_network( ${1:\\$using = 'sites'} )"
+			"contents": "wp_is_large_network( ${1:\\$using = 'sites'}${2:, \\$network_id = null} )"
 		},
 		{
 			"trigger": "upload_size_limit_filter",
@@ -9243,23 +9247,23 @@
 		},
 		{
 			"trigger": "wp_update_network_user_counts",
-			"contents": "wp_update_network_user_counts()"
+			"contents": "wp_update_network_user_counts( ${1:\\$network_id = null} )"
 		},
 		{
 			"trigger": "wp_update_network_site_counts",
-			"contents": "wp_update_network_site_counts()"
+			"contents": "wp_update_network_site_counts( ${1:\\$network_id = null} )"
 		},
 		{
 			"trigger": "wp_maybe_update_network_user_counts",
-			"contents": "wp_maybe_update_network_user_counts()"
+			"contents": "wp_maybe_update_network_user_counts( ${1:\\$network_id = null} )"
 		},
 		{
 			"trigger": "wp_maybe_update_network_site_counts",
-			"contents": "wp_maybe_update_network_site_counts()"
+			"contents": "wp_maybe_update_network_site_counts( ${1:\\$network_id = null} )"
 		},
 		{
 			"trigger": "wp_update_network_counts",
-			"contents": "wp_update_network_counts()"
+			"contents": "wp_update_network_counts( ${1:\\$network_id = null} )"
 		},
 		{
 			"trigger": "wp_schedule_update_network_counts",
