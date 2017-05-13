@@ -158,16 +158,24 @@
 			"contents": "wp_dashboard_quota()"
 		},
 		{
-			"trigger": "wp_dashboard_plugins_output",
-			"contents": "wp_dashboard_plugins_output( ${1:\\$rss}${2:, \\$args = array()} )"
-		},
-		{
 			"trigger": "wp_dashboard_primary_output",
 			"contents": "wp_dashboard_primary_output( ${1:\\$widget_id}${2:, \\$feeds} )"
 		},
 		{
 			"trigger": "wp_dashboard_primary",
 			"contents": "wp_dashboard_primary()"
+		},
+		{
+			"trigger": "wp_print_community_events_templates",
+			"contents": "wp_print_community_events_templates()"
+		},
+		{
+			"trigger": "wp_print_community_events_markup",
+			"contents": "wp_print_community_events_markup()"
+		},
+		{
+			"trigger": "wp_dashboard_events_news",
+			"contents": "wp_dashboard_events_news()"
 		},
 		{
 			"trigger": "wp_dashboard_rss_control",
@@ -228,6 +236,10 @@
 		{
 			"trigger": "wp_add_dashboard_widget",
 			"contents": "wp_add_dashboard_widget( ${1:\\$widget_id}${2:, \\$widget_name}${3:, \\$callback}${4:, \\$control_callback = null}${5:, \\$callback_args = null} )"
+		},
+		{
+			"trigger": "wp_get_community_events_script_data",
+			"contents": "wp_get_community_events_script_data()"
 		},
 		{
 			"trigger": "wp_dashboard_setup",
@@ -1266,6 +1278,10 @@
 			"contents": "upgrade_network()"
 		},
 		{
+			"trigger": "upgrade_480",
+			"contents": "upgrade_480()"
+		},
+		{
 			"trigger": "upgrade_460",
 			"contents": "upgrade_460()"
 		},
@@ -1776,6 +1792,10 @@
 		{
 			"trigger": "_relocate_children",
 			"contents": "_relocate_children( ${1:\\$old_ID}${2:, \\$new_ID} )"
+		},
+		{
+			"trigger": "wp_dashboard_plugins_output",
+			"contents": "wp_dashboard_plugins_output( ${1:\\$rss}${2:, \\$args = array()} )"
 		},
 		{
 			"trigger": "wp_dashboard_secondary_control",
@@ -2596,6 +2616,10 @@
 		{
 			"trigger": "wp_ajax_dashboard_widgets",
 			"contents": "wp_ajax_dashboard_widgets()"
+		},
+		{
+			"trigger": "wp_ajax_get_community_events",
+			"contents": "wp_ajax_get_community_events()"
 		},
 		{
 			"trigger": "wp_ajax_autocomplete_user",
@@ -6154,8 +6178,8 @@
 			"contents": "create_initial_taxonomies()"
 		},
 		{
-			"trigger": "wp_disallow_file_mods",
-			"contents": "wp_disallow_file_mods( ${1:\\$context} )"
+			"trigger": "wp_is_file_mod_allowed",
+			"contents": "wp_is_file_mod_allowed( ${1:\\$context} )"
 		},
 		{
 			"trigger": "is_wp_error",
