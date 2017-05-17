@@ -5566,6 +5566,10 @@
 			"contents": "random_int( ${1:\\$min}${2:, \\$max} )"
 		},
 		{
+			"trigger": "_wp_delete_customize_changeset_dependent_auto_drafts",
+			"contents": "_wp_delete_customize_changeset_dependent_auto_drafts( ${1:\\$post_id} )"
+		},
+		{
 			"trigger": "_wp_auto_add_pages_to_menu",
 			"contents": "_wp_auto_add_pages_to_menu( ${1:\\$new_status}${2:, \\$old_status}${3:, \\$post} )"
 		},
@@ -10424,6 +10428,10 @@
 		{
 			"trigger": "get_categories",
 			"contents": "get_categories( ${1:\\$args = ''} )"
+		},
+		{
+			"trigger": "_wp_keep_alive_customize_changeset_dependent_auto_drafts",
+			"contents": "_wp_keep_alive_customize_changeset_dependent_auto_drafts( ${1:\\$new_status}${2:, \\$old_status}${3:, \\$post} )"
 		},
 		{
 			"trigger": "is_customize_preview",
