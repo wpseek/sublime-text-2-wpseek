@@ -238,10 +238,6 @@
 			"contents": "wp_add_dashboard_widget( ${1:\\$widget_id}${2:, \\$widget_name}${3:, \\$callback}${4:, \\$control_callback = null}${5:, \\$callback_args = null} )"
 		},
 		{
-			"trigger": "wp_get_community_events_script_data",
-			"contents": "wp_get_community_events_script_data()"
-		},
-		{
 			"trigger": "wp_dashboard_setup",
 			"contents": "wp_dashboard_setup()"
 		},
@@ -1276,10 +1272,6 @@
 		{
 			"trigger": "upgrade_network",
 			"contents": "upgrade_network()"
-		},
-		{
-			"trigger": "upgrade_480",
-			"contents": "upgrade_480()"
 		},
 		{
 			"trigger": "upgrade_460",
@@ -6828,6 +6820,10 @@
 		{
 			"trigger": "wp_style_loader_src",
 			"contents": "wp_style_loader_src( ${1:\\$src}${2:, \\$handle} )"
+		},
+		{
+			"trigger": "wp_localize_community_events",
+			"contents": "wp_localize_community_events()"
 		},
 		{
 			"trigger": "wp_localize_jquery_ui_datepicker",
