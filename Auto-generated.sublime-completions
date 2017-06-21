@@ -5998,6 +5998,10 @@
 			"contents": "get_object_term_cache( ${1:\\$id}${2:, \\$taxonomy} )"
 		},
 		{
+			"trigger": "clean_taxonomy_cache",
+			"contents": "clean_taxonomy_cache( ${1:\\$taxonomy} )"
+		},
+		{
 			"trigger": "clean_term_cache",
 			"contents": "clean_term_cache( ${1:\\$ids}${2:, \\$taxonomy = ''}${3:, \\$clean_taxonomy = true} )"
 		},
@@ -6076,6 +6080,10 @@
 		{
 			"trigger": "term_exists",
 			"contents": "term_exists( ${1:\\$term}${2:, \\$taxonomy = ''}${3:, \\$parent = null} )"
+		},
+		{
+			"trigger": "has_term_meta",
+			"contents": "has_term_meta( ${1:\\$term_id} )"
 		},
 		{
 			"trigger": "update_termmeta_cache",
