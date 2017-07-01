@@ -4782,6 +4782,10 @@
 			"contents": "wp_next_scheduled( ${1:\\$hook}${2:, \\$args = array()} )"
 		},
 		{
+			"trigger": "wp_unschedule_hook",
+			"contents": "wp_unschedule_hook( ${1:\\$hook} )"
+		},
+		{
 			"trigger": "wp_clear_scheduled_hook",
 			"contents": "wp_clear_scheduled_hook( ${1:\\$hook}${2:, \\$args = array()} )"
 		},
