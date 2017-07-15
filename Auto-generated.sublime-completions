@@ -6366,8 +6366,16 @@
 			"contents": "url_shorten( ${1:\\$url}${2:, \\$length = 35} )"
 		},
 		{
+			"trigger": "wp_emoji_regex",
+			"contents": "wp_emoji_regex( ${1:\\$type = 'codepoints'} )"
+		},
+		{
 			"trigger": "wp_staticize_emoji_for_email",
 			"contents": "wp_staticize_emoji_for_email( ${1:\\$mail} )"
+		},
+		{
+			"trigger": "_wp_staticize_emoji",
+			"contents": "_wp_staticize_emoji( ${1:\\$matches} )"
 		},
 		{
 			"trigger": "wp_staticize_emoji",
