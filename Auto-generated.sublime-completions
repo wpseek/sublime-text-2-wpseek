@@ -2038,6 +2038,14 @@
 			"contents": "tinymce_include()"
 		},
 		{
+			"trigger": "get_site_screen_help_sidebar_content",
+			"contents": "get_site_screen_help_sidebar_content()"
+		},
+		{
+			"trigger": "get_site_screen_help_tab_args",
+			"contents": "get_site_screen_help_tab_args()"
+		},
+		{
 			"trigger": "network_edit_site_nav",
 			"contents": "network_edit_site_nav( ${1:\\$args = array()} )"
 		},
