@@ -3242,6 +3242,10 @@
 			"contents": "get_archives_link( ${1:\\$url}${2:, \\$text}${3:, \\$format = 'html'}${4:, \\$before = ''}${5:, \\$after = ''} )"
 		},
 		{
+			"trigger": "get_the_post_type_description",
+			"contents": "get_the_post_type_description()"
+		},
+		{
 			"trigger": "get_the_archive_description",
 			"contents": "get_the_archive_description()"
 		},
