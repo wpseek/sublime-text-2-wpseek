@@ -5570,6 +5570,14 @@
 			"contents": "random_int( ${1:\\$min}${2:, \\$max} )"
 		},
 		{
+			"trigger": "wp_map_nav_menu_locations",
+			"contents": "wp_map_nav_menu_locations( ${1:\\$new_nav_menu_locations}${2:, \\$old_nav_menu_locations} )"
+		},
+		{
+			"trigger": "_wp_menus_changed",
+			"contents": "_wp_menus_changed()"
+		},
+		{
 			"trigger": "_wp_delete_customize_changeset_dependent_auto_drafts",
 			"contents": "_wp_delete_customize_changeset_dependent_auto_drafts( ${1:\\$post_id} )"
 		},
