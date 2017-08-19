@@ -1434,6 +1434,10 @@
 			"contents": "wp_credits()"
 		},
 		{
+			"trigger": "update_option_new_admin_email",
+			"contents": "update_option_new_admin_email( ${1:\\$old_value}${2:, \\$value} )"
+		},
+		{
 			"trigger": "wp_page_reload_on_back_button_js",
 			"contents": "wp_page_reload_on_back_button_js()"
 		},
@@ -2063,7 +2067,7 @@
 		},
 		{
 			"trigger": "can_edit_network",
-			"contents": "can_edit_network( ${1:\\$site_id} )"
+			"contents": "can_edit_network( ${1:\\$network_id} )"
 		},
 		{
 			"trigger": "choose_primary_blog",
@@ -2120,10 +2124,6 @@
 		{
 			"trigger": "upload_is_user_over_quota",
 			"contents": "upload_is_user_over_quota( ${1:\\$echo = true} )"
-		},
-		{
-			"trigger": "update_option_new_admin_email",
-			"contents": "update_option_new_admin_email( ${1:\\$old_value}${2:, \\$value} )"
 		},
 		{
 			"trigger": "wpmu_delete_user",
@@ -3387,7 +3387,7 @@
 		},
 		{
 			"trigger": "get_admin_users_for_domain",
-			"contents": "get_admin_users_for_domain( ${1:\\$sitedomain = ''}${2:, \\$path = ''} )"
+			"contents": "get_admin_users_for_domain( ${1:\\$domain = ''}${2:, \\$path = ''} )"
 		},
 		{
 			"trigger": "create_empty_blog",
@@ -5680,6 +5680,10 @@
 		{
 			"trigger": "wp_nav_menu",
 			"contents": "wp_nav_menu( ${1:\\$args = array()} )"
+		},
+		{
+			"trigger": "wp_maybe_grant_install_languages_cap",
+			"contents": "wp_maybe_grant_install_languages_cap( ${1:\\$allcaps} )"
 		},
 		{
 			"trigger": "revoke_super_admin",
@@ -8415,7 +8419,7 @@
 		},
 		{
 			"trigger": "wp_load_core_site_options",
-			"contents": "wp_load_core_site_options( ${1:\\$site_id = null} )"
+			"contents": "wp_load_core_site_options( ${1:\\$network_id = null} )"
 		},
 		{
 			"trigger": "wp_load_alloptions",
@@ -9447,11 +9451,11 @@
 		},
 		{
 			"trigger": "insert_blog",
-			"contents": "insert_blog( ${1:\\$domain}${2:, \\$path}${3:, \\$site_id} )"
+			"contents": "insert_blog( ${1:\\$domain}${2:, \\$path}${3:, \\$network_id} )"
 		},
 		{
 			"trigger": "domain_exists",
-			"contents": "domain_exists( ${1:\\$domain}${2:, \\$path}${3:, \\$site_id = 1} )"
+			"contents": "domain_exists( ${1:\\$domain}${2:, \\$path}${3:, \\$network_id = 1} )"
 		},
 		{
 			"trigger": "newuser_notify_siteadmin",
@@ -9463,7 +9467,7 @@
 		},
 		{
 			"trigger": "wpmu_create_blog",
-			"contents": "wpmu_create_blog( ${1:\\$domain}${2:, \\$path}${3:, \\$title}${4:, \\$user_id}${5:, \\$meta = array()}${6:, \\$site_id = 1} )"
+			"contents": "wpmu_create_blog( ${1:\\$domain}${2:, \\$path}${3:, \\$title}${4:, \\$user_id}${5:, \\$meta = array()}${6:, \\$network_id = 1} )"
 		},
 		{
 			"trigger": "wpmu_create_user",
