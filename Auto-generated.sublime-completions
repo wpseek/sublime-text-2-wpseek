@@ -3926,6 +3926,10 @@
 			"contents": "wp_cache_get_last_changed( ${1:\\$group} )"
 		},
 		{
+			"trigger": "wp_is_uuid",
+			"contents": "wp_is_uuid( ${1:\\$uuid}${2:, \\$version = null} )"
+		},
+		{
 			"trigger": "wp_generate_uuid4",
 			"contents": "wp_generate_uuid4()"
 		},
