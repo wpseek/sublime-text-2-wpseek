@@ -10290,6 +10290,14 @@
 			"contents": "wp_widget_rss_output( ${1:\\$rss}${2:, \\$args = array()} )"
 		},
 		{
+			"trigger": "_wp_remove_unregistered_widgets",
+			"contents": "_wp_remove_unregistered_widgets( ${1:\\$sidebars_widgets}${2:, \\$whitelist = array()} )"
+		},
+		{
+			"trigger": "wp_map_sidebars_widgets",
+			"contents": "wp_map_sidebars_widgets( ${1:\\$existing_sidebars_widgets} )"
+		},
+		{
 			"trigger": "retrieve_widgets",
 			"contents": "retrieve_widgets( ${1:\\$theme_changed = false} )"
 		},
