@@ -674,6 +674,10 @@
 			"contents": "wp_media_attach_action( ${1:\\$parent_id}${2:, \\$action = 'attach'} )"
 		},
 		{
+			"trigger": "wp_get_media_creation_timestamp",
+			"contents": "wp_get_media_creation_timestamp( ${1:\\$metadata} )"
+		},
+		{
 			"trigger": "wp_read_audio_metadata",
 			"contents": "wp_read_audio_metadata( ${1:\\$file} )"
 		},
@@ -1460,6 +1464,10 @@
 		{
 			"trigger": "wp_page_reload_on_back_button_js",
 			"contents": "wp_page_reload_on_back_button_js()"
+		},
+		{
+			"trigger": "wp_admin_headers",
+			"contents": "wp_admin_headers()"
 		},
 		{
 			"trigger": "wp_admin_canonical_url",
@@ -3058,6 +3066,10 @@
 			"contents": "__checked_selected_helper( ${1:\\$helper}${2:, \\$current}${3:, \\$echo}${4:, \\$type} )"
 		},
 		{
+			"trigger": "readonly",
+			"contents": "readonly( ${1:\\$readonly}${2:, \\$current = true}${3:, \\$echo = true} )"
+		},
+		{
 			"trigger": "disabled",
 			"contents": "disabled( ${1:\\$disabled}${2:, \\$current = true}${3:, \\$echo = true} )"
 		},
@@ -3936,18 +3948,6 @@
 		{
 			"trigger": "wp_underscore_audio_template",
 			"contents": "wp_underscore_audio_template()"
-		},
-		{
-			"trigger": "wp_get_active_user_count",
-			"contents": "wp_get_active_user_count()"
-		},
-		{
-			"trigger": "wp_update_active_user_count",
-			"contents": "wp_update_active_user_count()"
-		},
-		{
-			"trigger": "wp_is_large_user_count",
-			"contents": "wp_is_large_user_count()"
 		},
 		{
 			"trigger": "wp_site_admin_email_change_notification",
@@ -4930,6 +4930,10 @@
 			"contents": "rest_output_rsd()"
 		},
 		{
+			"trigger": "rest_filter_response_fields",
+			"contents": "rest_filter_response_fields( ${1:\\$response}${2:, \\$server}${3:, \\$request} )"
+		},
+		{
 			"trigger": "rest_send_allow_header",
 			"contents": "rest_send_allow_header( ${1:\\$response}${2:, \\$server}${3:, \\$request} )"
 		},
@@ -5676,6 +5680,10 @@
 		{
 			"trigger": "is_nav_menu_item",
 			"contents": "is_nav_menu_item( ${1:\\$menu_item_id = 0} )"
+		},
+		{
+			"trigger": "wp_get_nav_menu_name",
+			"contents": "wp_get_nav_menu_name( ${1:\\$location} )"
 		},
 		{
 			"trigger": "has_nav_menu",
