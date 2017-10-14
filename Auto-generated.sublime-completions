@@ -659,7 +659,7 @@
 		},
 		{
 			"trigger": "list_files",
-			"contents": "list_files( ${1:\\$folder = ''}${2:, \\$levels = 100} )"
+			"contents": "list_files( ${1:\\$folder = ''}${2:, \\$levels = 100}${3:, \\$exclusions = array()} )"
 		},
 		{
 			"trigger": "get_home_path",
@@ -1540,6 +1540,22 @@
 		{
 			"trigger": "update_home_siteurl",
 			"contents": "update_home_siteurl( ${1:\\$old_value}${2:, \\$value} )"
+		},
+		{
+			"trigger": "wp_print_plugin_file_tree",
+			"contents": "wp_print_plugin_file_tree( ${1:\\$tree}${2:, \\$label = ''}${3:, \\$level = 2}${4:, \\$size = 1}${5:, \\$index = 1} )"
+		},
+		{
+			"trigger": "wp_make_plugin_file_tree",
+			"contents": "wp_make_plugin_file_tree( ${1:\\$plugin_editable_files} )"
+		},
+		{
+			"trigger": "wp_print_theme_file_tree",
+			"contents": "wp_print_theme_file_tree( ${1:\\$tree}${2:, \\$level = 2}${3:, \\$size = 1}${4:, \\$index = 1} )"
+		},
+		{
+			"trigger": "wp_make_theme_file_tree",
+			"contents": "wp_make_theme_file_tree( ${1:\\$allowed_files} )"
 		},
 		{
 			"trigger": "update_recently_edited",
