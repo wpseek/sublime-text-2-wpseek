@@ -138,6 +138,10 @@
 			"contents": "wpmu_menu()"
 		},
 		{
+			"trigger": "wp_try_gutenberg_panel",
+			"contents": "wp_try_gutenberg_panel()"
+		},
+		{
 			"trigger": "wp_welcome_panel",
 			"contents": "wp_welcome_panel()"
 		},
@@ -2548,6 +2552,10 @@
 		{
 			"trigger": "wp_ajax_menu_get_metabox",
 			"contents": "wp_ajax_menu_get_metabox()"
+		},
+		{
+			"trigger": "wp_ajax_update_try_gutenberg_panel",
+			"contents": "wp_ajax_update_try_gutenberg_panel()"
 		},
 		{
 			"trigger": "wp_ajax_update_welcome_panel",
@@ -7818,10 +7826,6 @@
 			"contents": "_prime_site_caches( ${1:\\$ids} )"
 		},
 		{
-			"trigger": "get_site_by",
-			"contents": "get_site_by( ${1:\\$field}${2:, \\$value}${3:, \\$network_id = null} )"
-		},
-		{
 			"trigger": "get_site",
 			"contents": "get_site( ${1:\\$site = null} )"
 		},
@@ -10471,11 +10475,11 @@
 		},
 		{
 			"trigger": "unregister_widget",
-			"contents": "unregister_widget( ${1:\\$widget_class} )"
+			"contents": "unregister_widget( ${1:\\$widget} )"
 		},
 		{
 			"trigger": "register_widget",
-			"contents": "register_widget( ${1:\\$widget_class} )"
+			"contents": "register_widget( ${1:\\$widget} )"
 		},
 		{
 			"trigger": "wp_style_add_data",
