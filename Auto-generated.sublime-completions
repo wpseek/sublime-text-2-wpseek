@@ -138,10 +138,6 @@
 			"contents": "wpmu_menu()"
 		},
 		{
-			"trigger": "wp_try_gutenberg_panel",
-			"contents": "wp_try_gutenberg_panel()"
-		},
-		{
 			"trigger": "wp_welcome_panel",
 			"contents": "wp_welcome_panel()"
 		},
@@ -639,7 +635,7 @@
 		},
 		{
 			"trigger": "validate_file_to_edit",
-			"contents": "validate_file_to_edit( ${1:\\$file}${2:, \\$allowed_files = ''} )"
+			"contents": "validate_file_to_edit( ${1:\\$file}${2:, \\$allowed_files = array()} )"
 		},
 		{
 			"trigger": "wp_tempnam",
@@ -2554,10 +2550,6 @@
 			"contents": "wp_ajax_menu_get_metabox()"
 		},
 		{
-			"trigger": "wp_ajax_update_try_gutenberg_panel",
-			"contents": "wp_ajax_update_try_gutenberg_panel()"
-		},
-		{
 			"trigger": "wp_ajax_update_welcome_panel",
 			"contents": "wp_ajax_update_welcome_panel()"
 		},
@@ -4167,7 +4159,7 @@
 		},
 		{
 			"trigger": "validate_file",
-			"contents": "validate_file( ${1:\\$file}${2:, \\$allowed_files = ''} )"
+			"contents": "validate_file( ${1:\\$file}${2:, \\$allowed_files = array()} )"
 		},
 		{
 			"trigger": "iis7_supports_permalinks",
@@ -8472,6 +8464,10 @@
 		{
 			"trigger": "wp_user_settings",
 			"contents": "wp_user_settings()"
+		},
+		{
+			"trigger": "delete_expired_transients",
+			"contents": "delete_expired_transients( ${1:\\$force_db = false} )"
 		},
 		{
 			"trigger": "set_transient",
