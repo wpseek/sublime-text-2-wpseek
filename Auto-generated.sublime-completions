@@ -2186,6 +2186,14 @@
 			"contents": "check_upload_size( ${1:\\$file} )"
 		},
 		{
+			"trigger": "taxonomy_meta_box_sanitize_cb_input",
+			"contents": "taxonomy_meta_box_sanitize_cb_input( ${1:\\$taxonomy}${2:, \\$terms} )"
+		},
+		{
+			"trigger": "taxonomy_meta_box_sanitize_cb_checkboxes",
+			"contents": "taxonomy_meta_box_sanitize_cb_checkboxes( ${1:\\$taxonmy}${2:, \\$terms} )"
+		},
+		{
 			"trigger": "redirect_post",
 			"contents": "redirect_post( ${1:\\$post_id = ''} )"
 		},
