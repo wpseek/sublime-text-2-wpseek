@@ -3679,7 +3679,7 @@
 		},
 		{
 			"trigger": "term_description",
-			"contents": "term_description( ${1:\\$term = 0}${2:, \\$taxonomy = 'post_tag'} )"
+			"contents": "term_description( ${1:\\$term = 0} )"
 		},
 		{
 			"trigger": "tag_description",
@@ -4435,7 +4435,7 @@
 		},
 		{
 			"trigger": "wp_nonce_field",
-			"contents": "wp_nonce_field( ${1:\\$action = -1}${2:, \\$name = \"_wpnonce\"}${3:, \\$referer = true}${4:, \\$echo = true} )"
+			"contents": "wp_nonce_field( ${1:\\$action = -1}${2:, \\$name = '_wpnonce'}${3:, \\$referer = true}${4:, \\$echo = true} )"
 		},
 		{
 			"trigger": "wp_nonce_url",
@@ -6555,7 +6555,7 @@
 		},
 		{
 			"trigger": "links_add_target",
-			"contents": "links_add_target( ${1:\\$content}${2:, \\$target = '_blank'}${3:, \\$tags = array('a')} )"
+			"contents": "links_add_target( ${1:\\$content}${2:, \\$target = '_blank'}${3:, \\$tags = array( 'a' )} )"
 		},
 		{
 			"trigger": "_links_add_base",
@@ -6563,7 +6563,7 @@
 		},
 		{
 			"trigger": "links_add_base_url",
-			"contents": "links_add_base_url( ${1:\\$content}${2:, \\$base}${3:, \\$attrs = array('src', 'href')} )"
+			"contents": "links_add_base_url( ${1:\\$content}${2:, \\$base}${3:, \\$attrs = array( 'src', 'href' )} )"
 		},
 		{
 			"trigger": "wp_html_excerpt",
@@ -7868,6 +7868,14 @@
 		{
 			"trigger": "setup_postdata",
 			"contents": "setup_postdata( ${1:\\$post} )"
+		},
+		{
+			"trigger": "_find_post_by_old_date",
+			"contents": "_find_post_by_old_date( ${1:\\$post_type} )"
+		},
+		{
+			"trigger": "_find_post_by_old_slug",
+			"contents": "_find_post_by_old_slug( ${1:\\$post_type} )"
 		},
 		{
 			"trigger": "wp_old_slug_redirect",
@@ -9679,7 +9687,7 @@
 		},
 		{
 			"trigger": "wp_get_post_parent_id",
-			"contents": "wp_get_post_parent_id( ${1:\\$post_ID} )"
+			"contents": "wp_get_post_parent_id( ${1:\\$post} )"
 		},
 		{
 			"trigger": "_publish_post_hook",
@@ -9732,6 +9740,10 @@
 		{
 			"trigger": "get_private_posts_cap_sql",
 			"contents": "get_private_posts_cap_sql( ${1:\\$post_type} )"
+		},
+		{
+			"trigger": "wp_check_for_changed_dates",
+			"contents": "wp_check_for_changed_dates( ${1:\\$post_id}${2:, \\$post}${3:, \\$post_before} )"
 		},
 		{
 			"trigger": "wp_check_for_changed_slugs",
@@ -10103,11 +10115,11 @@
 		},
 		{
 			"trigger": "get_post_status",
-			"contents": "get_post_status( ${1:\\$ID = ''} )"
+			"contents": "get_post_status( ${1:\\$post = null} )"
 		},
 		{
 			"trigger": "get_post_mime_type",
-			"contents": "get_post_mime_type( ${1:\\$ID = ''} )"
+			"contents": "get_post_mime_type( ${1:\\$post = null} )"
 		},
 		{
 			"trigger": "get_post_field",
