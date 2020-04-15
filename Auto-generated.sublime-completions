@@ -755,6 +755,10 @@
 			"contents": "get_theme_mods()"
 		},
 		{
+			"trigger": "validate_theme_requirements",
+			"contents": "validate_theme_requirements( ${1:\\$stylesheet} )"
+		},
+		{
 			"trigger": "validate_current_theme",
 			"contents": "validate_current_theme()"
 		},
@@ -6995,6 +6999,10 @@
 			"contents": "wp_make_content_images_responsive( ${1:\\$content} )"
 		},
 		{
+			"trigger": "wp_get_user_request_data",
+			"contents": "wp_get_user_request_data( ${1:\\$request_id} )"
+		},
+		{
 			"trigger": "wp_ajax_press_this_add_category",
 			"contents": "wp_ajax_press_this_add_category()"
 		},
@@ -10817,10 +10825,6 @@
 		{
 			"trigger": "export_wp",
 			"contents": "export_wp( ${1:\\$args = array()} )"
-		},
-		{
-			"trigger": "wp_get_user_request_data",
-			"contents": "wp_get_user_request_data( ${1:\\$request_id} )"
 		},
 		{
 			"trigger": "_wp_privacy_requests_screen_options",
