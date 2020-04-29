@@ -4151,6 +4151,10 @@
 			"contents": "timer_start()"
 		},
 		{
+			"trigger": "wp_in_maintenance_mode",
+			"contents": "wp_in_maintenance_mode()"
+		},
+		{
 			"trigger": "wp_maintenance",
 			"contents": "wp_maintenance()"
 		},
@@ -4165,10 +4169,6 @@
 		{
 			"trigger": "wp_fix_server_vars",
 			"contents": "wp_fix_server_vars()"
-		},
-		{
-			"trigger": "wp_unregister_globals",
-			"contents": "wp_unregister_globals()"
 		},
 		{
 			"trigger": "wp_get_server_protocol",
@@ -6993,6 +6993,10 @@
 		{
 			"trigger": "wp_embed_register_handler",
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
+		},
+		{
+			"trigger": "wp_unregister_globals",
+			"contents": "wp_unregister_globals()"
 		},
 		{
 			"trigger": "wp_make_content_images_responsive",
