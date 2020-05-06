@@ -1563,6 +1563,10 @@
 			"contents": "_wp_post_revision_fields( ${1:\\$post = array()}${2:, \\$deprecated = false} )"
 		},
 		{
+			"trigger": "rest_filter_response_by_context",
+			"contents": "rest_filter_response_by_context( ${1:\\$data}${2:, \\$schema}${3:, \\$context} )"
+		},
+		{
 			"trigger": "rest_parse_embed_param",
 			"contents": "rest_parse_embed_param( ${1:\\$embed} )"
 		},
