@@ -8784,11 +8784,11 @@
 		},
 		{
 			"trigger": "endelement",
-			"contents": "endelement( ${1:\\$parser}${2:, \\$tagName} )"
+			"contents": "endelement( ${1:\\$parser}${2:, \\$tag_name} )"
 		},
 		{
 			"trigger": "startelement",
-			"contents": "startelement( ${1:\\$parser}${2:, \\$tagName}${3:, \\$attrs} )"
+			"contents": "startelement( ${1:\\$parser}${2:, \\$tag_name}${3:, \\$attrs} )"
 		},
 		{
 			"trigger": "display_setup_form",
@@ -8989,6 +8989,14 @@
 		{
 			"trigger": "wp_install",
 			"contents": "wp_install( ${1:\\$blog_title}${2:, \\$user_name}${3:, \\$user_email}${4:, \\$public}${5:, \\$deprecated = ''}${6:, \\$user_password = ''}${7:, \\$language = ''} )"
+		},
+		{
+			"trigger": "wp_get_auto_update_message",
+			"contents": "wp_get_auto_update_message()"
+		},
+		{
+			"trigger": "wp_is_auto_update_enabled_for_type",
+			"contents": "wp_is_auto_update_enabled_for_type( ${1:\\$type} )"
 		},
 		{
 			"trigger": "wp_recovery_mode_nag",
@@ -11345,6 +11353,10 @@
 		{
 			"trigger": "add_link",
 			"contents": "add_link()"
+		},
+		{
+			"trigger": "wp_ajax_toggle_auto_updates",
+			"contents": "wp_ajax_toggle_auto_updates()"
 		},
 		{
 			"trigger": "wp_ajax_rest_nonce",
