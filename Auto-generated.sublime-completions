@@ -4155,8 +4155,8 @@
 			"contents": "timer_start()"
 		},
 		{
-			"trigger": "wp_in_maintenance_mode",
-			"contents": "wp_in_maintenance_mode()"
+			"trigger": "wp_is_maintenance_mode",
+			"contents": "wp_is_maintenance_mode()"
 		},
 		{
 			"trigger": "wp_maintenance",
