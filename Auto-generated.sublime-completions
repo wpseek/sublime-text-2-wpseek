@@ -1,4 +1,3 @@
-
 {
 	"scope": "source.php - variable.other.php\n",
 	"completions": [
@@ -112,7 +111,7 @@
 		},
 		{
 			"trigger": "_wp_remove_unregistered_widgets",
-			"contents": "_wp_remove_unregistered_widgets( ${1:\\$sidebars_widgets}${2:, \\$whitelist = array()} )"
+			"contents": "_wp_remove_unregistered_widgets( ${1:\\$sidebars_widgets}${2:, \\$allowed_widget_ids = array()} )"
 		},
 		{
 			"trigger": "wp_map_sidebars_widgets",
@@ -3643,8 +3642,8 @@
 			"contents": "get_object_subtype( ${1:\\$object_type}${2:, \\$object_id} )"
 		},
 		{
-			"trigger": "_wp_register_meta_args_whitelist",
-			"contents": "_wp_register_meta_args_whitelist( ${1:\\$args}${2:, \\$default_args} )"
+			"trigger": "_wp_register_meta_args_allowed_list",
+			"contents": "_wp_register_meta_args_allowed_list( ${1:\\$args}${2:, \\$default_args} )"
 		},
 		{
 			"trigger": "get_registered_metadata",
@@ -7027,6 +7026,22 @@
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
 		},
 		{
+			"trigger": "remove_option_whitelist",
+			"contents": "remove_option_whitelist( ${1:\\$del_options}${2:, \\$options = ''} )"
+		},
+		{
+			"trigger": "add_option_whitelist",
+			"contents": "add_option_whitelist( ${1:\\$new_options}${2:, \\$options = ''} )"
+		},
+		{
+			"trigger": "_wp_register_meta_args_whitelist",
+			"contents": "_wp_register_meta_args_whitelist( ${1:\\$args}${2:, \\$default_args} )"
+		},
+		{
+			"trigger": "wp_blacklist_check",
+			"contents": "wp_blacklist_check( ${1:\\$author}${2:, \\$email}${3:, \\$url}${4:, \\$comment}${5:, \\$user_ip}${6:, \\$user_agent} )"
+		},
+		{
 			"trigger": "wp_unregister_globals",
 			"contents": "wp_unregister_globals()"
 		},
@@ -8487,6 +8502,26 @@
 			"contents": "has_blocks( ${1:\\$post = null} )"
 		},
 		{
+			"trigger": "register_block_type_from_metadata",
+			"contents": "register_block_type_from_metadata( ${1:\\$file_or_folder}${2:, \\$args = array()} )"
+		},
+		{
+			"trigger": "register_block_style_handle",
+			"contents": "register_block_style_handle( ${1:\\$metadata}${2:, \\$field_name} )"
+		},
+		{
+			"trigger": "register_block_script_handle",
+			"contents": "register_block_script_handle( ${1:\\$metadata}${2:, \\$field_name} )"
+		},
+		{
+			"trigger": "generate_block_asset_handle",
+			"contents": "generate_block_asset_handle( ${1:\\$block_name}${2:, \\$field_name} )"
+		},
+		{
+			"trigger": "remove_block_asset_path_prefix",
+			"contents": "remove_block_asset_path_prefix( ${1:\\$asset_handle_or_path} )"
+		},
+		{
 			"trigger": "unregister_block_type",
 			"contents": "unregister_block_type( ${1:\\$name} )"
 		},
@@ -9767,12 +9802,12 @@
 			"contents": "settings_fields( ${1:\\$option_group} )"
 		},
 		{
-			"trigger": "remove_option_whitelist",
-			"contents": "remove_option_whitelist( ${1:\\$del_options}${2:, \\$options = ''} )"
+			"trigger": "remove_option_allowed_list",
+			"contents": "remove_option_allowed_list( ${1:\\$del_options}${2:, \\$options = ''} )"
 		},
 		{
-			"trigger": "add_option_whitelist",
-			"contents": "add_option_whitelist( ${1:\\$new_options}${2:, \\$options = ''} )"
+			"trigger": "add_allowed_options",
+			"contents": "add_allowed_options( ${1:\\$new_options}${2:, \\$options = ''} )"
 		},
 		{
 			"trigger": "option_update_filter",
