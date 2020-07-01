@@ -1,4 +1,3 @@
-
 {
 	"scope": "source.php - variable.other.php\n",
 	"completions": [
@@ -3891,6 +3890,10 @@
 			"contents": "wp_img_tag_add_srcset_and_sizes_attr( ${1:\\$image}${2:, \\$context}${3:, \\$attachment_id} )"
 		},
 		{
+			"trigger": "wp_img_tag_add_width_and_height_attr",
+			"contents": "wp_img_tag_add_width_and_height_attr( ${1:\\$image}${2:, \\$context}${3:, \\$attachment_id} )"
+		},
+		{
 			"trigger": "wp_img_tag_add_loading_attr",
 			"contents": "wp_img_tag_add_loading_attr( ${1:\\$image}${2:, \\$context} )"
 		},
@@ -3905,6 +3908,10 @@
 		{
 			"trigger": "wp_image_add_srcset_and_sizes",
 			"contents": "wp_image_add_srcset_and_sizes( ${1:\\$image}${2:, \\$image_meta}${3:, \\$attachment_id} )"
+		},
+		{
+			"trigger": "wp_image_src_get_dimensions",
+			"contents": "wp_image_src_get_dimensions( ${1:\\$image_src}${2:, \\$image_meta} )"
 		},
 		{
 			"trigger": "wp_calculate_image_sizes",
@@ -8484,7 +8491,7 @@
 		},
 		{
 			"trigger": "render_block",
-			"contents": "render_block( ${1:\\$block} )"
+			"contents": "render_block( ${1:\\$parsed_block} )"
 		},
 		{
 			"trigger": "_excerpt_render_inner_columns_blocks",
