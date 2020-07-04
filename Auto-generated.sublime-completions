@@ -1,3 +1,4 @@
+
 {
 	"scope": "source.php - variable.other.php\n",
 	"completions": [
@@ -1592,6 +1593,18 @@
 		{
 			"trigger": "_wp_post_revision_fields",
 			"contents": "_wp_post_revision_fields( ${1:\\$post = array()}${2:, \\$deprecated = false} )"
+		},
+		{
+			"trigger": "rest_get_queried_resource_route",
+			"contents": "rest_get_queried_resource_route()"
+		},
+		{
+			"trigger": "rest_get_route_for_term",
+			"contents": "rest_get_route_for_term( ${1:\\$term} )"
+		},
+		{
+			"trigger": "rest_get_route_for_post",
+			"contents": "rest_get_route_for_post( ${1:\\$post} )"
 		},
 		{
 			"trigger": "rest_default_additional_properties_to_false",
@@ -3740,6 +3753,10 @@
 		{
 			"trigger": "add_metadata",
 			"contents": "add_metadata( ${1:\\$meta_type}${2:, \\$object_id}${3:, \\$meta_key}${4:, \\$meta_value}${5:, \\$unique = false} )"
+		},
+		{
+			"trigger": "wp_show_heic_upload_error",
+			"contents": "wp_show_heic_upload_error( ${1:\\$plupload_settings} )"
 		},
 		{
 			"trigger": "_wp_add_additional_image_sizes",
@@ -8652,6 +8669,10 @@
 		{
 			"trigger": "wp_latest_comments_draft_or_post_title",
 			"contents": "wp_latest_comments_draft_or_post_title( ${1:\\$post = 0} )"
+		},
+		{
+			"trigger": "register_core_block_types_from_metadata",
+			"contents": "register_core_block_types_from_metadata()"
 		},
 		{
 			"trigger": "register_block_core_categories",
