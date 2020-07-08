@@ -1,4 +1,3 @@
-
 {
 	"scope": "source.php - variable.other.php\n",
 	"completions": [
@@ -860,11 +859,11 @@
 		},
 		{
 			"trigger": "load_template",
-			"contents": "load_template( ${1:\\$_template_file}${2:, \\$require_once = true} )"
+			"contents": "load_template( ${1:\\$_template_file}${2:, \\$require_once = true}${3:, \\$args = array()} )"
 		},
 		{
 			"trigger": "locate_template",
-			"contents": "locate_template( ${1:\\$template_names}${2:, \\$load = false}${3:, \\$require_once = true} )"
+			"contents": "locate_template( ${1:\\$template_names}${2:, \\$load = false}${3:, \\$require_once = true}${4:, \\$args = array()} )"
 		},
 		{
 			"trigger": "get_attachment_template",
@@ -1624,19 +1623,47 @@
 		},
 		{
 			"trigger": "rest_sanitize_value_from_schema",
-			"contents": "rest_sanitize_value_from_schema( ${1:\\$value}${2:, \\$args} )"
+			"contents": "rest_sanitize_value_from_schema( ${1:\\$value}${2:, \\$args}${3:, \\$param = ''} )"
 		},
 		{
 			"trigger": "rest_validate_value_from_schema",
 			"contents": "rest_validate_value_from_schema( ${1:\\$value}${2:, \\$args}${3:, \\$param = ''} )"
 		},
 		{
-			"trigger": "rest_get_avatar_sizes",
-			"contents": "rest_get_avatar_sizes()"
+			"trigger": "rest_stabilize_value",
+			"contents": "rest_stabilize_value( ${1:\\$value} )"
 		},
 		{
-			"trigger": "rest_get_avatar_urls",
-			"contents": "rest_get_avatar_urls( ${1:\\$id_or_email} )"
+			"trigger": "rest_validate_array_contains_unique_items",
+			"contents": "rest_validate_array_contains_unique_items( ${1:\\$array} )"
+		},
+		{
+			"trigger": "rest_handle_multi_type_schema",
+			"contents": "rest_handle_multi_type_schema( ${1:\\$value}${2:, \\$args}${3:, \\$param = ''} )"
+		},
+		{
+			"trigger": "rest_get_best_type_for_value",
+			"contents": "rest_get_best_type_for_value( ${1:\\$value}${2:, \\$types} )"
+		},
+		{
+			"trigger": "rest_sanitize_object",
+			"contents": "rest_sanitize_object( ${1:\\$maybe_object} )"
+		},
+		{
+			"trigger": "rest_is_object",
+			"contents": "rest_is_object( ${1:\\$maybe_object} )"
+		},
+		{
+			"trigger": "rest_sanitize_array",
+			"contents": "rest_sanitize_array( ${1:\\$maybe_array} )"
+		},
+		{
+			"trigger": "rest_is_array",
+			"contents": "rest_is_array( ${1:\\$maybe_array} )"
+		},
+		{
+			"trigger": "rest_is_integer",
+			"contents": "rest_is_integer( ${1:\\$maybe_integer} )"
 		},
 		{
 			"trigger": "rest_is_boolean",
@@ -1677,6 +1704,14 @@
 		{
 			"trigger": "rest_parse_date",
 			"contents": "rest_parse_date( ${1:\\$date}${2:, \\$force_utc = false} )"
+		},
+		{
+			"trigger": "rest_get_avatar_sizes",
+			"contents": "rest_get_avatar_sizes()"
+		},
+		{
+			"trigger": "rest_get_avatar_urls",
+			"contents": "rest_get_avatar_urls( ${1:\\$id_or_email} )"
 		},
 		{
 			"trigger": "rest_cookie_collect_status",
@@ -1721,6 +1756,10 @@
 		{
 			"trigger": "rest_send_cors_headers",
 			"contents": "rest_send_cors_headers( ${1:\\$value} )"
+		},
+		{
+			"trigger": "rest_handle_doing_it_wrong",
+			"contents": "rest_handle_doing_it_wrong( ${1:\\$function}${2:, \\$message}${3:, \\$version} )"
 		},
 		{
 			"trigger": "rest_handle_deprecated_argument",
@@ -2796,11 +2835,11 @@
 		},
 		{
 			"trigger": "do_action_deprecated",
-			"contents": "do_action_deprecated( ${1:\\$tag}${2:, \\$args}${3:, \\$version}${4:, \\$replacement = null}${5:, \\$message = null} )"
+			"contents": "do_action_deprecated( ${1:\\$tag}${2:, \\$args}${3:, \\$version}${4:, \\$replacement = ''}${5:, \\$message = ''} )"
 		},
 		{
 			"trigger": "apply_filters_deprecated",
-			"contents": "apply_filters_deprecated( ${1:\\$tag}${2:, \\$args}${3:, \\$version}${4:, \\$replacement = null}${5:, \\$message = null} )"
+			"contents": "apply_filters_deprecated( ${1:\\$tag}${2:, \\$args}${3:, \\$version}${4:, \\$replacement = ''}${5:, \\$message = ''} )"
 		},
 		{
 			"trigger": "remove_all_actions",
@@ -3671,6 +3710,10 @@
 			"contents": "wpmu_update_blogs_date()"
 		},
 		{
+			"trigger": "filter_default_metadata",
+			"contents": "filter_default_metadata( ${1:\\$value}${2:, \\$meta_type}${3:, \\$meta_key}${4:, \\$single}${5:, \\$object_id} )"
+		},
+		{
 			"trigger": "get_object_subtype",
 			"contents": "get_object_subtype( ${1:\\$object_type}${2:, \\$object_id} )"
 		},
@@ -3739,8 +3782,16 @@
 			"contents": "metadata_exists( ${1:\\$meta_type}${2:, \\$object_id}${3:, \\$meta_key} )"
 		},
 		{
+			"trigger": "get_metadata_default",
+			"contents": "get_metadata_default( ${1:\\$meta_type}${2:, \\$meta_key}${3:, \\$single = false}${4:, \\$object_id = 0} )"
+		},
+		{
 			"trigger": "get_metadata",
 			"contents": "get_metadata( ${1:\\$meta_type}${2:, \\$object_id}${3:, \\$meta_key = ''}${4:, \\$single = false} )"
+		},
+		{
+			"trigger": "get_metadata_raw",
+			"contents": "get_metadata_raw( ${1:\\$meta_type}${2:, \\$object_id}${3:, \\$meta_key = ''}${4:, \\$single = false} )"
 		},
 		{
 			"trigger": "delete_metadata",
@@ -3929,6 +3980,10 @@
 		{
 			"trigger": "wp_image_src_get_dimensions",
 			"contents": "wp_image_src_get_dimensions( ${1:\\$image_src}${2:, \\$image_meta} )"
+		},
+		{
+			"trigger": "wp_image_file_matches_image_meta",
+			"contents": "wp_image_file_matches_image_meta( ${1:\\$image_location}${2:, \\$image_meta} )"
 		},
 		{
 			"trigger": "wp_calculate_image_sizes",
@@ -5476,19 +5531,19 @@
 		},
 		{
 			"trigger": "get_template_part",
-			"contents": "get_template_part( ${1:\\$slug}${2:, \\$name = null} )"
+			"contents": "get_template_part( ${1:\\$slug}${2:, \\$name = null}${3:, \\$args = array()} )"
 		},
 		{
 			"trigger": "get_sidebar",
-			"contents": "get_sidebar( ${1:\\$name = null} )"
+			"contents": "get_sidebar( ${1:\\$name = null}${2:, \\$args = array()} )"
 		},
 		{
 			"trigger": "get_footer",
-			"contents": "get_footer( ${1:\\$name = null} )"
+			"contents": "get_footer( ${1:\\$name = null}${2:, \\$args = array()} )"
 		},
 		{
 			"trigger": "get_header",
-			"contents": "get_header( ${1:\\$name = null} )"
+			"contents": "get_header( ${1:\\$name = null}${2:, \\$args = array()} )"
 		},
 		{
 			"trigger": "wp_style_add_data",
@@ -5860,15 +5915,15 @@
 		},
 		{
 			"trigger": "_deprecated_hook",
-			"contents": "_deprecated_hook( ${1:\\$hook}${2:, \\$version}${3:, \\$replacement = null}${4:, \\$message = null} )"
+			"contents": "_deprecated_hook( ${1:\\$hook}${2:, \\$version}${3:, \\$replacement = ''}${4:, \\$message = ''} )"
 		},
 		{
 			"trigger": "_deprecated_argument",
-			"contents": "_deprecated_argument( ${1:\\$function}${2:, \\$version}${3:, \\$message = null} )"
+			"contents": "_deprecated_argument( ${1:\\$function}${2:, \\$version}${3:, \\$message = ''} )"
 		},
 		{
 			"trigger": "_deprecated_file",
-			"contents": "_deprecated_file( ${1:\\$file}${2:, \\$version}${3:, \\$replacement = null}${4:, \\$message = ''} )"
+			"contents": "_deprecated_file( ${1:\\$file}${2:, \\$version}${3:, \\$replacement = ''}${4:, \\$message = ''} )"
 		},
 		{
 			"trigger": "_deprecated_constructor",
@@ -5876,7 +5931,7 @@
 		},
 		{
 			"trigger": "_deprecated_function",
-			"contents": "_deprecated_function( ${1:\\$function}${2:, \\$version}${3:, \\$replacement = null} )"
+			"contents": "_deprecated_function( ${1:\\$function}${2:, \\$version}${3:, \\$replacement = ''} )"
 		},
 		{
 			"trigger": "absint",
