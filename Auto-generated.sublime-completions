@@ -3710,10 +3710,6 @@
 			"contents": "wpmu_update_blogs_date()"
 		},
 		{
-			"trigger": "filter_default_metadata",
-			"contents": "filter_default_metadata( ${1:\\$value}${2:, \\$meta_type}${3:, \\$meta_key}${4:, \\$single}${5:, \\$object_id} )"
-		},
-		{
 			"trigger": "get_object_subtype",
 			"contents": "get_object_subtype( ${1:\\$object_type}${2:, \\$object_id} )"
 		},
@@ -3736,6 +3732,10 @@
 		{
 			"trigger": "registered_meta_key_exists",
 			"contents": "registered_meta_key_exists( ${1:\\$object_type}${2:, \\$meta_key}${3:, \\$object_subtype = ''} )"
+		},
+		{
+			"trigger": "filter_default_metadata",
+			"contents": "filter_default_metadata( ${1:\\$value}${2:, \\$meta_type}${3:, \\$meta_key}${4:, \\$single}${5:, \\$object_id} )"
 		},
 		{
 			"trigger": "register_meta",
@@ -3786,12 +3786,12 @@
 			"contents": "get_metadata_default( ${1:\\$meta_type}${2:, \\$meta_key}${3:, \\$single = false}${4:, \\$object_id = 0} )"
 		},
 		{
-			"trigger": "get_metadata",
-			"contents": "get_metadata( ${1:\\$meta_type}${2:, \\$object_id}${3:, \\$meta_key = ''}${4:, \\$single = false} )"
-		},
-		{
 			"trigger": "get_metadata_raw",
 			"contents": "get_metadata_raw( ${1:\\$meta_type}${2:, \\$object_id}${3:, \\$meta_key = ''}${4:, \\$single = false} )"
+		},
+		{
+			"trigger": "get_metadata",
+			"contents": "get_metadata( ${1:\\$meta_type}${2:, \\$object_id}${3:, \\$meta_key = ''}${4:, \\$single = false} )"
 		},
 		{
 			"trigger": "delete_metadata",
@@ -10418,8 +10418,12 @@
 			"contents": "wp_check_locked_posts( ${1:\\$response}${2:, \\$data}${3:, \\$screen_id} )"
 		},
 		{
-			"trigger": "_ipad_meta",
-			"contents": "_ipad_meta()"
+			"trigger": "_customizer_mobile_viewport_meta",
+			"contents": "_customizer_mobile_viewport_meta( ${1:\\$viewport_meta} )"
+		},
+		{
+			"trigger": "wp_admin_viewport_meta",
+			"contents": "wp_admin_viewport_meta()"
 		},
 		{
 			"trigger": "wp_color_scheme_settings",
