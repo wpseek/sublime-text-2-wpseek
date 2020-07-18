@@ -3735,7 +3735,7 @@
 		},
 		{
 			"trigger": "filter_default_metadata",
-			"contents": "filter_default_metadata( ${1:\\$value}${2:, \\$meta_type}${3:, \\$meta_key}${4:, \\$single}${5:, \\$object_id} )"
+			"contents": "filter_default_metadata( ${1:\\$value}${2:, \\$object_id}${3:, \\$meta_key}${4:, \\$single}${5:, \\$meta_type} )"
 		},
 		{
 			"trigger": "register_meta",
@@ -3783,7 +3783,7 @@
 		},
 		{
 			"trigger": "get_metadata_default",
-			"contents": "get_metadata_default( ${1:\\$meta_type}${2:, \\$meta_key}${3:, \\$single = false}${4:, \\$object_id = 0} )"
+			"contents": "get_metadata_default( ${1:\\$meta_type}${2:, \\$object_id}${3:, \\$meta_key}${4:, \\$single = false} )"
 		},
 		{
 			"trigger": "get_metadata_raw",
@@ -8764,6 +8764,10 @@
 		{
 			"trigger": "render_block_core_archives",
 			"contents": "render_block_core_archives( ${1:\\$attributes} )"
+		},
+		{
+			"trigger": "_register_core_block_patterns_and_categories",
+			"contents": "_register_core_block_patterns_and_categories()"
 		},
 		{
 			"trigger": "__clear_multi_author_cache",
