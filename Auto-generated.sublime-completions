@@ -1234,12 +1234,12 @@
 			"contents": "wp_sitemaps_get_max_urls( ${1:\\$object_type} )"
 		},
 		{
-			"trigger": "wp_register_sitemap",
-			"contents": "wp_register_sitemap( ${1:\\$name}${2:, \\$provider} )"
+			"trigger": "wp_register_sitemap_provider",
+			"contents": "wp_register_sitemap_provider( ${1:\\$name}${2:, \\$provider} )"
 		},
 		{
-			"trigger": "wp_get_sitemaps",
-			"contents": "wp_get_sitemaps()"
+			"trigger": "wp_get_sitemap_providers",
+			"contents": "wp_get_sitemap_providers()"
 		},
 		{
 			"trigger": "wp_sitemaps_get_server",
@@ -1308,6 +1308,10 @@
 		{
 			"trigger": "add_shortcode",
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$callback} )"
+		},
+		{
+			"trigger": "wp_enqueue_editor_block_directory_assets",
+			"contents": "wp_enqueue_editor_block_directory_assets()"
 		},
 		{
 			"trigger": "enqueue_editor_block_styles_assets",
@@ -3979,11 +3983,11 @@
 		},
 		{
 			"trigger": "wp_image_src_get_dimensions",
-			"contents": "wp_image_src_get_dimensions( ${1:\\$image_src}${2:, \\$image_meta} )"
+			"contents": "wp_image_src_get_dimensions( ${1:\\$image_src}${2:, \\$image_meta}${3:, \\$attachment_id = 0} )"
 		},
 		{
 			"trigger": "wp_image_file_matches_image_meta",
-			"contents": "wp_image_file_matches_image_meta( ${1:\\$image_location}${2:, \\$image_meta} )"
+			"contents": "wp_image_file_matches_image_meta( ${1:\\$image_location}${2:, \\$image_meta}${3:, \\$attachment_id = 0} )"
 		},
 		{
 			"trigger": "wp_calculate_image_sizes",
