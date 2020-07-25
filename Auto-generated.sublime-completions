@@ -7971,11 +7971,11 @@
 		},
 		{
 			"trigger": "comment_id_fields",
-			"contents": "comment_id_fields( ${1:\\$id = 0} )"
+			"contents": "comment_id_fields( ${1:\\$post_id = 0} )"
 		},
 		{
 			"trigger": "get_comment_id_fields",
-			"contents": "get_comment_id_fields( ${1:\\$id = 0} )"
+			"contents": "get_comment_id_fields( ${1:\\$post_id = 0} )"
 		},
 		{
 			"trigger": "cancel_comment_reply_link",
@@ -9934,8 +9934,8 @@
 			"contents": "settings_fields( ${1:\\$option_group} )"
 		},
 		{
-			"trigger": "remove_option_allowed_list",
-			"contents": "remove_option_allowed_list( ${1:\\$del_options}${2:, \\$options = ''} )"
+			"trigger": "remove_allowed_options",
+			"contents": "remove_allowed_options( ${1:\\$del_options}${2:, \\$options = ''} )"
 		},
 		{
 			"trigger": "add_allowed_options",
