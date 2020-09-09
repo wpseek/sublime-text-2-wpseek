@@ -1598,6 +1598,10 @@
 			"contents": "_wp_post_revision_fields( ${1:\\$post = array()}${2:, \\$deprecated = false} )"
 		},
 		{
+			"trigger": "rest_get_endpoint_args_for_schema",
+			"contents": "rest_get_endpoint_args_for_schema( ${1:\\$schema}${2:, \\$method = WP_REST_Server::CREATABLE} )"
+		},
+		{
 			"trigger": "rest_get_queried_resource_route",
 			"contents": "rest_get_queried_resource_route()"
 		},
