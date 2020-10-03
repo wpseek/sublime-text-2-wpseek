@@ -1326,6 +1326,10 @@
 			"contents": "wp_enqueue_registered_block_scripts_and_styles()"
 		},
 		{
+			"trigger": "_should_load_block_editor_scripts_and_styles",
+			"contents": "_should_load_block_editor_scripts_and_styles()"
+		},
+		{
 			"trigger": "wp_common_block_scripts_and_styles",
 			"contents": "wp_common_block_scripts_and_styles()"
 		},
@@ -1636,6 +1640,14 @@
 		{
 			"trigger": "rest_validate_value_from_schema",
 			"contents": "rest_validate_value_from_schema( ${1:\\$value}${2:, \\$args}${3:, \\$param = ''} )"
+		},
+		{
+			"trigger": "rest_find_matching_pattern_property_schema",
+			"contents": "rest_find_matching_pattern_property_schema( ${1:\\$property}${2:, \\$args} )"
+		},
+		{
+			"trigger": "rest_validate_json_schema_pattern",
+			"contents": "rest_validate_json_schema_pattern( ${1:\\$pattern}${2:, \\$value} )"
 		},
 		{
 			"trigger": "rest_stabilize_value",
