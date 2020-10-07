@@ -1326,8 +1326,8 @@
 			"contents": "wp_enqueue_registered_block_scripts_and_styles()"
 		},
 		{
-			"trigger": "_should_load_block_editor_scripts_and_styles",
-			"contents": "_should_load_block_editor_scripts_and_styles()"
+			"trigger": "wp_should_load_block_editor_scripts_and_styles",
+			"contents": "wp_should_load_block_editor_scripts_and_styles()"
 		},
 		{
 			"trigger": "wp_common_block_scripts_and_styles",
