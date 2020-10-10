@@ -226,6 +226,14 @@
 			"contents": "wp_is_mobile()"
 		},
 		{
+			"trigger": "wp_is_application_passwords_available_for_user",
+			"contents": "wp_is_application_passwords_available_for_user( ${1:\\$user} )"
+		},
+		{
+			"trigger": "wp_is_application_passwords_available",
+			"contents": "wp_is_application_passwords_available()"
+		},
+		{
 			"trigger": "wp_get_user_request",
 			"contents": "wp_get_user_request( ${1:\\$request_id} )"
 		},
@@ -456,6 +464,14 @@
 		{
 			"trigger": "wp_authenticate_spam_check",
 			"contents": "wp_authenticate_spam_check( ${1:\\$user} )"
+		},
+		{
+			"trigger": "wp_validate_application_password",
+			"contents": "wp_validate_application_password( ${1:\\$input_user} )"
+		},
+		{
+			"trigger": "wp_authenticate_application_password",
+			"contents": "wp_authenticate_application_password( ${1:\\$input_user}${2:, \\$username}${3:, \\$password} )"
 		},
 		{
 			"trigger": "wp_authenticate_cookie",
@@ -1732,6 +1748,18 @@
 		{
 			"trigger": "rest_get_avatar_urls",
 			"contents": "rest_get_avatar_urls( ${1:\\$id_or_email} )"
+		},
+		{
+			"trigger": "rest_add_application_passwords_to_index",
+			"contents": "rest_add_application_passwords_to_index( ${1:\\$response} )"
+		},
+		{
+			"trigger": "rest_application_password_check_errors",
+			"contents": "rest_application_password_check_errors( ${1:\\$result} )"
+		},
+		{
+			"trigger": "rest_application_password_collect_status",
+			"contents": "rest_application_password_collect_status( ${1:\\$user_or_error} )"
 		},
 		{
 			"trigger": "rest_cookie_collect_status",
@@ -4312,6 +4340,10 @@
 		{
 			"trigger": "wp_check_php_mysql_versions",
 			"contents": "wp_check_php_mysql_versions()"
+		},
+		{
+			"trigger": "wp_populate_basic_auth_from_authorization_header",
+			"contents": "wp_populate_basic_auth_from_authorization_header()"
 		},
 		{
 			"trigger": "wp_fix_server_vars",
@@ -9064,6 +9096,10 @@
 		{
 			"trigger": "wp_list_widgets",
 			"contents": "wp_list_widgets()"
+		},
+		{
+			"trigger": "wp_is_authorize_application_password_request_valid",
+			"contents": "wp_is_authorize_application_password_request_valid( ${1:\\$request}${2:, \\$user} )"
 		},
 		{
 			"trigger": "admin_created_user_email",
