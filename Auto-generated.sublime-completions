@@ -1078,26 +1078,6 @@
 			"contents": "wp_update_term_count( ${1:\\$terms}${2:, \\$taxonomy}${3:, \\$do_deferred = false} )"
 		},
 		{
-			"trigger": "wp_modify_term_count_by_now",
-			"contents": "wp_modify_term_count_by_now( ${1:\\$tt_ids}${2:, \\$taxonomy}${3:, \\$modify_by} )"
-		},
-		{
-			"trigger": "wp_modify_term_count_by",
-			"contents": "wp_modify_term_count_by( ${1:\\$tt_ids}${2:, \\$taxonomy}${3:, \\$modify_by}${4:, \\$do_deferred = false} )"
-		},
-		{
-			"trigger": "wp_decrement_term_count",
-			"contents": "wp_decrement_term_count( ${1:\\$tt_ids}${2:, \\$taxonomy}${3:, \\$decrement_by = 1}${4:, \\$do_deferred = false} )"
-		},
-		{
-			"trigger": "wp_increment_term_count",
-			"contents": "wp_increment_term_count( ${1:\\$tt_ids}${2:, \\$taxonomy}${3:, \\$increment_by = 1}${4:, \\$do_deferred = false} )"
-		},
-		{
-			"trigger": "_wp_prevent_term_counting",
-			"contents": "_wp_prevent_term_counting( ${1:\\$new_setting = null} )"
-		},
-		{
 			"trigger": "wp_defer_term_counting",
 			"contents": "wp_defer_term_counting( ${1:\\$defer = null} )"
 		},
@@ -4910,6 +4890,14 @@
 			"contents": "get_translations_for_domain( ${1:\\$domain} )"
 		},
 		{
+			"trigger": "_get_path_to_translation_from_lang_dir",
+			"contents": "_get_path_to_translation_from_lang_dir( ${1:\\$domain} )"
+		},
+		{
+			"trigger": "_get_path_to_translation",
+			"contents": "_get_path_to_translation( ${1:\\$domain}${2:, \\$reset = false} )"
+		},
+		{
 			"trigger": "_load_textdomain_just_in_time",
 			"contents": "_load_textdomain_just_in_time( ${1:\\$domain} )"
 		},
@@ -4943,7 +4931,7 @@
 		},
 		{
 			"trigger": "unload_textdomain",
-			"contents": "unload_textdomain( ${1:\\$domain}${2:, \\$reloadable = false} )"
+			"contents": "unload_textdomain( ${1:\\$domain} )"
 		},
 		{
 			"trigger": "load_textdomain",
@@ -5738,12 +5726,8 @@
 			"contents": "is_wp_version_compatible( ${1:\\$required} )"
 		},
 		{
-			"trigger": "normalize_dirsize_cache_path",
-			"contents": "normalize_dirsize_cache_path( ${1:\\$path} )"
-		},
-		{
-			"trigger": "invalidate_dirsize_cache",
-			"contents": "invalidate_dirsize_cache( ${1:\\$path} )"
+			"trigger": "clean_dirsize_cache",
+			"contents": "clean_dirsize_cache( ${1:\\$path} )"
 		},
 		{
 			"trigger": "recurse_dirsize",
@@ -6080,10 +6064,6 @@
 		{
 			"trigger": "wp_is_numeric_array",
 			"contents": "wp_is_numeric_array( ${1:\\$data} )"
-		},
-		{
-			"trigger": "wp_array_get",
-			"contents": "wp_array_get( ${1:\\$array}${2:, \\$path}${3:, \\$default = array()} )"
 		},
 		{
 			"trigger": "wp_array_slice_assoc",
@@ -7228,14 +7208,6 @@
 		{
 			"trigger": "wp_embed_register_handler",
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
-		},
-		{
-			"trigger": "_get_path_to_translation_from_lang_dir",
-			"contents": "_get_path_to_translation_from_lang_dir( ${1:\\$domain} )"
-		},
-		{
-			"trigger": "_get_path_to_translation",
-			"contents": "_get_path_to_translation( ${1:\\$domain}${2:, \\$reset = false} )"
 		},
 		{
 			"trigger": "addslashes_strings_only",
