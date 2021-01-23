@@ -1498,6 +1498,22 @@
 			"contents": "fetch_rss( ${1:\\$url} )"
 		},
 		{
+			"trigger": "wp_robots_sensitive_page",
+			"contents": "wp_robots_sensitive_page( ${1:\\$robots} )"
+		},
+		{
+			"trigger": "wp_robots_no_robots",
+			"contents": "wp_robots_no_robots( ${1:\\$robots} )"
+		},
+		{
+			"trigger": "wp_robots_noindex",
+			"contents": "wp_robots_noindex( ${1:\\$robots} )"
+		},
+		{
+			"trigger": "wp_robots",
+			"contents": "wp_robots()"
+		},
+		{
 			"trigger": "url_to_postid",
 			"contents": "url_to_postid( ${1:\\$url} )"
 		},
@@ -2335,7 +2351,7 @@
 		},
 		{
 			"trigger": "wp_after_insert_post",
-			"contents": "wp_after_insert_post( ${1:\\$post}${2:, \\$update} )"
+			"contents": "wp_after_insert_post( ${1:\\$post}${2:, \\$update}${3:, \\$post_before} )"
 		},
 		{
 			"trigger": "wp_transition_post_status",
@@ -4034,6 +4050,10 @@
 			"contents": "img_caption_shortcode( ${1:\\$attr}${2:, \\$content = null} )"
 		},
 		{
+			"trigger": "wp_iframe_tag_add_loading_attr",
+			"contents": "wp_iframe_tag_add_loading_attr( ${1:\\$iframe}${2:, \\$context} )"
+		},
+		{
 			"trigger": "wp_img_tag_add_srcset_and_sizes_attr",
 			"contents": "wp_img_tag_add_srcset_and_sizes_attr( ${1:\\$image}${2:, \\$context}${3:, \\$attachment_id} )"
 		},
@@ -5158,6 +5178,30 @@
 			"contents": "wp_kses( ${1:\\$string}${2:, \\$allowed_html}${3:, \\$allowed_protocols = array()} )"
 		},
 		{
+			"trigger": "wp_is_owned_html_output",
+			"contents": "wp_is_owned_html_output( ${1:\\$html} )"
+		},
+		{
+			"trigger": "wp_cron_conditionally_prevent_sslverify",
+			"contents": "wp_cron_conditionally_prevent_sslverify( ${1:\\$request} )"
+		},
+		{
+			"trigger": "wp_schedule_https_detection",
+			"contents": "wp_schedule_https_detection()"
+		},
+		{
+			"trigger": "wp_update_https_detection_errors",
+			"contents": "wp_update_https_detection_errors()"
+		},
+		{
+			"trigger": "wp_is_https_supported",
+			"contents": "wp_is_https_supported()"
+		},
+		{
+			"trigger": "wp_is_using_https",
+			"contents": "wp_is_using_https()"
+		},
+		{
 			"trigger": "wp_parse_url",
 			"contents": "wp_parse_url( ${1:\\$url}${2:, \\$component = -1} )"
 		},
@@ -5374,16 +5418,8 @@
 			"contents": "wp_site_icon()"
 		},
 		{
-			"trigger": "wp_sensitive_page_meta",
-			"contents": "wp_sensitive_page_meta()"
-		},
-		{
-			"trigger": "wp_no_robots",
-			"contents": "wp_no_robots()"
-		},
-		{
-			"trigger": "noindex",
-			"contents": "noindex()"
+			"trigger": "wp_strict_cross_origin_referrer",
+			"contents": "wp_strict_cross_origin_referrer()"
 		},
 		{
 			"trigger": "wlwmanifest_link",
@@ -7062,6 +7098,10 @@
 			"contents": "wp_paused_plugins()"
 		},
 		{
+			"trigger": "wp_embed_no_robots",
+			"contents": "wp_embed_no_robots( ${1:\\$robots} )"
+		},
+		{
 			"trigger": "wp_filter_pre_oembed_result",
 			"contents": "wp_filter_pre_oembed_result( ${1:\\$result}${2:, \\$url}${3:, \\$args} )"
 		},
@@ -7208,6 +7248,18 @@
 		{
 			"trigger": "wp_embed_register_handler",
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
+		},
+		{
+			"trigger": "wp_sensitive_page_meta",
+			"contents": "wp_sensitive_page_meta()"
+		},
+		{
+			"trigger": "wp_no_robots",
+			"contents": "wp_no_robots()"
+		},
+		{
+			"trigger": "noindex",
+			"contents": "noindex()"
 		},
 		{
 			"trigger": "addslashes_strings_only",
@@ -8256,34 +8308,6 @@
 		{
 			"trigger": "get_comment_author",
 			"contents": "get_comment_author( ${1:\\$comment_ID = 0} )"
-		},
-		{
-			"trigger": "get_block_wrapper_attributes",
-			"contents": "get_block_wrapper_attributes( ${1:\\$extra_attributes = array()} )"
-		},
-		{
-			"trigger": "unregister_block_pattern",
-			"contents": "unregister_block_pattern( ${1:\\$pattern_name} )"
-		},
-		{
-			"trigger": "register_block_pattern",
-			"contents": "register_block_pattern( ${1:\\$pattern_name}${2:, \\$pattern_properties} )"
-		},
-		{
-			"trigger": "unregister_block_pattern_category",
-			"contents": "unregister_block_pattern_category( ${1:\\$category_name} )"
-		},
-		{
-			"trigger": "register_block_pattern_category",
-			"contents": "register_block_pattern_category( ${1:\\$category_name}${2:, \\$category_properties} )"
-		},
-		{
-			"trigger": "wp_simplepie_autoload",
-			"contents": "wp_simplepie_autoload( ${1:\\$class} )"
-		},
-		{
-			"trigger": "stripos",
-			"contents": "stripos( ${1:\\$haystack}${2:, \\$needle} )"
 		},
 		{
 			"trigger": "_make_cat_compat",
