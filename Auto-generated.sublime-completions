@@ -1498,6 +1498,10 @@
 			"contents": "fetch_rss( ${1:\\$url} )"
 		},
 		{
+			"trigger": "wp_robots_max_image_preview_large",
+			"contents": "wp_robots_max_image_preview_large( ${1:\\$robots} )"
+		},
+		{
 			"trigger": "wp_robots_sensitive_page",
 			"contents": "wp_robots_sensitive_page( ${1:\\$robots} )"
 		},
@@ -1670,6 +1674,34 @@
 			"contents": "rest_sanitize_value_from_schema( ${1:\\$value}${2:, \\$args}${3:, \\$param = ''} )"
 		},
 		{
+			"trigger": "rest_validate_integer_value_from_schema",
+			"contents": "rest_validate_integer_value_from_schema( ${1:\\$value}${2:, \\$args}${3:, \\$param} )"
+		},
+		{
+			"trigger": "rest_validate_string_value_from_schema",
+			"contents": "rest_validate_string_value_from_schema( ${1:\\$value}${2:, \\$args}${3:, \\$param} )"
+		},
+		{
+			"trigger": "rest_validate_number_value_from_schema",
+			"contents": "rest_validate_number_value_from_schema( ${1:\\$value}${2:, \\$args}${3:, \\$param} )"
+		},
+		{
+			"trigger": "rest_validate_array_value_from_schema",
+			"contents": "rest_validate_array_value_from_schema( ${1:\\$value}${2:, \\$args}${3:, \\$param} )"
+		},
+		{
+			"trigger": "rest_validate_object_value_from_schema",
+			"contents": "rest_validate_object_value_from_schema( ${1:\\$value}${2:, \\$args}${3:, \\$param} )"
+		},
+		{
+			"trigger": "rest_validate_boolean_value_from_schema",
+			"contents": "rest_validate_boolean_value_from_schema( ${1:\\$value}${2:, \\$param} )"
+		},
+		{
+			"trigger": "rest_validate_null_value_from_schema",
+			"contents": "rest_validate_null_value_from_schema( ${1:\\$value}${2:, \\$param} )"
+		},
+		{
 			"trigger": "rest_validate_value_from_schema",
 			"contents": "rest_validate_value_from_schema( ${1:\\$value}${2:, \\$args}${3:, \\$param = ''} )"
 		},
@@ -1802,8 +1834,12 @@
 			"contents": "rest_application_password_check_errors( ${1:\\$result} )"
 		},
 		{
+			"trigger": "rest_get_authenticated_app_password",
+			"contents": "rest_get_authenticated_app_password()"
+		},
+		{
 			"trigger": "rest_application_password_collect_status",
-			"contents": "rest_application_password_collect_status( ${1:\\$user_or_error} )"
+			"contents": "rest_application_password_collect_status( ${1:\\$user_or_error}${2:, \\$app_password = array()} )"
 		},
 		{
 			"trigger": "rest_cookie_collect_status",
@@ -5194,8 +5230,8 @@
 			"contents": "wp_kses( ${1:\\$string}${2:, \\$allowed_html}${3:, \\$allowed_protocols = array()} )"
 		},
 		{
-			"trigger": "wp_is_owned_html_output",
-			"contents": "wp_is_owned_html_output( ${1:\\$html} )"
+			"trigger": "wp_is_local_html_output",
+			"contents": "wp_is_local_html_output( ${1:\\$html} )"
 		},
 		{
 			"trigger": "wp_cron_conditionally_prevent_sslverify",
@@ -5212,6 +5248,14 @@
 		{
 			"trigger": "wp_is_https_supported",
 			"contents": "wp_is_https_supported()"
+		},
+		{
+			"trigger": "wp_is_site_url_using_https",
+			"contents": "wp_is_site_url_using_https()"
+		},
+		{
+			"trigger": "wp_is_home_url_using_https",
+			"contents": "wp_is_home_url_using_https()"
 		},
 		{
 			"trigger": "wp_is_using_https",
