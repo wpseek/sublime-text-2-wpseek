@@ -74,10 +74,6 @@
 			"contents": "do_signup_header()"
 		},
 		{
-			"trigger": "retrieve_password",
-			"contents": "retrieve_password()"
-		},
-		{
 			"trigger": "wp_login_viewport_meta",
 			"contents": "wp_login_viewport_meta()"
 		},
@@ -255,7 +251,7 @@
 		},
 		{
 			"trigger": "wp_create_user_request",
-			"contents": "wp_create_user_request( ${1:\\$email_address = ''}${2:, \\$action_name = ''}${3:, \\$request_data = array()} )"
+			"contents": "wp_create_user_request( ${1:\\$email_address = ''}${2:, \\$action_name = ''}${3:, \\$request_data = array()}${4:, \\$send_confirmation_email = true} )"
 		},
 		{
 			"trigger": "_wp_privacy_account_request_confirmed_message",
@@ -332,6 +328,10 @@
 		{
 			"trigger": "reset_password",
 			"contents": "reset_password( ${1:\\$user}${2:, \\$new_pass} )"
+		},
+		{
+			"trigger": "retrieve_password",
+			"contents": "retrieve_password( ${1:\\$user_login = null} )"
 		},
 		{
 			"trigger": "check_password_reset_key",
@@ -1638,6 +1638,10 @@
 			"contents": "_wp_post_revision_fields( ${1:\\$post = array()}${2:, \\$deprecated = false} )"
 		},
 		{
+			"trigger": "rest_convert_error_to_response",
+			"contents": "rest_convert_error_to_response( ${1:\\$error} )"
+		},
+		{
 			"trigger": "rest_get_endpoint_args_for_schema",
 			"contents": "rest_get_endpoint_args_for_schema( ${1:\\$schema}${2:, \\$method = WP_REST_Server::CREATABLE} )"
 		},
@@ -2574,6 +2578,14 @@
 			"contents": "get_posts( ${1:\\$args = null} )"
 		},
 		{
+			"trigger": "is_post_publicly_viewable",
+			"contents": "is_post_publicly_viewable( ${1:\\$post = null} )"
+		},
+		{
+			"trigger": "is_post_status_viewable",
+			"contents": "is_post_status_viewable( ${1:\\$post_status} )"
+		},
+		{
 			"trigger": "is_post_type_viewable",
 			"contents": "is_post_type_viewable( ${1:\\$post_type} )"
 		},
@@ -2752,6 +2764,14 @@
 		{
 			"trigger": "has_post_thumbnail",
 			"contents": "has_post_thumbnail( ${1:\\$post = null} )"
+		},
+		{
+			"trigger": "has_parent_post",
+			"contents": "has_parent_post( ${1:\\$post = null} )"
+		},
+		{
+			"trigger": "get_parent_post",
+			"contents": "get_parent_post( ${1:\\$post = null} )"
 		},
 		{
 			"trigger": "wp_list_post_revisions",
@@ -3946,6 +3966,10 @@
 			"contents": "add_metadata( ${1:\\$meta_type}${2:, \\$object_id}${3:, \\$meta_key}${4:, \\$meta_value}${5:, \\$unique = false} )"
 		},
 		{
+			"trigger": "wp_getimagesize",
+			"contents": "wp_getimagesize( ${1:\\$filename}${2:, \\$imageinfo = array()} )"
+		},
+		{
 			"trigger": "wp_show_heic_upload_error",
 			"contents": "wp_show_heic_upload_error( ${1:\\$plupload_settings} )"
 		},
@@ -4902,6 +4926,10 @@
 			"contents": "get_the_permalink( ${1:\\$post = 0}${2:, \\$leavename = false} )"
 		},
 		{
+			"trigger": "wp_force_ugly_post_permalink",
+			"contents": "wp_force_ugly_post_permalink( ${1:\\$post = null}${2:, \\$sample = null} )"
+		},
+		{
 			"trigger": "permalink_anchor",
 			"contents": "permalink_anchor( ${1:\\$mode = 'id'} )"
 		},
@@ -5228,6 +5256,22 @@
 		{
 			"trigger": "wp_kses",
 			"contents": "wp_kses( ${1:\\$string}${2:, \\$allowed_html}${3:, \\$allowed_protocols = array()} )"
+		},
+		{
+			"trigger": "wp_update_https_migration_required",
+			"contents": "wp_update_https_migration_required( ${1:\\$old_url}${2:, \\$new_url} )"
+		},
+		{
+			"trigger": "wp_update_urls_to_https",
+			"contents": "wp_update_urls_to_https()"
+		},
+		{
+			"trigger": "wp_replace_insecure_home_url",
+			"contents": "wp_replace_insecure_home_url( ${1:\\$content} )"
+		},
+		{
+			"trigger": "wp_should_replace_insecure_home_url",
+			"contents": "wp_should_replace_insecure_home_url()"
 		},
 		{
 			"trigger": "wp_is_local_html_output",
@@ -5810,6 +5854,26 @@
 			"contents": "wp_scripts()"
 		},
 		{
+			"trigger": "wp_print_inline_script_tag",
+			"contents": "wp_print_inline_script_tag( ${1:\\$javascript}${2:, \\$attributes = array()} )"
+		},
+		{
+			"trigger": "wp_get_inline_script_tag",
+			"contents": "wp_get_inline_script_tag( ${1:\\$javascript}${2:, \\$attributes = array()} )"
+		},
+		{
+			"trigger": "wp_print_script_tag",
+			"contents": "wp_print_script_tag( ${1:\\$attributes} )"
+		},
+		{
+			"trigger": "wp_get_script_tag",
+			"contents": "wp_get_script_tag( ${1:\\$attributes} )"
+		},
+		{
+			"trigger": "wp_sanitize_script_attributes",
+			"contents": "wp_sanitize_script_attributes( ${1:\\$attributes} )"
+		},
+		{
 			"trigger": "wp_fuzzy_number_match",
 			"contents": "wp_fuzzy_number_match( ${1:\\$expected}${2:, \\$actual}${3:, \\$precision = 1} )"
 		},
@@ -5832,6 +5896,18 @@
 		{
 			"trigger": "get_dirsize",
 			"contents": "get_dirsize( ${1:\\$directory}${2:, \\$max_execution_time = null} )"
+		},
+		{
+			"trigger": "wp_get_direct_update_https_url",
+			"contents": "wp_get_direct_update_https_url()"
+		},
+		{
+			"trigger": "wp_get_default_update_https_url",
+			"contents": "wp_get_default_update_https_url()"
+		},
+		{
+			"trigger": "wp_get_update_https_url",
+			"contents": "wp_get_update_https_url()"
 		},
 		{
 			"trigger": "wp_direct_php_update_button",
@@ -8087,7 +8163,7 @@
 		},
 		{
 			"trigger": "_set_cron_array",
-			"contents": "_set_cron_array( ${1:\\$cron} )"
+			"contents": "_set_cron_array( ${1:\\$cron}${2:, \\$wp_error = false} )"
 		},
 		{
 			"trigger": "_get_cron_array",
@@ -8104,6 +8180,10 @@
 		{
 			"trigger": "wp_get_schedules",
 			"contents": "wp_get_schedules()"
+		},
+		{
+			"trigger": "_wp_cron",
+			"contents": "_wp_cron()"
 		},
 		{
 			"trigger": "wp_cron",
@@ -8123,27 +8203,27 @@
 		},
 		{
 			"trigger": "wp_unschedule_hook",
-			"contents": "wp_unschedule_hook( ${1:\\$hook} )"
+			"contents": "wp_unschedule_hook( ${1:\\$hook}${2:, \\$wp_error = false} )"
 		},
 		{
 			"trigger": "wp_clear_scheduled_hook",
-			"contents": "wp_clear_scheduled_hook( ${1:\\$hook}${2:, \\$args = array()} )"
+			"contents": "wp_clear_scheduled_hook( ${1:\\$hook}${2:, \\$args = array()}${3:, \\$wp_error = false} )"
 		},
 		{
 			"trigger": "wp_unschedule_event",
-			"contents": "wp_unschedule_event( ${1:\\$timestamp}${2:, \\$hook}${3:, \\$args = array()} )"
+			"contents": "wp_unschedule_event( ${1:\\$timestamp}${2:, \\$hook}${3:, \\$args = array()}${4:, \\$wp_error = false} )"
 		},
 		{
 			"trigger": "wp_reschedule_event",
-			"contents": "wp_reschedule_event( ${1:\\$timestamp}${2:, \\$recurrence}${3:, \\$hook}${4:, \\$args = array()} )"
+			"contents": "wp_reschedule_event( ${1:\\$timestamp}${2:, \\$recurrence}${3:, \\$hook}${4:, \\$args = array()}${5:, \\$wp_error = false} )"
 		},
 		{
 			"trigger": "wp_schedule_event",
-			"contents": "wp_schedule_event( ${1:\\$timestamp}${2:, \\$recurrence}${3:, \\$hook}${4:, \\$args = array()} )"
+			"contents": "wp_schedule_event( ${1:\\$timestamp}${2:, \\$recurrence}${3:, \\$hook}${4:, \\$args = array()}${5:, \\$wp_error = false} )"
 		},
 		{
 			"trigger": "wp_schedule_single_event",
-			"contents": "wp_schedule_single_event( ${1:\\$timestamp}${2:, \\$hook}${3:, \\$args = array()} )"
+			"contents": "wp_schedule_single_event( ${1:\\$timestamp}${2:, \\$hook}${3:, \\$args = array()}${4:, \\$wp_error = false} )"
 		},
 		{
 			"trigger": "is_iterable",
@@ -11802,6 +11882,10 @@
 			"contents": "add_link()"
 		},
 		{
+			"trigger": "wp_ajax_send_password_reset",
+			"contents": "wp_ajax_send_password_reset()"
+		},
+		{
 			"trigger": "wp_ajax_toggle_auto_updates",
 			"contents": "wp_ajax_toggle_auto_updates()"
 		},
@@ -11876,6 +11960,10 @@
 		{
 			"trigger": "wp_ajax_save_wporg_username",
 			"contents": "wp_ajax_save_wporg_username()"
+		},
+		{
+			"trigger": "wp_ajax_nopriv_generate_password",
+			"contents": "wp_ajax_nopriv_generate_password()"
 		},
 		{
 			"trigger": "wp_ajax_generate_password",
