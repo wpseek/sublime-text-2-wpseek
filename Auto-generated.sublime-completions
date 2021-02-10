@@ -251,7 +251,7 @@
 		},
 		{
 			"trigger": "wp_create_user_request",
-			"contents": "wp_create_user_request( ${1:\\$email_address = ''}${2:, \\$action_name = ''}${3:, \\$request_data = array()}${4:, \\$send_confirmation_email = true} )"
+			"contents": "wp_create_user_request( ${1:\\$email_address = ''}${2:, \\$action_name = ''}${3:, \\$request_data = array()}${4:, \\$status = 'pending'} )"
 		},
 		{
 			"trigger": "_wp_privacy_account_request_confirmed_message",
@@ -4926,8 +4926,8 @@
 			"contents": "get_the_permalink( ${1:\\$post = 0}${2:, \\$leavename = false} )"
 		},
 		{
-			"trigger": "wp_force_ugly_post_permalink",
-			"contents": "wp_force_ugly_post_permalink( ${1:\\$post = null}${2:, \\$sample = null} )"
+			"trigger": "wp_force_plain_post_permalink",
+			"contents": "wp_force_plain_post_permalink( ${1:\\$post = null}${2:, \\$sample = null} )"
 		},
 		{
 			"trigger": "permalink_anchor",
