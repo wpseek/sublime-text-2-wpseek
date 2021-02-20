@@ -1510,6 +1510,14 @@
 			"contents": "wp_robots_no_robots( ${1:\\$robots} )"
 		},
 		{
+			"trigger": "wp_robots_noindex_search",
+			"contents": "wp_robots_noindex_search( ${1:\\$robots} )"
+		},
+		{
+			"trigger": "wp_robots_noindex_embeds",
+			"contents": "wp_robots_noindex_embeds( ${1:\\$robots} )"
+		},
+		{
 			"trigger": "wp_robots_noindex",
 			"contents": "wp_robots_noindex( ${1:\\$robots} )"
 		},
@@ -7232,10 +7240,6 @@
 		{
 			"trigger": "wp_paused_plugins",
 			"contents": "wp_paused_plugins()"
-		},
-		{
-			"trigger": "wp_embed_no_robots",
-			"contents": "wp_embed_no_robots( ${1:\\$robots} )"
 		},
 		{
 			"trigger": "wp_filter_pre_oembed_result",
