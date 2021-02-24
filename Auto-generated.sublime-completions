@@ -1326,6 +1326,26 @@
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$callback} )"
 		},
 		{
+			"trigger": "wp_print_inline_script_tag",
+			"contents": "wp_print_inline_script_tag( ${1:\\$javascript}${2:, \\$attributes = array()} )"
+		},
+		{
+			"trigger": "wp_get_inline_script_tag",
+			"contents": "wp_get_inline_script_tag( ${1:\\$javascript}${2:, \\$attributes = array()} )"
+		},
+		{
+			"trigger": "wp_print_script_tag",
+			"contents": "wp_print_script_tag( ${1:\\$attributes} )"
+		},
+		{
+			"trigger": "wp_get_script_tag",
+			"contents": "wp_get_script_tag( ${1:\\$attributes} )"
+		},
+		{
+			"trigger": "wp_sanitize_script_attributes",
+			"contents": "wp_sanitize_script_attributes( ${1:\\$attributes} )"
+		},
+		{
 			"trigger": "wp_enqueue_editor_block_directory_assets",
 			"contents": "wp_enqueue_editor_block_directory_assets()"
 		},
@@ -2774,12 +2794,12 @@
 			"contents": "has_post_thumbnail( ${1:\\$post = null} )"
 		},
 		{
-			"trigger": "has_parent_post",
-			"contents": "has_parent_post( ${1:\\$post = null} )"
+			"trigger": "has_post_parent",
+			"contents": "has_post_parent( ${1:\\$post = null} )"
 		},
 		{
-			"trigger": "get_parent_post",
-			"contents": "get_parent_post( ${1:\\$post = null} )"
+			"trigger": "get_post_parent",
+			"contents": "get_post_parent( ${1:\\$post = null} )"
 		},
 		{
 			"trigger": "wp_list_post_revisions",
@@ -5860,26 +5880,6 @@
 		{
 			"trigger": "wp_scripts",
 			"contents": "wp_scripts()"
-		},
-		{
-			"trigger": "wp_print_inline_script_tag",
-			"contents": "wp_print_inline_script_tag( ${1:\\$javascript}${2:, \\$attributes = array()} )"
-		},
-		{
-			"trigger": "wp_get_inline_script_tag",
-			"contents": "wp_get_inline_script_tag( ${1:\\$javascript}${2:, \\$attributes = array()} )"
-		},
-		{
-			"trigger": "wp_print_script_tag",
-			"contents": "wp_print_script_tag( ${1:\\$attributes} )"
-		},
-		{
-			"trigger": "wp_get_script_tag",
-			"contents": "wp_get_script_tag( ${1:\\$attributes} )"
-		},
-		{
-			"trigger": "wp_sanitize_script_attributes",
-			"contents": "wp_sanitize_script_attributes( ${1:\\$attributes} )"
 		},
 		{
 			"trigger": "wp_fuzzy_number_match",
