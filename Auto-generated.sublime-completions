@@ -1350,6 +1350,10 @@
 			"contents": "wp_enqueue_editor_block_directory_assets()"
 		},
 		{
+			"trigger": "wp_enqueue_editor_format_library_assets",
+			"contents": "wp_enqueue_editor_format_library_assets()"
+		},
+		{
 			"trigger": "enqueue_editor_block_styles_assets",
 			"contents": "enqueue_editor_block_styles_assets()"
 		},
@@ -3995,7 +3999,7 @@
 		},
 		{
 			"trigger": "wp_getimagesize",
-			"contents": "wp_getimagesize( ${1:\\$filename}${2:, \\$imageinfo = array()} )"
+			"contents": "wp_getimagesize( ${1:\\$filename}${2:, \\$image_info = null} )"
 		},
 		{
 			"trigger": "wp_show_heic_upload_error",
