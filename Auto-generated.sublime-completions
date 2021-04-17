@@ -1346,12 +1346,12 @@
 			"contents": "wp_sanitize_script_attributes( ${1:\\$attributes} )"
 		},
 		{
-			"trigger": "wp_enqueue_editor_block_directory_assets",
-			"contents": "wp_enqueue_editor_block_directory_assets()"
-		},
-		{
 			"trigger": "wp_enqueue_editor_format_library_assets",
 			"contents": "wp_enqueue_editor_format_library_assets()"
+		},
+		{
+			"trigger": "wp_enqueue_editor_block_directory_assets",
+			"contents": "wp_enqueue_editor_block_directory_assets()"
 		},
 		{
 			"trigger": "enqueue_editor_block_styles_assets",
@@ -8806,6 +8806,10 @@
 			"contents": "_walk_bookmarks( ${1:\\$bookmarks}${2:, \\$args = ''} )"
 		},
 		{
+			"trigger": "block_has_support",
+			"contents": "block_has_support( ${1:\\$block_type}${2:, \\$feature}${3:, \\$default = false} )"
+		},
+		{
 			"trigger": "unregister_block_style",
 			"contents": "unregister_block_style( ${1:\\$block_name}${2:, \\$block_style_name} )"
 		},
@@ -8950,6 +8954,10 @@
 			"contents": "render_block_core_shortcode( ${1:\\$attributes}${2:, \\$content} )"
 		},
 		{
+			"trigger": "styles_for_block_core_search",
+			"contents": "styles_for_block_core_search( ${1:\\$attributes} )"
+		},
+		{
 			"trigger": "classnames_for_block_core_search",
 			"contents": "classnames_for_block_core_search( ${1:\\$attributes} )"
 		},
@@ -9038,6 +9046,10 @@
 			"contents": "render_block_core_archives( ${1:\\$attributes} )"
 		},
 		{
+			"trigger": "wp_typography_get_css_variable_inline_style",
+			"contents": "wp_typography_get_css_variable_inline_style( ${1:\\$attributes}${2:, \\$feature}${3:, \\$css_property} )"
+		},
+		{
 			"trigger": "wp_apply_typography_support",
 			"contents": "wp_apply_typography_support( ${1:\\$block_type}${2:, \\$block_attributes} )"
 		},
@@ -9046,8 +9058,20 @@
 			"contents": "wp_register_typography_support( ${1:\\$block_type} )"
 		},
 		{
+			"trigger": "wp_apply_padding_support",
+			"contents": "wp_apply_padding_support( ${1:\\$block_type}${2:, \\$block_attributes} )"
+		},
+		{
+			"trigger": "wp_register_padding_support",
+			"contents": "wp_register_padding_support( ${1:\\$block_type} )"
+		},
+		{
+			"trigger": "wp_restore_group_inner_container",
+			"contents": "wp_restore_group_inner_container( ${1:\\$block_content}${2:, \\$block} )"
+		},
+		{
 			"trigger": "wp_apply_generated_classname_support",
-			"contents": "wp_apply_generated_classname_support( ${1:\\$block_type}${2:, \\$block_attributes} )"
+			"contents": "wp_apply_generated_classname_support( ${1:\\$block_type} )"
 		},
 		{
 			"trigger": "wp_get_block_default_classname",
@@ -9068,6 +9092,14 @@
 		{
 			"trigger": "wp_register_colors_support",
 			"contents": "wp_register_colors_support( ${1:\\$block_type} )"
+		},
+		{
+			"trigger": "wp_apply_border_support",
+			"contents": "wp_apply_border_support( ${1:\\$block_type}${2:, \\$block_attributes} )"
+		},
+		{
+			"trigger": "wp_register_border_support",
+			"contents": "wp_register_border_support( ${1:\\$block_type} )"
 		},
 		{
 			"trigger": "wp_apply_alignment_support",
