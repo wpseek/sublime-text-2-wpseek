@@ -9114,6 +9114,26 @@
 			"contents": "_register_core_block_patterns_and_categories()"
 		},
 		{
+			"trigger": "get_block_editor_settings",
+			"contents": "get_block_editor_settings( ${1:\\$editor_name}${2:, \\$custom_settings = array()} )"
+		},
+		{
+			"trigger": "get_default_block_editor_settings",
+			"contents": "get_default_block_editor_settings()"
+		},
+		{
+			"trigger": "get_allowed_block_types",
+			"contents": "get_allowed_block_types( ${1:\\$editor_name} )"
+		},
+		{
+			"trigger": "get_block_categories",
+			"contents": "get_block_categories( ${1:\\$editor_name_or_post} )"
+		},
+		{
+			"trigger": "get_default_block_categories",
+			"contents": "get_default_block_categories()"
+		},
+		{
 			"trigger": "__clear_multi_author_cache",
 			"contents": "__clear_multi_author_cache()"
 		},
@@ -10116,10 +10136,6 @@
 		{
 			"trigger": "get_block_editor_server_block_settings",
 			"contents": "get_block_editor_server_block_settings()"
-		},
-		{
-			"trigger": "get_block_categories",
-			"contents": "get_block_categories( ${1:\\$post} )"
 		},
 		{
 			"trigger": "use_block_editor_for_post_type",
