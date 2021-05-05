@@ -1,4 +1,3 @@
-
 {
 	"scope": "source.php - variable.other.php",
 	"completions": [
@@ -37,8 +36,8 @@
 		"WP_LOAD_IMPORTERS",
 		"IFRAME_REQUEST",
 		"WP_INSTALLING_NETWORK",
-		"WP_SANDBOX_SCRAPING",
 		"WP_UNINSTALL_PLUGIN",
+		"WP_SANDBOX_SCRAPING",
 		"FS_CONNECT_TIMEOUT",
 		"FS_TIMEOUT",
 		"FS_CHMOD_DIR",
@@ -232,6 +231,8 @@
 		"SERVICES_JSON_USE_TO_JSON",
 		"RANDOM_COMPAT_READ_BUFFER",
 		"PHP_VERSION_ID",
+		"IMAGETYPE_WEBP",
+		"IMG_WEBP",
 		"REST_API_VERSION",
 		"REST_REQUEST",
 		"RSS",
