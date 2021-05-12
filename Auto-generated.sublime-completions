@@ -1334,6 +1334,10 @@
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$callback} )"
 		},
 		{
+			"trigger": "wp_maybe_inline_styles",
+			"contents": "wp_maybe_inline_styles()"
+		},
+		{
 			"trigger": "wp_print_inline_script_tag",
 			"contents": "wp_print_inline_script_tag( ${1:\\$javascript}${2:, \\$attributes = array()} )"
 		},
@@ -1372,6 +1376,10 @@
 		{
 			"trigger": "wp_enqueue_registered_block_scripts_and_styles",
 			"contents": "wp_enqueue_registered_block_scripts_and_styles()"
+		},
+		{
+			"trigger": "should_load_separate_core_block_assets",
+			"contents": "should_load_separate_core_block_assets()"
 		},
 		{
 			"trigger": "wp_should_load_block_editor_scripts_and_styles",
