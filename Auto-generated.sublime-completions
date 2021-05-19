@@ -1378,8 +1378,8 @@
 			"contents": "wp_enqueue_registered_block_scripts_and_styles()"
 		},
 		{
-			"trigger": "should_load_separate_core_block_assets",
-			"contents": "should_load_separate_core_block_assets()"
+			"trigger": "wp_should_load_separate_core_block_assets",
+			"contents": "wp_should_load_separate_core_block_assets()"
 		},
 		{
 			"trigger": "wp_should_load_block_editor_scripts_and_styles",
