@@ -90,6 +90,42 @@
 			"contents": "login_header( ${1:\\$title = 'Log In'}${2:, \\$message = ''}${3:, \\$wp_error = null} )"
 		},
 		{
+			"trigger": "gutenberg_get_widget_object",
+			"contents": "gutenberg_get_widget_object( ${1:\\$id_base} )"
+		},
+		{
+			"trigger": "gutenberg_render_widget",
+			"contents": "gutenberg_render_widget( ${1:\\$widget_id}${2:, \\$sidebar_id} )"
+		},
+		{
+			"trigger": "gutenberg_find_widgets_sidebar",
+			"contents": "gutenberg_find_widgets_sidebar( ${1:\\$widget_id} )"
+		},
+		{
+			"trigger": "wp_render_widget_control",
+			"contents": "wp_render_widget_control( ${1:\\$id} )"
+		},
+		{
+			"trigger": "wp_render_widget",
+			"contents": "wp_render_widget( ${1:\\$widget_id}${2:, \\$sidebar_id} )"
+		},
+		{
+			"trigger": "wp_assign_widget_to_sidebar",
+			"contents": "wp_assign_widget_to_sidebar( ${1:\\$widget_id}${2:, \\$sidebar_id} )"
+		},
+		{
+			"trigger": "wp_find_widgets_sidebar",
+			"contents": "wp_find_widgets_sidebar( ${1:\\$widget_id} )"
+		},
+		{
+			"trigger": "wp_parse_widget_id",
+			"contents": "wp_parse_widget_id( ${1:\\$id} )"
+		},
+		{
+			"trigger": "wp_use_widgets_block_editor",
+			"contents": "wp_use_widgets_block_editor()"
+		},
+		{
 			"trigger": "wp_widgets_init",
 			"contents": "wp_widgets_init()"
 		},
@@ -874,6 +910,14 @@
 			"contents": "wp_get_themes( ${1:\\$args = array()} )"
 		},
 		{
+			"trigger": "the_block_template_skip_link",
+			"contents": "the_block_template_skip_link()"
+		},
+		{
+			"trigger": "wp_filter_wp_template_unique_post_slug",
+			"contents": "wp_filter_wp_template_unique_post_slug( ${1:\\$override_slug}${2:, \\$slug}${3:, \\$post_ID}${4:, \\$post_status}${5:, \\$post_type} )"
+		},
+		{
 			"trigger": "load_template",
 			"contents": "load_template( ${1:\\$_template_file}${2:, \\$require_once = true}${3:, \\$args = array()} )"
 		},
@@ -1334,6 +1378,10 @@
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$callback} )"
 		},
 		{
+			"trigger": "wp_add_iframed_editor_assets_html",
+			"contents": "wp_add_iframed_editor_assets_html()"
+		},
+		{
 			"trigger": "wp_maybe_inline_styles",
 			"contents": "wp_maybe_inline_styles()"
 		},
@@ -1384,6 +1432,10 @@
 		{
 			"trigger": "wp_should_load_block_editor_scripts_and_styles",
 			"contents": "wp_should_load_block_editor_scripts_and_styles()"
+		},
+		{
+			"trigger": "wp_enqueue_global_styles",
+			"contents": "wp_enqueue_global_styles()"
 		},
 		{
 			"trigger": "wp_common_block_scripts_and_styles",
@@ -6294,6 +6346,10 @@
 			"contents": "wp_is_numeric_array( ${1:\\$data} )"
 		},
 		{
+			"trigger": "_wp_array_set",
+			"contents": "_wp_array_set( ${1:\\$array}${2:, \\$path}${3:, \\$value = null} )"
+		},
+		{
 			"trigger": "_wp_array_get",
 			"contents": "_wp_array_get( ${1:\\$array}${2:, \\$path}${3:, \\$default = null} )"
 		},
@@ -9158,6 +9214,18 @@
 			"contents": "render_block_core_loginout( ${1:\\$attributes} )"
 		},
 		{
+			"trigger": "handle_legacy_widget_preview_iframe",
+			"contents": "handle_legacy_widget_preview_iframe()"
+		},
+		{
+			"trigger": "register_block_core_legacy_widget",
+			"contents": "register_block_core_legacy_widget()"
+		},
+		{
+			"trigger": "render_block_core_legacy_widget",
+			"contents": "render_block_core_legacy_widget( ${1:\\$attributes} )"
+		},
+		{
 			"trigger": "block_core_latest_posts_migrate_categories",
 			"contents": "block_core_latest_posts_migrate_categories( ${1:\\$block} )"
 		},
@@ -9234,6 +9302,46 @@
 			"contents": "render_block_core_archives( ${1:\\$attributes} )"
 		},
 		{
+			"trigger": "_block_template_render_without_post_block_context",
+			"contents": "_block_template_render_without_post_block_context( ${1:\\$context} )"
+		},
+		{
+			"trigger": "_strip_template_file_suffix",
+			"contents": "_strip_template_file_suffix( ${1:\\$template_file} )"
+		},
+		{
+			"trigger": "_block_template_viewport_meta_tag",
+			"contents": "_block_template_viewport_meta_tag()"
+		},
+		{
+			"trigger": "get_the_block_template_html",
+			"contents": "get_the_block_template_html()"
+		},
+		{
+			"trigger": "_block_template_render_title_tag",
+			"contents": "_block_template_render_title_tag()"
+		},
+		{
+			"trigger": "resolve_block_template",
+			"contents": "resolve_block_template( ${1:\\$template_type}${2:, \\$template_hierarchy} )"
+		},
+		{
+			"trigger": "locate_block_template",
+			"contents": "locate_block_template( ${1:\\$template}${2:, \\$type}${3:, \\$templates} )"
+		},
+		{
+			"trigger": "get_block_template",
+			"contents": "get_block_template( ${1:\\$id}${2:, \\$template_type = 'wp_template'} )"
+		},
+		{
+			"trigger": "get_block_templates",
+			"contents": "get_block_templates( ${1:\\$query = array()}${2:, \\$template_type = 'wp_template'} )"
+		},
+		{
+			"trigger": "_build_template_result_from_post",
+			"contents": "_build_template_result_from_post( ${1:\\$post} )"
+		},
+		{
 			"trigger": "wp_typography_get_css_variable_inline_style",
 			"contents": "wp_typography_get_css_variable_inline_style( ${1:\\$attributes}${2:, \\$feature}${3:, \\$css_property} )"
 		},
@@ -9260,6 +9368,14 @@
 		{
 			"trigger": "wp_restore_group_inner_container",
 			"contents": "wp_restore_group_inner_container( ${1:\\$block_content}${2:, \\$block} )"
+		},
+		{
+			"trigger": "wp_render_layout_support_flag",
+			"contents": "wp_render_layout_support_flag( ${1:\\$block_content}${2:, \\$block} )"
+		},
+		{
+			"trigger": "wp_register_layout_support",
+			"contents": "wp_register_layout_support( ${1:\\$block_type} )"
 		},
 		{
 			"trigger": "wp_apply_generated_classname_support",
@@ -9342,12 +9458,20 @@
 			"contents": "wp_register_alignment_support( ${1:\\$block_type} )"
 		},
 		{
+			"trigger": "_load_remote_block_patterns",
+			"contents": "_load_remote_block_patterns( ${1:\\$current_screen} )"
+		},
+		{
 			"trigger": "_register_core_block_patterns_and_categories",
 			"contents": "_register_core_block_patterns_and_categories()"
 		},
 		{
+			"trigger": "block_editor_rest_api_preload",
+			"contents": "block_editor_rest_api_preload( ${1:\\$preload_paths}${2:, \\$block_editor_context} )"
+		},
+		{
 			"trigger": "get_block_editor_settings",
-			"contents": "get_block_editor_settings( ${1:\\$editor_name}${2:, \\$custom_settings = array()} )"
+			"contents": "get_block_editor_settings( ${1:\\$custom_settings}${2:, \\$block_editor_context} )"
 		},
 		{
 			"trigger": "get_default_block_editor_settings",
@@ -9355,11 +9479,11 @@
 		},
 		{
 			"trigger": "get_allowed_block_types",
-			"contents": "get_allowed_block_types( ${1:\\$editor_name} )"
+			"contents": "get_allowed_block_types( ${1:\\$block_editor_context} )"
 		},
 		{
 			"trigger": "get_block_categories",
-			"contents": "get_block_categories( ${1:\\$editor_name_or_post} )"
+			"contents": "get_block_categories( ${1:\\$post_or_block_editor_context} )"
 		},
 		{
 			"trigger": "get_default_block_categories",
@@ -10483,7 +10607,7 @@
 		},
 		{
 			"trigger": "post_exists",
-			"contents": "post_exists( ${1:\\$title}${2:, \\$content = ''}${3:, \\$date = ''}${4:, \\$type = ''} )"
+			"contents": "post_exists( ${1:\\$title}${2:, \\$content = ''}${3:, \\$date = ''}${4:, \\$type = ''}${5:, \\$status = ''} )"
 		},
 		{
 			"trigger": "get_default_post_to_edit",
