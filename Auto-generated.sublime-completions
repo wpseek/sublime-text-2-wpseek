@@ -9214,12 +9214,8 @@
 			"contents": "render_block_core_loginout( ${1:\\$attributes} )"
 		},
 		{
-			"trigger": "handle_legacy_widget_preview_iframe",
-			"contents": "handle_legacy_widget_preview_iframe()"
-		},
-		{
-			"trigger": "register_block_core_legacy_widget",
-			"contents": "register_block_core_legacy_widget()"
+			"trigger": "init_legacy_widget_block",
+			"contents": "init_legacy_widget_block()"
 		},
 		{
 			"trigger": "render_block_core_legacy_widget",
