@@ -4186,12 +4186,24 @@
 			"contents": "adjacent_image_link( ${1:\\$prev = true}${2:, \\$size = 'thumbnail'}${3:, \\$text = false} )"
 		},
 		{
+			"trigger": "get_adjacent_image_link",
+			"contents": "get_adjacent_image_link( ${1:\\$prev = true}${2:, \\$size = 'thumbnail'}${3:, \\$text = false} )"
+		},
+		{
 			"trigger": "next_image_link",
 			"contents": "next_image_link( ${1:\\$size = 'thumbnail'}${2:, \\$text = false} )"
 		},
 		{
+			"trigger": "get_next_image_link",
+			"contents": "get_next_image_link( ${1:\\$size = 'thumbnail'}${2:, \\$text = false} )"
+		},
+		{
 			"trigger": "previous_image_link",
 			"contents": "previous_image_link( ${1:\\$size = 'thumbnail'}${2:, \\$text = false} )"
+		},
+		{
+			"trigger": "get_previous_image_link",
+			"contents": "get_previous_image_link( ${1:\\$size = 'thumbnail'}${2:, \\$text = false} )"
 		},
 		{
 			"trigger": "wp_video_shortcode",
@@ -8922,6 +8934,10 @@
 			"contents": "build_query_vars_from_query_block( ${1:\\$block}${2:, \\$page} )"
 		},
 		{
+			"trigger": "wp_migrate_old_typography_shape",
+			"contents": "wp_migrate_old_typography_shape( ${1:\\$metadata} )"
+		},
+		{
 			"trigger": "block_has_support",
 			"contents": "block_has_support( ${1:\\$block_type}${2:, \\$feature}${3:, \\$default = false} )"
 		},
@@ -9078,6 +9094,34 @@
 			"contents": "render_block_core_site_tagline( ${1:\\$attributes} )"
 		},
 		{
+			"trigger": "_sync_site_logo_to_custom_logo",
+			"contents": "_sync_site_logo_to_custom_logo( ${1:\\$old_value}${2:, \\$value} )"
+		},
+		{
+			"trigger": "_sync_custom_logo_to_site_logo_on_setup_theme",
+			"contents": "_sync_custom_logo_to_site_logo_on_setup_theme()"
+		},
+		{
+			"trigger": "_sync_custom_logo_to_site_logo",
+			"contents": "_sync_custom_logo_to_site_logo( ${1:\\$old_value}${2:, \\$value} )"
+		},
+		{
+			"trigger": "_override_custom_logo_theme_mod",
+			"contents": "_override_custom_logo_theme_mod( ${1:\\$custom_logo} )"
+		},
+		{
+			"trigger": "register_block_core_site_logo",
+			"contents": "register_block_core_site_logo()"
+		},
+		{
+			"trigger": "register_block_core_site_logo_setting",
+			"contents": "register_block_core_site_logo_setting()"
+		},
+		{
+			"trigger": "render_block_core_site_logo",
+			"contents": "render_block_core_site_logo( ${1:\\$attributes} )"
+		},
+		{
 			"trigger": "register_block_core_shortcode",
 			"contents": "register_block_core_shortcode()"
 		},
@@ -9150,14 +9194,6 @@
 			"contents": "render_block_core_query_pagination_next( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
-			"trigger": "register_block_core_query_loop",
-			"contents": "register_block_core_query_loop()"
-		},
-		{
-			"trigger": "render_block_core_query_loop",
-			"contents": "render_block_core_query_loop( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
-		},
-		{
 			"trigger": "register_block_core_post_title",
 			"contents": "register_block_core_post_title()"
 		},
@@ -9172,6 +9208,22 @@
 		{
 			"trigger": "render_block_core_post_terms",
 			"contents": "render_block_core_post_terms( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "gutenberg_register_legacy_query_loop_block",
+			"contents": "gutenberg_register_legacy_query_loop_block()"
+		},
+		{
+			"trigger": "render_legacy_query_loop_block",
+			"contents": "render_legacy_query_loop_block( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "register_block_core_post_template",
+			"contents": "register_block_core_post_template()"
+		},
+		{
+			"trigger": "render_block_core_post_template",
+			"contents": "render_block_core_post_template( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
 			"trigger": "register_block_core_post_featured_image",
@@ -9206,6 +9258,30 @@
 			"contents": "render_block_core_post_content( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
+			"trigger": "register_block_core_page_list",
+			"contents": "register_block_core_page_list()"
+		},
+		{
+			"trigger": "render_block_core_page_list",
+			"contents": "render_block_core_page_list( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "nest_pages",
+			"contents": "nest_pages( ${1:\\$current_level}${2:, \\$children} )"
+		},
+		{
+			"trigger": "render_nested_page_list",
+			"contents": "render_nested_page_list( ${1:\\$nested_pages} )"
+		},
+		{
+			"trigger": "block_core_page_list_build_css_font_sizes",
+			"contents": "block_core_page_list_build_css_font_sizes( ${1:\\$context} )"
+		},
+		{
+			"trigger": "block_core_page_list_build_css_colors",
+			"contents": "block_core_page_list_build_css_colors( ${1:\\$context} )"
+		},
+		{
 			"trigger": "register_block_core_loginout",
 			"contents": "register_block_core_loginout()"
 		},
@@ -9214,8 +9290,12 @@
 			"contents": "render_block_core_loginout( ${1:\\$attributes} )"
 		},
 		{
-			"trigger": "init_legacy_widget_block",
-			"contents": "init_legacy_widget_block()"
+			"trigger": "handle_legacy_widget_preview_iframe",
+			"contents": "handle_legacy_widget_preview_iframe()"
+		},
+		{
+			"trigger": "register_block_core_legacy_widget",
+			"contents": "register_block_core_legacy_widget()"
 		},
 		{
 			"trigger": "render_block_core_legacy_widget",
