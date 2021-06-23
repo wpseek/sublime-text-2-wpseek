@@ -90,18 +90,6 @@
 			"contents": "login_header( ${1:\\$title = 'Log In'}${2:, \\$message = ''}${3:, \\$wp_error = null} )"
 		},
 		{
-			"trigger": "gutenberg_get_widget_object",
-			"contents": "gutenberg_get_widget_object( ${1:\\$id_base} )"
-		},
-		{
-			"trigger": "gutenberg_render_widget",
-			"contents": "gutenberg_render_widget( ${1:\\$widget_id}${2:, \\$sidebar_id} )"
-		},
-		{
-			"trigger": "gutenberg_find_widgets_sidebar",
-			"contents": "gutenberg_find_widgets_sidebar( ${1:\\$widget_id} )"
-		},
-		{
 			"trigger": "wp_render_widget_control",
 			"contents": "wp_render_widget_control( ${1:\\$id} )"
 		},
@@ -124,6 +112,10 @@
 		{
 			"trigger": "wp_use_widgets_block_editor",
 			"contents": "wp_use_widgets_block_editor()"
+		},
+		{
+			"trigger": "wp_setup_widgets_block_editor",
+			"contents": "wp_setup_widgets_block_editor()"
 		},
 		{
 			"trigger": "wp_widgets_init",
@@ -908,6 +900,10 @@
 		{
 			"trigger": "wp_get_themes",
 			"contents": "wp_get_themes( ${1:\\$args = array()} )"
+		},
+		{
+			"trigger": "wp_enable_block_templates",
+			"contents": "wp_enable_block_templates()"
 		},
 		{
 			"trigger": "the_block_template_skip_link",
@@ -6358,6 +6354,10 @@
 			"contents": "wp_is_numeric_array( ${1:\\$data} )"
 		},
 		{
+			"trigger": "_wp_to_kebab_case",
+			"contents": "_wp_to_kebab_case( ${1:\\$string} )"
+		},
+		{
 			"trigger": "_wp_array_set",
 			"contents": "_wp_array_set( ${1:\\$array}${2:, \\$path}${3:, \\$value = null} )"
 		},
@@ -9266,12 +9266,12 @@
 			"contents": "render_block_core_page_list( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
-			"trigger": "nest_pages",
-			"contents": "nest_pages( ${1:\\$current_level}${2:, \\$children} )"
+			"trigger": "block_core_page_list_nest_pages",
+			"contents": "block_core_page_list_nest_pages( ${1:\\$current_level}${2:, \\$children} )"
 		},
 		{
-			"trigger": "render_nested_page_list",
-			"contents": "render_nested_page_list( ${1:\\$nested_pages} )"
+			"trigger": "block_core_page_list_render_nested_page_list",
+			"contents": "block_core_page_list_render_nested_page_list( ${1:\\$nested_pages} )"
 		},
 		{
 			"trigger": "block_core_page_list_build_css_font_sizes",
@@ -9540,6 +9540,10 @@
 		{
 			"trigger": "_register_core_block_patterns_and_categories",
 			"contents": "_register_core_block_patterns_and_categories()"
+		},
+		{
+			"trigger": "get_block_editor_theme_styles",
+			"contents": "get_block_editor_theme_styles()"
 		},
 		{
 			"trigger": "block_editor_rest_api_preload",
