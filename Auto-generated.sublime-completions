@@ -10714,6 +10714,10 @@
 			"contents": "_wp_translate_postdata( ${1:\\$update = false}${2:, \\$post_data = null} )"
 		},
 		{
+			"trigger": "deactivated_plugins_notice",
+			"contents": "deactivated_plugins_notice()"
+		},
+		{
 			"trigger": "paused_plugins_notice",
 			"contents": "paused_plugins_notice()"
 		},
