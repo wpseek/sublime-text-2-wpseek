@@ -7514,6 +7514,10 @@
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
 		},
 		{
+			"trigger": "_excerpt_render_inner_columns_blocks",
+			"contents": "_excerpt_render_inner_columns_blocks( ${1:\\$columns}${2:, \\$allowed_blocks} )"
+		},
+		{
 			"trigger": "wp_sensitive_page_meta",
 			"contents": "wp_sensitive_page_meta()"
 		},
@@ -8970,8 +8974,8 @@
 			"contents": "render_block( ${1:\\$parsed_block} )"
 		},
 		{
-			"trigger": "_excerpt_render_inner_columns_blocks",
-			"contents": "_excerpt_render_inner_columns_blocks( ${1:\\$columns}${2:, \\$allowed_blocks} )"
+			"trigger": "_excerpt_render_inner_blocks",
+			"contents": "_excerpt_render_inner_blocks( ${1:\\$parsed_block}${2:, \\$allowed_blocks} )"
 		},
 		{
 			"trigger": "excerpt_remove_blocks",
