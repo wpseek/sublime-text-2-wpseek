@@ -90,6 +90,10 @@
 			"contents": "login_header( ${1:\\$title = 'Log In'}${2:, \\$message = ''}${3:, \\$wp_error = null} )"
 		},
 		{
+			"trigger": "wp_check_widget_editor_deps",
+			"contents": "wp_check_widget_editor_deps()"
+		},
+		{
 			"trigger": "wp_render_widget_control",
 			"contents": "wp_render_widget_control( ${1:\\$id} )"
 		},
