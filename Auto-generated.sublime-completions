@@ -9102,16 +9102,20 @@
 			"contents": "render_block_core_site_tagline( ${1:\\$attributes} )"
 		},
 		{
-			"trigger": "_sync_site_logo_to_custom_logo",
-			"contents": "_sync_site_logo_to_custom_logo( ${1:\\$old_value}${2:, \\$value} )"
+			"trigger": "_delete_site_logo_on_remove_custom_logo_on_setup_theme",
+			"contents": "_delete_site_logo_on_remove_custom_logo_on_setup_theme()"
 		},
 		{
-			"trigger": "_sync_custom_logo_to_site_logo_on_setup_theme",
-			"contents": "_sync_custom_logo_to_site_logo_on_setup_theme()"
+			"trigger": "_delete_site_logo_on_remove_theme_mods",
+			"contents": "_delete_site_logo_on_remove_theme_mods()"
+		},
+		{
+			"trigger": "_delete_site_logo_on_remove_custom_logo",
+			"contents": "_delete_site_logo_on_remove_custom_logo( ${1:\\$old_value}${2:, \\$value} )"
 		},
 		{
 			"trigger": "_sync_custom_logo_to_site_logo",
-			"contents": "_sync_custom_logo_to_site_logo( ${1:\\$old_value}${2:, \\$value} )"
+			"contents": "_sync_custom_logo_to_site_logo( ${1:\\$value} )"
 		},
 		{
 			"trigger": "_override_custom_logo_theme_mod",
@@ -9216,14 +9220,6 @@
 		{
 			"trigger": "render_block_core_post_terms",
 			"contents": "render_block_core_post_terms( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
-		},
-		{
-			"trigger": "gutenberg_register_legacy_query_loop_block",
-			"contents": "gutenberg_register_legacy_query_loop_block()"
-		},
-		{
-			"trigger": "render_legacy_query_loop_block",
-			"contents": "render_legacy_query_loop_block( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
 			"trigger": "register_block_core_post_template",
