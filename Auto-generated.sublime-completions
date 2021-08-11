@@ -1,3 +1,4 @@
+
 {
 	"scope": "source.php - variable.other.php\n",
 	"completions": [
@@ -3354,6 +3355,10 @@
 			"contents": "set_current_user( ${1:\\$id}${2:, \\$name = ''} )"
 		},
 		{
+			"trigger": "readonly",
+			"contents": "readonly( ${1:\\$readonly}${2:, \\$current = true}${3:, \\$echo = true} )"
+		},
+		{
 			"trigger": "filter_default_option",
 			"contents": "filter_default_option( ${1:\\$default}${2:, \\$option}${3:, \\$passed_default} )"
 		},
@@ -5558,8 +5563,8 @@
 			"contents": "__checked_selected_helper( ${1:\\$helper}${2:, \\$current}${3:, \\$echo}${4:, \\$type} )"
 		},
 		{
-			"trigger": "readonly",
-			"contents": "readonly( ${1:\\$readonly}${2:, \\$current = true}${3:, \\$echo = true} )"
+			"trigger": "wp_readonly",
+			"contents": "wp_readonly( ${1:\\$readonly}${2:, \\$current = true}${3:, \\$echo = true} )"
 		},
 		{
 			"trigger": "disabled",
@@ -6938,6 +6943,10 @@
 			"contents": "htmlentities2( ${1:\\$myHTML} )"
 		},
 		{
+			"trigger": "sanitize_url",
+			"contents": "sanitize_url( ${1:\\$url}${2:, \\$protocols = null} )"
+		},
+		{
 			"trigger": "esc_url_raw",
 			"contents": "esc_url_raw( ${1:\\$url}${2:, \\$protocols = null} )"
 		},
@@ -7912,10 +7921,6 @@
 		{
 			"trigger": "clean_url",
 			"contents": "clean_url( ${1:\\$url}${2:, \\$protocols = null}${3:, \\$context = 'display'} )"
-		},
-		{
-			"trigger": "sanitize_url",
-			"contents": "sanitize_url( ${1:\\$url}${2:, \\$protocols = null} )"
 		},
 		{
 			"trigger": "get_link",
