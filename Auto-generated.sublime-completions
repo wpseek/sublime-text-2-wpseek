@@ -1,4 +1,3 @@
-
 {
 	"scope": "source.php - variable.other.php\n",
 	"completions": [
@@ -5079,6 +5078,10 @@
 			"contents": "the_permalink( ${1:\\$post = 0} )"
 		},
 		{
+			"trigger": "translate_settings_using_i18n_schema",
+			"contents": "translate_settings_using_i18n_schema( ${1:\\$i18n_schema}${2:, \\$settings}${3:, \\$textdomain} )"
+		},
+		{
 			"trigger": "is_locale_switched",
 			"contents": "is_locale_switched()"
 		},
@@ -6413,6 +6416,10 @@
 		{
 			"trigger": "_config_wp_home",
 			"contents": "_config_wp_home( ${1:\\$url = ''} )"
+		},
+		{
+			"trigger": "wp_json_file_decode",
+			"contents": "wp_json_file_decode( ${1:\\$filename}${2:, \\$options = array()} )"
 		},
 		{
 			"trigger": "wp_check_jsonp_callback",
@@ -9045,6 +9052,10 @@
 		{
 			"trigger": "register_block_type_from_metadata",
 			"contents": "register_block_type_from_metadata( ${1:\\$file_or_folder}${2:, \\$args = array()} )"
+		},
+		{
+			"trigger": "get_block_metadata_i18n_schema",
+			"contents": "get_block_metadata_i18n_schema()"
 		},
 		{
 			"trigger": "register_block_style_handle",
