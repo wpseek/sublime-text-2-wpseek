@@ -6506,6 +6506,10 @@
 			"contents": "wp_check_filetype( ${1:\\$filename}${2:, \\$mimes = null} )"
 		},
 		{
+			"trigger": "wp_get_default_extension_for_mime_type",
+			"contents": "wp_get_default_extension_for_mime_type( ${1:\\$mime_type} )"
+		},
+		{
 			"trigger": "wp_ext2type",
 			"contents": "wp_ext2type( ${1:\\$ext} )"
 		},
@@ -6516,6 +6520,10 @@
 		{
 			"trigger": "_wp_check_existing_file_names",
 			"contents": "_wp_check_existing_file_names( ${1:\\$filename}${2:, \\$files} )"
+		},
+		{
+			"trigger": "_wp_check_alternate_file_names",
+			"contents": "_wp_check_alternate_file_names( ${1:\\$filenames}${2:, \\$dir}${3:, \\$files} )"
 		},
 		{
 			"trigger": "wp_unique_filename",
