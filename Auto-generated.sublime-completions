@@ -146,6 +146,10 @@
 			"contents": "wp_map_sidebars_widgets( ${1:\\$existing_sidebars_widgets} )"
 		},
 		{
+			"trigger": "sync_registered_widgets",
+			"contents": "sync_registered_widgets( ${1:\\$theme_changed = false} )"
+		},
+		{
 			"trigger": "retrieve_widgets",
 			"contents": "retrieve_widgets( ${1:\\$theme_changed = false} )"
 		},
