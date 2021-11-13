@@ -3530,6 +3530,34 @@
 			"contents": "get_option( ${1:\\$option}${2:, \\$default = false} )"
 		},
 		{
+			"trigger": "_wp_parse_blocks_from_menu_items",
+			"contents": "_wp_parse_blocks_from_menu_items( ${1:\\$menu_items}${2:, \\$menu_items_by_parent_id} )"
+		},
+		{
+			"trigger": "_wp_sort_menu_items_by_parent_id",
+			"contents": "_wp_sort_menu_items_by_parent_id( ${1:\\$menu_items} )"
+		},
+		{
+			"trigger": "_wp_get_menu_items_at_location",
+			"contents": "_wp_get_menu_items_at_location( ${1:\\$location} )"
+		},
+		{
+			"trigger": "_wp_migrate_menu_to_navigation_post",
+			"contents": "_wp_migrate_menu_to_navigation_post( ${1:\\$new_name}${2:, \\$new_theme}${3:, \\$old_theme} )"
+		},
+		{
+			"trigger": "get_navigation_areas",
+			"contents": "get_navigation_areas()"
+		},
+		{
+			"trigger": "_wp_register_default_navigation_areas",
+			"contents": "_wp_register_default_navigation_areas()"
+		},
+		{
+			"trigger": "register_navigation_areas",
+			"contents": "register_navigation_areas( ${1:\\$new_areas} )"
+		},
+		{
 			"trigger": "wp_map_nav_menu_locations",
 			"contents": "wp_map_nav_menu_locations( ${1:\\$new_nav_menu_locations}${2:, \\$old_nav_menu_locations} )"
 		},
@@ -7546,6 +7574,10 @@
 			"contents": "get_post_embed_url( ${1:\\$post = null} )"
 		},
 		{
+			"trigger": "wp_maybe_enqueue_oembed_host_js",
+			"contents": "wp_maybe_enqueue_oembed_host_js( ${1:\\$html} )"
+		},
+		{
 			"trigger": "wp_oembed_add_host_js",
 			"contents": "wp_oembed_add_host_js()"
 		},
@@ -10944,6 +10976,18 @@
 		{
 			"trigger": "_wp_privacy_resend_request",
 			"contents": "_wp_privacy_resend_request( ${1:\\$request_id} )"
+		},
+		{
+			"trigger": "_enable_content_editor_for_navigation_post_type",
+			"contents": "_enable_content_editor_for_navigation_post_type( ${1:\\$post} )"
+		},
+		{
+			"trigger": "_disable_content_editor_for_navigation_post_type",
+			"contents": "_disable_content_editor_for_navigation_post_type( ${1:\\$post} )"
+		},
+		{
+			"trigger": "_disable_block_editor_for_navigation_post_type",
+			"contents": "_disable_block_editor_for_navigation_post_type( ${1:\\$value}${2:, \\$post_type} )"
 		},
 		{
 			"trigger": "the_block_editor_meta_box_post_form_hidden_fields",
