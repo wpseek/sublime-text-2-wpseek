@@ -530,6 +530,10 @@
 			"contents": "wp_signon( ${1:\\$credentials = array()}${2:, \\$secure_cookie = ''} )"
 		},
 		{
+			"trigger": "wp_delete_all_temp_backups",
+			"contents": "wp_delete_all_temp_backups()"
+		},
+		{
 			"trigger": "wp_clean_update_cache",
 			"contents": "wp_clean_update_cache()"
 		},
@@ -2359,7 +2363,7 @@
 		},
 		{
 			"trigger": "wp_get_post_parent_id",
-			"contents": "wp_get_post_parent_id( ${1:\\$post} )"
+			"contents": "wp_get_post_parent_id( ${1:\\$post = null} )"
 		},
 		{
 			"trigger": "_publish_post_hook",
@@ -5055,7 +5059,7 @@
 		},
 		{
 			"trigger": "get_edit_term_link",
-			"contents": "get_edit_term_link( ${1:\\$term_id}${2:, \\$taxonomy = ''}${3:, \\$object_type = ''} )"
+			"contents": "get_edit_term_link( ${1:\\$term}${2:, \\$taxonomy = ''}${3:, \\$object_type = ''} )"
 		},
 		{
 			"trigger": "edit_tag_link",
@@ -5063,19 +5067,19 @@
 		},
 		{
 			"trigger": "get_edit_tag_link",
-			"contents": "get_edit_tag_link( ${1:\\$tag_id}${2:, \\$taxonomy = 'post_tag'} )"
+			"contents": "get_edit_tag_link( ${1:\\$tag}${2:, \\$taxonomy = 'post_tag'} )"
 		},
 		{
 			"trigger": "get_tag_feed_link",
-			"contents": "get_tag_feed_link( ${1:\\$tag_id}${2:, \\$feed = ''} )"
+			"contents": "get_tag_feed_link( ${1:\\$tag}${2:, \\$feed = ''} )"
 		},
 		{
 			"trigger": "get_term_feed_link",
-			"contents": "get_term_feed_link( ${1:\\$term_id}${2:, \\$taxonomy = 'category'}${3:, \\$feed = ''} )"
+			"contents": "get_term_feed_link( ${1:\\$term}${2:, \\$taxonomy = ''}${3:, \\$feed = ''} )"
 		},
 		{
 			"trigger": "get_category_feed_link",
-			"contents": "get_category_feed_link( ${1:\\$cat_id}${2:, \\$feed = ''} )"
+			"contents": "get_category_feed_link( ${1:\\$cat}${2:, \\$feed = ''} )"
 		},
 		{
 			"trigger": "get_author_feed_link",
@@ -10112,6 +10116,10 @@
 		{
 			"trigger": "wp_admin_bar_customize_menu",
 			"contents": "wp_admin_bar_customize_menu( ${1:\\$wp_admin_bar} )"
+		},
+		{
+			"trigger": "wp_admin_bar_edit_site_menu",
+			"contents": "wp_admin_bar_edit_site_menu( ${1:\\$wp_admin_bar} )"
 		},
 		{
 			"trigger": "wp_admin_bar_site_menu",
