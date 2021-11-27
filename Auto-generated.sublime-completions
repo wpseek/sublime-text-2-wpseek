@@ -9806,6 +9806,10 @@
 			"contents": "get_allowed_block_template_part_areas()"
 		},
 		{
+			"trigger": "get_block_theme_folders",
+			"contents": "get_block_theme_folders( ${1:\\$theme_stylesheet = null} )"
+		},
+		{
 			"trigger": "wp_typography_get_css_variable_inline_style",
 			"contents": "wp_typography_get_css_variable_inline_style( ${1:\\$attributes}${2:, \\$feature}${3:, \\$css_property} )"
 		},
