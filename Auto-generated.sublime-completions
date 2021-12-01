@@ -3534,34 +3534,6 @@
 			"contents": "get_option( ${1:\\$option}${2:, \\$default = false} )"
 		},
 		{
-			"trigger": "_wp_parse_blocks_from_menu_items",
-			"contents": "_wp_parse_blocks_from_menu_items( ${1:\\$menu_items}${2:, \\$menu_items_by_parent_id} )"
-		},
-		{
-			"trigger": "_wp_sort_menu_items_by_parent_id",
-			"contents": "_wp_sort_menu_items_by_parent_id( ${1:\\$menu_items} )"
-		},
-		{
-			"trigger": "_wp_get_menu_items_at_location",
-			"contents": "_wp_get_menu_items_at_location( ${1:\\$location} )"
-		},
-		{
-			"trigger": "_wp_migrate_menu_to_navigation_post",
-			"contents": "_wp_migrate_menu_to_navigation_post( ${1:\\$new_name}${2:, \\$new_theme}${3:, \\$old_theme} )"
-		},
-		{
-			"trigger": "get_navigation_areas",
-			"contents": "get_navigation_areas()"
-		},
-		{
-			"trigger": "_wp_register_default_navigation_areas",
-			"contents": "_wp_register_default_navigation_areas()"
-		},
-		{
-			"trigger": "register_navigation_areas",
-			"contents": "register_navigation_areas( ${1:\\$new_areas} )"
-		},
-		{
 			"trigger": "wp_map_nav_menu_locations",
 			"contents": "wp_map_nav_menu_locations( ${1:\\$new_nav_menu_locations}${2:, \\$old_nav_menu_locations} )"
 		},
@@ -3607,7 +3579,7 @@
 		},
 		{
 			"trigger": "wp_update_nav_menu_item",
-			"contents": "wp_update_nav_menu_item( ${1:\\$menu_id = 0}${2:, \\$menu_item_db_id = 0}${3:, \\$menu_item_data = array()} )"
+			"contents": "wp_update_nav_menu_item( ${1:\\$menu_id = 0}${2:, \\$menu_item_db_id = 0}${3:, \\$menu_item_data = array()}${4:, \\$fire_after_hooks = true} )"
 		},
 		{
 			"trigger": "wp_update_nav_menu_object",
@@ -5643,11 +5615,11 @@
 		},
 		{
 			"trigger": "wp_get_global_styles",
-			"contents": "wp_get_global_styles( ${1:\\$path = array()}${2:, \\$block_name = ''}${3:, \\$origin = 'all'} )"
+			"contents": "wp_get_global_styles( ${1:\\$path = array()}${2:, \\$context = array()} )"
 		},
 		{
 			"trigger": "wp_get_global_settings",
-			"contents": "wp_get_global_settings( ${1:\\$path = array()}${2:, \\$block_name = ''}${3:, \\$origin = 'all'} )"
+			"contents": "wp_get_global_settings( ${1:\\$path = array()}${2:, \\$context = array()} )"
 		},
 		{
 			"trigger": "wp_heartbeat_settings",
@@ -9534,6 +9506,18 @@
 			"contents": "render_block_core_navigation( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
+			"trigger": "block_core_navigation_get_fallback_blocks",
+			"contents": "block_core_navigation_get_fallback_blocks()"
+		},
+		{
+			"trigger": "block_core_navigation_filter_out_empty_blocks",
+			"contents": "block_core_navigation_filter_out_empty_blocks( ${1:\\$parsed_blocks} )"
+		},
+		{
+			"trigger": "block_core_navigation_get_first_non_empty_navigation",
+			"contents": "block_core_navigation_get_first_non_empty_navigation()"
+		},
+		{
 			"trigger": "block_core_navigation_render_submenu_icon",
 			"contents": "block_core_navigation_render_submenu_icon()"
 		},
@@ -9588,10 +9572,6 @@
 		{
 			"trigger": "block_core_navigation_link_build_css_colors",
 			"contents": "block_core_navigation_link_build_css_colors( ${1:\\$context}${2:, \\$attributes} )"
-		},
-		{
-			"trigger": "register_block_core_navigation_area",
-			"contents": "register_block_core_navigation_area()"
 		},
 		{
 			"trigger": "register_block_core_loginout",
@@ -9734,6 +9714,10 @@
 			"contents": "locate_block_template( ${1:\\$template}${2:, \\$type}${3:, \\$templates} )"
 		},
 		{
+			"trigger": "wp_generate_block_templates_export_file",
+			"contents": "wp_generate_block_templates_export_file()"
+		},
+		{
 			"trigger": "block_footer_area",
 			"contents": "block_footer_area()"
 		},
@@ -9764,6 +9748,10 @@
 		{
 			"trigger": "_build_block_template_result_from_file",
 			"contents": "_build_block_template_result_from_file( ${1:\\$template_file}${2:, \\$template_type} )"
+		},
+		{
+			"trigger": "_remove_theme_attribute_in_block_template_content",
+			"contents": "_remove_theme_attribute_in_block_template_content( ${1:\\$template_content} )"
 		},
 		{
 			"trigger": "_inject_theme_attribute_in_block_template_content",
@@ -12223,7 +12211,7 @@
 		},
 		{
 			"trigger": "move_dir",
-			"contents": "move_dir( ${1:\\$from}${2:, \\$to} )"
+			"contents": "move_dir( ${1:\\$from}${2:, \\$to}${3:, \\$working_dir = ''} )"
 		},
 		{
 			"trigger": "copy_dir",
