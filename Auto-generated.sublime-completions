@@ -530,10 +530,6 @@
 			"contents": "wp_signon( ${1:\\$credentials = array()}${2:, \\$secure_cookie = ''} )"
 		},
 		{
-			"trigger": "wp_delete_all_temp_backups",
-			"contents": "wp_delete_all_temp_backups()"
-		},
-		{
 			"trigger": "wp_clean_update_cache",
 			"contents": "wp_clean_update_cache()"
 		},
@@ -576,6 +572,10 @@
 		{
 			"trigger": "wp_version_check",
 			"contents": "wp_version_check( ${1:\\$extra_stats = array()}${2:, \\$force_check = false} )"
+		},
+		{
+			"trigger": "_add_default_theme_supports",
+			"contents": "_add_default_theme_supports()"
 		},
 		{
 			"trigger": "wp_is_block_theme",
@@ -1396,6 +1396,10 @@
 		{
 			"trigger": "add_shortcode",
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$callback} )"
+		},
+		{
+			"trigger": "wp_enqueue_global_styles_css_custom_properties",
+			"contents": "wp_enqueue_global_styles_css_custom_properties()"
 		},
 		{
 			"trigger": "wp_add_iframed_editor_assets_html",
@@ -9978,6 +9982,10 @@
 			"contents": "render_block_core_post_content( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
+			"trigger": "post_comments_block_form_defaults",
+			"contents": "post_comments_block_form_defaults( ${1:\\$fields} )"
+		},
+		{
 			"trigger": "register_block_core_post_comments",
 			"contents": "register_block_core_post_comments()"
 		},
@@ -10168,6 +10176,22 @@
 		{
 			"trigger": "register_core_block_types_from_metadata",
 			"contents": "register_core_block_types_from_metadata()"
+		},
+		{
+			"trigger": "register_block_core_image",
+			"contents": "register_block_core_image()"
+		},
+		{
+			"trigger": "render_block_core_image",
+			"contents": "render_block_core_image( ${1:\\$attributes}${2:, \\$content} )"
+		},
+		{
+			"trigger": "register_block_core_gallery",
+			"contents": "register_block_core_gallery()"
+		},
+		{
+			"trigger": "block_core_gallery_data_id_backcompatibility",
+			"contents": "block_core_gallery_data_id_backcompatibility( ${1:\\$parsed_block} )"
 		},
 		{
 			"trigger": "register_block_core_file",
@@ -10492,6 +10516,10 @@
 		{
 			"trigger": "wp_register_alignment_support",
 			"contents": "wp_register_alignment_support( ${1:\\$block_type} )"
+		},
+		{
+			"trigger": "_load_remote_featured_patterns",
+			"contents": "_load_remote_featured_patterns( ${1:\\$current_screen} )"
 		},
 		{
 			"trigger": "_load_remote_block_patterns",
@@ -12760,10 +12788,6 @@
 		{
 			"trigger": "wp_filesystem",
 			"contents": "wp_filesystem( ${1:\\$args = false}${2:, \\$context = false}${3:, \\$allow_relaxed_file_ownership = false} )"
-		},
-		{
-			"trigger": "move_dir",
-			"contents": "move_dir( ${1:\\$from}${2:, \\$to}${3:, \\$working_dir = ''} )"
 		},
 		{
 			"trigger": "copy_dir",
