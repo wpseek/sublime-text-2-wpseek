@@ -266,6 +266,10 @@
 			"contents": "wp_is_application_passwords_available()"
 		},
 		{
+			"trigger": "wp_is_application_passwords_supported",
+			"contents": "wp_is_application_passwords_supported()"
+		},
+		{
 			"trigger": "wp_get_user_request",
 			"contents": "wp_get_user_request( ${1:\\$request_id} )"
 		},
@@ -10772,6 +10776,10 @@
 		{
 			"trigger": "wp_nav_menu_max_depth",
 			"contents": "wp_nav_menu_max_depth( ${1:\\$classes} )"
+		},
+		{
+			"trigger": "_add_plugin_file_editor_to_tools",
+			"contents": "_add_plugin_file_editor_to_tools()"
 		},
 		{
 			"trigger": "_add_themes_utility_last",
