@@ -2959,7 +2959,7 @@
 		},
 		{
 			"trigger": "walk_page_tree",
-			"contents": "walk_page_tree( ${1:\\$pages}${2:, \\$depth}${3:, \\$current_page}${4:, \\$r} )"
+			"contents": "walk_page_tree( ${1:\\$pages}${2:, \\$depth}${3:, \\$current_page}${4:, \\$args} )"
 		},
 		{
 			"trigger": "wp_page_menu",
@@ -3647,7 +3647,7 @@
 		},
 		{
 			"trigger": "walk_nav_menu_tree",
-			"contents": "walk_nav_menu_tree( ${1:\\$items}${2:, \\$depth}${3:, \\$r} )"
+			"contents": "walk_nav_menu_tree( ${1:\\$items}${2:, \\$depth}${3:, \\$args} )"
 		},
 		{
 			"trigger": "_wp_menu_item_classes_by_context",
@@ -7511,7 +7511,7 @@
 		},
 		{
 			"trigger": "utf8_uri_encode",
-			"contents": "utf8_uri_encode( ${1:\\$utf8_string}${2:, \\$length = 0} )"
+			"contents": "utf8_uri_encode( ${1:\\$utf8_string}${2:, \\$length = 0}${3:, \\$encode_ascii_characters = false} )"
 		},
 		{
 			"trigger": "wp_check_invalid_utf8",
@@ -9498,6 +9498,10 @@
 			"contents": "wp_cache_reset()"
 		},
 		{
+			"trigger": "wp_cache_switch_to_blog",
+			"contents": "wp_cache_switch_to_blog( ${1:\\$blog_id} )"
+		},
+		{
 			"trigger": "wp_cache_add_non_persistent_groups",
 			"contents": "wp_cache_add_non_persistent_groups( ${1:\\$groups} )"
 		},
@@ -9506,24 +9510,28 @@
 			"contents": "wp_cache_add_global_groups( ${1:\\$groups} )"
 		},
 		{
-			"trigger": "wp_cache_switch_to_blog",
-			"contents": "wp_cache_switch_to_blog( ${1:\\$blog_id} )"
+			"trigger": "wp_cache_close",
+			"contents": "wp_cache_close()"
 		},
 		{
-			"trigger": "wp_cache_set",
-			"contents": "wp_cache_set( ${1:\\$key}${2:, \\$data}${3:, \\$group = ''}${4:, \\$expire = 0} )"
+			"trigger": "wp_cache_flush",
+			"contents": "wp_cache_flush()"
 		},
 		{
-			"trigger": "wp_cache_replace",
-			"contents": "wp_cache_replace( ${1:\\$key}${2:, \\$data}${3:, \\$group = ''}${4:, \\$expire = 0} )"
-		},
-		{
-			"trigger": "wp_cache_init",
-			"contents": "wp_cache_init()"
+			"trigger": "wp_cache_decr",
+			"contents": "wp_cache_decr( ${1:\\$key}${2:, \\$offset = 1}${3:, \\$group = ''} )"
 		},
 		{
 			"trigger": "wp_cache_incr",
 			"contents": "wp_cache_incr( ${1:\\$key}${2:, \\$offset = 1}${3:, \\$group = ''} )"
+		},
+		{
+			"trigger": "wp_cache_delete_multiple",
+			"contents": "wp_cache_delete_multiple( ${1:\\$keys}${2:, \\$group = ''} )"
+		},
+		{
+			"trigger": "wp_cache_delete",
+			"contents": "wp_cache_delete( ${1:\\$key}${2:, \\$group = ''} )"
 		},
 		{
 			"trigger": "wp_cache_get_multiple",
@@ -9534,24 +9542,28 @@
 			"contents": "wp_cache_get( ${1:\\$key}${2:, \\$group = ''}${3:, \\$force = false}${4:, \\$found = null} )"
 		},
 		{
-			"trigger": "wp_cache_flush",
-			"contents": "wp_cache_flush()"
+			"trigger": "wp_cache_set_multiple",
+			"contents": "wp_cache_set_multiple( ${1:\\$data}${2:, \\$group = ''}${3:, \\$expire = 0} )"
 		},
 		{
-			"trigger": "wp_cache_delete",
-			"contents": "wp_cache_delete( ${1:\\$key}${2:, \\$group = ''} )"
+			"trigger": "wp_cache_set",
+			"contents": "wp_cache_set( ${1:\\$key}${2:, \\$data}${3:, \\$group = ''}${4:, \\$expire = 0} )"
 		},
 		{
-			"trigger": "wp_cache_decr",
-			"contents": "wp_cache_decr( ${1:\\$key}${2:, \\$offset = 1}${3:, \\$group = ''} )"
+			"trigger": "wp_cache_replace",
+			"contents": "wp_cache_replace( ${1:\\$key}${2:, \\$data}${3:, \\$group = ''}${4:, \\$expire = 0} )"
 		},
 		{
-			"trigger": "wp_cache_close",
-			"contents": "wp_cache_close()"
+			"trigger": "wp_cache_add_multiple",
+			"contents": "wp_cache_add_multiple( ${1:\\$data}${2:, \\$group = ''}${3:, \\$expire = 0} )"
 		},
 		{
 			"trigger": "wp_cache_add",
 			"contents": "wp_cache_add( ${1:\\$key}${2:, \\$data}${3:, \\$group = ''}${4:, \\$expire = 0} )"
+		},
+		{
+			"trigger": "wp_cache_init",
+			"contents": "wp_cache_init()"
 		},
 		{
 			"trigger": "clean_bookmark_cache",
@@ -10523,11 +10535,11 @@
 		},
 		{
 			"trigger": "_load_remote_featured_patterns",
-			"contents": "_load_remote_featured_patterns( ${1:\\$current_screen} )"
+			"contents": "_load_remote_featured_patterns()"
 		},
 		{
 			"trigger": "_load_remote_block_patterns",
-			"contents": "_load_remote_block_patterns( ${1:\\$current_screen} )"
+			"contents": "_load_remote_block_patterns( ${1:\\$deprecated = null} )"
 		},
 		{
 			"trigger": "_register_core_block_patterns_and_categories",
