@@ -1402,6 +1402,10 @@
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$callback} )"
 		},
 		{
+			"trigger": "wp_enqueue_block_support_styles",
+			"contents": "wp_enqueue_block_support_styles( ${1:\\$style} )"
+		},
+		{
 			"trigger": "wp_enqueue_global_styles_css_custom_properties",
 			"contents": "wp_enqueue_global_styles_css_custom_properties()"
 		},
@@ -1464,6 +1468,10 @@
 		{
 			"trigger": "wp_should_load_block_editor_scripts_and_styles",
 			"contents": "wp_should_load_block_editor_scripts_and_styles()"
+		},
+		{
+			"trigger": "wp_global_styles_render_svg_filters",
+			"contents": "wp_global_styles_render_svg_filters()"
 		},
 		{
 			"trigger": "wp_enqueue_global_styles",
@@ -5866,6 +5874,10 @@
 			"contents": "_wp_http_get_object()"
 		},
 		{
+			"trigger": "wp_get_global_styles_svg_filters",
+			"contents": "wp_get_global_styles_svg_filters()"
+		},
+		{
 			"trigger": "wp_get_global_stylesheet",
 			"contents": "wp_get_global_stylesheet( ${1:\\$types = array()} )"
 		},
@@ -7866,6 +7878,10 @@
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
 		},
 		{
+			"trigger": "wp_render_duotone_filter_preset",
+			"contents": "wp_render_duotone_filter_preset( ${1:\\$preset} )"
+		},
+		{
 			"trigger": "_excerpt_render_inner_columns_blocks",
 			"contents": "_excerpt_render_inner_columns_blocks( ${1:\\$columns}${2:, \\$allowed_blocks} )"
 		},
@@ -9514,6 +9530,10 @@
 			"contents": "wp_cache_close()"
 		},
 		{
+			"trigger": "wp_cache_flush_runtime",
+			"contents": "wp_cache_flush_runtime()"
+		},
+		{
 			"trigger": "wp_cache_flush",
 			"contents": "wp_cache_flush()"
 		},
@@ -10450,12 +10470,20 @@
 			"contents": "wp_render_duotone_support( ${1:\\$block_content}${2:, \\$block} )"
 		},
 		{
-			"trigger": "wp_render_duotone_filter_preset",
-			"contents": "wp_render_duotone_filter_preset( ${1:\\$preset} )"
-		},
-		{
 			"trigger": "wp_register_duotone_support",
 			"contents": "wp_register_duotone_support( ${1:\\$block_type} )"
+		},
+		{
+			"trigger": "wp_get_duotone_filter_svg",
+			"contents": "wp_get_duotone_filter_svg( ${1:\\$preset} )"
+		},
+		{
+			"trigger": "wp_get_duotone_filter_property",
+			"contents": "wp_get_duotone_filter_property( ${1:\\$preset} )"
+		},
+		{
+			"trigger": "wp_get_duotone_filter_id",
+			"contents": "wp_get_duotone_filter_id( ${1:\\$preset} )"
 		},
 		{
 			"trigger": "wp_tinycolor_string_to_rgb",
