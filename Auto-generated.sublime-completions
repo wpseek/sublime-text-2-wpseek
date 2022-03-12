@@ -7519,7 +7519,7 @@
 		},
 		{
 			"trigger": "remove_accents",
-			"contents": "remove_accents( ${1:\\$string} )"
+			"contents": "remove_accents( ${1:\\$string}${2:, \\$locale = ''} )"
 		},
 		{
 			"trigger": "utf8_uri_encode",
@@ -7543,7 +7543,7 @@
 		},
 		{
 			"trigger": "shortcode_unautop",
-			"contents": "shortcode_unautop( ${1:\\$pee} )"
+			"contents": "shortcode_unautop( ${1:\\$text} )"
 		},
 		{
 			"trigger": "_autop_newline_preservation_helper",
@@ -7563,7 +7563,7 @@
 		},
 		{
 			"trigger": "wpautop",
-			"contents": "wpautop( ${1:\\$pee}${2:, \\$br = true} )"
+			"contents": "wpautop( ${1:\\$text}${2:, \\$br = true} )"
 		},
 		{
 			"trigger": "_wptexturize_pushpop_element",
@@ -12816,6 +12816,10 @@
 		{
 			"trigger": "wp_image_editor",
 			"contents": "wp_image_editor( ${1:\\$post_id}${2:, \\$msg = false} )"
+		},
+		{
+			"trigger": "wp_filesize",
+			"contents": "wp_filesize( ${1:\\$path} )"
 		},
 		{
 			"trigger": "wp_opcache_invalidate",
