@@ -442,6 +442,26 @@
 			"contents": "setup_userdata( ${1:\\$for_user_id = 0} )"
 		},
 		{
+			"trigger": "wp_is_large_user_count",
+			"contents": "wp_is_large_user_count( ${1:\\$network_id = null} )"
+		},
+		{
+			"trigger": "wp_schedule_update_user_counts",
+			"contents": "wp_schedule_update_user_counts()"
+		},
+		{
+			"trigger": "wp_update_user_counts",
+			"contents": "wp_update_user_counts( ${1:\\$network_id = null} )"
+		},
+		{
+			"trigger": "wp_maybe_update_user_counts",
+			"contents": "wp_maybe_update_user_counts( ${1:\\$network_id = null} )"
+		},
+		{
+			"trigger": "get_user_count",
+			"contents": "get_user_count( ${1:\\$network_id = null} )"
+		},
+		{
 			"trigger": "count_users",
 			"contents": "count_users( ${1:\\$strategy = 'time'}${2:, \\$site_id = null} )"
 		},
@@ -3219,7 +3239,7 @@
 		},
 		{
 			"trigger": "apply_filters",
-			"contents": "apply_filters( ${1:\\$hook_name}${2:, \\$value} )"
+			"contents": "apply_filters( ${1:\\$hook_name}${2:, \\$value}${3:, \\$args} )"
 		},
 		{
 			"trigger": "add_filter",
@@ -4064,10 +4084,6 @@
 		{
 			"trigger": "get_blog_count",
 			"contents": "get_blog_count( ${1:\\$network_id = null} )"
-		},
-		{
-			"trigger": "get_user_count",
-			"contents": "get_user_count( ${1:\\$network_id = null} )"
 		},
 		{
 			"trigger": "get_active_blog_for_user",
@@ -9419,7 +9435,7 @@
 		},
 		{
 			"trigger": "get_the_category_by_id",
-			"contents": "get_the_category_by_id( ${1:\\$cat_ID} )"
+			"contents": "get_the_category_by_id( ${1:\\$cat_id} )"
 		},
 		{
 			"trigger": "get_the_category",
