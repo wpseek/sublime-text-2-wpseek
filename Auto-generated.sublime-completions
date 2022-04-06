@@ -7902,6 +7902,18 @@
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
 		},
 		{
+			"trigger": "wp_skip_spacing_serialization",
+			"contents": "wp_skip_spacing_serialization( ${1:\\$block_type} )"
+		},
+		{
+			"trigger": "wp_skip_dimensions_serialization",
+			"contents": "wp_skip_dimensions_serialization( ${1:\\$block_type} )"
+		},
+		{
+			"trigger": "wp_skip_border_serialization",
+			"contents": "wp_skip_border_serialization( ${1:\\$block_type} )"
+		},
+		{
 			"trigger": "wp_render_duotone_filter_preset",
 			"contents": "wp_render_duotone_filter_preset( ${1:\\$preset} )"
 		},
@@ -10438,6 +10450,10 @@
 			"contents": "get_block_theme_folders( ${1:\\$theme_stylesheet = null} )"
 		},
 		{
+			"trigger": "wp_should_skip_block_supports_serialization",
+			"contents": "wp_should_skip_block_supports_serialization( ${1:\\$block_type}${2:, \\$feature_set}${3:, \\$feature = null} )"
+		},
+		{
 			"trigger": "wp_typography_get_css_variable_inline_style",
 			"contents": "wp_typography_get_css_variable_inline_style( ${1:\\$attributes}${2:, \\$feature}${3:, \\$css_property} )"
 		},
@@ -10448,10 +10464,6 @@
 		{
 			"trigger": "wp_register_typography_support",
 			"contents": "wp_register_typography_support( ${1:\\$block_type} )"
-		},
-		{
-			"trigger": "wp_skip_spacing_serialization",
-			"contents": "wp_skip_spacing_serialization( ${1:\\$block_type} )"
 		},
 		{
 			"trigger": "wp_apply_spacing_support",
@@ -10534,10 +10546,6 @@
 			"contents": "wp_tinycolor_bound01( ${1:\\$n}${2:, \\$max} )"
 		},
 		{
-			"trigger": "wp_skip_dimensions_serialization",
-			"contents": "wp_skip_dimensions_serialization( ${1:\\$block_type} )"
-		},
-		{
 			"trigger": "wp_apply_dimensions_support",
 			"contents": "wp_apply_dimensions_support( ${1:\\$block_type}${2:, \\$block_attributes} )"
 		},
@@ -10564,10 +10572,6 @@
 		{
 			"trigger": "wp_has_border_feature_support",
 			"contents": "wp_has_border_feature_support( ${1:\\$block_type}${2:, \\$feature}${3:, \\$default = false} )"
-		},
-		{
-			"trigger": "wp_skip_border_serialization",
-			"contents": "wp_skip_border_serialization( ${1:\\$block_type} )"
 		},
 		{
 			"trigger": "wp_apply_border_support",
