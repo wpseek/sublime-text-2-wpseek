@@ -1,3 +1,4 @@
+
 {
 	"scope": "source.php - variable.other.php\n",
 	"completions": [
@@ -10330,6 +10331,10 @@
 			"contents": "render_block_core_archives( ${1:\\$attributes} )"
 		},
 		{
+			"trigger": "_resolve_home_block_template",
+			"contents": "_resolve_home_block_template()"
+		},
+		{
 			"trigger": "_resolve_template_for_new_post",
 			"contents": "_resolve_template_for_new_post( ${1:\\$wp_query} )"
 		},
@@ -10474,6 +10479,10 @@
 			"contents": "wp_register_spacing_support( ${1:\\$block_type} )"
 		},
 		{
+			"trigger": "wp_restore_image_outer_container",
+			"contents": "wp_restore_image_outer_container( ${1:\\$block_content}${2:, \\$block} )"
+		},
+		{
 			"trigger": "wp_restore_group_inner_container",
 			"contents": "wp_restore_group_inner_container( ${1:\\$block_content}${2:, \\$block} )"
 		},
@@ -10483,7 +10492,7 @@
 		},
 		{
 			"trigger": "wp_get_layout_style",
-			"contents": "wp_get_layout_style( ${1:\\$selector}${2:, \\$layout}${3:, \\$has_block_gap_support = false}${4:, \\$gap_value = null} )"
+			"contents": "wp_get_layout_style( ${1:\\$selector}${2:, \\$layout}${3:, \\$has_block_gap_support = false}${4:, \\$gap_value = null}${5:, \\$should_skip_gap_serialization = false} )"
 		},
 		{
 			"trigger": "wp_register_layout_support",
