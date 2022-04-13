@@ -1430,10 +1430,6 @@
 			"contents": "wp_enqueue_global_styles_css_custom_properties()"
 		},
 		{
-			"trigger": "wp_add_iframed_editor_assets_html",
-			"contents": "wp_add_iframed_editor_assets_html()"
-		},
-		{
 			"trigger": "_wp_normalize_relative_css_links",
 			"contents": "_wp_normalize_relative_css_links( ${1:\\$css}${2:, \\$stylesheet_url} )"
 		},
@@ -1584,6 +1580,10 @@
 		{
 			"trigger": "wp_default_packages_scripts",
 			"contents": "wp_default_packages_scripts( ${1:\\$scripts} )"
+		},
+		{
+			"trigger": "wp_register_development_scripts",
+			"contents": "wp_register_development_scripts( ${1:\\$scripts} )"
 		},
 		{
 			"trigger": "wp_get_script_polyfill",
@@ -6354,6 +6354,10 @@
 			"contents": "wp_scripts()"
 		},
 		{
+			"trigger": "wp_recursive_ksort",
+			"contents": "wp_recursive_ksort( ${1:\\$array} )"
+		},
+		{
 			"trigger": "wp_fuzzy_number_match",
 			"contents": "wp_fuzzy_number_match( ${1:\\$expected}${2:, \\$actual}${3:, \\$precision = 1} )"
 		},
@@ -7900,6 +7904,10 @@
 		{
 			"trigger": "wp_embed_register_handler",
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
+		},
+		{
+			"trigger": "wp_add_iframed_editor_assets_html",
+			"contents": "wp_add_iframed_editor_assets_html()"
 		},
 		{
 			"trigger": "wp_skip_spacing_serialization",
@@ -9654,6 +9662,14 @@
 			"contents": "_walk_bookmarks( ${1:\\$bookmarks}${2:, \\$args = ''} )"
 		},
 		{
+			"trigger": "get_comments_pagination_arrow",
+			"contents": "get_comments_pagination_arrow( ${1:\\$block}${2:, \\$pagination_type = 'next'} )"
+		},
+		{
+			"trigger": "build_comment_query_vars_from_block",
+			"contents": "build_comment_query_vars_from_block( ${1:\\$block} )"
+		},
+		{
 			"trigger": "_wp_multiple_block_styles",
 			"contents": "_wp_multiple_block_styles( ${1:\\$metadata} )"
 		},
@@ -9950,6 +9966,14 @@
 			"contents": "render_block_core_rss( ${1:\\$attributes} )"
 		},
 		{
+			"trigger": "register_block_core_read_more",
+			"contents": "register_block_core_read_more()"
+		},
+		{
+			"trigger": "render_block_core_read_more",
+			"contents": "render_block_core_read_more( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
 			"trigger": "register_block_core_query",
 			"contents": "register_block_core_query()"
 		},
@@ -9992,6 +10016,14 @@
 		{
 			"trigger": "render_block_core_query_pagination_next",
 			"contents": "render_block_core_query_pagination_next( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "register_block_core_query_no_results",
+			"contents": "register_block_core_query_no_results()"
+		},
+		{
+			"trigger": "render_block_core_query_no_results",
+			"contents": "render_block_core_query_no_results( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
 			"trigger": "register_block_core_post_title",
@@ -10076,6 +10108,14 @@
 		{
 			"trigger": "render_block_core_post_author",
 			"contents": "render_block_core_post_author( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "register_block_core_post_author_biography",
+			"contents": "register_block_core_post_author_biography()"
+		},
+		{
+			"trigger": "render_block_core_post_author_biography",
+			"contents": "render_block_core_post_author_biography( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
 			"trigger": "render_block_core_pattern",
@@ -10262,8 +10302,32 @@
 			"contents": "render_block_core_image( ${1:\\$attributes}${2:, \\$content} )"
 		},
 		{
+			"trigger": "register_block_core_home_link",
+			"contents": "register_block_core_home_link()"
+		},
+		{
+			"trigger": "render_block_core_home_link",
+			"contents": "render_block_core_home_link( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "block_core_home_link_build_li_wrapper_attributes",
+			"contents": "block_core_home_link_build_li_wrapper_attributes( ${1:\\$context} )"
+		},
+		{
+			"trigger": "block_core_home_link_build_css_font_sizes",
+			"contents": "block_core_home_link_build_css_font_sizes( ${1:\\$context} )"
+		},
+		{
+			"trigger": "block_core_home_link_build_css_colors",
+			"contents": "block_core_home_link_build_css_colors( ${1:\\$context} )"
+		},
+		{
 			"trigger": "register_block_core_gallery",
 			"contents": "register_block_core_gallery()"
+		},
+		{
+			"trigger": "block_core_gallery_render",
+			"contents": "block_core_gallery_render( ${1:\\$attributes}${2:, \\$content} )"
 		},
 		{
 			"trigger": "block_core_gallery_data_id_backcompatibility",
@@ -10276,6 +10340,90 @@
 		{
 			"trigger": "render_block_core_file",
 			"contents": "render_block_core_file( ${1:\\$attributes}${2:, \\$content} )"
+		},
+		{
+			"trigger": "register_block_core_comments_pagination",
+			"contents": "register_block_core_comments_pagination()"
+		},
+		{
+			"trigger": "render_block_core_comments_pagination",
+			"contents": "render_block_core_comments_pagination( ${1:\\$attributes}${2:, \\$content} )"
+		},
+		{
+			"trigger": "register_block_core_comments_pagination_previous",
+			"contents": "register_block_core_comments_pagination_previous()"
+		},
+		{
+			"trigger": "render_block_core_comments_pagination_previous",
+			"contents": "render_block_core_comments_pagination_previous( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "register_block_core_comments_pagination_numbers",
+			"contents": "register_block_core_comments_pagination_numbers()"
+		},
+		{
+			"trigger": "render_block_core_comments_pagination_numbers",
+			"contents": "render_block_core_comments_pagination_numbers( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "register_block_core_comments_pagination_next",
+			"contents": "register_block_core_comments_pagination_next()"
+		},
+		{
+			"trigger": "render_block_core_comments_pagination_next",
+			"contents": "render_block_core_comments_pagination_next( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "register_block_core_comment_template",
+			"contents": "register_block_core_comment_template()"
+		},
+		{
+			"trigger": "render_block_core_comment_template",
+			"contents": "render_block_core_comment_template( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "block_core_comment_template_render_comments",
+			"contents": "block_core_comment_template_render_comments( ${1:\\$comments}${2:, \\$block} )"
+		},
+		{
+			"trigger": "register_block_core_comment_reply_link",
+			"contents": "register_block_core_comment_reply_link()"
+		},
+		{
+			"trigger": "render_block_core_comment_reply_link",
+			"contents": "render_block_core_comment_reply_link( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "register_block_core_comment_edit_link",
+			"contents": "register_block_core_comment_edit_link()"
+		},
+		{
+			"trigger": "render_block_core_comment_edit_link",
+			"contents": "render_block_core_comment_edit_link( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "register_block_core_comment_date",
+			"contents": "register_block_core_comment_date()"
+		},
+		{
+			"trigger": "render_block_core_comment_date",
+			"contents": "render_block_core_comment_date( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "register_block_core_comment_content",
+			"contents": "register_block_core_comment_content()"
+		},
+		{
+			"trigger": "render_block_core_comment_content",
+			"contents": "render_block_core_comment_content( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "register_block_core_comment_author_name",
+			"contents": "register_block_core_comment_author_name()"
+		},
+		{
+			"trigger": "render_block_core_comment_author_name",
+			"contents": "render_block_core_comment_author_name( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
 			"trigger": "register_block_core_categories",
@@ -10320,6 +10468,14 @@
 		{
 			"trigger": "render_block_core_block",
 			"contents": "render_block_core_block( ${1:\\$attributes} )"
+		},
+		{
+			"trigger": "register_block_core_avatar",
+			"contents": "register_block_core_avatar()"
+		},
+		{
+			"trigger": "render_block_core_avatar",
+			"contents": "render_block_core_avatar( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
 			"trigger": "register_block_core_archives",
@@ -10372,6 +10528,10 @@
 		{
 			"trigger": "wp_generate_block_templates_export_file",
 			"contents": "wp_generate_block_templates_export_file()"
+		},
+		{
+			"trigger": "wp_is_theme_directory_ignored",
+			"contents": "wp_is_theme_directory_ignored( ${1:\\$path} )"
 		},
 		{
 			"trigger": "block_footer_area",
@@ -10598,6 +10758,14 @@
 			"contents": "wp_register_alignment_support( ${1:\\$block_type} )"
 		},
 		{
+			"trigger": "_register_theme_block_patterns",
+			"contents": "_register_theme_block_patterns()"
+		},
+		{
+			"trigger": "_register_remote_theme_patterns",
+			"contents": "_register_remote_theme_patterns()"
+		},
+		{
 			"trigger": "_load_remote_featured_patterns",
 			"contents": "_load_remote_featured_patterns()"
 		},
@@ -10620,6 +10788,10 @@
 		{
 			"trigger": "get_block_editor_settings",
 			"contents": "get_block_editor_settings( ${1:\\$custom_settings}${2:, \\$block_editor_context} )"
+		},
+		{
+			"trigger": "_wp_get_iframed_editor_assets",
+			"contents": "_wp_get_iframed_editor_assets()"
 		},
 		{
 			"trigger": "get_legacy_widget_block_editor_settings",
