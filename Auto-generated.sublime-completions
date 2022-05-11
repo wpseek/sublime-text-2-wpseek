@@ -8787,27 +8787,27 @@
 		},
 		{
 			"trigger": "array_key_last",
-			"contents": "array_key_last( ${1:\\$arr} )"
+			"contents": "array_key_last( ${1:\\$array} )"
 		},
 		{
 			"trigger": "array_key_first",
-			"contents": "array_key_first( ${1:\\$arr} )"
+			"contents": "array_key_first( ${1:\\$array} )"
 		},
 		{
 			"trigger": "is_iterable",
-			"contents": "is_iterable( ${1:\\$var} )"
+			"contents": "is_iterable( ${1:\\$value} )"
 		},
 		{
 			"trigger": "is_countable",
-			"contents": "is_countable( ${1:\\$var} )"
+			"contents": "is_countable( ${1:\\$value} )"
 		},
 		{
 			"trigger": "hash_equals",
-			"contents": "hash_equals( ${1:\\$a}${2:, \\$b} )"
+			"contents": "hash_equals( ${1:\\$known_string}${2:, \\$user_string} )"
 		},
 		{
 			"trigger": "_",
-			"contents": "_( ${1:\\$string} )"
+			"contents": "_( ${1:\\$message} )"
 		},
 		{
 			"trigger": "_wp_batch_update_comment_type",
@@ -10054,6 +10054,10 @@
 			"contents": "render_block_core_post_template( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
+			"trigger": "block_core_post_template_uses_featured_image",
+			"contents": "block_core_post_template_uses_featured_image( ${1:\\$inner_blocks} )"
+		},
+		{
 			"trigger": "register_block_core_post_navigation_link",
 			"contents": "register_block_core_post_navigation_link()"
 		},
@@ -10176,6 +10180,14 @@
 		{
 			"trigger": "render_block_core_navigation",
 			"contents": "render_block_core_navigation( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
+		},
+		{
+			"trigger": "block_core_navigation_from_block_get_post_ids",
+			"contents": "block_core_navigation_from_block_get_post_ids( ${1:\\$block} )"
+		},
+		{
+			"trigger": "block_core_navigation_get_post_ids",
+			"contents": "block_core_navigation_get_post_ids( ${1:\\$inner_blocks} )"
 		},
 		{
 			"trigger": "block_core_navigation_get_fallback_blocks",
@@ -11623,7 +11635,7 @@
 		},
 		{
 			"trigger": "parent_dropdown",
-			"contents": "parent_dropdown( ${1:\\$default_page = 0}${2:, \\$parent = 0}${3:, \\$level = 0}${4:, \\$post = null} )"
+			"contents": "parent_dropdown( ${1:\\$default_page = 0}${2:, \\$parent_page = 0}${3:, \\$level = 0}${4:, \\$post = null} )"
 		},
 		{
 			"trigger": "page_template_dropdown",
