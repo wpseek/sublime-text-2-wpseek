@@ -2430,6 +2430,10 @@
 			"contents": "update_postmeta_cache( ${1:\\$post_ids} )"
 		},
 		{
+			"trigger": "update_post_parent_caches",
+			"contents": "update_post_parent_caches( ${1:\\$posts} )"
+		},
+		{
 			"trigger": "update_post_author_caches",
 			"contents": "update_post_author_caches( ${1:\\$posts} )"
 		},
@@ -3612,6 +3616,10 @@
 		{
 			"trigger": "wp_setup_nav_menu_item",
 			"contents": "wp_setup_nav_menu_item( ${1:\\$menu_item} )"
+		},
+		{
+			"trigger": "update_menu_item_cache",
+			"contents": "update_menu_item_cache( ${1:\\$menu_items} )"
 		},
 		{
 			"trigger": "wp_get_nav_menu_items",
