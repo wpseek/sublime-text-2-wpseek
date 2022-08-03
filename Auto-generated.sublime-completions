@@ -3238,6 +3238,10 @@
 			"contents": "add_action( ${1:\\$hook_name}${2:, \\$callback}${3:, \\$priority = 10}${4:, \\$accepted_args = 1} )"
 		},
 		{
+			"trigger": "did_filter",
+			"contents": "did_filter( ${1:\\$hook_name} )"
+		},
+		{
 			"trigger": "doing_filter",
 			"contents": "doing_filter( ${1:\\$hook_name = null} )"
 		},
