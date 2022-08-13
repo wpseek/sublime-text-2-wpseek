@@ -4870,6 +4870,10 @@
 			"contents": "is_admin()"
 		},
 		{
+			"trigger": "is_login_screen",
+			"contents": "is_login_screen()"
+		},
+		{
 			"trigger": "wp_clone",
 			"contents": "wp_clone( ${1:\\$object} )"
 		},
@@ -5506,14 +5510,6 @@
 			"contents": "get_translations_for_domain( ${1:\\$domain} )"
 		},
 		{
-			"trigger": "_get_path_to_translation_from_lang_dir",
-			"contents": "_get_path_to_translation_from_lang_dir( ${1:\\$domain} )"
-		},
-		{
-			"trigger": "_get_path_to_translation",
-			"contents": "_get_path_to_translation( ${1:\\$domain}${2:, \\$reset = false} )"
-		},
-		{
 			"trigger": "_load_textdomain_just_in_time",
 			"contents": "_load_textdomain_just_in_time( ${1:\\$domain} )"
 		},
@@ -5547,11 +5543,11 @@
 		},
 		{
 			"trigger": "unload_textdomain",
-			"contents": "unload_textdomain( ${1:\\$domain} )"
+			"contents": "unload_textdomain( ${1:\\$domain}${2:, \\$reloadable = false} )"
 		},
 		{
 			"trigger": "load_textdomain",
-			"contents": "load_textdomain( ${1:\\$domain}${2:, \\$mofile} )"
+			"contents": "load_textdomain( ${1:\\$domain}${2:, \\$mofile}${3:, \\$locale = null} )"
 		},
 		{
 			"trigger": "translate_nooped_plural",
@@ -5956,6 +5952,14 @@
 		{
 			"trigger": "wp_heartbeat_settings",
 			"contents": "wp_heartbeat_settings( ${1:\\$settings} )"
+		},
+		{
+			"trigger": "wp_required_field_message",
+			"contents": "wp_required_field_message()"
+		},
+		{
+			"trigger": "wp_required_field_indicator",
+			"contents": "wp_required_field_indicator()"
 		},
 		{
 			"trigger": "__checked_selected_helper",
@@ -7952,6 +7956,14 @@
 		{
 			"trigger": "wp_embed_register_handler",
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
+		},
+		{
+			"trigger": "_get_path_to_translation_from_lang_dir",
+			"contents": "_get_path_to_translation_from_lang_dir( ${1:\\$domain} )"
+		},
+		{
+			"trigger": "_get_path_to_translation",
+			"contents": "_get_path_to_translation( ${1:\\$domain}${2:, \\$reset = false} )"
 		},
 		{
 			"trigger": "wp_get_attachment_thumb_file",
