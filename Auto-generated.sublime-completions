@@ -1506,6 +1506,10 @@
 			"contents": "wp_enqueue_global_styles()"
 		},
 		{
+			"trigger": "wp_filter_out_block_nodes",
+			"contents": "wp_filter_out_block_nodes( ${1:\\$nodes} )"
+		},
+		{
 			"trigger": "wp_common_block_scripts_and_styles",
 			"contents": "wp_common_block_scripts_and_styles()"
 		},
@@ -4518,6 +4522,10 @@
 			"contents": "wp_plupload_default_settings()"
 		},
 		{
+			"trigger": "wp_default_image_output_mapping",
+			"contents": "wp_default_image_output_mapping( ${1:\\$output_mapping}${2:, \\$filename}${3:, \\$mime_type}${4:, \\$size_name = ''} )"
+		},
+		{
 			"trigger": "wp_image_editor_supports",
 			"contents": "wp_image_editor_supports( ${1:\\$args = array()} )"
 		},
@@ -5928,6 +5936,10 @@
 		{
 			"trigger": "_wp_http_get_object",
 			"contents": "_wp_http_get_object()"
+		},
+		{
+			"trigger": "wp_add_global_styles_for_blocks",
+			"contents": "wp_add_global_styles_for_blocks()"
 		},
 		{
 			"trigger": "wp_get_global_styles_svg_filters",
@@ -12594,6 +12606,10 @@
 			"contents": "wp_refresh_heartbeat_nonces( ${1:\\$response} )"
 		},
 		{
+			"trigger": "wp_refresh_metabox_loader_nonces",
+			"contents": "wp_refresh_metabox_loader_nonces( ${1:\\$response}${2:, \\$data} )"
+		},
+		{
 			"trigger": "wp_refresh_post_nonces",
 			"contents": "wp_refresh_post_nonces( ${1:\\$response}${2:, \\$data}${3:, \\$screen_id} )"
 		},
@@ -12808,10 +12824,6 @@
 		{
 			"trigger": "add_cssclass",
 			"contents": "add_cssclass( ${1:\\$class_to_add}${2:, \\$classes} )"
-		},
-		{
-			"trigger": "wp_default_image_output_mapping",
-			"contents": "wp_default_image_output_mapping( ${1:\\$output_mapping} )"
 		},
 		{
 			"trigger": "wp_media_attach_action",
