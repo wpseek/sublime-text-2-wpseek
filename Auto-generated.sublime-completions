@@ -258,6 +258,10 @@
 			"contents": "wp_is_mobile()"
 		},
 		{
+			"trigger": "wp_register_persisted_preferences_meta",
+			"contents": "wp_register_persisted_preferences_meta()"
+		},
+		{
 			"trigger": "wp_is_application_passwords_available_for_user",
 			"contents": "wp_is_application_passwords_available_for_user( ${1:\\$user} )"
 		},
@@ -600,6 +604,10 @@
 		{
 			"trigger": "_add_default_theme_supports",
 			"contents": "_add_default_theme_supports()"
+		},
+		{
+			"trigger": "wp_theme_get_element_class_name",
+			"contents": "wp_theme_get_element_class_name( ${1:\\$element} )"
 		},
 		{
 			"trigger": "wp_is_block_theme",
@@ -1340,6 +1348,18 @@
 		{
 			"trigger": "create_initial_taxonomies",
 			"contents": "create_initial_taxonomies()"
+		},
+		{
+			"trigger": "wp_style_engine_get_stylesheet_from_context",
+			"contents": "wp_style_engine_get_stylesheet_from_context( ${1:\\$context}${2:, \\$options = array()} )"
+		},
+		{
+			"trigger": "wp_style_engine_get_stylesheet_from_css_rules",
+			"contents": "wp_style_engine_get_stylesheet_from_css_rules( ${1:\\$css_rules}${2:, \\$options = array()} )"
+		},
+		{
+			"trigger": "wp_style_engine_get_styles",
+			"contents": "wp_style_engine_get_styles( ${1:\\$block_styles}${2:, \\$options = array()} )"
 		},
 		{
 			"trigger": "get_sitemap_url",
@@ -7966,6 +7986,10 @@
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
 		},
 		{
+			"trigger": "_wp_multiple_block_styles",
+			"contents": "_wp_multiple_block_styles( ${1:\\$metadata} )"
+		},
+		{
 			"trigger": "_get_path_to_translation_from_lang_dir",
 			"contents": "_get_path_to_translation_from_lang_dir( ${1:\\$domain} )"
 		},
@@ -9750,10 +9774,6 @@
 			"contents": "build_comment_query_vars_from_block( ${1:\\$block} )"
 		},
 		{
-			"trigger": "_wp_multiple_block_styles",
-			"contents": "_wp_multiple_block_styles( ${1:\\$metadata} )"
-		},
-		{
 			"trigger": "get_query_pagination_arrow",
 			"contents": "get_query_pagination_arrow( ${1:\\$block}${2:, \\$is_next} )"
 		},
@@ -9867,15 +9887,15 @@
 		},
 		{
 			"trigger": "register_block_style_handle",
-			"contents": "register_block_style_handle( ${1:\\$metadata}${2:, \\$field_name} )"
+			"contents": "register_block_style_handle( ${1:\\$metadata}${2:, \\$field_name}${3:, \\$index = 0} )"
 		},
 		{
 			"trigger": "register_block_script_handle",
-			"contents": "register_block_script_handle( ${1:\\$metadata}${2:, \\$field_name} )"
+			"contents": "register_block_script_handle( ${1:\\$metadata}${2:, \\$field_name}${3:, \\$index = 0} )"
 		},
 		{
 			"trigger": "generate_block_asset_handle",
-			"contents": "generate_block_asset_handle( ${1:\\$block_name}${2:, \\$field_name} )"
+			"contents": "generate_block_asset_handle( ${1:\\$block_name}${2:, \\$field_name}${3:, \\$index = 0} )"
 		},
 		{
 			"trigger": "remove_block_asset_path_prefix",
