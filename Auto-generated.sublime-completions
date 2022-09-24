@@ -4158,10 +4158,6 @@
 			"contents": "global_terms( ${1:\\$term_id}${2:, \\$deprecated = ''} )"
 		},
 		{
-			"trigger": "global_terms_enabled",
-			"contents": "global_terms_enabled()"
-		},
-		{
 			"trigger": "update_user_status",
 			"contents": "update_user_status( ${1:\\$id}${2:, \\$pref}${3:, \\$value}${4:, \\$deprecated = null} )"
 		},
@@ -8002,6 +7998,10 @@
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
 		},
 		{
+			"trigger": "global_terms_enabled",
+			"contents": "global_terms_enabled()"
+		},
+		{
 			"trigger": "wp_typography_get_css_variable_inline_style",
 			"contents": "wp_typography_get_css_variable_inline_style( ${1:\\$attributes}${2:, \\$feature}${3:, \\$css_property} )"
 		},
@@ -10770,6 +10770,14 @@
 			"contents": "_build_block_template_result_from_post( ${1:\\$post} )"
 		},
 		{
+			"trigger": "_wp_build_title_and_description_for_taxonomy_block_template",
+			"contents": "_wp_build_title_and_description_for_taxonomy_block_template( ${1:\\$taxonomy}${2:, \\$slug}${3:, \\$template} )"
+		},
+		{
+			"trigger": "_wp_build_title_and_description_for_single_post_type_block_template",
+			"contents": "_wp_build_title_and_description_for_single_post_type_block_template( ${1:\\$post_type}${2:, \\$slug}${3:, \\$template} )"
+		},
+		{
 			"trigger": "_build_block_template_result_from_file",
 			"contents": "_build_block_template_result_from_file( ${1:\\$template_file}${2:, \\$template_type} )"
 		},
@@ -10871,7 +10879,7 @@
 		},
 		{
 			"trigger": "wp_get_layout_style",
-			"contents": "wp_get_layout_style( ${1:\\$selector}${2:, \\$layout}${3:, \\$has_block_gap_support = false}${4:, \\$gap_value = null}${5:, \\$should_skip_gap_serialization = false}${6:, \\$fallback_gap_value = '0.5em'} )"
+			"contents": "wp_get_layout_style( ${1:\\$selector}${2:, \\$layout}${3:, \\$has_block_gap_support = false}${4:, \\$gap_value = null}${5:, \\$should_skip_gap_serialization = false}${6:, \\$fallback_gap_value = '0.5em'}${7:, \\$block_spacing = null} )"
 		},
 		{
 			"trigger": "wp_register_layout_support",
