@@ -4898,8 +4898,8 @@
 			"contents": "is_admin()"
 		},
 		{
-			"trigger": "is_login_screen",
-			"contents": "is_login_screen()"
+			"trigger": "is_login",
+			"contents": "is_login()"
 		},
 		{
 			"trigger": "wp_clone",
@@ -9682,8 +9682,8 @@
 			"contents": "wp_cache_close()"
 		},
 		{
-			"trigger": "wp_cache_supports_group_flush",
-			"contents": "wp_cache_supports_group_flush()"
+			"trigger": "wp_cache_supports",
+			"contents": "wp_cache_supports( ${1:\\$feature} )"
 		},
 		{
 			"trigger": "wp_cache_flush_group",
@@ -10828,6 +10828,10 @@
 		{
 			"trigger": "wp_get_typography_value_and_unit",
 			"contents": "wp_get_typography_value_and_unit( ${1:\\$raw_value}${2:, \\$options = array()} )"
+		},
+		{
+			"trigger": "wp_render_typography_support",
+			"contents": "wp_render_typography_support( ${1:\\$block_content}${2:, \\$block} )"
 		},
 		{
 			"trigger": "wp_typography_get_preset_inline_style_value",
