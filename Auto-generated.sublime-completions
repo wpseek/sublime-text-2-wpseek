@@ -503,11 +503,11 @@
 		},
 		{
 			"trigger": "delete_user_option",
-			"contents": "delete_user_option( ${1:\\$user_id}${2:, \\$option_name}${3:, \\$global = false} )"
+			"contents": "delete_user_option( ${1:\\$user_id}${2:, \\$option_name}${3:, \\$is_global = false} )"
 		},
 		{
 			"trigger": "update_user_option",
-			"contents": "update_user_option( ${1:\\$user_id}${2:, \\$option_name}${3:, \\$newvalue}${4:, \\$global = false} )"
+			"contents": "update_user_option( ${1:\\$user_id}${2:, \\$option_name}${3:, \\$newvalue}${4:, \\$is_global = false} )"
 		},
 		{
 			"trigger": "get_user_option",
@@ -671,7 +671,7 @@
 		},
 		{
 			"trigger": "require_if_theme_supports",
-			"contents": "require_if_theme_supports( ${1:\\$feature}${2:, \\$include} )"
+			"contents": "require_if_theme_supports( ${1:\\$feature}${2:, \\$file} )"
 		},
 		{
 			"trigger": "current_theme_supports",
@@ -859,7 +859,7 @@
 		},
 		{
 			"trigger": "get_theme_mod",
-			"contents": "get_theme_mod( ${1:\\$name}${2:, \\$default = false} )"
+			"contents": "get_theme_mod( ${1:\\$name}${2:, \\$default_value = false} )"
 		},
 		{
 			"trigger": "get_theme_mods",
@@ -971,11 +971,11 @@
 		},
 		{
 			"trigger": "load_template",
-			"contents": "load_template( ${1:\\$_template_file}${2:, \\$require_once = true}${3:, \\$args = array()} )"
+			"contents": "load_template( ${1:\\$_template_file}${2:, \\$load_once = true}${3:, \\$args = array()} )"
 		},
 		{
 			"trigger": "locate_template",
-			"contents": "locate_template( ${1:\\$template_names}${2:, \\$load = false}${3:, \\$require_once = true}${4:, \\$args = array()} )"
+			"contents": "locate_template( ${1:\\$template_names}${2:, \\$load = false}${3:, \\$load_once = true}${4:, \\$args = array()} )"
 		},
 		{
 			"trigger": "get_attachment_template",
@@ -1071,7 +1071,7 @@
 		},
 		{
 			"trigger": "wp_check_term_hierarchy_for_loops",
-			"contents": "wp_check_term_hierarchy_for_loops( ${1:\\$parent}${2:, \\$term_id}${3:, \\$taxonomy} )"
+			"contents": "wp_check_term_hierarchy_for_loops( ${1:\\$parent_term}${2:, \\$term_id}${3:, \\$taxonomy} )"
 		},
 		{
 			"trigger": "wp_get_term_taxonomy_parent_id",
@@ -1239,7 +1239,7 @@
 		},
 		{
 			"trigger": "term_exists",
-			"contents": "term_exists( ${1:\\$term}${2:, \\$taxonomy = ''}${3:, \\$parent = null} )"
+			"contents": "term_exists( ${1:\\$term}${2:, \\$taxonomy = ''}${3:, \\$parent_term = null} )"
 		},
 		{
 			"trigger": "unregister_term_meta",
@@ -1339,7 +1339,7 @@
 		},
 		{
 			"trigger": "get_object_taxonomies",
-			"contents": "get_object_taxonomies( ${1:\\$object}${2:, \\$output = 'names'} )"
+			"contents": "get_object_taxonomies( ${1:\\$object_type}${2:, \\$output = 'names'} )"
 		},
 		{
 			"trigger": "get_taxonomies",
@@ -1887,7 +1887,7 @@
 		},
 		{
 			"trigger": "rest_filter_response_by_context",
-			"contents": "rest_filter_response_by_context( ${1:\\$data}${2:, \\$schema}${3:, \\$context} )"
+			"contents": "rest_filter_response_by_context( ${1:\\$response_data}${2:, \\$schema}${3:, \\$context} )"
 		},
 		{
 			"trigger": "rest_parse_embed_param",
@@ -2567,7 +2567,7 @@
 		},
 		{
 			"trigger": "wp_insert_attachment",
-			"contents": "wp_insert_attachment( ${1:\\$args}${2:, \\$file = false}${3:, \\$parent_post = 0}${4:, \\$wp_error = false}${5:, \\$fire_after_hooks = true} )"
+			"contents": "wp_insert_attachment( ${1:\\$args}${2:, \\$file = false}${3:, \\$parent_post_id = 0}${4:, \\$wp_error = false}${5:, \\$fire_after_hooks = true} )"
 		},
 		{
 			"trigger": "is_local_attachment",
@@ -3743,7 +3743,7 @@
 		},
 		{
 			"trigger": "wp_nav_menu_remove_menu_item_has_children_class",
-			"contents": "wp_nav_menu_remove_menu_item_has_children_class( ${1:\\$classes}${2:, \\$menu_item}${3:, \\$args}${4:, \\$depth} )"
+			"contents": "wp_nav_menu_remove_menu_item_has_children_class( ${1:\\$classes}${2:, \\$menu_item}${3:, \\$args = false}${4:, \\$depth = false} )"
 		},
 		{
 			"trigger": "_nav_menu_item_id_use_once",
@@ -5968,6 +5968,14 @@
 		{
 			"trigger": "_wp_http_get_object",
 			"contents": "_wp_http_get_object()"
+		},
+		{
+			"trigger": "wp_clean_theme_json_cache",
+			"contents": "wp_clean_theme_json_cache()"
+		},
+		{
+			"trigger": "wp_theme_has_theme_json",
+			"contents": "wp_theme_has_theme_json()"
 		},
 		{
 			"trigger": "wp_add_global_styles_for_blocks",
