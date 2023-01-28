@@ -6454,10 +6454,6 @@
 			"contents": "wp_scripts()"
 		},
 		{
-			"trigger": "wp_recursive_ksort",
-			"contents": "wp_recursive_ksort( ${1:\\$array} )"
-		},
-		{
 			"trigger": "wp_fuzzy_number_match",
 			"contents": "wp_fuzzy_number_match( ${1:\\$expected}${2:, \\$actual}${3:, \\$precision = 1} )"
 		},
@@ -6828,6 +6824,10 @@
 		{
 			"trigger": "_wp_array_get",
 			"contents": "_wp_array_get( ${1:\\$input_array}${2:, \\$path}${3:, \\$default_value = null} )"
+		},
+		{
+			"trigger": "wp_recursive_ksort",
+			"contents": "wp_recursive_ksort( ${1:\\$input_array} )"
 		},
 		{
 			"trigger": "wp_array_slice_assoc",
@@ -9815,7 +9815,7 @@
 		},
 		{
 			"trigger": "block_has_support",
-			"contents": "block_has_support( ${1:\\$block_type}${2:, \\$feature}${3:, \\$default = false} )"
+			"contents": "block_has_support( ${1:\\$block_type}${2:, \\$feature}${3:, \\$default_value = false} )"
 		},
 		{
 			"trigger": "unregister_block_style",
@@ -11016,6 +11016,10 @@
 		{
 			"trigger": "_register_core_block_patterns_and_categories",
 			"contents": "_register_core_block_patterns_and_categories()"
+		},
+		{
+			"trigger": "get_classic_theme_supports_block_editor_settings",
+			"contents": "get_classic_theme_supports_block_editor_settings()"
 		},
 		{
 			"trigger": "get_block_editor_theme_styles",
