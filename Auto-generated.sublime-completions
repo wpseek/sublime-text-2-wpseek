@@ -5510,6 +5510,10 @@
 			"contents": "restore_previous_locale()"
 		},
 		{
+			"trigger": "switch_to_user_locale",
+			"contents": "switch_to_user_locale( ${1:\\$user_id} )"
+		},
+		{
 			"trigger": "switch_to_locale",
 			"contents": "switch_to_locale( ${1:\\$locale} )"
 		},
@@ -7611,7 +7615,7 @@
 		},
 		{
 			"trigger": "sanitize_html_class",
-			"contents": "sanitize_html_class( ${1:\\$class}${2:, \\$fallback = ''} )"
+			"contents": "sanitize_html_class( ${1:\\$classname}${2:, \\$fallback = ''} )"
 		},
 		{
 			"trigger": "sanitize_sql_orderby",
