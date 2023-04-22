@@ -1262,6 +1262,10 @@
 			"contents": "has_term_meta( ${1:\\$term_id} )"
 		},
 		{
+			"trigger": "wp_lazyload_term_meta",
+			"contents": "wp_lazyload_term_meta( ${1:\\$term_ids} )"
+		},
+		{
 			"trigger": "update_termmeta_cache",
 			"contents": "update_termmeta_cache( ${1:\\$term_ids} )"
 		},
@@ -9279,11 +9283,11 @@
 		},
 		{
 			"trigger": "cancel_comment_reply_link",
-			"contents": "cancel_comment_reply_link( ${1:\\$text = ''} )"
+			"contents": "cancel_comment_reply_link( ${1:\\$link_text = ''} )"
 		},
 		{
 			"trigger": "get_cancel_comment_reply_link",
-			"contents": "get_cancel_comment_reply_link( ${1:\\$text = ''}${2:, \\$post = null} )"
+			"contents": "get_cancel_comment_reply_link( ${1:\\$link_text = ''}${2:, \\$post = null} )"
 		},
 		{
 			"trigger": "post_reply_link",
@@ -9415,11 +9419,11 @@
 		},
 		{
 			"trigger": "comment_author_url_link",
-			"contents": "comment_author_url_link( ${1:\\$linktext = ''}${2:, \\$before = ''}${3:, \\$after = ''}${4:, \\$comment = 0} )"
+			"contents": "comment_author_url_link( ${1:\\$link_text = ''}${2:, \\$before = ''}${3:, \\$after = ''}${4:, \\$comment = 0} )"
 		},
 		{
 			"trigger": "get_comment_author_url_link",
-			"contents": "get_comment_author_url_link( ${1:\\$linktext = ''}${2:, \\$before = ''}${3:, \\$after = ''}${4:, \\$comment = 0} )"
+			"contents": "get_comment_author_url_link( ${1:\\$link_text = ''}${2:, \\$before = ''}${3:, \\$after = ''}${4:, \\$comment = 0} )"
 		},
 		{
 			"trigger": "comment_author_url",
@@ -9447,11 +9451,11 @@
 		},
 		{
 			"trigger": "get_comment_author_email_link",
-			"contents": "get_comment_author_email_link( ${1:\\$linktext = ''}${2:, \\$before = ''}${3:, \\$after = ''}${4:, \\$comment = null} )"
+			"contents": "get_comment_author_email_link( ${1:\\$link_text = ''}${2:, \\$before = ''}${3:, \\$after = ''}${4:, \\$comment = null} )"
 		},
 		{
 			"trigger": "comment_author_email_link",
-			"contents": "comment_author_email_link( ${1:\\$linktext = ''}${2:, \\$before = ''}${3:, \\$after = ''}${4:, \\$comment = null} )"
+			"contents": "comment_author_email_link( ${1:\\$link_text = ''}${2:, \\$before = ''}${3:, \\$after = ''}${4:, \\$comment = null} )"
 		},
 		{
 			"trigger": "comment_author_email",
