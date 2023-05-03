@@ -6570,6 +6570,10 @@
 			"contents": "wp_site_admin_email_change_notification( ${1:\\$old_email}${2:, \\$new_email}${3:, \\$option_name} )"
 		},
 		{
+			"trigger": "wp_cache_set_last_changed",
+			"contents": "wp_cache_set_last_changed( ${1:\\$group} )"
+		},
+		{
 			"trigger": "wp_cache_get_last_changed",
 			"contents": "wp_cache_get_last_changed( ${1:\\$group} )"
 		},
@@ -10887,7 +10891,7 @@
 		},
 		{
 			"trigger": "_get_block_templates_files",
-			"contents": "_get_block_templates_files( ${1:\\$template_type} )"
+			"contents": "_get_block_templates_files( ${1:\\$template_type}${2:, \\$query = array()} )"
 		},
 		{
 			"trigger": "_get_block_template_file",
