@@ -566,6 +566,14 @@
 			"contents": "wp_signon( ${1:\\$credentials = array()}${2:, \\$secure_cookie = ''} )"
 		},
 		{
+			"trigger": "_wp_delete_all_temp_backups",
+			"contents": "_wp_delete_all_temp_backups()"
+		},
+		{
+			"trigger": "wp_delete_all_temp_backups",
+			"contents": "wp_delete_all_temp_backups()"
+		},
+		{
 			"trigger": "wp_clean_update_cache",
 			"contents": "wp_clean_update_cache()"
 		},
