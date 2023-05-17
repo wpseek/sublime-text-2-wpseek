@@ -3866,6 +3866,10 @@
 			"contents": "update_site_cache( ${1:\\$sites}${2:, \\$update_meta_cache = true} )"
 		},
 		{
+			"trigger": "wp_lazyload_site_meta",
+			"contents": "wp_lazyload_site_meta( ${1:\\$site_ids} )"
+		},
+		{
 			"trigger": "_prime_site_caches",
 			"contents": "_prime_site_caches( ${1:\\$ids}${2:, \\$update_meta_cache = true} )"
 		},
@@ -7658,6 +7662,10 @@
 			"contents": "convert_chars( ${1:\\$content}${2:, \\$deprecated = ''} )"
 		},
 		{
+			"trigger": "sanitize_locale_name",
+			"contents": "sanitize_locale_name( ${1:\\$locale_name} )"
+		},
+		{
 			"trigger": "sanitize_html_class",
 			"contents": "sanitize_html_class( ${1:\\$classname}${2:, \\$fallback = ''} )"
 		},
@@ -9226,6 +9234,10 @@
 			"contents": "update_comment_meta( ${1:\\$comment_id}${2:, \\$meta_key}${3:, \\$meta_value}${4:, \\$prev_value = ''} )"
 		},
 		{
+			"trigger": "wp_lazyload_comment_meta",
+			"contents": "wp_lazyload_comment_meta( ${1:\\$comment_ids} )"
+		},
+		{
 			"trigger": "get_comment_meta",
 			"contents": "get_comment_meta( ${1:\\$comment_id}${2:, \\$key = ''}${3:, \\$single = false} )"
 		},
@@ -9924,6 +9936,10 @@
 		{
 			"trigger": "filter_block_kses",
 			"contents": "filter_block_kses( ${1:\\$block}${2:, \\$allowed_html}${3:, \\$allowed_protocols = array()} )"
+		},
+		{
+			"trigger": "_filter_block_content_callback",
+			"contents": "_filter_block_content_callback( ${1:\\$matches} )"
 		},
 		{
 			"trigger": "filter_block_content",
