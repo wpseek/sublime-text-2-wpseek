@@ -11174,6 +11174,14 @@
 			"contents": "get_block_editor_settings( ${1:\\$custom_settings}${2:, \\$block_editor_context} )"
 		},
 		{
+			"trigger": "wp_get_post_content_block_attributes",
+			"contents": "wp_get_post_content_block_attributes()"
+		},
+		{
+			"trigger": "wp_get_first_block",
+			"contents": "wp_get_first_block( ${1:\\$blocks}${2:, \\$block_name} )"
+		},
+		{
 			"trigger": "_wp_get_iframed_editor_assets",
 			"contents": "_wp_get_iframed_editor_assets()"
 		},
