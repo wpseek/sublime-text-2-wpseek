@@ -6010,8 +6010,8 @@
 			"contents": "_wp_http_get_object()"
 		},
 		{
-			"trigger": "wp_get_remote_theme_patterns",
-			"contents": "wp_get_remote_theme_patterns()"
+			"trigger": "wp_get_theme_directory_pattern_slugs",
+			"contents": "wp_get_theme_directory_pattern_slugs()"
 		},
 		{
 			"trigger": "wp_clean_theme_json_cache",
