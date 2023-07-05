@@ -1550,10 +1550,6 @@
 			"contents": "wp_should_load_block_editor_scripts_and_styles()"
 		},
 		{
-			"trigger": "wp_global_styles_render_svg_filters",
-			"contents": "wp_global_styles_render_svg_filters()"
-		},
-		{
 			"trigger": "wp_enqueue_global_styles_custom_css",
 			"contents": "wp_enqueue_global_styles_custom_css()"
 		},
@@ -6050,10 +6046,6 @@
 			"contents": "wp_add_global_styles_for_blocks()"
 		},
 		{
-			"trigger": "wp_get_global_styles_svg_filters",
-			"contents": "wp_get_global_styles_svg_filters()"
-		},
-		{
 			"trigger": "wp_get_global_styles_custom_css",
 			"contents": "wp_get_global_styles_custom_css()"
 		},
@@ -8084,6 +8076,62 @@
 		{
 			"trigger": "wp_embed_register_handler",
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
+		},
+		{
+			"trigger": "block_core_navigation_submenu_build_css_colors",
+			"contents": "block_core_navigation_submenu_build_css_colors( ${1:\\$context}${2:, \\$attributes}${3:, \\$is_sub_menu = false} )"
+		},
+		{
+			"trigger": "wp_global_styles_render_svg_filters",
+			"contents": "wp_global_styles_render_svg_filters()"
+		},
+		{
+			"trigger": "wp_get_global_styles_svg_filters",
+			"contents": "wp_get_global_styles_svg_filters()"
+		},
+		{
+			"trigger": "wp_render_duotone_support",
+			"contents": "wp_render_duotone_support( ${1:\\$block_content}${2:, \\$block} )"
+		},
+		{
+			"trigger": "wp_register_duotone_support",
+			"contents": "wp_register_duotone_support( ${1:\\$block_type} )"
+		},
+		{
+			"trigger": "wp_get_duotone_filter_svg",
+			"contents": "wp_get_duotone_filter_svg( ${1:\\$preset} )"
+		},
+		{
+			"trigger": "wp_get_duotone_filter_property",
+			"contents": "wp_get_duotone_filter_property( ${1:\\$preset} )"
+		},
+		{
+			"trigger": "wp_get_duotone_filter_id",
+			"contents": "wp_get_duotone_filter_id( ${1:\\$preset} )"
+		},
+		{
+			"trigger": "wp_tinycolor_string_to_rgb",
+			"contents": "wp_tinycolor_string_to_rgb( ${1:\\$color_str} )"
+		},
+		{
+			"trigger": "wp_tinycolor_hsl_to_rgb",
+			"contents": "wp_tinycolor_hsl_to_rgb( ${1:\\$hsl_color} )"
+		},
+		{
+			"trigger": "wp_tinycolor_hue_to_rgb",
+			"contents": "wp_tinycolor_hue_to_rgb( ${1:\\$p}${2:, \\$q}${3:, \\$t} )"
+		},
+		{
+			"trigger": "wp_tinycolor_rgb_to_rgb",
+			"contents": "wp_tinycolor_rgb_to_rgb( ${1:\\$rgb_color} )"
+		},
+		{
+			"trigger": "_wp_tinycolor_bound_alpha",
+			"contents": "_wp_tinycolor_bound_alpha( ${1:\\$n} )"
+		},
+		{
+			"trigger": "wp_tinycolor_bound01",
+			"contents": "wp_tinycolor_bound01( ${1:\\$n}${2:, \\$max} )"
 		},
 		{
 			"trigger": "wp_img_tag_add_loading_attr",
@@ -11116,50 +11164,6 @@
 		{
 			"trigger": "wp_get_elements_class_name",
 			"contents": "wp_get_elements_class_name( ${1:\\$block} )"
-		},
-		{
-			"trigger": "wp_render_duotone_support",
-			"contents": "wp_render_duotone_support( ${1:\\$block_content}${2:, \\$block} )"
-		},
-		{
-			"trigger": "wp_register_duotone_support",
-			"contents": "wp_register_duotone_support( ${1:\\$block_type} )"
-		},
-		{
-			"trigger": "wp_get_duotone_filter_svg",
-			"contents": "wp_get_duotone_filter_svg( ${1:\\$preset} )"
-		},
-		{
-			"trigger": "wp_get_duotone_filter_property",
-			"contents": "wp_get_duotone_filter_property( ${1:\\$preset} )"
-		},
-		{
-			"trigger": "wp_get_duotone_filter_id",
-			"contents": "wp_get_duotone_filter_id( ${1:\\$preset} )"
-		},
-		{
-			"trigger": "wp_tinycolor_string_to_rgb",
-			"contents": "wp_tinycolor_string_to_rgb( ${1:\\$color_str} )"
-		},
-		{
-			"trigger": "wp_tinycolor_hsl_to_rgb",
-			"contents": "wp_tinycolor_hsl_to_rgb( ${1:\\$hsl_color} )"
-		},
-		{
-			"trigger": "wp_tinycolor_hue_to_rgb",
-			"contents": "wp_tinycolor_hue_to_rgb( ${1:\\$p}${2:, \\$q}${3:, \\$t} )"
-		},
-		{
-			"trigger": "wp_tinycolor_rgb_to_rgb",
-			"contents": "wp_tinycolor_rgb_to_rgb( ${1:\\$rgb_color} )"
-		},
-		{
-			"trigger": "_wp_tinycolor_bound_alpha",
-			"contents": "_wp_tinycolor_bound_alpha( ${1:\\$n} )"
-		},
-		{
-			"trigger": "wp_tinycolor_bound01",
-			"contents": "wp_tinycolor_bound01( ${1:\\$n}${2:, \\$max} )"
 		},
 		{
 			"trigger": "wp_apply_dimensions_support",
