@@ -262,6 +262,10 @@
 			"contents": "wp_is_mobile()"
 		},
 		{
+			"trigger": "wp_is_password_reset_allowed_for_user",
+			"contents": "wp_is_password_reset_allowed_for_user( ${1:\\$user} )"
+		},
+		{
 			"trigger": "wp_cache_set_users_last_changed",
 			"contents": "wp_cache_set_users_last_changed()"
 		},
@@ -2200,26 +2204,6 @@
 		{
 			"trigger": "register_rest_route",
 			"contents": "register_rest_route( ${1:\\$route_namespace}${2:, \\$route}${3:, \\$args = array()}${4:, \\$override = false} )"
-		},
-		{
-			"trigger": "random_int",
-			"contents": "random_int( ${1:\\$min}${2:, \\$max} )"
-		},
-		{
-			"trigger": "random_bytes",
-			"contents": "random_bytes( ${1:\\$bytes} )"
-		},
-		{
-			"trigger": "randomcompat_intval",
-			"contents": "randomcompat_intval( ${1:\\$number}${2:, \\$fail_open = false} )"
-		},
-		{
-			"trigger": "randomcompat_substr",
-			"contents": "randomcompat_substr( ${1:\\$binary_string}${2:, \\$start}${3:, \\$length = null} )"
-		},
-		{
-			"trigger": "randomcompat_strlen",
-			"contents": "randomcompat_strlen( ${1:\\$binary_string} )"
 		},
 		{
 			"trigger": "generate_postdata",
