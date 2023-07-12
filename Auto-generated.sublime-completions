@@ -990,6 +990,18 @@
 			"contents": "wp_set_unique_slug_on_create_template_part( ${1:\\$post_id} )"
 		},
 		{
+			"trigger": "wp_block_theme_activate_nonce",
+			"contents": "wp_block_theme_activate_nonce()"
+		},
+		{
+			"trigger": "wp_attach_theme_preview_middleware",
+			"contents": "wp_attach_theme_preview_middleware()"
+		},
+		{
+			"trigger": "wp_get_theme_preview_path",
+			"contents": "wp_get_theme_preview_path( ${1:\\$current_stylesheet = null} )"
+		},
+		{
 			"trigger": "load_template",
 			"contents": "load_template( ${1:\\$_template_file}${2:, \\$load_once = true}${3:, \\$args = array()} )"
 		},
@@ -1440,6 +1452,10 @@
 		{
 			"trigger": "get_shortcode_regex",
 			"contents": "get_shortcode_regex( ${1:\\$tagnames = null} )"
+		},
+		{
+			"trigger": "_filter_do_shortcode_context",
+			"contents": "_filter_do_shortcode_context()"
 		},
 		{
 			"trigger": "do_shortcode",
@@ -11876,14 +11892,6 @@
 		{
 			"trigger": "delete_theme",
 			"contents": "delete_theme( ${1:\\$stylesheet}${2:, \\$redirect = ''} )"
-		},
-		{
-			"trigger": "wp_attach_theme_preview_middleware",
-			"contents": "wp_attach_theme_preview_middleware()"
-		},
-		{
-			"trigger": "wp_get_theme_preview_path",
-			"contents": "wp_get_theme_preview_path( ${1:\\$current_stylesheet = null} )"
 		},
 		{
 			"trigger": "install_theme_information",
