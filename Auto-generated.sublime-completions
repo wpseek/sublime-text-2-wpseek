@@ -5046,6 +5046,10 @@
 			"contents": "wp_favicon_request()"
 		},
 		{
+			"trigger": "wp_in_development_mode",
+			"contents": "wp_in_development_mode( ${1:\\$mode} )"
+		},
+		{
 			"trigger": "wp_get_development_mode",
 			"contents": "wp_get_development_mode()"
 		},
