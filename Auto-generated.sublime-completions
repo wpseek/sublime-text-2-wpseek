@@ -3654,8 +3654,8 @@
 			"contents": "get_option( ${1:\\$option}${2:, \\$default_value = false} )"
 		},
 		{
-			"trigger": "wp_add_fields_to_navigation_fallback_embeded_links",
-			"contents": "wp_add_fields_to_navigation_fallback_embeded_links( ${1:\\$schema} )"
+			"trigger": "wp_add_fields_to_navigation_fallback_embedded_links",
+			"contents": "wp_add_fields_to_navigation_fallback_embedded_links( ${1:\\$schema} )"
 		},
 		{
 			"trigger": "_wp_reset_invalid_menu_item_parent",
@@ -10724,6 +10724,30 @@
 		{
 			"trigger": "block_core_gallery_data_id_backcompatibility",
 			"contents": "block_core_gallery_data_id_backcompatibility( ${1:\\$parsed_block} )"
+		},
+		{
+			"trigger": "wp_get_footnotes_from_revision",
+			"contents": "wp_get_footnotes_from_revision( ${1:\\$revision_field}${2:, \\$field}${3:, \\$revision} )"
+		},
+		{
+			"trigger": "wp_add_footnotes_to_revision",
+			"contents": "wp_add_footnotes_to_revision( ${1:\\$fields} )"
+		},
+		{
+			"trigger": "wp_restore_footnotes_from_revision",
+			"contents": "wp_restore_footnotes_from_revision( ${1:\\$post_id}${2:, \\$revision_id} )"
+		},
+		{
+			"trigger": "wp_add_footnotes_revisions_to_post_meta",
+			"contents": "wp_add_footnotes_revisions_to_post_meta( ${1:\\$post} )"
+		},
+		{
+			"trigger": "wp_keep_footnotes_revision_id",
+			"contents": "wp_keep_footnotes_revision_id( ${1:\\$revision_id} )"
+		},
+		{
+			"trigger": "wp_save_footnotes_meta",
+			"contents": "wp_save_footnotes_meta( ${1:\\$revision_id} )"
 		},
 		{
 			"trigger": "register_block_core_footnotes",
