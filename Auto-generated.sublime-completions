@@ -10726,6 +10726,14 @@
 			"contents": "block_core_gallery_data_id_backcompatibility( ${1:\\$parsed_block} )"
 		},
 		{
+			"trigger": "_wp_rest_api_force_autosave_difference",
+			"contents": "_wp_rest_api_force_autosave_difference( ${1:\\$prepared_post}${2:, \\$request} )"
+		},
+		{
+			"trigger": "_wp_rest_api_autosave_meta",
+			"contents": "_wp_rest_api_autosave_meta( ${1:\\$autosave} )"
+		},
+		{
 			"trigger": "wp_get_footnotes_from_revision",
 			"contents": "wp_get_footnotes_from_revision( ${1:\\$revision_field}${2:, \\$field}${3:, \\$revision} )"
 		},
