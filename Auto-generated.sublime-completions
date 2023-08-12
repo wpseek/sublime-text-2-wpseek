@@ -6034,6 +6034,10 @@
 			"contents": "wp_get_block_css_selector( ${1:\\$block_type}${2:, \\$target = 'root'}${3:, \\$fallback = false} )"
 		},
 		{
+			"trigger": "wp_get_theme_data_template_parts",
+			"contents": "wp_get_theme_data_template_parts()"
+		},
+		{
 			"trigger": "wp_get_theme_directory_pattern_slugs",
 			"contents": "wp_get_theme_directory_pattern_slugs()"
 		},
