@@ -6038,6 +6038,10 @@
 			"contents": "wp_get_theme_data_template_parts()"
 		},
 		{
+			"trigger": "wp_get_theme_data_custom_templates",
+			"contents": "wp_get_theme_data_custom_templates()"
+		},
+		{
 			"trigger": "wp_get_theme_directory_pattern_slugs",
 			"contents": "wp_get_theme_directory_pattern_slugs()"
 		},
@@ -12964,6 +12968,14 @@
 		{
 			"trigger": "wpmu_menu",
 			"contents": "wpmu_menu()"
+		},
+		{
+			"trigger": "wp_admin_notice",
+			"contents": "wp_admin_notice( ${1:\\$message}${2:, \\$args = array()} )"
+		},
+		{
+			"trigger": "wp_get_admin_notice",
+			"contents": "wp_get_admin_notice( ${1:\\$message}${2:, \\$args = array()} )"
 		},
 		{
 			"trigger": "wp_check_php_version",
