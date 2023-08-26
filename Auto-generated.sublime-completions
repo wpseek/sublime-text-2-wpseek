@@ -3650,6 +3650,18 @@
 			"contents": "wp_protect_special_option( ${1:\\$option} )"
 		},
 		{
+			"trigger": "get_options",
+			"contents": "get_options( ${1:\\$options} )"
+		},
+		{
+			"trigger": "prime_options_by_group",
+			"contents": "prime_options_by_group( ${1:\\$option_group} )"
+		},
+		{
+			"trigger": "prime_options",
+			"contents": "prime_options( ${1:\\$options} )"
+		},
+		{
 			"trigger": "get_option",
 			"contents": "get_option( ${1:\\$option}${2:, \\$default_value = false} )"
 		},
@@ -6848,6 +6860,10 @@
 		{
 			"trigger": "_deprecated_file",
 			"contents": "_deprecated_file( ${1:\\$file}${2:, \\$version}${3:, \\$replacement = ''}${4:, \\$message = ''} )"
+		},
+		{
+			"trigger": "_deprecated_class",
+			"contents": "_deprecated_class( ${1:\\$class}${2:, \\$version}${3:, \\$replacement = ''} )"
 		},
 		{
 			"trigger": "_deprecated_constructor",
