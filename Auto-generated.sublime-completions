@@ -1494,10 +1494,6 @@
 			"contents": "wp_enqueue_classic_theme_styles()"
 		},
 		{
-			"trigger": "_wp_theme_json_webfonts_handler",
-			"contents": "_wp_theme_json_webfonts_handler()"
-		},
-		{
 			"trigger": "wp_enqueue_block_style",
 			"contents": "wp_enqueue_block_style( ${1:\\$block_name}${2:, \\$args} )"
 		},
@@ -3648,6 +3644,18 @@
 		{
 			"trigger": "wp_protect_special_option",
 			"contents": "wp_protect_special_option( ${1:\\$option} )"
+		},
+		{
+			"trigger": "wp_set_option_autoload",
+			"contents": "wp_set_option_autoload( ${1:\\$option}${2:, \\$autoload} )"
+		},
+		{
+			"trigger": "wp_set_options_autoload",
+			"contents": "wp_set_options_autoload( ${1:\\$options}${2:, \\$autoload} )"
+		},
+		{
+			"trigger": "wp_set_option_autoload_values",
+			"contents": "wp_set_option_autoload_values( ${1:\\$options} )"
 		},
 		{
 			"trigger": "get_options",
@@ -7810,6 +7818,10 @@
 			"contents": "wptexturize( ${1:\\$text}${2:, \\$reset = false} )"
 		},
 		{
+			"trigger": "wp_print_font_faces",
+			"contents": "wp_print_font_faces( ${1:\\$fonts = array()} )"
+		},
+		{
 			"trigger": "fetch_feed",
 			"contents": "fetch_feed( ${1:\\$url} )"
 		},
@@ -8108,6 +8120,10 @@
 		{
 			"trigger": "wp_embed_register_handler",
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
+		},
+		{
+			"trigger": "_wp_theme_json_webfonts_handler",
+			"contents": "_wp_theme_json_webfonts_handler()"
 		},
 		{
 			"trigger": "block_core_navigation_submenu_build_css_colors",
