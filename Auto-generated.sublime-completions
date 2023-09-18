@@ -6603,7 +6603,7 @@
 		},
 		{
 			"trigger": "wp_update_php_annotation",
-			"contents": "wp_update_php_annotation( ${1:\\$before = '\u003Cp class=\"description\"\u003E'}${2:, \\$after = '\u003C\/p\u003E'} )"
+			"contents": "wp_update_php_annotation( ${1:\\$before = '\u003Cp class=\"description\"\u003E'}${2:, \\$after = '\u003C\/p\u003E'}${3:, \\$echo = true} )"
 		},
 		{
 			"trigger": "wp_get_default_update_php_url",
@@ -10091,11 +10091,11 @@
 		},
 		{
 			"trigger": "serialize_blocks",
-			"contents": "serialize_blocks( ${1:\\$blocks} )"
+			"contents": "serialize_blocks( ${1:\\$blocks}${2:, \\$callback = null} )"
 		},
 		{
 			"trigger": "serialize_block",
-			"contents": "serialize_block( ${1:\\$block} )"
+			"contents": "serialize_block( ${1:\\$block}${2:, \\$callback = null} )"
 		},
 		{
 			"trigger": "get_comment_delimited_block_content",
@@ -11100,6 +11100,10 @@
 		{
 			"trigger": "_remove_theme_attribute_in_block_template_content",
 			"contents": "_remove_theme_attribute_in_block_template_content( ${1:\\$template_content} )"
+		},
+		{
+			"trigger": "_inject_theme_attribute_in_template_part_block",
+			"contents": "_inject_theme_attribute_in_template_part_block( ${1:\\$block} )"
 		},
 		{
 			"trigger": "_inject_theme_attribute_in_block_template_content",
