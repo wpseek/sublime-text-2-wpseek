@@ -10090,12 +10090,20 @@
 			"contents": "filter_block_content( ${1:\\$text}${2:, \\$allowed_html = 'post'}${3:, \\$allowed_protocols = array()} )"
 		},
 		{
+			"trigger": "traverse_and_serialize_blocks",
+			"contents": "traverse_and_serialize_blocks( ${1:\\$blocks}${2:, \\$callback} )"
+		},
+		{
+			"trigger": "traverse_and_serialize_block",
+			"contents": "traverse_and_serialize_block( ${1:\\$block}${2:, \\$callback} )"
+		},
+		{
 			"trigger": "serialize_blocks",
-			"contents": "serialize_blocks( ${1:\\$blocks}${2:, \\$callback = null} )"
+			"contents": "serialize_blocks( ${1:\\$blocks} )"
 		},
 		{
 			"trigger": "serialize_block",
-			"contents": "serialize_block( ${1:\\$block}${2:, \\$callback = null} )"
+			"contents": "serialize_block( ${1:\\$block} )"
 		},
 		{
 			"trigger": "get_comment_delimited_block_content",
@@ -10108,6 +10116,22 @@
 		{
 			"trigger": "serialize_block_attributes",
 			"contents": "serialize_block_attributes( ${1:\\$block_attributes} )"
+		},
+		{
+			"trigger": "append_inner_block",
+			"contents": "append_inner_block( ${1:\\$parent_block}${2:, \\$inserted_block} )"
+		},
+		{
+			"trigger": "prepend_inner_block",
+			"contents": "prepend_inner_block( ${1:\\$parent_block}${2:, \\$inserted_block} )"
+		},
+		{
+			"trigger": "insert_inner_block",
+			"contents": "insert_inner_block( ${1:\\$parent_block}${2:, \\$block_index}${3:, \\$chunk_index}${4:, \\$inserted_block} )"
+		},
+		{
+			"trigger": "get_hooked_blocks",
+			"contents": "get_hooked_blocks( ${1:\\$name} )"
 		},
 		{
 			"trigger": "get_dynamic_block_names",
@@ -11296,6 +11320,14 @@
 		{
 			"trigger": "wp_register_border_support",
 			"contents": "wp_register_border_support( ${1:\\$block_type} )"
+		},
+		{
+			"trigger": "wp_render_background_support",
+			"contents": "wp_render_background_support( ${1:\\$block_content}${2:, \\$block} )"
+		},
+		{
+			"trigger": "wp_register_background_support",
+			"contents": "wp_register_background_support( ${1:\\$block_type} )"
 		},
 		{
 			"trigger": "wp_apply_alignment_support",
