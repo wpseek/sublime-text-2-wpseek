@@ -1490,6 +1490,10 @@
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$callback} )"
 		},
 		{
+			"trigger": "wp_remove_surrounding_empty_script_tags",
+			"contents": "wp_remove_surrounding_empty_script_tags( ${1:\\$contents} )"
+		},
+		{
 			"trigger": "wp_add_editor_classic_theme_styles",
 			"contents": "wp_add_editor_classic_theme_styles( ${1:\\$editor_settings} )"
 		},
