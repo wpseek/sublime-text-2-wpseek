@@ -990,8 +990,8 @@
 			"contents": "wp_set_unique_slug_on_create_template_part( ${1:\\$post_id} )"
 		},
 		{
-			"trigger": "initialize_theme_preview_hooks",
-			"contents": "initialize_theme_preview_hooks()"
+			"trigger": "wp_initialize_theme_preview_hooks",
+			"contents": "wp_initialize_theme_preview_hooks()"
 		},
 		{
 			"trigger": "wp_block_theme_activate_nonce",
@@ -2480,6 +2480,10 @@
 		{
 			"trigger": "wp_add_trashed_suffix_to_post_name_for_trashed_posts",
 			"contents": "wp_add_trashed_suffix_to_post_name_for_trashed_posts( ${1:\\$post_name}${2:, \\$post_id = 0} )"
+		},
+		{
+			"trigger": "_prime_post_parents_caches",
+			"contents": "_prime_post_parents_caches( ${1:\\$ids} )"
 		},
 		{
 			"trigger": "_prime_post_caches",
@@ -10886,36 +10890,12 @@
 			"contents": "block_core_gallery_data_id_backcompatibility( ${1:\\$parsed_block} )"
 		},
 		{
-			"trigger": "_wp_rest_api_force_autosave_difference",
-			"contents": "_wp_rest_api_force_autosave_difference( ${1:\\$prepared_post}${2:, \\$request} )"
-		},
-		{
-			"trigger": "_wp_rest_api_autosave_meta",
-			"contents": "_wp_rest_api_autosave_meta( ${1:\\$autosave} )"
-		},
-		{
 			"trigger": "wp_get_footnotes_from_revision",
 			"contents": "wp_get_footnotes_from_revision( ${1:\\$revision_field}${2:, \\$field}${3:, \\$revision} )"
 		},
 		{
 			"trigger": "wp_add_footnotes_to_revision",
 			"contents": "wp_add_footnotes_to_revision( ${1:\\$fields} )"
-		},
-		{
-			"trigger": "wp_restore_footnotes_from_revision",
-			"contents": "wp_restore_footnotes_from_revision( ${1:\\$post_id}${2:, \\$revision_id} )"
-		},
-		{
-			"trigger": "wp_add_footnotes_revisions_to_post_meta",
-			"contents": "wp_add_footnotes_revisions_to_post_meta( ${1:\\$post} )"
-		},
-		{
-			"trigger": "wp_keep_footnotes_revision_id",
-			"contents": "wp_keep_footnotes_revision_id( ${1:\\$revision_id} )"
-		},
-		{
-			"trigger": "wp_save_footnotes_meta",
-			"contents": "wp_save_footnotes_meta( ${1:\\$revision_id} )"
 		},
 		{
 			"trigger": "register_block_core_footnotes",
@@ -11420,6 +11400,10 @@
 		{
 			"trigger": "wp_register_alignment_support",
 			"contents": "wp_register_alignment_support( ${1:\\$block_type} )"
+		},
+		{
+			"trigger": "_wp_get_block_patterns",
+			"contents": "_wp_get_block_patterns( ${1:\\$theme} )"
 		},
 		{
 			"trigger": "_register_theme_block_patterns",
