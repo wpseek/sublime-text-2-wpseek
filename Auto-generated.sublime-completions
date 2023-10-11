@@ -2482,8 +2482,8 @@
 			"contents": "wp_add_trashed_suffix_to_post_name_for_trashed_posts( ${1:\\$post_name}${2:, \\$post_id = 0} )"
 		},
 		{
-			"trigger": "_prime_post_parents_caches",
-			"contents": "_prime_post_parents_caches( ${1:\\$ids} )"
+			"trigger": "_prime_post_parent_id_caches",
+			"contents": "_prime_post_parent_id_caches( ${1:\\$ids} )"
 		},
 		{
 			"trigger": "_prime_post_caches",
@@ -3716,10 +3716,6 @@
 		{
 			"trigger": "get_option",
 			"contents": "get_option( ${1:\\$option}${2:, \\$default_value = false} )"
-		},
-		{
-			"trigger": "wp_add_fields_to_navigation_fallback_embedded_links",
-			"contents": "wp_add_fields_to_navigation_fallback_embedded_links( ${1:\\$schema} )"
 		},
 		{
 			"trigger": "_wp_reset_invalid_menu_item_parent",
@@ -10187,15 +10183,15 @@
 		},
 		{
 			"trigger": "make_after_block_visitor",
-			"contents": "make_after_block_visitor( ${1:\\$context} )"
+			"contents": "make_after_block_visitor( ${1:\\$hooked_blocks}${2:, \\$context} )"
 		},
 		{
 			"trigger": "make_before_block_visitor",
-			"contents": "make_before_block_visitor( ${1:\\$context} )"
+			"contents": "make_before_block_visitor( ${1:\\$hooked_blocks}${2:, \\$context} )"
 		},
 		{
 			"trigger": "get_hooked_blocks",
-			"contents": "get_hooked_blocks( ${1:\\$name} )"
+			"contents": "get_hooked_blocks()"
 		},
 		{
 			"trigger": "get_dynamic_block_names",
