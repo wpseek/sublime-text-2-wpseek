@@ -978,8 +978,8 @@
 			"contents": "wp_enable_block_templates()"
 		},
 		{
-			"trigger": "the_block_template_skip_link",
-			"contents": "the_block_template_skip_link()"
+			"trigger": "wp_enqueue_block_template_skip_link",
+			"contents": "wp_enqueue_block_template_skip_link()"
 		},
 		{
 			"trigger": "wp_filter_wp_template_unique_post_slug",
@@ -1468,6 +1468,10 @@
 		{
 			"trigger": "apply_shortcodes",
 			"contents": "apply_shortcodes( ${1:\\$content}${2:, \\$ignore_html = false} )"
+		},
+		{
+			"trigger": "get_shortcode_tags_in_content",
+			"contents": "get_shortcode_tags_in_content( ${1:\\$content} )"
 		},
 		{
 			"trigger": "has_shortcode",
@@ -8162,6 +8166,10 @@
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
 		},
 		{
+			"trigger": "the_block_template_skip_link",
+			"contents": "the_block_template_skip_link()"
+		},
+		{
 			"trigger": "_remove_theme_attribute_in_block_template_content",
 			"contents": "_remove_theme_attribute_in_block_template_content( ${1:\\$template_content} )"
 		},
@@ -10074,6 +10082,26 @@
 			"contents": "_walk_bookmarks( ${1:\\$bookmarks}${2:, \\$args = ''} )"
 		},
 		{
+			"trigger": "_wp_footnotes_force_filtered_html_on_import_filter",
+			"contents": "_wp_footnotes_force_filtered_html_on_import_filter( ${1:\\$arg} )"
+		},
+		{
+			"trigger": "_wp_footnotes_kses_init",
+			"contents": "_wp_footnotes_kses_init()"
+		},
+		{
+			"trigger": "_wp_footnotes_remove_filters",
+			"contents": "_wp_footnotes_remove_filters()"
+		},
+		{
+			"trigger": "_wp_footnotes_kses_init_filters",
+			"contents": "_wp_footnotes_kses_init_filters()"
+		},
+		{
+			"trigger": "_wp_filter_post_meta_footnotes",
+			"contents": "_wp_filter_post_meta_footnotes( ${1:\\$footnotes} )"
+		},
+		{
 			"trigger": "get_comments_pagination_arrow",
 			"contents": "get_comments_pagination_arrow( ${1:\\$block}${2:, \\$pagination_type = 'next'} )"
 		},
@@ -11756,6 +11784,10 @@
 		{
 			"trigger": "wp_list_widgets",
 			"contents": "wp_list_widgets()"
+		},
+		{
+			"trigger": "wp_is_authorize_application_redirect_url_valid",
+			"contents": "wp_is_authorize_application_redirect_url_valid( ${1:\\$url} )"
 		},
 		{
 			"trigger": "wp_is_authorize_application_password_request_valid",
