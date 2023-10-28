@@ -3706,12 +3706,12 @@
 			"contents": "get_options( ${1:\\$options} )"
 		},
 		{
-			"trigger": "wp_load_options_by_group",
-			"contents": "wp_load_options_by_group( ${1:\\$option_group} )"
+			"trigger": "wp_prime_option_caches_by_group",
+			"contents": "wp_prime_option_caches_by_group( ${1:\\$option_group} )"
 		},
 		{
-			"trigger": "wp_load_options",
-			"contents": "wp_load_options( ${1:\\$options} )"
+			"trigger": "wp_prime_option_caches",
+			"contents": "wp_prime_option_caches( ${1:\\$options} )"
 		},
 		{
 			"trigger": "get_option",
