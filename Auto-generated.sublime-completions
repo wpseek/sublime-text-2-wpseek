@@ -10466,6 +10466,10 @@
 			"contents": "render_block_core_read_more( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
+			"trigger": "block_core_query_disable_enhanced_pagination",
+			"contents": "block_core_query_disable_enhanced_pagination( ${1:\\$parsed_block} )"
+		},
+		{
 			"trigger": "register_block_core_query",
 			"contents": "register_block_core_query()"
 		},
