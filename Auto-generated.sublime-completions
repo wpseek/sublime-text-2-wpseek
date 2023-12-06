@@ -7031,19 +7031,19 @@
 		},
 		{
 			"trigger": "wp_send_json_error",
-			"contents": "wp_send_json_error( ${1:\\$data = null}${2:, \\$status_code = null}${3:, \\$options = 0} )"
+			"contents": "wp_send_json_error( ${1:\\$value = null}${2:, \\$status_code = null}${3:, \\$flags = 0} )"
 		},
 		{
 			"trigger": "wp_send_json_success",
-			"contents": "wp_send_json_success( ${1:\\$data = null}${2:, \\$status_code = null}${3:, \\$options = 0} )"
+			"contents": "wp_send_json_success( ${1:\\$value = null}${2:, \\$status_code = null}${3:, \\$flags = 0} )"
 		},
 		{
 			"trigger": "wp_send_json",
-			"contents": "wp_send_json( ${1:\\$response}${2:, \\$status_code = null}${3:, \\$options = 0} )"
+			"contents": "wp_send_json( ${1:\\$response}${2:, \\$status_code = null}${3:, \\$flags = 0} )"
 		},
 		{
 			"trigger": "wp_json_encode",
-			"contents": "wp_json_encode( ${1:\\$data}${2:, \\$options = 0}${3:, \\$depth = 512} )"
+			"contents": "wp_json_encode( ${1:\\$value}${2:, \\$flags = 0}${3:, \\$depth = 512} )"
 		},
 		{
 			"trigger": "_wp_die_process_input",
@@ -10218,6 +10218,10 @@
 			"contents": "make_before_block_visitor( ${1:\\$hooked_blocks}${2:, \\$context} )"
 		},
 		{
+			"trigger": "get_hooked_block_markup",
+			"contents": "get_hooked_block_markup( ${1:\\$anchor_block}${2:, \\$hooked_block_type} )"
+		},
+		{
 			"trigger": "get_hooked_blocks",
 			"contents": "get_hooked_blocks()"
 		},
@@ -12167,7 +12171,7 @@
 		},
 		{
 			"trigger": "submit_button",
-			"contents": "submit_button( ${1:\\$text = null}${2:, \\$type = 'primary'}${3:, \\$name = 'submit'}${4:, \\$wrap = true}${5:, \\$other_attributes = null} )"
+			"contents": "submit_button( ${1:\\$text = ''}${2:, \\$type = 'primary'}${3:, \\$name = 'submit'}${4:, \\$wrap = true}${5:, \\$other_attributes = ''} )"
 		},
 		{
 			"trigger": "compression_test",
