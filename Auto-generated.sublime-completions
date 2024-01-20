@@ -1946,6 +1946,10 @@
 			"contents": "_wp_post_revision_fields( ${1:\\$post = array()}${2:, \\$deprecated = false} )"
 		},
 		{
+			"trigger": "wp_is_rest_endpoint",
+			"contents": "wp_is_rest_endpoint()"
+		},
+		{
 			"trigger": "rest_convert_error_to_response",
 			"contents": "rest_convert_error_to_response( ${1:\\$error} )"
 		},
@@ -7020,6 +7024,10 @@
 		{
 			"trigger": "smilies_init",
 			"contents": "smilies_init()"
+		},
+		{
+			"trigger": "wp_is_serving_rest_request",
+			"contents": "wp_is_serving_rest_request()"
 		},
 		{
 			"trigger": "_mce_set_direction",
