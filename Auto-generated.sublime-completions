@@ -1494,20 +1494,20 @@
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$callback} )"
 		},
 		{
-			"trigger": "wp_dequeue_module",
-			"contents": "wp_dequeue_module( ${1:\\$module_id} )"
+			"trigger": "wp_dequeue_script_module",
+			"contents": "wp_dequeue_script_module( ${1:\\$id} )"
 		},
 		{
-			"trigger": "wp_enqueue_module",
-			"contents": "wp_enqueue_module( ${1:\\$module_id}${2:, \\$src = ''}${3:, \\$deps = array()}${4:, \\$version = false} )"
+			"trigger": "wp_enqueue_script_module",
+			"contents": "wp_enqueue_script_module( ${1:\\$id}${2:, \\$src = ''}${3:, \\$deps = array()}${4:, \\$version = false} )"
 		},
 		{
-			"trigger": "wp_register_module",
-			"contents": "wp_register_module( ${1:\\$module_id}${2:, \\$src}${3:, \\$deps = array()}${4:, \\$version = false} )"
+			"trigger": "wp_register_script_module",
+			"contents": "wp_register_script_module( ${1:\\$id}${2:, \\$src}${3:, \\$deps = array()}${4:, \\$version = false} )"
 		},
 		{
-			"trigger": "wp_modules",
-			"contents": "wp_modules()"
+			"trigger": "wp_script_modules",
+			"contents": "wp_script_modules()"
 		},
 		{
 			"trigger": "wp_remove_surrounding_empty_script_tags",
@@ -9208,6 +9208,10 @@
 		{
 			"trigger": "str_contains",
 			"contents": "str_contains( ${1:\\$haystack}${2:, \\$needle} )"
+		},
+		{
+			"trigger": "array_is_list",
+			"contents": "array_is_list( ${1:\\$arr} )"
 		},
 		{
 			"trigger": "array_key_last",
