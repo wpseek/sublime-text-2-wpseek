@@ -1547,11 +1547,11 @@
 		},
 		{
 			"trigger": "wp_print_inline_script_tag",
-			"contents": "wp_print_inline_script_tag( ${1:\\$javascript}${2:, \\$attributes = array()} )"
+			"contents": "wp_print_inline_script_tag( ${1:\\$data}${2:, \\$attributes = array()} )"
 		},
 		{
 			"trigger": "wp_get_inline_script_tag",
-			"contents": "wp_get_inline_script_tag( ${1:\\$javascript}${2:, \\$attributes = array()} )"
+			"contents": "wp_get_inline_script_tag( ${1:\\$data}${2:, \\$attributes = array()} )"
 		},
 		{
 			"trigger": "wp_print_script_tag",
@@ -10246,8 +10246,12 @@
 			"contents": "make_before_block_visitor( ${1:\\$hooked_blocks}${2:, \\$context} )"
 		},
 		{
+			"trigger": "insert_hooked_blocks",
+			"contents": "insert_hooked_blocks( ${1:\\$parsed_anchor_block}${2:, \\$relative_position}${3:, \\$hooked_blocks}${4:, \\$context} )"
+		},
+		{
 			"trigger": "get_hooked_block_markup",
-			"contents": "get_hooked_block_markup( ${1:\\$anchor_block}${2:, \\$hooked_block_type} )"
+			"contents": "get_hooked_block_markup( ${1:\\$hooked_block}${2:, \\$hooked_block_type}${3:, \\$anchor_block} )"
 		},
 		{
 			"trigger": "get_hooked_blocks",
