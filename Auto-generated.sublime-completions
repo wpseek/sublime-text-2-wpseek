@@ -4606,6 +4606,10 @@
 			"contents": "wp_get_webp_info( ${1:\\$filename} )"
 		},
 		{
+			"trigger": "wp_get_avif_info",
+			"contents": "wp_get_avif_info( ${1:\\$filename} )"
+		},
+		{
 			"trigger": "wp_getimagesize",
 			"contents": "wp_getimagesize( ${1:\\$filename}${2:, \\$image_info = null} )"
 		},
@@ -5944,6 +5948,10 @@
 		{
 			"trigger": "wp_kses",
 			"contents": "wp_kses( ${1:\\$content}${2:, \\$allowed_html}${3:, \\$allowed_protocols = array()} )"
+		},
+		{
+			"trigger": "wp_interactivity_register_script_modules",
+			"contents": "wp_interactivity_register_script_modules()"
 		},
 		{
 			"trigger": "wp_update_https_migration_required",
@@ -8188,6 +8196,18 @@
 		{
 			"trigger": "wp_embed_register_handler",
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
+		},
+		{
+			"trigger": "block_core_image_ensure_interactivity_dependency",
+			"contents": "block_core_image_ensure_interactivity_dependency()"
+		},
+		{
+			"trigger": "block_core_file_ensure_interactivity_dependency",
+			"contents": "block_core_file_ensure_interactivity_dependency()"
+		},
+		{
+			"trigger": "block_core_query_ensure_interactivity_dependency",
+			"contents": "block_core_query_ensure_interactivity_dependency()"
 		},
 		{
 			"trigger": "the_block_template_skip_link",
@@ -10719,7 +10739,7 @@
 		},
 		{
 			"trigger": "block_core_navigation_insert_hooked_blocks",
-			"contents": "block_core_navigation_insert_hooked_blocks( ${1:\\$inner_blocks}${2:, \\$post = null} )"
+			"contents": "block_core_navigation_insert_hooked_blocks( ${1:\\$inner_blocks}${2:, \\$post} )"
 		},
 		{
 			"trigger": "block_core_navigation_get_most_recently_published_navigation",
@@ -11574,6 +11594,10 @@
 			"contents": "get_default_block_categories()"
 		},
 		{
+			"trigger": "get_block_bindings_source",
+			"contents": "get_block_bindings_source( ${1:\\$source_name} )"
+		},
+		{
 			"trigger": "get_all_registered_block_bindings_sources",
 			"contents": "get_all_registered_block_bindings_sources()"
 		},
@@ -11584,6 +11608,22 @@
 		{
 			"trigger": "register_block_bindings_source",
 			"contents": "register_block_bindings_source( ${1:\\$source_name}${2:, \\$source_properties} )"
+		},
+		{
+			"trigger": "_register_block_bindings_post_meta_source",
+			"contents": "_register_block_bindings_post_meta_source()"
+		},
+		{
+			"trigger": "_block_bindings_post_meta_get_value",
+			"contents": "_block_bindings_post_meta_get_value( ${1:\\$source_args} )"
+		},
+		{
+			"trigger": "_register_block_bindings_pattern_overrides_source",
+			"contents": "_register_block_bindings_pattern_overrides_source()"
+		},
+		{
+			"trigger": "_block_bindings_pattern_overrides_get_value",
+			"contents": "_block_bindings_pattern_overrides_get_value( ${1:\\$source_args}${2:, \\$block_instance}${3:, \\$attribute_name} )"
 		},
 		{
 			"trigger": "__clear_multi_author_cache",
