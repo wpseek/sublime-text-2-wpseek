@@ -7894,6 +7894,26 @@
 			"contents": "wptexturize( ${1:\\$text}${2:, \\$reset = false} )"
 		},
 		{
+			"trigger": "_wp_before_delete_font_face",
+			"contents": "_wp_before_delete_font_face( ${1:\\$post_id}${2:, \\$post} )"
+		},
+		{
+			"trigger": "_wp_after_delete_font_family",
+			"contents": "_wp_after_delete_font_family( ${1:\\$post_id}${2:, \\$post} )"
+		},
+		{
+			"trigger": "wp_get_font_dir",
+			"contents": "wp_get_font_dir( ${1:\\$defaults = array()} )"
+		},
+		{
+			"trigger": "wp_unregister_font_collection",
+			"contents": "wp_unregister_font_collection( ${1:\\$slug} )"
+		},
+		{
+			"trigger": "wp_register_font_collection",
+			"contents": "wp_register_font_collection( ${1:\\$slug}${2:, \\$data_or_file} )"
+		},
+		{
 			"trigger": "wp_print_font_faces",
 			"contents": "wp_print_font_faces( ${1:\\$fonts = array()} )"
 		},
@@ -9319,7 +9339,7 @@
 		},
 		{
 			"trigger": "trackback",
-			"contents": "trackback( ${1:\\$trackback_url}${2:, \\$title}${3:, \\$excerpt}${4:, \\$ID} )"
+			"contents": "trackback( ${1:\\$trackback_url}${2:, \\$title}${3:, \\$excerpt}${4:, \\$post_id} )"
 		},
 		{
 			"trigger": "privacy_ping_filter",
@@ -13002,6 +13022,10 @@
 			"contents": "get_plugin_data( ${1:\\$plugin_file}${2:, \\$markup = true}${3:, \\$translate = true} )"
 		},
 		{
+			"trigger": "wp_get_plugin_action_button",
+			"contents": "wp_get_plugin_action_button( ${1:\\$name}${2:, \\$data}${3:, \\$compatible_php}${4:, \\$compatible_wp} )"
+		},
+		{
 			"trigger": "install_plugin_information",
 			"contents": "install_plugin_information()"
 		},
@@ -13886,6 +13910,10 @@
 			"contents": "unzip_file( ${1:\\$file}${2:, \\$to} )"
 		},
 		{
+			"trigger": "wp_zip_file_is_valid",
+			"contents": "wp_zip_file_is_valid( ${1:\\$file} )"
+		},
+		{
 			"trigger": "wp_trusted_keys",
 			"contents": "wp_trusted_keys()"
 		},
@@ -14528,6 +14556,10 @@
 		{
 			"trigger": "wp_ajax_update_plugin",
 			"contents": "wp_ajax_update_plugin()"
+		},
+		{
+			"trigger": "wp_ajax_activate_plugin",
+			"contents": "wp_ajax_activate_plugin()"
 		},
 		{
 			"trigger": "wp_ajax_install_plugin",
