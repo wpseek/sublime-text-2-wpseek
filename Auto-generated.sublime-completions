@@ -5950,8 +5950,28 @@
 			"contents": "wp_kses( ${1:\\$content}${2:, \\$allowed_html}${3:, \\$allowed_protocols = array()} )"
 		},
 		{
-			"trigger": "wp_interactivity_register_script_modules",
-			"contents": "wp_interactivity_register_script_modules()"
+			"trigger": "data_wp_context",
+			"contents": "data_wp_context( ${1:\\$context}${2:, \\$store_namespace = ''} )"
+		},
+		{
+			"trigger": "wp_interactivity_config",
+			"contents": "wp_interactivity_config( ${1:\\$store_namespace}${2:, \\$config = array()} )"
+		},
+		{
+			"trigger": "wp_interactivity_state",
+			"contents": "wp_interactivity_state( ${1:\\$store_namespace}${2:, \\$state = array()} )"
+		},
+		{
+			"trigger": "wp_interactivity_process_directives",
+			"contents": "wp_interactivity_process_directives( ${1:\\$html} )"
+		},
+		{
+			"trigger": "wp_interactivity",
+			"contents": "wp_interactivity()"
+		},
+		{
+			"trigger": "wp_interactivity_process_directives_of_interactive_blocks",
+			"contents": "wp_interactivity_process_directives_of_interactive_blocks( ${1:\\$parsed_block} )"
 		},
 		{
 			"trigger": "wp_update_https_migration_required",
@@ -7892,6 +7912,10 @@
 		{
 			"trigger": "wptexturize",
 			"contents": "wptexturize( ${1:\\$text}${2:, \\$reset = false} )"
+		},
+		{
+			"trigger": "_wp_register_default_font_collections",
+			"contents": "_wp_register_default_font_collections()"
 		},
 		{
 			"trigger": "_wp_before_delete_font_face",
@@ -10334,6 +10358,10 @@
 			"contents": "register_block_script_handle( ${1:\\$metadata}${2:, \\$field_name}${3:, \\$index = 0} )"
 		},
 		{
+			"trigger": "register_block_script_module_id",
+			"contents": "register_block_script_module_id( ${1:\\$metadata}${2:, \\$field_name}${3:, \\$index = 0} )"
+		},
+		{
 			"trigger": "get_block_asset_url",
 			"contents": "get_block_asset_url( ${1:\\$path} )"
 		},
@@ -10610,8 +10638,8 @@
 			"contents": "register_block_core_post_terms()"
 		},
 		{
-			"trigger": "build_post_term_block_variations",
-			"contents": "build_post_term_block_variations()"
+			"trigger": "block_core_post_terms_build_variations",
+			"contents": "block_core_post_terms_build_variations()"
 		},
 		{
 			"trigger": "render_block_core_post_terms",
@@ -10858,36 +10886,16 @@
 			"contents": "block_core_navigation_submenu_build_css_font_sizes( ${1:\\$context} )"
 		},
 		{
-			"trigger": "block_core_navigation_link_unregister_taxonomy_variation",
-			"contents": "block_core_navigation_link_unregister_taxonomy_variation( ${1:\\$taxonomy} )"
-		},
-		{
-			"trigger": "block_core_navigation_link_unregister_post_type_variation",
-			"contents": "block_core_navigation_link_unregister_post_type_variation( ${1:\\$post_type} )"
-		},
-		{
-			"trigger": "block_core_navigation_link_register_taxonomy_variation",
-			"contents": "block_core_navigation_link_register_taxonomy_variation( ${1:\\$taxonomy}${2:, \\$object_type}${3:, \\$args} )"
-		},
-		{
-			"trigger": "block_core_navigation_link_register_post_type_variation",
-			"contents": "block_core_navigation_link_register_post_type_variation( ${1:\\$post_type}${2:, \\$post_type_object} )"
-		},
-		{
 			"trigger": "register_block_core_navigation_link",
 			"contents": "register_block_core_navigation_link()"
 		},
 		{
-			"trigger": "build_navigation_link_block_variations",
-			"contents": "build_navigation_link_block_variations()"
+			"trigger": "block_core_navigation_link_build_variations",
+			"contents": "block_core_navigation_link_build_variations()"
 		},
 		{
-			"trigger": "block_core_navigation_link_unregister_variation",
-			"contents": "block_core_navigation_link_unregister_variation( ${1:\\$name} )"
-		},
-		{
-			"trigger": "block_core_navigation_link_register_variation",
-			"contents": "block_core_navigation_link_register_variation( ${1:\\$variation} )"
+			"trigger": "block_core_navigation_link_filter_variations",
+			"contents": "block_core_navigation_link_filter_variations( ${1:\\$variations}${2:, \\$block_type} )"
 		},
 		{
 			"trigger": "build_variation_for_navigation_link",
@@ -10974,6 +10982,10 @@
 			"contents": "register_block_core_image()"
 		},
 		{
+			"trigger": "block_core_image_print_lightbox_overlay",
+			"contents": "block_core_image_print_lightbox_overlay()"
+		},
+		{
 			"trigger": "block_core_image_render_lightbox",
 			"contents": "block_core_image_render_lightbox( ${1:\\$block_content}${2:, \\$block} )"
 		},
@@ -11020,10 +11032,6 @@
 		{
 			"trigger": "block_core_gallery_render",
 			"contents": "block_core_gallery_render( ${1:\\$attributes}${2:, \\$content} )"
-		},
-		{
-			"trigger": "block_core_gallery_random_order",
-			"contents": "block_core_gallery_random_order( ${1:\\$parsed_block} )"
 		},
 		{
 			"trigger": "block_core_gallery_data_id_backcompatibility",
