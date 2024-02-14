@@ -1494,6 +1494,10 @@
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$callback} )"
 		},
 		{
+			"trigger": "wp_deregister_script_module",
+			"contents": "wp_deregister_script_module( ${1:\\$id} )"
+		},
+		{
 			"trigger": "wp_dequeue_script_module",
 			"contents": "wp_dequeue_script_module( ${1:\\$id} )"
 		},
@@ -10303,19 +10307,19 @@
 		},
 		{
 			"trigger": "make_after_block_visitor",
-			"contents": "make_after_block_visitor( ${1:\\$hooked_blocks}${2:, \\$context} )"
+			"contents": "make_after_block_visitor( ${1:\\$hooked_blocks}${2:, \\$context}${3:, \\$callback = 'insert_hooked_blocks'} )"
 		},
 		{
 			"trigger": "make_before_block_visitor",
-			"contents": "make_before_block_visitor( ${1:\\$hooked_blocks}${2:, \\$context} )"
+			"contents": "make_before_block_visitor( ${1:\\$hooked_blocks}${2:, \\$context}${3:, \\$callback = 'insert_hooked_blocks'} )"
+		},
+		{
+			"trigger": "set_ignored_hooked_blocks_metadata",
+			"contents": "set_ignored_hooked_blocks_metadata( ${1:\\$parsed_anchor_block}${2:, \\$relative_position}${3:, \\$hooked_blocks}${4:, \\$context} )"
 		},
 		{
 			"trigger": "insert_hooked_blocks",
 			"contents": "insert_hooked_blocks( ${1:\\$parsed_anchor_block}${2:, \\$relative_position}${3:, \\$hooked_blocks}${4:, \\$context} )"
-		},
-		{
-			"trigger": "get_hooked_block_markup",
-			"contents": "get_hooked_block_markup( ${1:\\$hooked_block}${2:, \\$hooked_block_type}${3:, \\$anchor_block} )"
 		},
 		{
 			"trigger": "get_hooked_blocks",
@@ -11280,6 +11284,10 @@
 		{
 			"trigger": "_add_template_loader_filters",
 			"contents": "_add_template_loader_filters()"
+		},
+		{
+			"trigger": "inject_ignored_hooked_blocks_metadata_attributes",
+			"contents": "inject_ignored_hooked_blocks_metadata_attributes( ${1:\\$post} )"
 		},
 		{
 			"trigger": "get_template_hierarchy",
