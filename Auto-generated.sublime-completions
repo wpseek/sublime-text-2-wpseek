@@ -10790,8 +10790,20 @@
 			"contents": "block_core_navigation_update_ignore_hooked_blocks_meta( ${1:\\$post} )"
 		},
 		{
+			"trigger": "block_core_navigation_set_ignored_hooked_blocks_metadata",
+			"contents": "block_core_navigation_set_ignored_hooked_blocks_metadata( ${1:\\$inner_blocks}${2:, \\$post} )"
+		},
+		{
 			"trigger": "block_core_navigation_insert_hooked_blocks",
 			"contents": "block_core_navigation_insert_hooked_blocks( ${1:\\$inner_blocks}${2:, \\$post} )"
+		},
+		{
+			"trigger": "block_core_navigation_mock_parsed_block",
+			"contents": "block_core_navigation_mock_parsed_block( ${1:\\$inner_blocks}${2:, \\$post} )"
+		},
+		{
+			"trigger": "block_core_navigation_remove_serialized_parent_block",
+			"contents": "block_core_navigation_remove_serialized_parent_block( ${1:\\$serialized_block} )"
 		},
 		{
 			"trigger": "block_core_navigation_get_most_recently_published_navigation",
@@ -11048,6 +11060,10 @@
 		{
 			"trigger": "wp_add_footnotes_to_revision",
 			"contents": "wp_add_footnotes_to_revision( ${1:\\$fields} )"
+		},
+		{
+			"trigger": "register_block_core_footnotes_post_meta",
+			"contents": "register_block_core_footnotes_post_meta()"
 		},
 		{
 			"trigger": "register_block_core_footnotes",
@@ -11651,7 +11667,7 @@
 		},
 		{
 			"trigger": "_block_bindings_post_meta_get_value",
-			"contents": "_block_bindings_post_meta_get_value( ${1:\\$source_args} )"
+			"contents": "_block_bindings_post_meta_get_value( ${1:\\$source_args}${2:, \\$block_instance} )"
 		},
 		{
 			"trigger": "_register_block_bindings_pattern_overrides_source",
