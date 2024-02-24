@@ -1014,6 +1014,10 @@
 			"contents": "locate_template( ${1:\\$template_names}${2:, \\$load = false}${3:, \\$load_once = true}${4:, \\$args = array()} )"
 		},
 		{
+			"trigger": "wp_set_template_globals",
+			"contents": "wp_set_template_globals()"
+		},
+		{
 			"trigger": "get_attachment_template",
 			"contents": "get_attachment_template()"
 		},
@@ -2615,7 +2619,7 @@
 		},
 		{
 			"trigger": "wp_mime_type_icon",
-			"contents": "wp_mime_type_icon( ${1:\\$mime = 0} )"
+			"contents": "wp_mime_type_icon( ${1:\\$mime = 0}${2:, \\$preferred_ext = '.png'} )"
 		},
 		{
 			"trigger": "wp_attachment_is_image",
@@ -7939,7 +7943,7 @@
 		},
 		{
 			"trigger": "wp_register_font_collection",
-			"contents": "wp_register_font_collection( ${1:\\$slug}${2:, \\$data_or_file} )"
+			"contents": "wp_register_font_collection( ${1:\\$slug}${2:, \\$args} )"
 		},
 		{
 			"trigger": "wp_print_font_faces",
