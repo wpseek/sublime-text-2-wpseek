@@ -2807,7 +2807,7 @@
 		},
 		{
 			"trigger": "wp_delete_post",
-			"contents": "wp_delete_post( ${1:\\$postid = 0}${2:, \\$force_delete = false} )"
+			"contents": "wp_delete_post( ${1:\\$post_id = 0}${2:, \\$force_delete = false} )"
 		},
 		{
 			"trigger": "wp_post_mime_type_where",
@@ -7934,6 +7934,14 @@
 			"contents": "_wp_after_delete_font_family( ${1:\\$post_id}${2:, \\$post} )"
 		},
 		{
+			"trigger": "_wp_filter_font_directory",
+			"contents": "_wp_filter_font_directory( ${1:\\$font_dir} )"
+		},
+		{
+			"trigger": "wp_font_dir",
+			"contents": "wp_font_dir( ${1:\\$create_dir = true} )"
+		},
+		{
 			"trigger": "wp_get_font_dir",
 			"contents": "wp_get_font_dir()"
 		},
@@ -11307,7 +11315,7 @@
 		},
 		{
 			"trigger": "inject_ignored_hooked_blocks_metadata_attributes",
-			"contents": "inject_ignored_hooked_blocks_metadata_attributes( ${1:\\$post} )"
+			"contents": "inject_ignored_hooked_blocks_metadata_attributes( ${1:\\$post}${2:, \\$request} )"
 		},
 		{
 			"trigger": "get_template_hierarchy",
@@ -12791,7 +12799,7 @@
 		},
 		{
 			"trigger": "has_meta",
-			"contents": "has_meta( ${1:\\$postid} )"
+			"contents": "has_meta( ${1:\\$post_id} )"
 		},
 		{
 			"trigger": "get_post_meta_by_id",
