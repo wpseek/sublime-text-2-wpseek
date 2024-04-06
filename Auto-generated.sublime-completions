@@ -3582,6 +3582,10 @@
 			"contents": "readonly( ${1:\\$readonly_value}${2:, \\$current = true}${3:, \\$display = true} )"
 		},
 		{
+			"trigger": "wp_autoload_values_to_autoload",
+			"contents": "wp_autoload_values_to_autoload()"
+		},
+		{
 			"trigger": "filter_default_option",
 			"contents": "filter_default_option( ${1:\\$default_value}${2:, \\$option}${3:, \\$passed_default} )"
 		},
@@ -3690,12 +3694,20 @@
 			"contents": "delete_transient( ${1:\\$transient} )"
 		},
 		{
+			"trigger": "wp_filter_default_autoload_value_via_option_size",
+			"contents": "wp_filter_default_autoload_value_via_option_size( ${1:\\$autoload}${2:, \\$option}${3:, \\$value}${4:, \\$serialized_value} )"
+		},
+		{
+			"trigger": "wp_determine_option_autoload_value",
+			"contents": "wp_determine_option_autoload_value( ${1:\\$option}${2:, \\$value}${3:, \\$serialized_value}${4:, \\$autoload} )"
+		},
+		{
 			"trigger": "delete_option",
 			"contents": "delete_option( ${1:\\$option} )"
 		},
 		{
 			"trigger": "add_option",
-			"contents": "add_option( ${1:\\$option}${2:, \\$value = ''}${3:, \\$deprecated = ''}${4:, \\$autoload = 'yes'} )"
+			"contents": "add_option( ${1:\\$option}${2:, \\$value = ''}${3:, \\$deprecated = ''}${4:, \\$autoload = null} )"
 		},
 		{
 			"trigger": "update_option",
@@ -11315,7 +11327,7 @@
 		},
 		{
 			"trigger": "inject_ignored_hooked_blocks_metadata_attributes",
-			"contents": "inject_ignored_hooked_blocks_metadata_attributes( ${1:\\$post}${2:, \\$request} )"
+			"contents": "inject_ignored_hooked_blocks_metadata_attributes( ${1:\\$changes}${2:, \\$deprecated = null} )"
 		},
 		{
 			"trigger": "get_template_hierarchy",
@@ -11356,6 +11368,10 @@
 		{
 			"trigger": "_build_block_template_result_from_post",
 			"contents": "_build_block_template_result_from_post( ${1:\\$post} )"
+		},
+		{
+			"trigger": "_build_block_template_object_from_post_object",
+			"contents": "_build_block_template_object_from_post_object( ${1:\\$post}${2:, \\$terms = array()}${3:, \\$meta = array()} )"
 		},
 		{
 			"trigger": "_wp_build_title_and_description_for_taxonomy_block_template",
