@@ -5682,6 +5682,10 @@
 			"contents": "wp_dropdown_languages( ${1:\\$args = array()} )"
 		},
 		{
+			"trigger": "wp_get_l10n_php_file_data",
+			"contents": "wp_get_l10n_php_file_data( ${1:\\$php_file} )"
+		},
+		{
 			"trigger": "wp_get_pomo_file_data",
 			"contents": "wp_get_pomo_file_data( ${1:\\$po_file} )"
 		},
@@ -8270,6 +8274,10 @@
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
 		},
 		{
+			"trigger": "wp_render_elements_support",
+			"contents": "wp_render_elements_support( ${1:\\$block_content}${2:, \\$block} )"
+		},
+		{
 			"trigger": "block_core_image_ensure_interactivity_dependency",
 			"contents": "block_core_image_ensure_interactivity_dependency()"
 		},
@@ -9312,10 +9320,6 @@
 		{
 			"trigger": "array_key_first",
 			"contents": "array_key_first( ${1:\\$array} )"
-		},
-		{
-			"trigger": "is_iterable",
-			"contents": "is_iterable( ${1:\\$value} )"
 		},
 		{
 			"trigger": "is_countable",
@@ -11534,12 +11538,16 @@
 			"contents": "wp_get_block_default_classname( ${1:\\$block_name} )"
 		},
 		{
-			"trigger": "wp_render_elements_support_styles",
-			"contents": "wp_render_elements_support_styles( ${1:\\$pre_render}${2:, \\$block} )"
+			"trigger": "wp_render_elements_class_name",
+			"contents": "wp_render_elements_class_name( ${1:\\$block_content}${2:, \\$block} )"
 		},
 		{
-			"trigger": "wp_render_elements_support",
-			"contents": "wp_render_elements_support( ${1:\\$block_content}${2:, \\$block} )"
+			"trigger": "wp_render_elements_support_styles",
+			"contents": "wp_render_elements_support_styles( ${1:\\$parsed_block} )"
+		},
+		{
+			"trigger": "wp_should_add_elements_class_name",
+			"contents": "wp_should_add_elements_class_name( ${1:\\$block}${2:, \\$options} )"
 		},
 		{
 			"trigger": "wp_get_elements_class_name",
