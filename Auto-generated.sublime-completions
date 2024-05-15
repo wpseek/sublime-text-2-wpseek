@@ -622,6 +622,10 @@
 			"contents": "wp_version_check( ${1:\\$extra_stats = array()}${2:, \\$force_check = false} )"
 		},
 		{
+			"trigger": "is_utf8_charset",
+			"contents": "is_utf8_charset( ${1:\\$blog_charset = null} )"
+		},
+		{
 			"trigger": "_add_default_theme_supports",
 			"contents": "_add_default_theme_supports()"
 		},
@@ -8075,7 +8079,7 @@
 		},
 		{
 			"trigger": "get_the_title_rss",
-			"contents": "get_the_title_rss()"
+			"contents": "get_the_title_rss( ${1:\\$post = 0} )"
 		},
 		{
 			"trigger": "wp_title_rss",
