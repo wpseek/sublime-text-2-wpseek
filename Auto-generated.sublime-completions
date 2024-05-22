@@ -622,10 +622,6 @@
 			"contents": "wp_version_check( ${1:\\$extra_stats = array()}${2:, \\$force_check = false} )"
 		},
 		{
-			"trigger": "is_utf8_charset",
-			"contents": "is_utf8_charset( ${1:\\$blog_charset = null} )"
-		},
-		{
 			"trigger": "_add_default_theme_supports",
 			"contents": "_add_default_theme_supports()"
 		},
@@ -3722,6 +3718,14 @@
 			"contents": "wp_load_core_site_options( ${1:\\$network_id = null} )"
 		},
 		{
+			"trigger": "wp_prime_network_option_caches",
+			"contents": "wp_prime_network_option_caches( ${1:\\$network_id}${2:, \\$options} )"
+		},
+		{
+			"trigger": "wp_prime_site_option_caches",
+			"contents": "wp_prime_site_option_caches( ${1:\\$options} )"
+		},
+		{
 			"trigger": "wp_load_alloptions",
 			"contents": "wp_load_alloptions( ${1:\\$force_cache = false} )"
 		},
@@ -6808,6 +6812,10 @@
 		{
 			"trigger": "_canonical_charset",
 			"contents": "_canonical_charset( ${1:\\$charset} )"
+		},
+		{
+			"trigger": "is_utf8_charset",
+			"contents": "is_utf8_charset( ${1:\\$blog_charset = null} )"
 		},
 		{
 			"trigger": "get_tag_regex",
@@ -11447,7 +11455,7 @@
 		},
 		{
 			"trigger": "wp_get_typography_font_size_value",
-			"contents": "wp_get_typography_font_size_value( ${1:\\$preset}${2:, \\$should_use_fluid_typography = false} )"
+			"contents": "wp_get_typography_font_size_value( ${1:\\$preset}${2:, \\$settings = array()} )"
 		},
 		{
 			"trigger": "wp_get_computed_fluid_typography_value",
@@ -11516,6 +11524,10 @@
 		{
 			"trigger": "wp_restore_group_inner_container",
 			"contents": "wp_restore_group_inner_container( ${1:\\$block_content}${2:, \\$block} )"
+		},
+		{
+			"trigger": "wp_add_parent_layout_to_parsed_block",
+			"contents": "wp_add_parent_layout_to_parsed_block( ${1:\\$parsed_block}${2:, \\$source_block}${3:, \\$parent_block} )"
 		},
 		{
 			"trigger": "wp_render_layout_support_flag",
