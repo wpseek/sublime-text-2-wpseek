@@ -10354,6 +10354,10 @@
 			"contents": "make_before_block_visitor( ${1:\\$hooked_blocks}${2:, \\$context}${3:, \\$callback = 'insert_hooked_blocks'} )"
 		},
 		{
+			"trigger": "insert_hooked_blocks_and_set_ignored_hooked_blocks_metadata",
+			"contents": "insert_hooked_blocks_and_set_ignored_hooked_blocks_metadata( ${1:\\$parsed_anchor_block}${2:, \\$relative_position}${3:, \\$hooked_blocks}${4:, \\$context} )"
+		},
+		{
 			"trigger": "set_ignored_hooked_blocks_metadata",
 			"contents": "set_ignored_hooked_blocks_metadata( ${1:\\$parsed_anchor_block}${2:, \\$relative_position}${3:, \\$hooked_blocks}${4:, \\$context} )"
 		},
@@ -10978,12 +10982,28 @@
 			"contents": "block_core_navigation_link_build_css_colors( ${1:\\$context}${2:, \\$attributes}${3:, \\$is_sub_menu = false} )"
 		},
 		{
+			"trigger": "register_block_core_media_text",
+			"contents": "register_block_core_media_text()"
+		},
+		{
+			"trigger": "render_block_core_media_text",
+			"contents": "render_block_core_media_text( ${1:\\$attributes}${2:, \\$content} )"
+		},
+		{
 			"trigger": "register_block_core_loginout",
 			"contents": "register_block_core_loginout()"
 		},
 		{
 			"trigger": "render_block_core_loginout",
 			"contents": "render_block_core_loginout( ${1:\\$attributes} )"
+		},
+		{
+			"trigger": "register_block_core_list",
+			"contents": "register_block_core_list()"
+		},
+		{
+			"trigger": "block_core_list_render",
+			"contents": "block_core_list_render( ${1:\\$attributes}${2:, \\$content} )"
 		},
 		{
 			"trigger": "handle_legacy_widget_preview_iframe",
