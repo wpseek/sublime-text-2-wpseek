@@ -5982,6 +5982,10 @@
 			"contents": "wp_kses( ${1:\\$content}${2:, \\$allowed_html}${3:, \\$allowed_protocols = array()} )"
 		},
 		{
+			"trigger": "wp_interactivity_get_context",
+			"contents": "wp_interactivity_get_context( ${1:\\$store_namespace = null} )"
+		},
+		{
 			"trigger": "wp_interactivity_data_wp_context",
 			"contents": "wp_interactivity_data_wp_context( ${1:\\$context}${2:, \\$store_namespace = ''} )"
 		},
@@ -5991,7 +5995,7 @@
 		},
 		{
 			"trigger": "wp_interactivity_state",
-			"contents": "wp_interactivity_state( ${1:\\$store_namespace}${2:, \\$state = array()} )"
+			"contents": "wp_interactivity_state( ${1:\\$store_namespace = null}${2:, \\$state = array()} )"
 		},
 		{
 			"trigger": "wp_interactivity_process_directives",
@@ -10322,6 +10326,10 @@
 			"contents": "traverse_and_serialize_blocks( ${1:\\$blocks}${2:, \\$pre_callback = null}${3:, \\$post_callback = null} )"
 		},
 		{
+			"trigger": "resolve_pattern_blocks",
+			"contents": "resolve_pattern_blocks( ${1:\\$blocks} )"
+		},
+		{
 			"trigger": "traverse_and_serialize_block",
 			"contents": "traverse_and_serialize_block( ${1:\\$block}${2:, \\$pre_callback = null}${3:, \\$post_callback = null} )"
 		},
@@ -10354,8 +10362,24 @@
 			"contents": "make_before_block_visitor( ${1:\\$hooked_blocks}${2:, \\$context}${3:, \\$callback = 'insert_hooked_blocks'} )"
 		},
 		{
+			"trigger": "insert_hooked_blocks_into_rest_response",
+			"contents": "insert_hooked_blocks_into_rest_response( ${1:\\$response}${2:, \\$post} )"
+		},
+		{
 			"trigger": "insert_hooked_blocks_and_set_ignored_hooked_blocks_metadata",
 			"contents": "insert_hooked_blocks_and_set_ignored_hooked_blocks_metadata( ${1:\\$parsed_anchor_block}${2:, \\$relative_position}${3:, \\$hooked_blocks}${4:, \\$context} )"
+		},
+		{
+			"trigger": "update_ignored_hooked_blocks_postmeta",
+			"contents": "update_ignored_hooked_blocks_postmeta( ${1:\\$post} )"
+		},
+		{
+			"trigger": "remove_serialized_parent_block",
+			"contents": "remove_serialized_parent_block( ${1:\\$serialized_block} )"
+		},
+		{
+			"trigger": "apply_block_hooks_to_content",
+			"contents": "apply_block_hooks_to_content( ${1:\\$content}${2:, \\$context}${3:, \\$callback = 'insert_hooked_blocks'} )"
 		},
 		{
 			"trigger": "set_ignored_hooked_blocks_metadata",
