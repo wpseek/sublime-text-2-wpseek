@@ -11322,6 +11322,14 @@
 			"contents": "render_block_core_calendar( ${1:\\$attributes} )"
 		},
 		{
+			"trigger": "register_block_core_button",
+			"contents": "register_block_core_button()"
+		},
+		{
+			"trigger": "render_block_core_button",
+			"contents": "render_block_core_button( ${1:\\$attributes}${2:, \\$content} )"
+		},
+		{
 			"trigger": "register_block_core_block",
 			"contents": "register_block_core_block()"
 		},
