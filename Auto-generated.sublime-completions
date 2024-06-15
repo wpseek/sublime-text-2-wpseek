@@ -11662,6 +11662,14 @@
 			"contents": "wp_register_border_support( ${1:\\$block_type} )"
 		},
 		{
+			"trigger": "wp_register_block_style_variations_from_theme",
+			"contents": "wp_register_block_style_variations_from_theme()"
+		},
+		{
+			"trigger": "wp_register_block_style_variations_from_theme_json_data",
+			"contents": "wp_register_block_style_variations_from_theme_json_data( ${1:\\$variations} )"
+		},
+		{
 			"trigger": "wp_enqueue_block_style_variation_styles",
 			"contents": "wp_enqueue_block_style_variation_styles()"
 		},
@@ -11686,8 +11694,8 @@
 			"contents": "wp_merge_block_style_variations_data( ${1:\\$variations_data}${2:, \\$theme_json}${3:, \\$origin = 'theme'} )"
 		},
 		{
-			"trigger": "wp_resolve_and_register_block_style_variations",
-			"contents": "wp_resolve_and_register_block_style_variations( ${1:\\$variations} )"
+			"trigger": "wp_resolve_block_style_variations",
+			"contents": "wp_resolve_block_style_variations( ${1:\\$variations} )"
 		},
 		{
 			"trigger": "wp_render_block_style_variation_class_name",
