@@ -10306,8 +10306,12 @@
 			"contents": "excerpt_remove_blocks( ${1:\\$content} )"
 		},
 		{
+			"trigger": "filter_block_core_template_part_attributes",
+			"contents": "filter_block_core_template_part_attributes( ${1:\\$attribute_value}${2:, \\$attribute_name}${3:, \\$allowed_html} )"
+		},
+		{
 			"trigger": "filter_block_kses_value",
-			"contents": "filter_block_kses_value( ${1:\\$value}${2:, \\$allowed_html}${3:, \\$allowed_protocols = array()} )"
+			"contents": "filter_block_kses_value( ${1:\\$value}${2:, \\$allowed_html}${3:, \\$allowed_protocols = array()}${4:, \\$block_context = null} )"
 		},
 		{
 			"trigger": "filter_block_kses",
@@ -11662,40 +11666,12 @@
 			"contents": "wp_register_border_support( ${1:\\$block_type} )"
 		},
 		{
-			"trigger": "wp_register_block_style_variations_from_theme",
-			"contents": "wp_register_block_style_variations_from_theme()"
-		},
-		{
-			"trigger": "wp_register_block_style_variations_from_theme_json_data",
-			"contents": "wp_register_block_style_variations_from_theme_json_data( ${1:\\$variations} )"
+			"trigger": "wp_register_block_style_variations_from_theme_json_partials",
+			"contents": "wp_register_block_style_variations_from_theme_json_partials( ${1:\\$variations} )"
 		},
 		{
 			"trigger": "wp_enqueue_block_style_variation_styles",
 			"contents": "wp_enqueue_block_style_variation_styles()"
-		},
-		{
-			"trigger": "wp_resolve_block_style_variations_from_styles_registry",
-			"contents": "wp_resolve_block_style_variations_from_styles_registry( ${1:\\$theme_json} )"
-		},
-		{
-			"trigger": "wp_resolve_block_style_variations_from_primary_theme_json",
-			"contents": "wp_resolve_block_style_variations_from_primary_theme_json( ${1:\\$theme_json} )"
-		},
-		{
-			"trigger": "wp_resolve_block_style_variations_from_theme_json_partials",
-			"contents": "wp_resolve_block_style_variations_from_theme_json_partials( ${1:\\$theme_json} )"
-		},
-		{
-			"trigger": "wp_resolve_block_style_variations_from_theme_style_variation",
-			"contents": "wp_resolve_block_style_variations_from_theme_style_variation( ${1:\\$theme_json} )"
-		},
-		{
-			"trigger": "wp_merge_block_style_variations_data",
-			"contents": "wp_merge_block_style_variations_data( ${1:\\$variations_data}${2:, \\$theme_json}${3:, \\$origin = 'theme'} )"
-		},
-		{
-			"trigger": "wp_resolve_block_style_variations",
-			"contents": "wp_resolve_block_style_variations( ${1:\\$variations} )"
 		},
 		{
 			"trigger": "wp_render_block_style_variation_class_name",
