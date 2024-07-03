@@ -10378,6 +10378,10 @@
 			"contents": "update_ignored_hooked_blocks_postmeta( ${1:\\$post} )"
 		},
 		{
+			"trigger": "extract_serialized_parent_block",
+			"contents": "extract_serialized_parent_block( ${1:\\$serialized_block} )"
+		},
+		{
 			"trigger": "remove_serialized_parent_block",
 			"contents": "remove_serialized_parent_block( ${1:\\$serialized_block} )"
 		},
