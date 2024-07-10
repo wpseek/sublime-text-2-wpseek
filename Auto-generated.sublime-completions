@@ -11686,6 +11686,10 @@
 			"contents": "wp_render_block_style_variation_support_styles( ${1:\\$parsed_block} )"
 		},
 		{
+			"trigger": "wp_resolve_block_style_variation_ref_values",
+			"contents": "wp_resolve_block_style_variation_ref_values( ${1:\\$variation_data}${2:, \\$theme_json} )"
+		},
+		{
 			"trigger": "wp_get_block_style_variation_name_from_class",
 			"contents": "wp_get_block_style_variation_name_from_class( ${1:\\$class_string} )"
 		},
