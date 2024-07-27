@@ -1602,10 +1602,6 @@
 			"contents": "wp_should_load_block_editor_scripts_and_styles()"
 		},
 		{
-			"trigger": "wp_enqueue_global_styles_custom_css",
-			"contents": "wp_enqueue_global_styles_custom_css()"
-		},
-		{
 			"trigger": "wp_enqueue_global_styles",
 			"contents": "wp_enqueue_global_styles()"
 		},
@@ -6190,10 +6186,6 @@
 			"contents": "wp_add_global_styles_for_blocks()"
 		},
 		{
-			"trigger": "wp_get_global_styles_custom_css",
-			"contents": "wp_get_global_styles_custom_css()"
-		},
-		{
 			"trigger": "wp_get_global_stylesheet",
 			"contents": "wp_get_global_stylesheet( ${1:\\$types = array()} )"
 		},
@@ -6656,6 +6648,10 @@
 		{
 			"trigger": "wp_scripts",
 			"contents": "wp_scripts()"
+		},
+		{
+			"trigger": "wp_get_wp_version",
+			"contents": "wp_get_wp_version()"
 		},
 		{
 			"trigger": "wp_admin_notice",
@@ -8284,6 +8280,14 @@
 		{
 			"trigger": "wp_embed_register_handler",
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
+		},
+		{
+			"trigger": "wp_enqueue_global_styles_custom_css",
+			"contents": "wp_enqueue_global_styles_custom_css()"
+		},
+		{
+			"trigger": "wp_get_global_styles_custom_css",
+			"contents": "wp_get_global_styles_custom_css()"
 		},
 		{
 			"trigger": "wp_interactivity_process_directives_of_interactive_blocks",
