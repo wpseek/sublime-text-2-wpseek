@@ -4606,6 +4606,10 @@
 			"contents": "add_metadata( ${1:\\$meta_type}${2:, \\$object_id}${3:, \\$meta_key}${4:, \\$meta_value}${5:, \\$unique = false} )"
 		},
 		{
+			"trigger": "wp_get_image_editor_output_format",
+			"contents": "wp_get_image_editor_output_format( ${1:\\$filename}${2:, \\$mime_type} )"
+		},
+		{
 			"trigger": "wp_high_priority_element_flag",
 			"contents": "wp_high_priority_element_flag( ${1:\\$value = null} )"
 		},
@@ -6650,10 +6654,6 @@
 			"contents": "wp_scripts()"
 		},
 		{
-			"trigger": "wp_get_wp_version",
-			"contents": "wp_get_wp_version()"
-		},
-		{
 			"trigger": "wp_admin_notice",
 			"contents": "wp_admin_notice( ${1:\\$message}${2:, \\$args = array()} )"
 		},
@@ -6672,6 +6672,10 @@
 		{
 			"trigger": "is_wp_version_compatible",
 			"contents": "is_wp_version_compatible( ${1:\\$required} )"
+		},
+		{
+			"trigger": "wp_get_wp_version",
+			"contents": "wp_get_wp_version()"
 		},
 		{
 			"trigger": "clean_dirsize_cache",
