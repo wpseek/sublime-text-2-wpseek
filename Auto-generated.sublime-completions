@@ -6494,6 +6494,10 @@
 			"contents": "wp_title( ${1:\\$sep = '&raquo;'}${2:, \\$display = true}${3:, \\$seplocation = ''} )"
 		},
 		{
+			"trigger": "_wp_render_title_tag",
+			"contents": "_wp_render_title_tag()"
+		},
+		{
 			"trigger": "wp_get_document_title",
 			"contents": "wp_get_document_title()"
 		},
