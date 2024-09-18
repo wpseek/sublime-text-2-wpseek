@@ -5658,6 +5658,10 @@
 			"contents": "the_permalink( ${1:\\$post = 0} )"
 		},
 		{
+			"trigger": "has_translation",
+			"contents": "has_translation( ${1:\\$singular}${2:, \\$textdomain = 'default'}${3:, \\$locale = null} )"
+		},
+		{
 			"trigger": "wp_get_word_count_type",
 			"contents": "wp_get_word_count_type()"
 		},
