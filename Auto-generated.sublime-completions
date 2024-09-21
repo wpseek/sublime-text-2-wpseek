@@ -11331,7 +11331,7 @@
 		},
 		{
 			"trigger": "render_block_core_categories",
-			"contents": "render_block_core_categories( ${1:\\$attributes} )"
+			"contents": "render_block_core_categories( ${1:\\$attributes}${2:, \\$content}${3:, \\$block} )"
 		},
 		{
 			"trigger": "block_core_calendar_update_has_published_post_on_transition_post_status",
@@ -11392,6 +11392,14 @@
 		{
 			"trigger": "render_block_core_archives",
 			"contents": "render_block_core_archives( ${1:\\$attributes} )"
+		},
+		{
+			"trigger": "wp_unregister_block_template",
+			"contents": "wp_unregister_block_template( ${1:\\$template_name} )"
+		},
+		{
+			"trigger": "wp_register_block_template",
+			"contents": "wp_register_block_template( ${1:\\$template_name}${2:, \\$args = array()} )"
 		},
 		{
 			"trigger": "_resolve_template_for_new_post",
