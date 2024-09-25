@@ -1498,6 +1498,10 @@
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$callback} )"
 		},
 		{
+			"trigger": "wp_default_script_modules",
+			"contents": "wp_default_script_modules()"
+		},
+		{
 			"trigger": "wp_deregister_script_module",
 			"contents": "wp_deregister_script_module( ${1:\\$id} )"
 		},
@@ -5355,7 +5359,7 @@
 		},
 		{
 			"trigger": "get_previous_comments_link",
-			"contents": "get_previous_comments_link( ${1:\\$label = ''} )"
+			"contents": "get_previous_comments_link( ${1:\\$label = ''}${2:, \\$page = null} )"
 		},
 		{
 			"trigger": "next_comments_link",
@@ -5363,7 +5367,7 @@
 		},
 		{
 			"trigger": "get_next_comments_link",
-			"contents": "get_next_comments_link( ${1:\\$label = ''}${2:, \\$max_page = 0} )"
+			"contents": "get_next_comments_link( ${1:\\$label = ''}${2:, \\$max_page = 0}${3:, \\$page = null} )"
 		},
 		{
 			"trigger": "get_comments_pagenum_link",
