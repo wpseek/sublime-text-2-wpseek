@@ -8314,6 +8314,10 @@
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
 		},
 		{
+			"trigger": "current_user_can_for_blog",
+			"contents": "current_user_can_for_blog( ${1:\\$blog_id}${2:, \\$capability}${3:, \\$args} )"
+		},
+		{
 			"trigger": "wp_create_block_style_variation_instance_name",
 			"contents": "wp_create_block_style_variation_instance_name( ${1:\\$block}${2:, \\$variation} )"
 		},
@@ -10106,8 +10110,8 @@
 			"contents": "wp_roles()"
 		},
 		{
-			"trigger": "user_can_for_blog",
-			"contents": "user_can_for_blog( ${1:\\$user}${2:, \\$blog_id}${3:, \\$capability}${4:, \\$args} )"
+			"trigger": "user_can_for_site",
+			"contents": "user_can_for_site( ${1:\\$user}${2:, \\$site_id}${3:, \\$capability}${4:, \\$args} )"
 		},
 		{
 			"trigger": "user_can",
@@ -10118,8 +10122,8 @@
 			"contents": "author_can( ${1:\\$post}${2:, \\$capability}${3:, \\$args} )"
 		},
 		{
-			"trigger": "current_user_can_for_blog",
-			"contents": "current_user_can_for_blog( ${1:\\$blog_id}${2:, \\$capability}${3:, \\$args} )"
+			"trigger": "current_user_can_for_site",
+			"contents": "current_user_can_for_site( ${1:\\$site_id}${2:, \\$capability}${3:, \\$args} )"
 		},
 		{
 			"trigger": "current_user_can",
