@@ -11422,12 +11422,12 @@
 			"contents": "render_block_core_archives( ${1:\\$attributes} )"
 		},
 		{
-			"trigger": "wp_unregister_block_template",
-			"contents": "wp_unregister_block_template( ${1:\\$template_name} )"
+			"trigger": "unregister_block_template",
+			"contents": "unregister_block_template( ${1:\\$template_name} )"
 		},
 		{
-			"trigger": "wp_register_block_template",
-			"contents": "wp_register_block_template( ${1:\\$template_name}${2:, \\$args = array()} )"
+			"trigger": "register_block_template",
+			"contents": "register_block_template( ${1:\\$template_name}${2:, \\$args = array()} )"
 		},
 		{
 			"trigger": "_resolve_template_for_new_post",
