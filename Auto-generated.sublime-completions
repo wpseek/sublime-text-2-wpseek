@@ -5046,6 +5046,10 @@
 			"contents": "get_current_blog_id()"
 		},
 		{
+			"trigger": "absint",
+			"contents": "absint( ${1:\\$maybeint} )"
+		},
+		{
 			"trigger": "is_multisite",
 			"contents": "is_multisite()"
 		},
@@ -7038,10 +7042,6 @@
 			"contents": "_deprecated_function( ${1:\\$function_name}${2:, \\$version}${3:, \\$replacement = ''} )"
 		},
 		{
-			"trigger": "absint",
-			"contents": "absint( ${1:\\$maybeint} )"
-		},
-		{
 			"trigger": "dead_db",
 			"contents": "dead_db()"
 		},
@@ -8008,6 +8008,10 @@
 		{
 			"trigger": "wp_register_font_collection",
 			"contents": "wp_register_font_collection( ${1:\\$slug}${2:, \\$args} )"
+		},
+		{
+			"trigger": "wp_print_font_faces_from_style_variations",
+			"contents": "wp_print_font_faces_from_style_variations()"
 		},
 		{
 			"trigger": "wp_print_font_faces",
