@@ -387,7 +387,7 @@
 		},
 		{
 			"trigger": "retrieve_password",
-			"contents": "retrieve_password( ${1:\\$user_login = null} )"
+			"contents": "retrieve_password( ${1:\\$user_login = ''} )"
 		},
 		{
 			"trigger": "check_password_reset_key",
@@ -6686,6 +6686,10 @@
 			"contents": "wp_scripts()"
 		},
 		{
+			"trigger": "wp_is_heic_image_mime_type",
+			"contents": "wp_is_heic_image_mime_type( ${1:\\$mime_type} )"
+		},
+		{
 			"trigger": "wp_admin_notice",
 			"contents": "wp_admin_notice( ${1:\\$message}${2:, \\$args = array()} )"
 		},
@@ -9588,6 +9592,10 @@
 		{
 			"trigger": "wp_check_comment_disallowed_list",
 			"contents": "wp_check_comment_disallowed_list( ${1:\\$author}${2:, \\$email}${3:, \\$url}${4:, \\$comment}${5:, \\$user_ip}${6:, \\$user_agent} )"
+		},
+		{
+			"trigger": "wp_check_comment_data",
+			"contents": "wp_check_comment_data( ${1:\\$comment_data} )"
 		},
 		{
 			"trigger": "wp_check_comment_data_max_lengths",
