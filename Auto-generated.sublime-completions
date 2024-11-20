@@ -4830,6 +4830,10 @@
 			"contents": "wp_img_tag_add_loading_optimization_attrs( ${1:\\$image}${2:, \\$context} )"
 		},
 		{
+			"trigger": "wp_print_auto_sizes_contain_css_fix",
+			"contents": "wp_print_auto_sizes_contain_css_fix()"
+		},
+		{
 			"trigger": "wp_sizes_attribute_includes_valid_auto",
 			"contents": "wp_sizes_attribute_includes_valid_auto( ${1:\\$sizes_attr} )"
 		},
