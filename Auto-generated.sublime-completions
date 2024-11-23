@@ -11478,6 +11478,10 @@
 			"contents": "locate_block_template( ${1:\\$template}${2:, \\$type}${3:, \\$templates} )"
 		},
 		{
+			"trigger": "wp_render_empty_block_template_warning",
+			"contents": "wp_render_empty_block_template_warning( ${1:\\$block_template} )"
+		},
+		{
 			"trigger": "_add_template_loader_filters",
 			"contents": "_add_template_loader_filters()"
 		},
