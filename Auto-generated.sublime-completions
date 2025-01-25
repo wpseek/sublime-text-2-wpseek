@@ -2902,6 +2902,10 @@
 			"contents": "get_posts( ${1:\\$args = null} )"
 		},
 		{
+			"trigger": "is_post_embeddable",
+			"contents": "is_post_embeddable( ${1:\\$post = null} )"
+		},
+		{
 			"trigger": "is_post_publicly_viewable",
 			"contents": "is_post_publicly_viewable( ${1:\\$post = null} )"
 		},
@@ -3431,7 +3435,7 @@
 		},
 		{
 			"trigger": "wp_hash",
-			"contents": "wp_hash( ${1:\\$data}${2:, \\$scheme = 'auth'} )"
+			"contents": "wp_hash( ${1:\\$data}${2:, \\$scheme = 'auth'}${3:, \\$algo = 'md5'} )"
 		},
 		{
 			"trigger": "wp_salt",
@@ -10451,7 +10455,7 @@
 		},
 		{
 			"trigger": "apply_block_hooks_to_content",
-			"contents": "apply_block_hooks_to_content( ${1:\\$content}${2:, \\$context}${3:, \\$callback = 'insert_hooked_blocks'} )"
+			"contents": "apply_block_hooks_to_content( ${1:\\$content}${2:, \\$context = null}${3:, \\$callback = 'insert_hooked_blocks'} )"
 		},
 		{
 			"trigger": "set_ignored_hooked_blocks_metadata",
