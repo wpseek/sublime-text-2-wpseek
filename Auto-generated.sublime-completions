@@ -9422,10 +9422,6 @@
 			"contents": "is_countable( ${1:\\$value} )"
 		},
 		{
-			"trigger": "hash_equals",
-			"contents": "hash_equals( ${1:\\$known_string}${2:, \\$user_string} )"
-		},
-		{
 			"trigger": "_",
 			"contents": "_( ${1:\\$message} )"
 		},
@@ -12116,6 +12112,10 @@
 		{
 			"trigger": "wp_theme_auto_update_setting_template",
 			"contents": "wp_theme_auto_update_setting_template()"
+		},
+		{
+			"trigger": "_wp_get_site_editor_redirection_url",
+			"contents": "_wp_get_site_editor_redirection_url()"
 		},
 		{
 			"trigger": "wp_load_press_this",
