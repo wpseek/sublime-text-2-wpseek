@@ -1602,6 +1602,10 @@
 			"contents": "wp_enqueue_registered_block_scripts_and_styles()"
 		},
 		{
+			"trigger": "wp_should_load_block_assets_on_demand",
+			"contents": "wp_should_load_block_assets_on_demand()"
+		},
+		{
 			"trigger": "wp_should_load_separate_core_block_assets",
 			"contents": "wp_should_load_separate_core_block_assets()"
 		},
