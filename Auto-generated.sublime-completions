@@ -10498,6 +10498,10 @@
 			"contents": "remove_serialized_parent_block( ${1:\\$serialized_block} )"
 		},
 		{
+			"trigger": "apply_block_hooks_to_content_from_post_object",
+			"contents": "apply_block_hooks_to_content_from_post_object( ${1:\\$content}${2:, \\$post = null}${3:, \\$callback = 'insert_hooked_blocks'} )"
+		},
+		{
 			"trigger": "apply_block_hooks_to_content",
 			"contents": "apply_block_hooks_to_content( ${1:\\$content}${2:, \\$context = null}${3:, \\$callback = 'insert_hooked_blocks'} )"
 		},
