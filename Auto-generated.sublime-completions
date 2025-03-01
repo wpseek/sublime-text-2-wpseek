@@ -10546,6 +10546,10 @@
 			"contents": "wp_register_block_metadata_collection( ${1:\\$path}${2:, \\$manifest} )"
 		},
 		{
+			"trigger": "wp_register_block_types_from_metadata_collection",
+			"contents": "wp_register_block_types_from_metadata_collection( ${1:\\$path}${2:, \\$manifest = ''} )"
+		},
+		{
 			"trigger": "get_block_metadata_i18n_schema",
 			"contents": "get_block_metadata_i18n_schema()"
 		},
