@@ -6479,7 +6479,7 @@
 		},
 		{
 			"trigger": "get_calendar",
-			"contents": "get_calendar( ${1:\\$initial = true}${2:, \\$display = true} )"
+			"contents": "get_calendar( ${1:\\$args = array()} )"
 		},
 		{
 			"trigger": "calendar_week_mod",
@@ -10990,14 +10990,6 @@
 			"contents": "register_block_core_page_list_item()"
 		},
 		{
-			"trigger": "block_core_navigation_insert_hooked_blocks",
-			"contents": "block_core_navigation_insert_hooked_blocks( ${1:\\$inner_blocks}${2:, \\$post} )"
-		},
-		{
-			"trigger": "block_core_navigation_mock_parsed_block",
-			"contents": "block_core_navigation_mock_parsed_block( ${1:\\$inner_blocks}${2:, \\$post} )"
-		},
-		{
 			"trigger": "block_core_navigation_get_most_recently_published_navigation",
 			"contents": "block_core_navigation_get_most_recently_published_navigation()"
 		},
@@ -11832,6 +11824,14 @@
 		{
 			"trigger": "wp_register_background_support",
 			"contents": "wp_register_background_support( ${1:\\$block_type} )"
+		},
+		{
+			"trigger": "wp_apply_aria_label_support",
+			"contents": "wp_apply_aria_label_support( ${1:\\$block_type}${2:, \\$block_attributes} )"
+		},
+		{
+			"trigger": "wp_register_aria_label_support",
+			"contents": "wp_register_aria_label_support( ${1:\\$block_type} )"
 		},
 		{
 			"trigger": "wp_apply_alignment_support",
@@ -13464,6 +13464,10 @@
 		{
 			"trigger": "_wp_ajax_menu_quick_search",
 			"contents": "_wp_ajax_menu_quick_search( ${1:\\$request = array()} )"
+		},
+		{
+			"trigger": "wp_ensure_editable_role",
+			"contents": "wp_ensure_editable_role( ${1:\\$role} )"
 		},
 		{
 			"trigger": "get_site_screen_help_sidebar_content",
