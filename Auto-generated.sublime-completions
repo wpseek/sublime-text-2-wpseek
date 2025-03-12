@@ -2494,6 +2494,10 @@
 			"contents": "get_query_var( ${1:\\$query_var}${2:, \\$default_value = ''} )"
 		},
 		{
+			"trigger": "wp_set_editor_default_mode",
+			"contents": "wp_set_editor_default_mode()"
+		},
+		{
 			"trigger": "wp_create_initial_post_meta",
 			"contents": "wp_create_initial_post_meta()"
 		},
