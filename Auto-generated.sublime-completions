@@ -7982,6 +7982,14 @@
 			"contents": "_wp_specialchars( ${1:\\$text}${2:, \\$quote_style = ENT_NOQUOTES}${3:, \\$charset = false}${4:, \\$double_encode = false} )"
 		},
 		{
+			"trigger": "_wp_is_valid_utf8_fallback",
+			"contents": "_wp_is_valid_utf8_fallback( ${1:\\$bytes} )"
+		},
+		{
+			"trigger": "wp_is_valid_utf8",
+			"contents": "wp_is_valid_utf8( ${1:\\$bytes} )"
+		},
+		{
 			"trigger": "seems_utf8",
 			"contents": "seems_utf8( ${1:\\$str} )"
 		},
