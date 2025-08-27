@@ -9418,6 +9418,14 @@
 			"contents": "wp_schedule_single_event( ${1:\\$timestamp}${2:, \\$hook}${3:, \\$args = array()}${4:, \\$wp_error = false} )"
 		},
 		{
+			"trigger": "array_last",
+			"contents": "array_last( ${1:\\$array} )"
+		},
+		{
+			"trigger": "array_first",
+			"contents": "array_first( ${1:\\$array} )"
+		},
+		{
 			"trigger": "array_all",
 			"contents": "array_all( ${1:\\$array}${2:, \\$callback} )"
 		},
