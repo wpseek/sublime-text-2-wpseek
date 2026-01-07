@@ -1526,6 +1526,10 @@
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$callback} )"
 		},
 		{
+			"trigger": "wp_enqueue_block_editor_script_modules",
+			"contents": "wp_enqueue_block_editor_script_modules()"
+		},
+		{
 			"trigger": "wp_default_script_modules",
 			"contents": "wp_default_script_modules()"
 		},
@@ -1748,10 +1752,6 @@
 		{
 			"trigger": "wp_default_packages_scripts",
 			"contents": "wp_default_packages_scripts( ${1:\\$scripts} )"
-		},
-		{
-			"trigger": "wp_register_development_scripts",
-			"contents": "wp_register_development_scripts( ${1:\\$scripts} )"
 		},
 		{
 			"trigger": "wp_get_script_polyfill",
@@ -3399,7 +3399,7 @@
 		},
 		{
 			"trigger": "has_action",
-			"contents": "has_action( ${1:\\$hook_name}${2:, \\$callback = false} )"
+			"contents": "has_action( ${1:\\$hook_name}${2:, \\$callback = false}${3:, \\$priority = false} )"
 		},
 		{
 			"trigger": "do_action_ref_array",
@@ -3435,7 +3435,7 @@
 		},
 		{
 			"trigger": "has_filter",
-			"contents": "has_filter( ${1:\\$hook_name}${2:, \\$callback = false} )"
+			"contents": "has_filter( ${1:\\$hook_name}${2:, \\$callback = false}${3:, \\$priority = false} )"
 		},
 		{
 			"trigger": "apply_filters_ref_array",
@@ -9658,6 +9658,10 @@
 			"contents": "wp_set_comment_status( ${1:\\$comment_id}${2:, \\$comment_status}${3:, \\$wp_error = false} )"
 		},
 		{
+			"trigger": "wp_new_comment_via_rest_notify_postauthor",
+			"contents": "wp_new_comment_via_rest_notify_postauthor( ${1:\\$comment} )"
+		},
+		{
 			"trigger": "wp_new_comment_notify_postauthor",
 			"contents": "wp_new_comment_notify_postauthor( ${1:\\$comment_id} )"
 		},
@@ -10400,6 +10404,118 @@
 		{
 			"trigger": "wp_cache_get_salted",
 			"contents": "wp_cache_get_salted( ${1:\\$cache_key}${2:, \\$group}${3:, \\$salt} )"
+		},
+		{
+			"trigger": "site_editor_intercept_render",
+			"contents": "site_editor_intercept_render()"
+		},
+		{
+			"trigger": "site_editor_render_page",
+			"contents": "site_editor_render_page()"
+		},
+		{
+			"trigger": "site_editor_preload_data",
+			"contents": "site_editor_preload_data()"
+		},
+		{
+			"trigger": "get_site_editor_menu_items",
+			"contents": "get_site_editor_menu_items()"
+		},
+		{
+			"trigger": "get_site_editor_routes",
+			"contents": "get_site_editor_routes()"
+		},
+		{
+			"trigger": "register_site_editor_menu_item",
+			"contents": "register_site_editor_menu_item( ${1:\\$id}${2:, \\$label}${3:, \\$to}${4:, \\$parent_id = ''}${5:, \\$parent_type = ''} )"
+		},
+		{
+			"trigger": "register_site_editor_route",
+			"contents": "register_site_editor_route( ${1:\\$path}${2:, \\$content_module = null}${3:, \\$route_module = null} )"
+		},
+		{
+			"trigger": "site_editor_wp_admin_render_page",
+			"contents": "site_editor_wp_admin_render_page()"
+		},
+		{
+			"trigger": "site_editor_wp_admin_enqueue_scripts",
+			"contents": "site_editor_wp_admin_enqueue_scripts( ${1:\\$hook_suffix} )"
+		},
+		{
+			"trigger": "site_editor_wp_admin_preload_data",
+			"contents": "site_editor_wp_admin_preload_data()"
+		},
+		{
+			"trigger": "get_site_editor_wp_admin_menu_items",
+			"contents": "get_site_editor_wp_admin_menu_items()"
+		},
+		{
+			"trigger": "get_site_editor_wp_admin_routes",
+			"contents": "get_site_editor_wp_admin_routes()"
+		},
+		{
+			"trigger": "register_site_editor_wp_admin_menu_item",
+			"contents": "register_site_editor_wp_admin_menu_item( ${1:\\$id}${2:, \\$label}${3:, \\$to}${4:, \\$parent_id = ''} )"
+		},
+		{
+			"trigger": "register_site_editor_wp_admin_route",
+			"contents": "register_site_editor_wp_admin_route( ${1:\\$path}${2:, \\$content_module = null}${3:, \\$route_module = null} )"
+		},
+		{
+			"trigger": "font_library_intercept_render",
+			"contents": "font_library_intercept_render()"
+		},
+		{
+			"trigger": "font_library_render_page",
+			"contents": "font_library_render_page()"
+		},
+		{
+			"trigger": "font_library_preload_data",
+			"contents": "font_library_preload_data()"
+		},
+		{
+			"trigger": "get_font_library_menu_items",
+			"contents": "get_font_library_menu_items()"
+		},
+		{
+			"trigger": "get_font_library_routes",
+			"contents": "get_font_library_routes()"
+		},
+		{
+			"trigger": "register_font_library_menu_item",
+			"contents": "register_font_library_menu_item( ${1:\\$id}${2:, \\$label}${3:, \\$to}${4:, \\$parent_id = ''}${5:, \\$parent_type = ''} )"
+		},
+		{
+			"trigger": "register_font_library_route",
+			"contents": "register_font_library_route( ${1:\\$path}${2:, \\$content_module = null}${3:, \\$route_module = null} )"
+		},
+		{
+			"trigger": "font_library_wp_admin_render_page",
+			"contents": "font_library_wp_admin_render_page()"
+		},
+		{
+			"trigger": "font_library_wp_admin_enqueue_scripts",
+			"contents": "font_library_wp_admin_enqueue_scripts( ${1:\\$hook_suffix} )"
+		},
+		{
+			"trigger": "font_library_wp_admin_preload_data",
+			"contents": "font_library_wp_admin_preload_data()"
+		},
+		{
+			"trigger": "get_font_library_wp_admin_menu_items",
+			"contents": "get_font_library_wp_admin_menu_items()"
+		},
+		{
+			"trigger": "get_font_library_wp_admin_routes",
+			"contents": "get_font_library_wp_admin_routes()"
+		},
+		{
+			"trigger": "register_font_library_wp_admin_menu_item",
+			"contents": "register_font_library_wp_admin_menu_item( ${1:\\$id}${2:, \\$label}${3:, \\$to}${4:, \\$parent_id = ''} )"
+		},
+		{
+			"trigger": "register_font_library_wp_admin_route",
+			"contents": "register_font_library_wp_admin_route( ${1:\\$path}${2:, \\$content_module = null}${3:, \\$route_module = null} )"
 		},
 		{
 			"trigger": "clean_bookmark_cache",
@@ -11634,6 +11750,10 @@
 			"contents": "register_block_core_archives()"
 		},
 		{
+			"trigger": "block_core_archives_build_dropdown_script",
+			"contents": "block_core_archives_build_dropdown_script( ${1:\\$dropdown_id} )"
+		},
+		{
 			"trigger": "render_block_core_archives",
 			"contents": "render_block_core_archives( ${1:\\$attributes} )"
 		},
@@ -11702,18 +11822,6 @@
 			"contents": "_add_template_loader_filters()"
 		},
 		{
-			"trigger": "_wp_migrate_active_templates",
-			"contents": "_wp_migrate_active_templates()"
-		},
-		{
-			"trigger": "wp_maybe_activate_template",
-			"contents": "wp_maybe_activate_template( ${1:\\$post_id} )"
-		},
-		{
-			"trigger": "wp_assign_new_template_to_theme",
-			"contents": "wp_assign_new_template_to_theme( ${1:\\$changes}${2:, \\$request} )"
-		},
-		{
 			"trigger": "inject_ignored_hooked_blocks_metadata_attributes",
 			"contents": "inject_ignored_hooked_blocks_metadata_attributes( ${1:\\$changes}${2:, \\$deprecated = null} )"
 		},
@@ -11752,10 +11860,6 @@
 		{
 			"trigger": "get_block_templates",
 			"contents": "get_block_templates( ${1:\\$query = array()}${2:, \\$template_type = 'wp_template'} )"
-		},
-		{
-			"trigger": "get_registered_block_templates",
-			"contents": "get_registered_block_templates( ${1:\\$query} )"
 		},
 		{
 			"trigger": "_build_block_template_result_from_post",
@@ -12030,6 +12134,14 @@
 			"contents": "wp_register_aria_label_support( ${1:\\$block_type} )"
 		},
 		{
+			"trigger": "wp_apply_anchor_support",
+			"contents": "wp_apply_anchor_support( ${1:\\$block_type}${2:, \\$block_attributes} )"
+		},
+		{
+			"trigger": "wp_register_anchor_support",
+			"contents": "wp_register_anchor_support( ${1:\\$block_type} )"
+		},
+		{
 			"trigger": "wp_apply_alignment_support",
 			"contents": "wp_apply_alignment_support( ${1:\\$block_type}${2:, \\$block_attributes} )"
 		},
@@ -12060,6 +12172,22 @@
 		{
 			"trigger": "_register_core_block_patterns_and_categories",
 			"contents": "_register_core_block_patterns_and_categories()"
+		},
+		{
+			"trigger": "unregister_block_pattern_category",
+			"contents": "unregister_block_pattern_category( ${1:\\$category_name} )"
+		},
+		{
+			"trigger": "register_block_pattern_category",
+			"contents": "register_block_pattern_category( ${1:\\$category_name}${2:, \\$category_properties} )"
+		},
+		{
+			"trigger": "unregister_block_pattern",
+			"contents": "unregister_block_pattern( ${1:\\$pattern_name} )"
+		},
+		{
+			"trigger": "register_block_pattern",
+			"contents": "register_block_pattern( ${1:\\$pattern_name}${2:, \\$pattern_properties} )"
 		},
 		{
 			"trigger": "wp_initialize_site_preview_hooks",
@@ -13075,7 +13203,7 @@
 		},
 		{
 			"trigger": "wp_create_category",
-			"contents": "wp_create_category( ${1:\\$cat_name}${2:, \\$category_parent = 0} )"
+			"contents": "wp_create_category( ${1:\\$category_name}${2:, \\$category_parent = 0} )"
 		},
 		{
 			"trigger": "get_category_to_edit",
