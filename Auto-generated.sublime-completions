@@ -12246,6 +12246,14 @@
 			"contents": "wp_get_block_state_style_rules( ${1:\\$state_styles}${2:, \\$block_type}${3:, \\$rules_group = null} )"
 		},
 		{
+			"trigger": "wp_add_block_state_style_rule",
+			"contents": "wp_add_block_state_style_rule( ${1:\\$css_rules}${2:, \\$state}${3:, \\$selector}${4:, \\$style}${5:, \\$rules_group = null} )"
+		},
+		{
+			"trigger": "wp_get_block_state_element_selectors",
+			"contents": "wp_get_block_state_element_selectors( ${1:\\$root_selector} )"
+		},
+		{
 			"trigger": "wp_get_root_state_style",
 			"contents": "wp_get_root_state_style( ${1:\\$state_style}${2:, \\$nested_keys} )"
 		},
@@ -12256,6 +12264,14 @@
 		{
 			"trigger": "wp_add_state_style_group",
 			"contents": "wp_add_state_style_group( ${1:\\$groups}${2:, \\$selector}${3:, \\$style} )"
+		},
+		{
+			"trigger": "wp_get_state_style_with_fallback_dimension_styles",
+			"contents": "wp_get_state_style_with_fallback_dimension_styles( ${1:\\$state_style} )"
+		},
+		{
+			"trigger": "wp_get_state_declarations_with_background_resets",
+			"contents": "wp_get_state_declarations_with_background_resets( ${1:\\$declarations} )"
 		},
 		{
 			"trigger": "wp_get_state_declarations_with_fallback_border_styles",
@@ -12380,6 +12396,10 @@
 		{
 			"trigger": "wp_render_dimensions_support",
 			"contents": "wp_render_dimensions_support( ${1:\\$block_content}${2:, \\$block} )"
+		},
+		{
+			"trigger": "wp_is_explicit_aspect_ratio_value",
+			"contents": "wp_is_explicit_aspect_ratio_value( ${1:\\$aspect_ratio} )"
 		},
 		{
 			"trigger": "wp_apply_dimensions_support",
