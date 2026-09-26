@@ -2406,10 +2406,6 @@
 			"contents": "setup_postdata( ${1:\\$post} )"
 		},
 		{
-			"trigger": "wp_random_content_redirect",
-			"contents": "wp_random_content_redirect()"
-		},
-		{
 			"trigger": "_find_post_by_old_date",
 			"contents": "_find_post_by_old_date( ${1:\\$post_type} )"
 		},
@@ -2860,10 +2856,6 @@
 		{
 			"trigger": "wp_add_post_tags",
 			"contents": "wp_add_post_tags( ${1:\\$post_id = 0}${2:, \\$tags = ''} )"
-		},
-		{
-			"trigger": "_truncate_post_slug",
-			"contents": "_truncate_post_slug( ${1:\\$slug}${2:, \\$length = 200} )"
 		},
 		{
 			"trigger": "wp_unique_post_slug",
@@ -6454,6 +6446,10 @@
 			"contents": "wp_get_global_styles( ${1:\\$path = array()}${2:, \\$context = array()} )"
 		},
 		{
+			"trigger": "wp_get_viewport_media_queries",
+			"contents": "wp_get_viewport_media_queries( ${1:\\$viewport_settings = null}${2:, \\$options = array()} )"
+		},
+		{
 			"trigger": "wp_get_global_settings",
 			"contents": "wp_get_global_settings( ${1:\\$path = array()}${2:, \\$context = array()} )"
 		},
@@ -8162,6 +8158,10 @@
 			"contents": "sanitize_sql_orderby( ${1:\\$orderby} )"
 		},
 		{
+			"trigger": "wp_truncate_slug",
+			"contents": "wp_truncate_slug( ${1:\\$slug}${2:, \\$length = 200} )"
+		},
+		{
 			"trigger": "sanitize_title_with_dashes",
 			"contents": "sanitize_title_with_dashes( ${1:\\$title}${2:, \\$raw_title = ''}${3:, \\$context = 'display'} )"
 		},
@@ -8592,6 +8592,10 @@
 		{
 			"trigger": "wp_embed_register_handler",
 			"contents": "wp_embed_register_handler( ${1:\\$id}${2:, \\$regex}${3:, \\$callback}${4:, \\$priority = 10} )"
+		},
+		{
+			"trigger": "_truncate_post_slug",
+			"contents": "_truncate_post_slug( ${1:\\$slug}${2:, \\$length = 200} )"
 		},
 		{
 			"trigger": "wp_sanitize_script_attributes",
@@ -12564,6 +12568,10 @@
 		{
 			"trigger": "wp_render_position_support",
 			"contents": "wp_render_position_support( ${1:\\$block_content}${2:, \\$block} )"
+		},
+		{
+			"trigger": "wp_get_position_support_styles",
+			"contents": "wp_get_position_support_styles( ${1:\\$selector}${2:, \\$position}${3:, \\$allowed_position_types} )"
 		},
 		{
 			"trigger": "wp_register_position_support",
