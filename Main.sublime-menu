@@ -1,6 +1,5 @@
 [
     {
-        "caption": "Tools",
         "children":
         [
             {
@@ -17,10 +16,9 @@
                     }
                 ],
                 "id": "wpseek_wp_developer_assistant",
-                "mnemonic": "f"
+                "mnemonic": "w"
             }
         ],
-        "id": "tools",
-        "mnemonic": "t"
+        "id": "tools"
     }
 ]
