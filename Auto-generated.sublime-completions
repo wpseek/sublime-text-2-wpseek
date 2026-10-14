@@ -1582,6 +1582,102 @@
 			"contents": "add_shortcode( ${1:\\$tag}${2:, \\$callback} )"
 		},
 		{
+			"trigger": "_wp_secrets_list",
+			"contents": "_wp_secrets_list( ${1:\\$name_prefix}${2:, \\$network} )"
+		},
+		{
+			"trigger": "_wp_secrets_retire",
+			"contents": "_wp_secrets_retire( ${1:\\$name}${2:, \\$network} )"
+		},
+		{
+			"trigger": "_wp_secrets_delete",
+			"contents": "_wp_secrets_delete( ${1:\\$name}${2:, \\$network} )"
+		},
+		{
+			"trigger": "_wp_secrets_get",
+			"contents": "_wp_secrets_get( ${1:\\$name}${2:, \\$version}${3:, \\$network} )"
+		},
+		{
+			"trigger": "_wp_secrets_set",
+			"contents": "_wp_secrets_set( ${1:\\$name}${2:, \\$value}${3:, \\$network}${4:, \\$needs_rotation = false}${5:, \\$action_override = null} )"
+		},
+		{
+			"trigger": "wp_secrets_provider_label",
+			"contents": "wp_secrets_provider_label()"
+		},
+		{
+			"trigger": "wp_secrets_provider_is_writable",
+			"contents": "wp_secrets_provider_is_writable()"
+		},
+		{
+			"trigger": "_wp_secrets_get_provider",
+			"contents": "_wp_secrets_get_provider()"
+		},
+		{
+			"trigger": "wp_list_network_secrets",
+			"contents": "wp_list_network_secrets( ${1:\\$namespace = ''} )"
+		},
+		{
+			"trigger": "wp_retire_network_secret_version",
+			"contents": "wp_retire_network_secret_version( ${1:\\$name} )"
+		},
+		{
+			"trigger": "wp_delete_network_secret",
+			"contents": "wp_delete_network_secret( ${1:\\$name} )"
+		},
+		{
+			"trigger": "wp_get_network_secret",
+			"contents": "wp_get_network_secret( ${1:\\$name}${2:, \\$version = WP_Secret_Version::CURRENT} )"
+		},
+		{
+			"trigger": "wp_set_network_secret",
+			"contents": "wp_set_network_secret( ${1:\\$name}${2:, \\$value} )"
+		},
+		{
+			"trigger": "wp_list_secrets",
+			"contents": "wp_list_secrets( ${1:\\$namespace = ''} )"
+		},
+		{
+			"trigger": "wp_retire_secret_version",
+			"contents": "wp_retire_secret_version( ${1:\\$name} )"
+		},
+		{
+			"trigger": "wp_delete_secret",
+			"contents": "wp_delete_secret( ${1:\\$name} )"
+		},
+		{
+			"trigger": "wp_get_secret",
+			"contents": "wp_get_secret( ${1:\\$name}${2:, \\$version = WP_Secret_Version::CURRENT} )"
+		},
+		{
+			"trigger": "wp_import_option_as_secret",
+			"contents": "wp_import_option_as_secret( ${1:\\$option}${2:, \\$name} )"
+		},
+		{
+			"trigger": "wp_set_secret",
+			"contents": "wp_set_secret( ${1:\\$name}${2:, \\$value} )"
+		},
+		{
+			"trigger": "wp_using_secrets_dropin",
+			"contents": "wp_using_secrets_dropin()"
+		},
+		{
+			"trigger": "_wp_secrets_get_key_manager",
+			"contents": "_wp_secrets_get_key_manager()"
+		},
+		{
+			"trigger": "_wp_secrets_get_store",
+			"contents": "_wp_secrets_get_store()"
+		},
+		{
+			"trigger": "wp_secrets_validate_name",
+			"contents": "wp_secrets_validate_name( ${1:\\$name} )"
+		},
+		{
+			"trigger": "wp_secrets_memzero",
+			"contents": "wp_secrets_memzero( ${1:\\$value} )"
+		},
+		{
 			"trigger": "wp_enqueue_block_editor_script_modules",
 			"contents": "wp_enqueue_block_editor_script_modules()"
 		},
@@ -1831,7 +1927,7 @@
 		},
 		{
 			"trigger": "wp_register_tinymce_scripts",
-			"contents": "wp_register_tinymce_scripts( ${1:\\$scripts}${2:, \\$force_uncompressed = false} )"
+			"contents": "wp_register_tinymce_scripts( ${1:\\$scripts}${2:, \\$deprecated = false} )"
 		},
 		{
 			"trigger": "get_rss",
@@ -3742,6 +3838,10 @@
 			"contents": "register_setting( ${1:\\$option_group}${2:, \\$option_name}${3:, \\$args = array()} )"
 		},
 		{
+			"trigger": "_wp_register_initial_settings_for_abilities",
+			"contents": "_wp_register_initial_settings_for_abilities()"
+		},
+		{
 			"trigger": "register_initial_settings",
 			"contents": "register_initial_settings()"
 		},
@@ -5308,6 +5408,10 @@
 		{
 			"trigger": "wp_start_object_cache",
 			"contents": "wp_start_object_cache()"
+		},
+		{
+			"trigger": "wp_load_secrets_dropin",
+			"contents": "wp_load_secrets_dropin()"
 		},
 		{
 			"trigger": "wp_using_ext_object_cache",
@@ -13034,6 +13138,10 @@
 			"contents": "get_the_author( ${1:\\$deprecated = ''} )"
 		},
 		{
+			"trigger": "wp_ai_client_embedding",
+			"contents": "wp_ai_client_embedding( ${1:\\$input} )"
+		},
+		{
 			"trigger": "wp_ai_client_prompt",
 			"contents": "wp_ai_client_prompt( ${1:\\$prompt = null} )"
 		},
@@ -13902,6 +14010,38 @@
 			"contents": "category_exists( ${1:\\$cat_name}${2:, \\$category_parent = null} )"
 		},
 		{
+			"trigger": "wp_secrets_site_health_debug_info",
+			"contents": "wp_secrets_site_health_debug_info( ${1:\\$info} )"
+		},
+		{
+			"trigger": "wp_secrets_site_health_count_needing_rotation",
+			"contents": "wp_secrets_site_health_count_needing_rotation( ${1:\\$network} )"
+		},
+		{
+			"trigger": "wp_secrets_site_health_test_needs_rotation",
+			"contents": "wp_secrets_site_health_test_needs_rotation()"
+		},
+		{
+			"trigger": "wp_secrets_site_health_find_undecryptable",
+			"contents": "wp_secrets_site_health_find_undecryptable( ${1:\\$network} )"
+		},
+		{
+			"trigger": "wp_secrets_site_health_test_undecryptable",
+			"contents": "wp_secrets_site_health_test_undecryptable()"
+		},
+		{
+			"trigger": "wp_secrets_site_health_test_key_source",
+			"contents": "wp_secrets_site_health_test_key_source()"
+		},
+		{
+			"trigger": "wp_secrets_site_health_result",
+			"contents": "wp_secrets_site_health_result( ${1:\\$test}${2:, \\$label}${3:, \\$status}${4:, \\$description} )"
+		},
+		{
+			"trigger": "wp_secrets_site_health_tests",
+			"contents": "wp_secrets_site_health_tests( ${1:\\$tests} )"
+		},
+		{
 			"trigger": "set_current_screen",
 			"contents": "set_current_screen( ${1:\\$hook_name = ''} )"
 		},
@@ -13912,6 +14052,10 @@
 		{
 			"trigger": "add_screen_option",
 			"contents": "add_screen_option( ${1:\\$option}${2:, \\$args = array()} )"
+		},
+		{
+			"trigger": "wp_is_meta_box_reordering_enabled",
+			"contents": "wp_is_meta_box_reordering_enabled()"
 		},
 		{
 			"trigger": "get_hidden_meta_boxes",
@@ -13944,6 +14088,10 @@
 		{
 			"trigger": "install_network",
 			"contents": "install_network()"
+		},
+		{
+			"trigger": "populate_roles_720",
+			"contents": "populate_roles_720()"
 		},
 		{
 			"trigger": "populate_roles_300",
@@ -16152,6 +16300,10 @@
 		{
 			"trigger": "wp_ajax_update_welcome_panel",
 			"contents": "wp_ajax_update_welcome_panel()"
+		},
+		{
+			"trigger": "wp_ajax_meta_box_reordering",
+			"contents": "wp_ajax_meta_box_reordering()"
 		},
 		{
 			"trigger": "wp_ajax_hidden_columns",
