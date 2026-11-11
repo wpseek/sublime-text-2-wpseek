@@ -7,11 +7,11 @@
                 "children":
                 [
                     {
-                        "command": "wpseek_com_search_selection",
+                        "command": "wp_seek_com_search_selection",
                         "caption": "Search Selection"
                     },
                     {
-                        "command": "wpseek_com_search_from_input",
+                        "command": "wp_seek_com_search_from_input",
                         "caption": "Search From Input"
                     }
                 ],
