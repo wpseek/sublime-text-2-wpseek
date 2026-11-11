@@ -658,6 +658,26 @@
 			"contents": "wp_get_update_data()"
 		},
 		{
+			"trigger": "wp_set_deferred_translation_updates",
+			"contents": "wp_set_deferred_translation_updates( ${1:\\$updates} )"
+		},
+		{
+			"trigger": "wp_is_translation_update_deferred",
+			"contents": "wp_is_translation_update_deferred( ${1:\\$update}${2:, \\$deferred_updates = null} )"
+		},
+		{
+			"trigger": "wp_get_deferred_translation_updates",
+			"contents": "wp_get_deferred_translation_updates( ${1:\\$updates = null} )"
+		},
+		{
+			"trigger": "wp_get_translation_updates_by_id",
+			"contents": "wp_get_translation_updates_by_id( ${1:\\$updates = null} )"
+		},
+		{
+			"trigger": "wp_get_translation_update_id",
+			"contents": "wp_get_translation_update_id( ${1:\\$update} )"
+		},
+		{
 			"trigger": "wp_get_translation_updates",
 			"contents": "wp_get_translation_updates()"
 		},
@@ -1614,6 +1634,10 @@
 			"contents": "wp_secrets_provider_label()"
 		},
 		{
+			"trigger": "wp_is_secrets_api_available",
+			"contents": "wp_is_secrets_api_available()"
+		},
+		{
 			"trigger": "wp_secrets_provider_is_writable",
 			"contents": "wp_secrets_provider_is_writable()"
 		},
@@ -2435,7 +2459,7 @@
 		},
 		{
 			"trigger": "rest_send_cors_headers",
-			"contents": "rest_send_cors_headers( ${1:\\$value} )"
+			"contents": "rest_send_cors_headers( ${1:\\$value}${2:, \\$result = null}${3:, \\$request = null}${4:, \\$server = null} )"
 		},
 		{
 			"trigger": "rest_handle_doing_it_wrong",
@@ -2515,15 +2539,11 @@
 		},
 		{
 			"trigger": "wp_random_content_flush_rewrite_rules_for_post",
-			"contents": "wp_random_content_flush_rewrite_rules_for_post( ${1:\\$post_id}${2:, \\$post}${3:, \\$update = false}${4:, \\$post_before = null} )"
+			"contents": "wp_random_content_flush_rewrite_rules_for_post( ${1:\\$post_id}${2:, \\$post = null}${3:, \\$update = false}${4:, \\$post_before = null} )"
 		},
 		{
 			"trigger": "wp_random_content_redirect",
 			"contents": "wp_random_content_redirect()"
-		},
-		{
-			"trigger": "wp_random_content_split_the_query",
-			"contents": "wp_random_content_split_the_query( ${1:\\$split_the_query}${2:, \\$query} )"
 		},
 		{
 			"trigger": "wp_random_content_post_limits",
@@ -4711,7 +4731,7 @@
 		},
 		{
 			"trigger": "_update_posts_count_on_delete",
-			"contents": "_update_posts_count_on_delete( ${1:\\$post_id}${2:, \\$post} )"
+			"contents": "_update_posts_count_on_delete( ${1:\\$post_id}${2:, \\$post = null} )"
 		},
 		{
 			"trigger": "_update_blog_date_on_post_delete",
@@ -7543,7 +7563,7 @@
 		},
 		{
 			"trigger": "wp_list_filter",
-			"contents": "wp_list_filter( ${1:\\$input_list}${2:, \\$args = array()}${3:, \\$operator = 'AND'} )"
+			"contents": "wp_list_filter( ${1:\\$input_list}${2:, \\$args = array()}${3:, \\$operator = 'and'} )"
 		},
 		{
 			"trigger": "wp_filter_object_list",
@@ -13850,6 +13870,26 @@
 			"contents": "wp_theme_update_rows()"
 		},
 		{
+			"trigger": "wp_process_translation_update_selection",
+			"contents": "wp_process_translation_update_selection( ${1:\\$translation_update_ids}${2:, \\$selected_translation_update_ids} )"
+		},
+		{
+			"trigger": "wp_get_translation_update_data",
+			"contents": "wp_get_translation_update_data()"
+		},
+		{
+			"trigger": "wp_get_translation_update_language",
+			"contents": "wp_get_translation_update_language( ${1:\\$locale} )"
+		},
+		{
+			"trigger": "wp_get_translation_update_name",
+			"contents": "wp_get_translation_update_name( ${1:\\$update}${2:, \\$plugin_names = null} )"
+		},
+		{
+			"trigger": "wp_get_translation_update_plugin_names",
+			"contents": "wp_get_translation_update_plugin_names()"
+		},
+		{
 			"trigger": "get_theme_updates",
 			"contents": "get_theme_updates()"
 		},
@@ -14240,38 +14280,6 @@
 		{
 			"trigger": "category_exists",
 			"contents": "category_exists( ${1:\\$cat_name}${2:, \\$category_parent = null} )"
-		},
-		{
-			"trigger": "wp_secrets_site_health_debug_info",
-			"contents": "wp_secrets_site_health_debug_info( ${1:\\$info} )"
-		},
-		{
-			"trigger": "wp_secrets_site_health_count_needing_rotation",
-			"contents": "wp_secrets_site_health_count_needing_rotation( ${1:\\$network} )"
-		},
-		{
-			"trigger": "wp_secrets_site_health_test_needs_rotation",
-			"contents": "wp_secrets_site_health_test_needs_rotation()"
-		},
-		{
-			"trigger": "wp_secrets_site_health_find_undecryptable",
-			"contents": "wp_secrets_site_health_find_undecryptable( ${1:\\$network} )"
-		},
-		{
-			"trigger": "wp_secrets_site_health_test_undecryptable",
-			"contents": "wp_secrets_site_health_test_undecryptable()"
-		},
-		{
-			"trigger": "wp_secrets_site_health_test_key_source",
-			"contents": "wp_secrets_site_health_test_key_source()"
-		},
-		{
-			"trigger": "wp_secrets_site_health_result",
-			"contents": "wp_secrets_site_health_result( ${1:\\$test}${2:, \\$label}${3:, \\$status}${4:, \\$description} )"
-		},
-		{
-			"trigger": "wp_secrets_site_health_tests",
-			"contents": "wp_secrets_site_health_tests( ${1:\\$tests} )"
 		},
 		{
 			"trigger": "set_current_screen",
