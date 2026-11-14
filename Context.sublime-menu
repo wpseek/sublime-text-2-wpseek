@@ -4,11 +4,11 @@
         "children": [
             {
                 "caption": "Search selection",
-                "command": "wpseek_com_search_selection"
+                "command": "wp_seek_com_search_selection"
             },
             {
                 "caption": "wpseek.com Function Reference",
-                "command": "wpseek_com_open_selection"
+                "command": "wp_seek_com_open_selection"
             }
         ]
     }

@@ -9,9 +9,9 @@
 # @License: GPL 3+
 
 # available commands
-#   wpseek_com_open_selection
-#   wpseek_com_search_selection
-#   wpseek_com_search_from_input
+#   wp_seek_com_open_selection
+#   wp_seek_com_search_selection
+#   wp_seek_com_search_from_input
 
 import sublime
 import sublime_plugin
